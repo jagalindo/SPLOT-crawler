@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 14, 2019 - 10:00 AM  -->
+<feature_model name="SmartHome-20Features">
+<meta>
+<data name="description">SmartHome FM with 20 features</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UBB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartHome(_r)
+	:m Windows_Control(_r_1)
+		:m Manual_Windows(_r_1_2)
+		:o Automated_Windows(_r_1_3)
+	:m Heating_Control(_r_4)
+		:m Manual_Heating(_r_4_5)
+		:o Smart_Heating(_r_4_6)
+	:m UI(_r_7)
+		:m Inhome_Screen(_r_7_8)
+		:o Internet_App(_r_7_10)
+	:o Security(_r_11)
+		:o Burglar_Alarm(_r_11_12)
+			:g (_r_11_12_16) [1,*] 
+				: Siren(_r_11_12_16_17)
+				: Bell(_r_11_12_16_18)
+				: Light(_r_11_12_16_19)
+				: Notification(_r_11_12_16_20)
+		:o Authorization(_r_11_13)
+		:o Authentication(_r_11_14)
+	:o LAN(_r_15)
+	:o Door_Lock(_r_22)
+</feature_tree>
+<constraints>
+constraint_4:~_r_7_10 or _r_15
+constraint_2:~_r_4_6 or _r_7_10
+constraint_3:~_r_1_3 or _r_7_10
+</constraints>
+</feature_model>

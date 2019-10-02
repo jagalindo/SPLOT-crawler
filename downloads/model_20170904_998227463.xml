@@ -1,0 +1,67 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 4, 2017 - 1:35 PM  -->
+<feature_model name="BLAST MODEL">
+<meta>
+<data name="description">Blast bioinformatics feature model</data>
+<data name="creator">Juan Molano</data>
+<data name="address"></data>
+<data name="email">je.molano1498@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BLAST(_r)
+	:m Input(_r_1)
+		:m Format(_r_1_41)
+			:g (_r_1_41_44) [1,1] 
+				: FASTA(_r_1_41_44_45)
+				: GenBank(_r_1_41_44_46)
+				: Custom(_r_1_41_44_48)
+		:o Distributed(_r_1_47)
+	:m Output(_r_6)
+		:o XML(_r_6_7)
+		:o HTML(_r_6_8)
+		:o TXT(_r_6_9)
+		:o BTOP(_r_6_65)
+		:o Tabular(_r_6_67)
+	:m OS(_r_10)
+		:g (_r_10_20) [1,1] 
+			: Windows(_r_10_20_21)
+			: Linux(_r_10_20_22)
+			: Mac(_r_10_20_24)
+	:m DB(_r_15)
+		:g (_r_15_25) [1,*] 
+			: Remote(_r_15_25_26)
+			: Local(_r_15_25_27)
+				:o Bacterial and Archaeal(_r_15_25_27_29)
+				:o Protein(_r_15_25_27_31)
+					:o metagenomes(_r_15_25_27_31_33)
+					:o Non-redundant(_r_15_25_27_31_39)
+				:o Nucleotide(_r_15_25_27_32)
+					:o metagenomes(_r_15_25_27_32_34)
+					:o Partially non-redundant(_r_15_25_27_32_40)
+				:o Human(_r_15_25_27_35)
+				:o Rat(_r_15_25_27_36)
+				:o non-human non-rat(_r_15_25_27_37)
+				:o PSSM(_r_15_25_27_66)
+	:o Configurations(_r_51)
+		:g (_r_51_54) [1,*] 
+			: Path to BLAST DB(_r_51_54_55)
+			: DATA_LOADERS(_r_51_54_56)
+			: BLASTDB_PROT_DATA_LOADER(_r_51_54_57)
+			: BLASTDB_NUCL_DATA_LOADER(_r_51_54_58)
+			: GENE_INFO_PATH(_r_51_54_59)
+			: WINDOW_MASKER_PATH(_r_51_54_60)
+	:m Memory(_r_61)
+		:g (_r_61_62) [1,1] 
+			: Batch_Size limited memory(_r_61_62_63)
+			: unlimited(_r_61_62_64)
+	:o CPUS(_r_68)
+</feature_tree>
+<constraints>
+constraint_2:_r
+</constraints>
+</feature_model>

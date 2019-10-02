@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 13, 2019 - 9:42 PM  -->
+<feature_model name="TV">
+<meta>
+<data name="description">TV with basic features</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UBB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r TV(_r)
+	:m Display(_r_1)
+	:m Speakers(_r_2)
+	:m OS(_r_3)
+		:g (_r_3_6) [1,1] 
+			: AndroidTV(_r_3_6_7)
+			: Basic(_r_3_6_8)
+	:o Connectivity(_r_9)
+		:g (_r_9_10) [1,*] 
+			: WiFi(_r_9_10_11)
+			: Wired(_r_9_10_12)
+			: Bluetooth(_r_9_10_13)
+</feature_tree>
+<constraints>
+constraint_1:~_r_3_6_8 or ~_r_9
+</constraints>
+</feature_model>

@@ -1,0 +1,149 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Apr 7, 2018 - 11:11 AM  -->
+<feature_model name="Patient Navigation Program">
+<meta>
+<data name="description">PNP feature model</data>
+<data name="creator">usha</data>
+<data name="address"></data>
+<data name="email">unanthiny0405@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PNS(_r)
+	:m Referral(_r_2)
+		:m New Referral(_r_2_3)
+			:m Insert_Patient_Information(_r_2_3_7)
+			:o Import_information(_r_2_3_37)
+			:o Read_from_Card_Reader(_r_2_3_38)
+		:m Update_Referral(_r_2_10)
+		:m Delete_Referral(_r_2_11)
+	:m Registration(_r_12)
+		:m New Patient(_r_12_16)
+			:m Insert(_r_12_16_17)
+			:o Referral _ist(_r_12_16_19)
+			:o Import_Information(_r_12_16_39)
+			:o Read_From_Card_Reader(_r_12_16_40)
+		:m Update_Patient(_r_12_41)
+		:m Delete_Patient(_r_12_42)
+	:m Search(_r_47)
+		:o Check_Availability(_r_47_48)
+		:m List_Results(_r_47_49)
+		:o Actions(_r_47_50)
+	:m Patient_Management(_r_51)
+		:m File Tracking(_r_51_52)
+			:m Update location(_r_51_52_57)
+			:m Movement History(_r_51_52_58)
+		:m Status(_r_51_53)
+			:m update(_r_51_53_59)
+		:m Notification(_r_51_54)
+			:m insert(_r_51_54_30)
+			:m Update(_r_51_54_31)
+		:m Milestones(_r_51_55)
+			:m Preset(_r_51_55_32)
+			:m insert(_r_51_55_34)
+			:m Update(_r_51_55_35)
+		:m Assessments(_r_51_56)
+			:o Customize(_r_51_56_36)
+			:m Insert(_r_51_56_37)
+			:m Update(_r_51_56_38)
+			:m Cancel(_r_51_56_39)
+		:m Case_Data(_r_51_90)
+			:m CRUD(_r_51_90_91)
+				:m Clinical_Diagnosis(_r_51_90_91_92)
+				:m Treatment_Plan(_r_51_90_91_94)
+				:m Visit_details(_r_51_90_91_95)
+				:m Pre_surgery_Information(_r_51_90_91_96)
+				:m Post_surgery_Diagnosis(_r_51_90_91_97)
+				:o Other_Assessment(_r_51_90_91_98)
+				:m Treatment(_r_51_90_91_100)
+					:g (_r_51_90_91_100_101) [1,*] 
+						: Neo_Adjuvant_Theraphy(_r_51_90_91_100_101_102)
+						: Adjuvant_Theraphy(_r_51_90_91_100_101_103)
+						: Radiotheraphy(_r_51_90_91_100_101_104)
+							:m 2nd_line_Chemo(_r_51_90_91_100_101_104_105)
+								:o 3rd_line_Chemo(_r_51_90_91_100_101_104_105_106)
+						: Hormone_Theraphy(_r_51_90_91_100_101_108)
+						: Targetted_Theraphy(_r_51_90_91_100_101_109)
+					:o Side_Effects(_r_51_90_91_100_110)
+				:m Oncology_Referral(_r_51_90_91_111)
+	:m Appoinment(_r_40)
+		:o Followup(_r_40_42)
+			:m CRUD(_r_40_42_49)
+			:m cancel(_r_40_42_50)
+			:m reappoinment(_r_40_42_51)
+			:m Reminder(_r_40_42_52)
+				:o upcoming(_r_40_42_52_58)
+				:o missed(_r_40_42_52_59)
+			:m Defaulter(_r_40_42_53)
+			:m list(_r_40_42_57)
+	:m Report(_r_112)
+		:o Ethnic_distribution(_r_112_113)
+		:o Age_Distribution(_r_112_114)
+		:o Diagnosis(_r_112_115)
+		:o Barriers(_r_112_117)
+		:o Status(_r_112_118)
+		:o Survival(_r_112_119)
+		:m KPI(_r_112_120)
+		:o milestones_met(_r_112_122)
+		:o Notified_cases(_r_112_123)
+		:o Defaulter(_r_112_124)
+	:m Management(_r_125)
+		:m User(_r_125_129)
+			:m Type(_r_125_129_130)
+			:m Access_Limit(_r_125_129_131)
+		:m List(_r_125_132)
+			:m CRUD(_r_125_132_133)
+				:o Discharge_Type(_r_125_132_133_134)
+				:o Patient_Status(_r_125_132_133_135)
+				:o Ethnic(_r_125_132_133_136)
+				:o Treatments(_r_125_132_133_137)
+				:o Treatment_Plan_Combo(_r_125_132_133_138)
+				:o Assessments(_r_125_132_133_139)
+				:o File_Location(_r_125_132_133_140)
+				:o Referral_Centres(_r_125_132_133_141)
+	:o Messaging(_r_127)
+		:m Inbox(_r_127_142)
+		:m Read(_r_127_145)
+		:m Reply(_r_127_146)
+		:m New(_r_127_147)
+		:m Delete(_r_127_148)
+	:o Prediction(_r_128)
+		:g (_r_128_151) [1,*] 
+			: Defaulter(_r_128_151_152)
+			: Barrier(_r_128_151_153)
+			: Risk_Factor(_r_128_151_154)
+	:o Reader(_r_155)
+		:o Barcode_Reader(_r_155_156)
+		:o MyKad_reader(_r_155_158)
+	:m Login(_r_159)
+	:m Baseline_Questionaire(_r_160)
+	:o Geospatial(_r_161)
+		:g (_r_161_162) [1,*] 
+			: Patient_location(_r_161_162_163)
+			: Referral_centres_loation(_r_161_162_164)
+</feature_tree>
+<constraints>
+constraint_17:_r_12 or ~_r_47
+constraint_18:~_r_125 or _r_125_129_131
+constraint_19:~_r_2 or ~_r_12 or ~_r_47_50 or ~_r_51 or ~_r_40 or ~_r_51_90_91_100 or _r_159
+constraint_22:_r_125_132_133_141 or ~_r_161_162_164
+constraint_8:_r_51_53_59 or ~_r_125_132_133_135
+constraint_9:_r_12 or ~_r_51_55
+constraint_10:~_r_51_56_36 or _r_125_132_133_139
+constraint_20:_r_125_129 or ~_r_159
+constraint_11:_r_51_56 or ~_r_51_90_91_92
+constraint_21:~_r_128_151_153 or ~_r_128_151_154 or _r_160
+constraint_7:~_r_51_52_57 or _r_125_132_133_140
+constraint_12:~_r_51_90_91_94 or _r_125_132_133_137 or _r_125_132_133_138
+constraint_4:~_r_2_3_38 or _r_155
+constraint_13:~_r_51_90_91_98 or _r_125_132_133_139
+constraint_14:_r_51_90_91_100 or ~_r_51_90_91_100_110
+constraint_2:_r_2_3 or ~_r_12_16_19
+constraint_15:_r_47 or ~_r_51_90_91
+constraint_16:_r_47 or ~_r_51
+</constraints>
+</feature_model>

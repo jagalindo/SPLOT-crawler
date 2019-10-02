@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Feb 23, 2019 - 2:39 PM  -->
+<feature_model name="Camisa">
+<meta>
+<data name="description">exemplo de aula</data>
+<data name="creator">rblb</data>
+<data name="address"></data>
+<data name="email">rodrigoblb@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">rblb</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Camisa(_r)
+	:m Tamanho(_r_1)
+		:g (_r_1_15) [1,1] 
+			: P(_r_1_15_16)
+			: M(_r_1_15_17)
+			: G(_r_1_15_18)
+			: GG(_r_1_15_19)
+	:o Estampa(_r_7)
+		:g (_r_7_12) [1,1] 
+			: Florida(_r_7_12_13)
+			: Geometrica(_r_7_12_14)
+	:o Marca(_r_11)
+</feature_tree>
+<constraints>
+constraint_1:~_r_7 or _r_11
+</constraints>
+</feature_model>

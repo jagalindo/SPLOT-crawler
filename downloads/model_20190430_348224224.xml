@@ -1,0 +1,58 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Apr 30, 2019 - 9:13 AM  -->
+<feature_model name="Fahrradcomputer">
+<meta>
+<data name="description">BC</data>
+<data name="creator">Polly</data>
+<data name="address"></data>
+<data name="email">polina.penkovskaia@uni-rostock.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uni Rostock</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Fahrradcomputer(_r)
+	:m Standard(_r_1)
+		:m Speedometer(_r_1_4)
+			:m Reifenmagnet(_r_1_4_14)
+			:m Reifensensor(_r_1_4_15)
+				:g (_r_1_4_15_17) [1,1] 
+					: Kabel(_r_1_4_15_17_18)
+						:g (_r_1_4_15_17_18_20) [1,1] 
+							: Batterie(_r_1_4_15_17_18_20_21)
+							: Akku(_r_1_4_15_17_18_20_22)
+							: Solarzelle(_r_1_4_15_17_18_20_23)
+					: Kabellos(_r_1_4_15_17_19)
+						:g (_r_1_4_15_17_19_24) [1,1] 
+							: Batterie(_r_1_4_15_17_19_24_25)
+							: Akku(_r_1_4_15_17_19_24_26)
+		:m Strecke(_r_1_5)
+		:m Trip(_r_1_6)
+		:m Uhr(_r_1_7)
+	:o Fortgeschritten(_r_2)
+		:m Durchschnittstrip(_r_2_8)
+		:m Durchschnitts-kmh(_r_2_9)
+		:m Stoppuhr(_r_2_10)
+	:o Deluxe(_r_3)
+		:m Pedalumdrehung(_r_3_11)
+			:m Rahmenmagnet(_r_3_11_27)
+			:m Rahmensensor(_r_3_11_28)
+				:g (_r_3_11_28_30) [1,1] 
+					: Kabel(_r_3_11_28_30_31)
+						:g (_r_3_11_28_30_31_33) [1,1] 
+							: Batterie(_r_3_11_28_30_31_33_34)
+							: Akku(_r_3_11_28_30_31_33_35)
+							: Solarzelle(_r_3_11_28_30_31_33_36)
+					: Kabellos(_r_3_11_28_30_32)
+						:g (_r_3_11_28_30_32_37) [1,1] 
+							: Batterie(_r_3_11_28_30_32_37_38)
+							: Akku(_r_3_11_28_30_32_37_39)
+			:o Nike-Schuhesensoren(_r_3_11_29)
+		:o Navi(_r_3_12)
+		:o Herzfrequenzmesser(_r_3_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

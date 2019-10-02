@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 5, 2017 - 11:25 PM  -->
+<feature_model name="uController Board">
+<meta>
+<data name="description">uController Board</data>
+<data name="creator">Zouai Amine</data>
+<data name="address"></data>
+<data name="email">amine.zouai@esprit.tn</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">.</data>
+<data name="department"></data>
+<data name="date">05/10/2017</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Carte_uC(_r)
+	:m uControlleur(_r_1)
+		:m Frequence(_r_1_16)
+		:m nbre intructions(_r_1_17)
+	:m bus de communication (_r_2)
+		:g (_r_2_38) [1,*] 
+			: SPI(_r_2_38_39)
+			: UART(_r_2_38_40)
+			: CAN(_r_2_38_41)
+			: i2C(_r_2_38_42)
+	:m Pins ES(_r_3)
+		:g (_r_3_21) [1,*] 
+			: 12(_r_3_21_22)
+			: 21(_r_3_21_23)
+			: 36(_r_3_21_24)
+			: 52(_r_3_21_25)
+	:o LEDs(_r_5)
+	:m horloge(_r_6)
+	:m Memoire(_r_18)
+		:m RAM(_r_18_26)
+		:g (_r_18_32) [1,*] 
+			: ROM(_r_18_32_33)
+			: Flash(_r_18_32_34)
+	:o Buttons(_r_29)
+	:o Wifi(_r_31)
+	:o HDMI(_r_35)
+	:o Bluetooth(_r_36)
+	:o USB(_r_43)
+	:o Ethernet(_r_44)
+	:o Timer(_r_45)
+	:o DAC(_r_46)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

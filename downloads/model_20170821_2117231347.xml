@@ -1,0 +1,79 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 21, 2017 - 7:29 PM  -->
+<feature_model name="SlotsAndModules">
+<meta>
+<data name="description">Toy example for mounting hardware modules in slots</data>
+<data name="creator">Falkner</data>
+<data name="address"></data>
+<data name="email">Andreas.Falkner@aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Alpen-Adria-Universität Klagenfurt, Austria</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Rack(_r)
+	:m Slots(_r_1)
+		:o Slot-A(_r_1_2)
+			:g (_r_1_2_6) [1,1] 
+				: A1(_r_1_2_6_7)
+				: A2(_r_1_2_6_8)
+		:o Slot-B(_r_1_3)
+			:g (_r_1_3_9) [1,1] 
+				: B1(_r_1_3_9_10)
+				: B2(_r_1_3_9_11)
+		:o Slot-C(_r_1_4)
+			:g (_r_1_4_12) [1,1] 
+				: C1(_r_1_4_12_13)
+				: C2(_r_1_4_12_14)
+		:o Slot-D(_r_1_5)
+			:g (_r_1_5_15) [1,1] 
+				: D1(_r_1_5_15_16)
+	:m Modules(_r_17)
+		:m Module-1(_r_17_18)
+			:g (_r_17_18_21) [1,1] 
+				: 1A1(_r_17_18_21_22)
+				: 1B1(_r_17_18_21_23)
+				: 1C1(_r_17_18_21_24)
+				: 1D1(_r_17_18_21_25)
+		:m Module-2(_r_17_19)
+			:g (_r_17_19_26) [1,1] 
+				: 2A2(_r_17_19_26_27)
+				: 2B2(_r_17_19_26_28)
+				: 2C2(_r_17_19_26_29)
+		:m Module-3(_r_17_20)
+			:g (_r_17_20_30) [1,1] 
+				: 3A1(_r_17_20_30_31)
+				: 3B1(_r_17_20_30_32)
+				: 3C1(_r_17_20_30_33)
+				: 3D1(_r_17_20_30_34)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3 or ~_r_1_2_6_8
+constraint_17:_r_1_3_9_11 or ~_r_17_19_26_28
+constraint_18:_r_1_4_12_14 or ~_r_17_19_26_29
+constraint_19:_r_1_2_6_7 or ~_r_17_20_30_31
+constraint_8:~_r_1_4_12_13 or _r_17_18_21_24 or _r_17_20_30_33
+constraint_10:~_r_1_5_15_16 or _r_17_18_21_25 or _r_17_20_30_34
+constraint_9:~_r_1_4_12_14 or _r_17_19_26_29
+constraint_6:~_r_1_3_9_10 or _r_17_18_21_23 or _r_17_20_30_32
+constraint_7:~_r_1_3_9_11 or _r_17_19_26_28
+constraint_12:_r_1_2_6_7 or ~_r_17_18_21_22
+constraint_4:~_r_1_2_6_7 or _r_17_18_21_22 or _r_17_20_30_31
+constraint_13:_r_1_3_9_10 or ~_r_17_18_21_23
+constraint_14:_r_1_4_12_13 or ~_r_17_18_21_24
+constraint_5:~_r_1_2_6_8 or _r_17_19_26_27
+constraint_15:_r_1_5_15_16 or ~_r_17_18_21_25
+constraint_2:~_r_1_4 or ~_r_1_3_9_11
+constraint_16:_r_1_2_6_8 or ~_r_17_19_26_27
+constraint_3:~_r_1_5 or ~_r_1_4_12_14
+constraint_22:_r_1_5_15_16 or ~_r_17_20_30_34
+constraint_23:~_r_17_18_21_22 or ~_r_17_20_30_31
+constraint_20:_r_1_3_9_10 or ~_r_17_20_30_32
+constraint_21:_r_1_4_12_13 or ~_r_17_20_30_33
+constraint_26:~_r_17_18_21_25 or ~_r_17_20_30_34
+constraint_24:~_r_17_18_21_23 or ~_r_17_20_30_32
+constraint_25:~_r_17_18_21_24 or ~_r_17_20_30_33
+</constraints>
+</feature_model>

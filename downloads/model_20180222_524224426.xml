@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 22, 2018 - 7:26 PM  -->
+<feature_model name="Heroku">
+<meta>
+<data name="description">Heroku</data>
+<data name="creator">Jefferson da Silva Barbosa</data>
+<data name="address"></data>
+<data name="email">jefferson.sb.es@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Heroku(_r)
+	:m Location(_r_1)
+		:g (_r_1_6) [1,1] 
+			: EU(_r_1_6_7)
+			: US(_r_1_6_8)
+	:o Framework(_r_2)
+		:g (_r_2_9) [1,1] 
+			: Java(_r_2_9_10)
+			: Ruby(_r_2_9_11)
+			: PHP(_r_2_9_12)
+	:o Process Type(_r_3)
+		:m Kind(_r_3_13)
+			:g (_r_3_13_15) [1,1] 
+				: Web(_r_3_13_15_16)
+				: Worker(_r_3_13_15_17)
+		:m Size(_r_3_14)
+			:g (_r_3_14_18) [1,1] 
+				: S1X(_r_3_14_18_19)
+				: S2X(_r_3_14_18_20)
+				: PM(_r_3_14_18_21)
+	:o Heroku Postgres(_r_4)
+		:g (_r_4_22) [1,1] 
+			: H1(_r_4_22_23)
+			: H2(_r_4_22_24)
+			: S1(_r_4_22_25)
+			: S2(_r_4_22_26)
+	:o ClearDB MySQL(_r_5)
+		:g (_r_5_27) [1,1] 
+			: M1(_r_5_27_28)
+			: M2(_r_5_27_29)
+			: M3(_r_5_27_30)
+			: M4(_r_5_27_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

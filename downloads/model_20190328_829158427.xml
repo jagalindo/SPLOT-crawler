@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Mar 29, 2019 - 9:32 AM  -->
+<feature_model name="E-shop example">
+<meta>
+<data name="description">Simple example of an online shopping  product line for </data>
+<data name="creator">Angela Villota-Gomez</data>
+<data name="address">90 rue de Tolbiac</data>
+<data name="email">angievig@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">CRI</data>
+<data name="department">CRI</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EShop(_r)
+	:m Customer type(_r_1)
+		:m Current(_r_1_4)
+		:o Regular(_r_1_5)
+	:m Payment(_r_2)
+		:g (_r_2_6) [1,*] 
+			: PayPal(_r_2_6_7)
+			: SMS(_r_2_6_8)
+			: Card(_r_2_6_9)
+				:o Gift(_r_2_6_9_15)
+				:m Credit(_r_2_6_9_16)
+				:o Debit(_r_2_6_9_17)
+	:o Connection(_r_3)
+		:g (_r_3_18) [1,1] 
+			: Secure(_r_3_18_19)
+			: Unsecure(_r_3_18_20)
+</feature_tree>
+<constraints>
+constraint_1:~_r_2_6_9 or ~_r_3_18_19
+constraint_4:~_r_2_6_9_17 or ~_r_3_18_20
+constraint_3:~_r_2_6_9_16 or ~_r_3_18_20
+</constraints>
+</feature_model>

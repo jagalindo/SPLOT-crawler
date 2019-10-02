@@ -1,0 +1,172 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, May 4, 2018 - 2:58 AM  -->
+<feature_model name="Molino Impactor">
+<meta>
+<data name="description">Derivacion de capacidad de produccion de roca</data>
+<data name="creator">John H Castillo G</data>
+<data name="address"></data>
+<data name="email">john-castillo@upc.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">John castillo, Industrial de Mecanizados y UPC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Molino impactor(_r)
+	:m Carcasa(_r_1)
+		:m Carcasa superior(_r_1_2)
+			:m Placas revestimiento(_r_1_2_7)
+				:m Tornillos_Tuerca_arandelas_3-4pulg(_r_1_2_7_10)
+				:m Agujeros tornillos 3-4 pulg(_r_1_2_7_81)
+				:m Tipos acero placas(_r_1_2_7_100)
+					:o Hadfield PR(_r_1_2_7_100_122)
+					:o Cromo molibdeno PR(_r_1_2_7_100_123)
+			:m Soporte placas pantallas(_r_1_2_22)
+				:m Placas pantallas(_r_1_2_22_24)
+					:m Tipos acero placas(_r_1_2_22_24_105)
+						:o Hadfield PP(_r_1_2_22_24_105_124)
+						:o Cromo molibdeno PP(_r_1_2_22_24_105_125)
+					:m Agujeros tornillos 7-8 pulg(_r_1_2_22_24_140)
+						:g (_r_1_2_22_24_140_148) [1,*] 
+							: Tres agujeros por placa(_r_1_2_22_24_140_148_149)
+						:g (_r_1_2_22_24_140_150) [1,*] 
+							: Dos agujeros por pkaca(_r_1_2_22_24_140_150_151)
+						:g (_r_1_2_22_24_140_152) [1,*] 
+							: Mas de tres agujeros(_r_1_2_22_24_140_152_153)
+					:m tornillos_tuercas_arandela 7-8 pulg(_r_1_2_22_24_147)
+				:m Agujeros 45 mm(_r_1_2_22_79)
+				:m tornillos_arandelas_tuercas 45 mm(_r_1_2_22_80)
+			:m Cuerpo lamina acero(_r_1_2_66)
+				:m Lamina soldado CS(_r_1_2_66_69)
+				:m Agujeros tornillos 3-4 pulg placa revestimiento(_r_1_2_66_70)
+			:m Lamina superior movil(_r_1_2_67)
+				:m Gancho soporte placas 45 mm(_r_1_2_67_72)
+				:m Agujeros CSM placas revestimiento 3-4 pulg(_r_1_2_67_124)
+		:m Carcasa inferior(_r_1_5)
+			:m Soportes chumaceras(_r_1_5_67)
+				:m Laminas soldado(_r_1_5_67_88)
+				:m Agujeros tornillos 1 pulg(_r_1_5_67_89)
+				:m Tornillos_Tuercas_Arandelas_1 pulg(_r_1_5_67_126)
+			:m Cuerpo lamina acero(_r_1_5_84)
+				:m Lamina soldado(_r_1_5_84_86)
+				:m Agujeros tornillos 3-4 pulg placa revestimiento(_r_1_5_84_87)
+	:m Especificacion(_r_57)
+		:m Capacidad produccion(_r_57_63)
+			:m Clasificacion material roca(_r_57_63_101)
+				:m Metros hora(_r_57_63_101_102)
+					:o Mi tres escudos 40-60 m x 1 hora(_r_57_63_101_102_126)
+					:o MI cuatro escudos 80-120 m x 1 hora(_r_57_63_101_102_127)
+				:m Material roca(_r_57_63_101_119)
+					:o Grava(_r_57_63_101_119_128)
+					:o penia(_r_57_63_101_119_129)
+		:m Entrada boca de material(_r_57_97)
+			:m Tamanio roca BEM(_r_57_97_98)
+				:m Roca 4 a 7 pulg(_r_57_97_98_120)
+		:m Salida boca material(_r_57_99)
+			:m Tamanio roca BSM(_r_57_99_100)
+				:m Roca arenosa a 1 pulg(_r_57_99_100_121)
+	:m Rotor(_r_141)
+		:m Eje(_r_141_143)
+			:o Eje_Tres_Escudos(_r_141_143_128)
+				:m Buje fijacion(_r_141_143_128_129)
+				:m Tubo proteccion(_r_141_143_128_131)
+			:o Eje cuatro escudos(_r_141_143_133)
+				:m Buje fijacion(_r_141_143_133_134)
+				:m Tubo proteccion(_r_141_143_133_133)
+		:m Buje fijacion(_r_141_147)
+			:o Buje desmontaje(_r_141_147_149)
+				:m Tornillos_Arandelas 3-4 pulg(_r_141_147_149_141)
+				:m Cuniero 1 pulg pulg(_r_141_147_149_142)
+					:m cunia 1 pulg(_r_141_147_149_142_144)
+				:m Agujeros  3-4 pulg(_r_141_147_149_147)
+				:m Tubo proteccion BD(_r_141_147_149_148)
+			:o Buje fijacion sit-lock(_r_141_147_150)
+				:m agujeros roscado 12 x 1 5 mm(_r_141_147_150_140)
+				:m tornillos_aarandelas 12 x 1 5 mm(_r_141_147_150_146)
+				:m Tubo proteccion BF SL(_r_141_147_150_149)
+		:m Tubo proteccion(_r_141_155)
+			:o Tubo proteccion BD(_r_141_155_161)
+				:m Agujeros roscado 5-8 pulg(_r_141_155_161_150)
+				:m Buje desmotaje(_r_141_155_161_151)
+				:m Escudo soldado(_r_141_155_161_154)
+			:o Tubo proteccion BD SL(_r_141_155_162)
+				:m Buje fijacion sit lock(_r_141_155_162_153)
+				:m Escudo soldado(_r_141_155_162_155)
+		:m Escudos(_r_141_166)
+			:o Tres lineas martillos- tres escudos(_r_141_166_168)
+				:m Martillos tres escudos(_r_141_166_168_160)
+				:m Protector_tres lineas_Martillos(_r_141_166_168_161)
+				:m Separador(_r_141_166_168_163)
+					:m Soldado escudo(_r_141_166_168_163_164)
+			:o Cuatro lineas martillos - cuatro escudos(_r_141_166_169)
+				:m Martillo 2 escudos(_r_141_166_169_170)
+				:m Protector dos escudos(_r_141_166_169_165)
+					:m Agujero desplazamiento 13-16 pulg(_r_141_166_169_165_167)
+					:m Tornillos_Tuerca_arandelas 3-4 pulg(_r_141_166_169_165_168)
+				:m Cunia cola milano(_r_141_166_169_166)
+					:m Agujero 5-8 pulg(_r_141_166_169_166_169)
+		:m Martillo(_r_141_173)
+			:o Martillos tres escudos(_r_141_173_136)
+				:m Tipo acero(_r_141_173_136_137)
+					:o Hadfield M3(_r_141_173_136_137_134)
+					:o Cromo Molibdeno m3(_r_141_173_136_137_135)
+			:o Martillos dos o cuatro lineas escudos(_r_141_173_143)
+				:m Tipo acero(_r_141_173_143_144)
+					:o Hadfield M2-4(_r_141_173_143_144_136)
+					:o Cromo Molibdeno M2-4(_r_141_173_143_144_137)
+		:m Polea(_r_141_187)
+			:o Buje desmontaje P(_r_141_187_149)
+			:o Buje fijacion sit-lock P(_r_141_187_150)
+		:m Chumacera(_r_141_193)
+			:m Rodamiento referencia(_r_141_193_195)
+			:m Tornillos_Tuercas_ Arandelas 1 pulg(_r_141_193_196)
+			:m Tapa chumacera hueco(_r_141_193_199)
+			:m Tapa chumacera ciego(_r_141_193_200)
+	:m Dimension disenio(_r_154)
+		:o MI tres escudos(_r_154_155)
+			:m Cuerpo(_r_154_155_158)
+				:m Ancho 1110 mm(_r_154_155_158_160)
+				:m Largo 1855 mm(_r_154_155_158_161)
+				:m Alto 1750 mm(_r_154_155_158_162)
+			:m Eje(_r_154_155_163)
+				:m Largo 1261 mm(_r_154_155_163_164)
+		:o MI cuatro escudos(_r_154_174)
+			:m Cuerpo(_r_154_174_175)
+				:m Ancho 1605 mm(_r_154_174_175_177)
+				:m Largo 2015 mm(_r_154_174_175_178)
+				:m Alto 1776 mm(_r_154_174_175_179)
+			:m Eje(_r_154_174_176)
+				:m Largo 1800 mm(_r_154_174_176_180)
+</feature_tree>
+<constraints>
+constraint_69:~_r_141_166_168 or _r_141_166_169
+constraint_68:_r_141_155_161 or ~_r_141_155_162
+constraint_65:~_r_141_147_149 or _r_141_147_150
+constraint_64:_r_141_143_128 or ~_r_141_143_133
+constraint_67:~_r_141_155_161 or _r_141_155_162
+constraint_66:_r_141_147_149 or ~_r_141_147_150
+constraint_73:~_r_141_173_136_137_134 or _r_141_173_136_137_135
+constraint_74:_r_141_173_136_137_134 or ~_r_141_173_136_137_135
+constraint_51:_r_57_63_101_119_128 or ~_r_57_63_101_119_129
+constraint_70:_r_141_166_168 or ~_r_141_166_169
+constraint_52:~_r_57_63_101_119_128 or _r_57_63_101_119_129
+constraint_75:~_r_141_187_149 or _r_141_187_150
+constraint_39:~_r_141_173_143_144_136 or _r_141_173_143_144_137
+constraint_76:_r_141_187_149 or ~_r_141_187_150
+constraint_30:~_r_1_2_7_100_122 or _r_1_2_7_100_123
+constraint_32:~_r_1_2_22_24_105_124 or _r_1_2_22_24_105_125
+constraint_31:_r_1_2_22_24_105_124 or ~_r_1_2_22_24_105_125
+constraint_38:_r_141_173_136_137_134 or ~_r_141_173_136_137_135
+constraint_37:~_r_141_173_136_137_134 or _r_141_173_136_137_135
+constraint_36:_r_141_173_136 or ~_r_141_173_143
+constraint_35:~_r_141_173_136 or _r_141_173_143
+constraint_62:_r_57_63_101_102_126 or ~_r_57_63_101_102_127
+constraint_63:~_r_141_143_128 or _r_141_143_133
+constraint_28:~_r_154_155 or _r_154_174
+constraint_61:~_r_57_63_101_102_126 or _r_57_63_101_102_127
+constraint_29:_r_154_155 or ~_r_154_174
+constraint_40:_r_141_173_143_144_136 or ~_r_141_173_143_144_137
+constraint_26:_r_1_2_7_100_122 or ~_r_1_2_7_100_123
+</constraints>
+</feature_model>

@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 5:16 PM  -->
+<feature_model name="IOS5_Zoom">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Zoom in iOS5 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m Accessibility(_r1)
+		:m Vision(_r2)
+			:o Zoom1(_r3)
+				:o FollowFocus(_r4)
+				:o SmartTyping(_r5)
+				:o ShowControler(_r6)
+				:m ZoomRegion(_r7)
+					:g (_id_0) [1,1] 
+						: FullScreenZoom(_r8)
+						: WindowZoom(_r9)
+				:m MaximumZoomLevel(_r10)
+					:g (_id_1) [1,1] 
+						: _12X(_r11)
+						: _15X(_r12)
+		:o Learning(_r13)
+			:o AccessibilityShortcut(_r14)
+				:o Zoom2(_r15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

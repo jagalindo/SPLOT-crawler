@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Oct 24, 2018 - 1:55 PM  -->
+<feature_model name="Search-Engine">
+<meta>
+<data name="description">Search-Engine feature model</data>
+<data name="creator">Omer G</data>
+<data name="address"></data>
+<data name="email">omerg7493@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TAU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r search-engine(_r)
+	:o page-translation(_r_1)
+	:m doc-type(_r_2)
+		:m html(_r_2_3)
+		:o image(_r_2_4)
+			:g (_r_2_4_6) [1,1] 
+				: gif(_r_2_4_6_7)
+				: svg(_r_2_4_6_8)
+		:o video(_r_2_5)
+	:o search-by-lang(_r_9)
+		:g (_r_9_10) [1,*] 
+			: English(_r_9_10_11)
+			: Spanish(_r_9_10_12)
+			: French(_r_9_10_13)
+	:o page-preview(_r_14)
+</feature_tree>
+<constraints>
+constraint_2:_r_1 or ~_r_9
+constraint_3:~_r_2_4_6_8 or ~_r_14
+</constraints>
+</feature_model>

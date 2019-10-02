@@ -1,0 +1,59 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, May 12, 2018 - 5:04 AM  -->
+<feature_model name="Agent Illustration System">
+<meta>
+<data name="description">AIS</data>
+<data name="creator">Mohd Shafiq</data>
+<data name="address"></data>
+<data name="email">shafiq.ia@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTMSpace</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Agent Illustration System(_r)
+	:m Login(_r_1)
+	:m Product(_r_2)
+		:o Islamic(_r_2_11)
+		:o Traditional(_r_2_12)
+	:m Customer(_r_3)
+		:m Title(_r_3_13)
+		:m Name(_r_3_14)
+		:m DateOfBirth(_r_3_15)
+		:m Occupation(_r_3_16)
+			:o Class(_r_3_16_17)
+	:m Payment(_r_4)
+		:g (_r_4_34) [1,*] 
+			: Half(_r_4_34_35)
+			: Monthly(_r_4_34_36)
+			: Quarter(_r_4_34_37)
+			: Yearly(_r_4_34_38)
+	:m Fund(_r_5)
+		:o Islamic(_r_5_24)
+		:o Conventional(_r_5_25)
+	:m Utilise(_r_6)
+		:o Maintainence(_r_6_26)
+	:m Plan(_r_7)
+		:m Basic(_r_7_27)
+		:g (_r_7_29) [1,*] 
+			: Critical Illness(_r_7_29_30)
+			: Accident(_r_7_29_31)
+			: Hajj(_r_7_29_32)
+			: Hospitalization(_r_7_29_33)
+	:m Summary(_r_8)
+	:m Quotation(_r_9)
+		:m Language(_r_9_45)
+			:m English(_r_9_45_47)
+			:m Malay(_r_9_45_48)
+		:m Print(_r_9_46)
+	:m Admin(_r_10)
+		:m Restore(_r_10_39)
+		:o Backup(_r_10_40)
+		:o Profile(_r_10_41)
+</feature_tree>
+<constraints>
+constraint_1:_r
+</constraints>
+</feature_model>

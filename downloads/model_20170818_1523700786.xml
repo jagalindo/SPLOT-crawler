@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Aug 18, 2017 - 7:09 PM  -->
+<feature_model name="MSP-Learning">
+<meta>
+<data name="description">MSP-L</data>
+<data name="creator">Venilton FalvoJr</data>
+<data name="address"></data>
+<data name="email">venilton@icmc.usp.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Sao Paulo</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r M-SPLearning(_r)
+	:m Pedagogical(_r_1)
+		:m Content Management(_r_1_7)
+		:m Educational Activities(_r_1_8)
+		:o Interactivity(_r_1_9)
+		:m Multimedia Resources(_r_1_10)
+			:g (_r_1_10_11) [1,*] 
+				: Audio(_r_1_10_11_12)
+				: Image(_r_1_10_11_13)
+				: Text(_r_1_10_11_14)
+				: Video(_r_1_10_11_15)
+	:m Usability_Abstract(_r_2)
+		:m Accessibility(_r_2_16)
+		:m Attractiveness(_r_2_17)
+		:m Intelligibility(_r_2_18)
+		:m Learnability(_r_2_19)
+		:m Operability(_r_2_20)
+	:m Compatibility(_r_3)
+		:m Coexistence_Abstract(_r_3_21)
+		:m Interoperability(_r_3_22)
+	:m Security(_r_4)
+		:o Authenticity(_r_4_23)
+		:m Confidentiality(_r_4_24)
+		:m Integrity(_r_4_25)
+	:o Communication(_r_5)
+		:m Alerts and Messages(_r_5_26)
+		:m Collaboration(_r_5_27)
+		:m Results and Feedbacks(_r_5_28)
+		:m Synchronization(_r_5_29)
+	:o Support(_r_6)
+		:m Customization(_r_6_30)
+		:m Help(_r_6_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

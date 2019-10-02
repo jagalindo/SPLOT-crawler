@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Aug 19, 2018 - 1:49 AM  -->
+<feature_model name="Test">
+<meta>
+<data name="description">Test </data>
+<data name="creator">Cristina Tavares</data>
+<data name="address"></data>
+<data name="email">cristina.tavares@uwaterloo.ca</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Waterloo</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Type name for root feature(_r)
+	:m Feature-1(_r_1)
+		:o Feature-3(_r_1_3)
+		:o Feature-4(_r_1_4)
+	:o Feature-2(_r_2)
+		:g (_r_2_10) [1,*] 
+			: Feature-11(_r_2_10_11)
+			: Feature-12(_r_2_10_12)
+	:m Feature-5(_r_5)
+		:g (_r_5_6) [1,*] 
+			: Feature-7(_r_5_6_7)
+			: Feature-9(_r_5_6_9)
+	:m Feature-8(_r_8)
+		:g (_r_8_13) [1,*] 
+			: Feature-14(_r_8_13_14)
+			: Feature-15(_r_8_13_15)
+			: Feature-16(_r_8_13_16)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

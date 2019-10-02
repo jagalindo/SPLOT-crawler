@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 5:52 PM  -->
+<feature_model name="Windows7_Zoom">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Zoom in Windows7.0 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m AppearanceAndPersonalization(_r1)
+		:o Display(_r2)
+			:o Magnifier(_r3)
+				:o ZoomOut(_r4)
+				:o ZoomIn(_r5)
+				:m Views(_r6)
+					:g (_id_0) [1,1] 
+						: Lens(_r7)
+						: Docked(_r8)
+						: FullScreen(_r9)
+						: PreviewFullScreen(_r10)
+				:m Option1(_r11)
+					:m SetHowMuchTheViewChangesWhenZoomingInOrOut(_r12)
+						:g (_id_1) [1,1] 
+							: _150(_r13)
+							: _50(_r14)
+							: _200(_r15)
+							: _25(_r16)
+							: _400(_r17)
+							: _100(_r18)
+					:o Tracking(_r19)
+						:o FolLowTheMousePointer(_r20)
+						:o FolLowTheKeyboardFocus(_r21)
+						:o HaveMagnifierFolLowTheTextInsertionPoint(_r22)
+		:m EaseOfAccessCenter(_r23)
+			:o MakeTheComputerEasierToSee(_r24)
+				:o MakeThingsOnTheScreenLarger(_r25)
+					:o LinkFor_Display(_r26)
+					:o TurnOnMagnifier(_r27)
+			:m MakeTheMouseEasierToUse(_r28)
+				:m MousePointers(_r29)
+					:g (_id_2) [1,1] 
+						: LargeInverting(_r30)
+						: LargeBlack(_r31)
+						: RegularInverting(_r32)
+						: LargeWhite(_r33)
+						: ExtraLargeWhite(_r34)
+						: ExtraLargeBlack(_r35)
+						: RegularWhite(_r36)
+						: ExtraLargeInverting(_r37)
+						: RegularBlack(_r38)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

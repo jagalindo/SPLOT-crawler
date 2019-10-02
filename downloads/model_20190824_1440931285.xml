@@ -1,0 +1,136 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Aug 24, 2019 - 3:29 PM  -->
+<feature_model name="Micro Test">
+<meta>
+<data name="description">random app</data>
+<data name="creator">Micro x</data>
+<data name="address"></data>
+<data name="email">micromatx2@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">fun</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Lot Tracer(_r)
+	:m DWH Selection(_r_5)
+		:g (_r_5_13) [1,*] 
+			: Batam(_r_5_13_14)
+			: Dresden(_r_5_13_15)
+			: Kulim(_r_5_13_16)
+			: MAL BE LO(_r_5_13_17)
+			: MAL BE POM(_r_5_13_18)
+			: Singapore(_r_5_13_19)
+			: Subcon Sifo(_r_5_13_20)
+			: Villach(_r_5_13_21)
+			: Wuxi(_r_5_13_22)
+	:m Column Selection(_r_9)
+		:g (_r_9_23) [1,*] 
+			: Attributes(_r_9_23_25)
+				:g (_r_9_23_25_35) [1,*] 
+					: Lot Attr(_r_9_23_25_35_36)
+					: Facility Attr(_r_9_23_25_35_37)
+					: Attribute Number(_r_9_23_25_35_38)
+					: Attribute Value(_r_9_23_25_35_39)
+					: Attribute Desc(_r_9_23_25_35_40)
+					: Timestamp(_r_9_23_25_35_41)
+			: DWH Selection(_r_9_23_26)
+				:g (_r_9_23_26_42) [1,*] 
+					: Main(_r_9_23_26_42_43)
+						:g (_r_9_23_26_42_43_81) [1,*] 
+							: Facility(_r_9_23_26_42_43_81_82)
+							: Lot(_r_9_23_26_42_43_81_83)
+							: Owner(_r_9_23_26_42_43_81_84)
+							: Time Stamp(_r_9_23_26_42_43_81_85)
+							: Transcode(_r_9_23_26_42_43_81_86)
+							: Transcode Desc(_r_9_23_26_42_43_81_87)
+							: Operation(_r_9_23_26_42_43_81_88)
+							: Operation Short Desc(_r_9_23_26_42_43_81_89)
+							: Operation Long Desc(_r_9_23_26_42_43_81_90)
+							: Product(_r_9_23_26_42_43_81_91)
+							: Part Number(_r_9_23_26_42_43_81_92)
+							: Product Type(_r_9_23_26_42_43_81_93)
+							: Process Class(_r_9_23_26_42_43_81_94)
+							: Basic Type(_r_9_23_26_42_43_81_95)
+							: Process Group(_r_9_23_26_42_43_81_96)
+							: Qty Out 1(_r_9_23_26_42_43_81_97)
+							: Qty Out 2(_r_9_23_26_42_43_81_98)
+							: Qty Out 3(_r_9_23_26_42_43_81_99)
+							: Operator(_r_9_23_26_42_43_81_100)
+							: Equipment(_r_9_23_26_42_43_81_101)
+							: SPS Number(_r_9_23_26_42_43_81_102)
+							: Transaction Comment(_r_9_23_26_42_43_81_103)
+							: Unit 1(_r_9_23_26_42_43_81_104)
+							: Unit 2(_r_9_23_26_42_43_81_105)
+							: Unit 3(_r_9_23_26_42_43_81_106)
+							: Priority(_r_9_23_26_42_43_81_107)
+							: Date Stamp(_r_9_23_26_42_43_81_108)
+							: To Operation(_r_9_23_26_42_43_81_109)
+							: Route(_r_9_23_26_42_43_81_110)
+							: To Route(_r_9_23_26_42_43_81_111)
+							: Rework Flag(_r_9_23_26_42_43_81_112)
+							: Parent Lot(_r_9_23_26_42_43_81_113)
+							: QMP Flag(_r_9_23_26_42_43_81_114)
+							: To Lot(_r_9_23_26_42_43_81_115)
+							: Movein Timestamp(_r_9_23_26_42_43_81_116)
+							: Enter Operation Timestamp(_r_9_23_26_42_43_81_118)
+							: Enter SPS Timestamp(_r_9_23_26_42_43_81_119)
+							: Deleted Flag(_r_9_23_26_42_43_81_120)
+							: Remote Online Flag(_r_9_23_26_42_43_81_121)
+							: Operations in Route(_r_9_23_26_42_43_81_122)
+							: Wafer Size(_r_9_23_26_42_43_81_123)
+							: Due Cycle Time(_r_9_23_26_42_43_81_124)
+							: Due Total Process Cycle(_r_9_23_26_42_43_81_125)
+							: Sequence Number(_r_9_23_26_42_43_81_126)
+							: Qty in 1(_r_9_23_26_42_43_81_127)
+							: Qty in 2(_r_9_23_26_42_43_81_128)
+							: Qty in 3(_r_9_23_26_42_43_81_129)
+							: To Facility(_r_9_23_26_42_43_81_130)
+							: Cost Center(_r_9_23_26_42_43_81_131)
+							: Hold Flag(_r_9_23_26_42_43_81_132)
+							: Shift(_r_9_23_26_42_43_81_133)
+					: Resource(_r_9_23_26_42_44)
+						:g (_r_9_23_26_42_44_79) [1,*] 
+							: Tool Name(_r_9_23_26_42_44_79_80)
+					: Material(_r_9_23_26_42_45)
+						:g (_r_9_23_26_42_45_74) [1,*] 
+							: Material Part(_r_9_23_26_42_45_74_75)
+							: Material Type(_r_9_23_26_42_45_74_76)
+							: Vendor Name(_r_9_23_26_42_45_74_77)
+							: Material Lot(_r_9_23_26_42_45_74_78)
+					: Recipe(_r_9_23_26_42_46)
+						:g (_r_9_23_26_42_46_69) [1,*] 
+							: Recipe Parameter(_r_9_23_26_42_46_69_70)
+							: Recipe Revision(_r_9_23_26_42_46_69_71)
+							: Recipe Program(_r_9_23_26_42_46_69_72)
+							: Recipe Value(_r_9_23_26_42_46_69_73)
+					: EDC(_r_9_23_26_42_47)
+						:g (_r_9_23_26_42_47_66) [1,*] 
+							: Parameter Name(_r_9_23_26_42_47_66_67)
+							: Parameter Value(_r_9_23_26_42_47_66_68)
+					: Carrier(_r_9_23_26_42_48)
+						:g (_r_9_23_26_42_48_63) [1,*] 
+							: Carrier Name(_r_9_23_26_42_48_63_64)
+							: Carrier Action(_r_9_23_26_42_48_63_65)
+					: Wafer Slice Options(_r_9_23_26_42_49)
+						:g (_r_9_23_26_42_49_59) [1,*] 
+							: Wafer Slice(_r_9_23_26_42_49_59_60)
+							: Consumed Quantity(_r_9_23_26_42_49_59_61)
+							: Wafer Slot Number(_r_9_23_26_42_49_59_62)
+					: Bonus Loss(_r_9_23_26_42_50)
+						:g (_r_9_23_26_42_50_54) [1,*] 
+							: Bonus Loss Reason(_r_9_23_26_42_50_54_55)
+							: Bonus Loss Value(_r_9_23_26_42_50_54_56)
+			: Input for QMR Options(_r_9_23_27)
+				:g (_r_9_23_27_28) [1,*] 
+					: Label Lot(_r_9_23_27_28_30)
+					: Split and Merge(_r_9_23_27_28_32)
+					: Overview(_r_9_23_27_28_33)
+					: Input for QMR(_r_9_23_27_28_34)
+	:m  Lot Input(_r_10)
+	:m Current Lot(_r_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

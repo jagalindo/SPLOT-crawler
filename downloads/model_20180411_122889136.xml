@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Apr 11, 2018 - 4:50 PM  -->
+<feature_model name="Test Strategy">
+<meta>
+<data name="description">Test Strategy</data>
+<data name="creator">Pablo Ruiz</data>
+<data name="address"></data>
+<data name="email">phruiz27@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad del Cauca</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Test Strategy (_r)
+	:g (_r_37) [1,1] 
+		: Technical test strategy(_r_37_39)
+			:g (_r_37_39_42) [1,*] 
+				: Statict Test(_r_37_39_42_43)
+					:g (_r_37_39_42_43_47) [1,*] 
+						: Software requirements reviews(_r_37_39_42_43_47_49)
+						: Design reviews(_r_37_39_42_43_47_50)
+						: Code inspections(_r_37_39_42_43_47_51)
+				: Dinamic Test(_r_37_39_42_44)
+					:g (_r_37_39_42_44_52) [1,*] 
+						: Software functional tests(_r_37_39_42_44_52_54)
+						: Integral tests at the system level(_r_37_39_42_44_52_55)
+						:  Usability tests(_r_37_39_42_44_52_56)
+						: Acceptance tests(_r_37_39_42_44_52_57)
+						: Integration tests(_r_37_39_42_44_52_58)
+				: Functional Test (_r_37_39_42_45)
+					:g (_r_37_39_42_45_59) [1,*] 
+						: Acceptance(_r_37_39_42_45_59_61)
+						: Exploratory(_r_37_39_42_45_59_62)
+				: Not functionals Test(_r_37_39_42_46)
+					:g (_r_37_39_42_46_63) [1,*] 
+						: Concurrency Test(_r_37_39_42_46_63_64)
+						: Compatibility tests(_r_37_39_42_46_63_65)
+						: Load tests(_r_37_39_42_46_63_66)
+						: Migration tests(_r_37_39_42_46_63_67)
+						: Performance Analysis (_r_37_39_42_46_63_68)
+						: Automation(_r_37_39_42_46_63_69)
+		: Data preparation strategy(_r_37_73)
+			:g (_r_37_73_74) [1,1] 
+				: External(_r_37_73_74_75)
+				: Internal(_r_37_73_74_76)
+		: Project management strategy(_r_37_78)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

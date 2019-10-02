@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 10, 2017 - 8:30 PM  -->
+<feature_model name="search engine">
+<meta>
+<data name="description">product line of a search engine</data>
+<data name="creator">maalaoui najla</data>
+<data name="address"></data>
+<data name="email">najlus2012@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">research </data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r search-engine(_r)
+	:o page-translation(_r_1)
+	:m doc-type(_r_2)
+		:m html(_r_2_3)
+		:m image(_r_2_4)
+			:g (_r_2_4_7) [1,1] 
+				: gif(_r_2_4_7_8)
+				: svg(_r_2_4_7_9)
+			:m video(_r_2_4_10)
+	:o search-by-lang(_r_11)
+		:g (_r_11_12) [1,*] 
+			: spanish(_r_11_12_13)
+			: english(_r_11_12_14)
+			: french(_r_11_12_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

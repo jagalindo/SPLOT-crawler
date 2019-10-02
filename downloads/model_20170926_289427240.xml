@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 26, 2017 - 8:33 PM  -->
+<feature_model name="SimpleModel">
+<meta>
+<data name="description">Basic Model</data>
+<data name="creator">NM</data>
+<data name="address"></data>
+<data name="email">nm@outlook.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">na</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r 0(_r)
+	:m A(_r_28)
+		:g (_r_28_30) [1,1] 
+			: B(_r_28_30_31)
+			: C(_r_28_30_32)
+	:o D(_r_29)
+		:g (_r_29_36) [1,1] 
+			: E(_r_29_36_37)
+			: F(_r_29_36_38)
+			: G(_r_29_36_39)
+	:m Feature-40(_r_40)
+		:g (_r_40_43) [1,*] 
+			: M(_r_40_43_44)
+			: N(_r_40_43_45)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

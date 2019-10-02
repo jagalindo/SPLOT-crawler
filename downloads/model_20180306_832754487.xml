@@ -1,0 +1,107 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 5:13 AM  -->
+<feature_model name="computador">
+<meta>
+<data name="description">producto computador</data>
+<data name="creator">diego rodriguez</data>
+<data name="address">Bogota</data>
+<data name="email">darvela@gmail.com</data>
+<data name="phone">3133280728</data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r computador(_r)
+	:m marca(_r_53)
+		:g (_r_53_54) [1,1] 
+			: dell(_r_53_54_55)
+			: toshiba(_r_53_54_76)
+			: lenovo(_r_53_54_77)
+			: apple(_r_53_54_78)
+			: clon(_r_53_54_80)
+	:m tipo(_r_70)
+		:g (_r_70_85) [1,1] 
+			: personal(_r_70_85_86)
+				:g (_r_70_85_86_88) [1,1] 
+					: esciritorio(_r_70_85_86_88_89)
+					: portatil(_r_70_85_86_88_92)
+			: servidor(_r_70_85_87)
+	:m SO(_r_81)
+		:g (_r_81_123) [1,1] 
+			: SO Personal(_r_81_123_124)
+				:g (_r_81_123_124_126) [1,1] 
+					: Windows 10(_r_81_123_124_126_127)
+					: Fedora(_r_81_123_124_126_128)
+					: OS X Yosemite(_r_81_123_124_126_129)
+			: SO Servidor(_r_81_123_125)
+				:g (_r_81_123_125_132) [1,1] 
+					: Windows Server(_r_81_123_125_132_133)
+					: RedHat(_r_81_123_125_132_134)
+					: OS X Server(_r_81_123_125_132_135)
+	:m CPU(_r_82)
+		:m RAM(_r_82_98)
+			:g (_r_82_98_105) [1,1] 
+				: 4GB(_r_82_98_105_106)
+				: 8GB(_r_82_98_105_107)
+				: 16GB(_r_82_98_105_108)
+				: 32GB(_r_82_98_105_109)
+				: 64GB(_r_82_98_105_110)
+		:m procesador(_r_82_99)
+			:g (_r_82_99_117) [1,1] 
+				: intel(_r_82_99_117_118)
+				: AMD(_r_82_99_117_119)
+		:m DD(_r_82_100)
+			:g (_r_82_100_111) [1,1] 
+				: 500GB(_r_82_100_111_112)
+				: 1TB(_r_82_100_111_113)
+				: 2TB(_r_82_100_111_114)
+				: 5TB(_r_82_100_111_115)
+				: 10TB(_r_82_100_111_116)
+		:o tarjeta grafica(_r_82_101)
+			:g (_r_82_101_120) [1,1] 
+				: Nvidia(_r_82_101_120_121)
+				: ATI Radeon(_r_82_101_120_122)
+	:o pantalla(_r_83)
+		:m tecnologia(_r_83_93)
+			:g (_r_83_93_95) [1,*] 
+				: 3D(_r_83_93_95_96)
+				: 4K(_r_83_93_95_97)
+		:m tamanio(_r_83_94)
+			:g (_r_83_94_140) [1,1] 
+				: 14(_r_83_94_140_141)
+				: 17(_r_83_94_140_142)
+				: 24(_r_83_94_140_143)
+	:o planta(_r_84)
+</feature_tree>
+<constraints>
+constraint_43:~_r_53_54_77 or ~_r_81_123_124_126_129
+constraint_42:~_r_53_54_76 or ~_r_81_123_125_132_135
+constraint_45:~_r_53_54_80 or ~_r_81_123_124_126_129
+constraint_44:~_r_53_54_77 or ~_r_81_123_125_132_135
+constraint_47:~_r_53_54_80 or ~_r_81_123_125_132_135
+constraint_8:~_r_70_85_86_88_92 or ~_r_83_93_95_96
+constraint_9:~_r_70_85_86_88_92 or ~_r_83_93_95_97
+constraint_4:~_r_53_54_80 or ~_r_70_85_86_88_92
+constraint_39:~_r_53_54_55 or ~_r_81_123_124_126_129
+constraint_30:~_r_53_54_78 or ~_r_81_123_125_132_134
+constraint_34:~_r_70_85_87 or ~_r_82_98_105_107
+constraint_33:~_r_70_85_87 or ~_r_82_98_105_106
+constraint_32:~_r_70_85_87 or _r_81_123_125
+constraint_31:~_r_53_54_78 or ~_r_81_123_125_132_133
+constraint_38:~_r_70_85_87 or ~_r_82_100_111_114
+constraint_37:~_r_70_85_87 or ~_r_82_100_111_113
+constraint_36:~_r_70_85_87 or ~_r_82_100_111_112
+constraint_35:~_r_70_85_87 or ~_r_82_98_105_108
+constraint_28:~_r_53_54_78 or ~_r_81_123_124_126_127
+constraint_29:~_r_53_54_78 or ~_r_81_123_124_126_128
+constraint_40:~_r_53_54_55 or ~_r_81_123_125_132_135
+constraint_41:~_r_53_54_76 or ~_r_81_123_124_126_129
+constraint_23:~_r_70_85_86 or ~_r_82_100_111_115
+constraint_26:~_r_70_85_86 or ~_r_82_98_105_110
+constraint_27:~_r_70_85_86_88_92 or ~_r_81_123_125
+constraint_24:~_r_70_85_86 or ~_r_82_100_111_116
+constraint_25:~_r_70_85_86 or ~_r_82_98_105_109
+</constraints>
+</feature_model>

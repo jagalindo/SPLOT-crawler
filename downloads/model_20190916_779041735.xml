@@ -1,0 +1,65 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2019 - 6:30 PM  -->
+<feature_model name="Android51_Contrast">
+<meta>
+<data name="description">feature model representing paths to accessibility options associated with Contrast and Color in Android5.1 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237)695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date">Monday, May 6, 2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m Accessibility(_r1)
+		:o Display2(_r2)
+			:o ColorInversion(_r3)
+			:o ColorCorrection(_r4)
+				:o CorrectionMode(_r5)
+					:g (_id_0) [1,1] 
+						: Tritanomaly_BlueYellow(_r6)
+						: Deuteronomaly_RedGreen(_r7)
+						: Protanomaly_RedGreen(_r8)
+		:m System(_r9)
+			:m Captions(_r10)
+				:m StandardOptions(_r11)
+					:m CaptionStyle(_r12)
+						:g (_id_1) [1,1] 
+							: YellowOnBlue(_r13)
+							: BlackOnWhite(_r14)
+							: Custom(_r15)
+							: UseAppDefault(_r16)
+							: WhiteOnBlack(_r17)
+							: YellowOnBlack(_r18)
+			:o HighContrastText(_r19)
+	:m LanguageAndInput(_r20)
+		:m AndroidKeyboard_AOSP(_r21)
+			:m AppearanceAndLayouts(_r22)
+				:m Theme(_r23)
+					:g (_id_2) [1,1] 
+						: MaterialLight(_r24)
+						: MaterialDark(_r25)
+						: HoloWhited(_r26)
+						: HoloBlue(_r27)
+	:m Display1(_r28)
+		:m Wallpaper(_r29)
+			:g (_id_3) [1,1] 
+				: Wallpapers(_r30)
+				: Photos2(_r31)
+				: FileExplorer(_r32)
+				: LiveWallpapers(_r33)
+				: Gallery(_r34)
+		:m Daydream(_r35)
+			:g (_id_4) [1,1] 
+				: Colors(_r36)
+				: PhotoTable(_r37)
+				: Photos1(_r38)
+				: Clock(_r39)
+				: PhotoFrame(_r40)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

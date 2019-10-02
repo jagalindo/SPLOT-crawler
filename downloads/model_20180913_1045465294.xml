@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Sep 13, 2018 - 3:35 PM  -->
+<feature_model name="IDE">
+<meta>
+<data name="description">IDE of robotr</data>
+<data name="creator">Kyunam CHO</data>
+<data name="address"></data>
+<data name="email">mystous@naver.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">None</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Robot(_r)
+	:m Editor(_r_1)
+		:g (_r_1_7) [1,1] 
+			: English(_r_1_7_8)
+			: Korean(_r_1_7_9)
+			: Japaness(_r_1_7_10)
+	:o AI Feature(_r_2)
+		:m Preprocessing(_r_2_11)
+	:g (_r_3) [1,1] 
+		: Code Editor(_r_3_4)
+		: Visual Editor(_r_3_5)
+		: Learning by Action(_r_3_6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

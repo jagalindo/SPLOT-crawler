@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, May 10, 2019 - 10:45 AM  -->
+<feature_model name="Smartwatch">
+<meta>
+<data name="description">Smartwatch with basic features</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Student</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Smartwatch(_r)
+	:m OS(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Watch OS(_r_1_2_3)
+			: Wear OS(_r_1_2_4)
+			: Tizen(_r_1_2_5)
+	:m Charge(_r_6)
+		:g (_r_6_7) [1,*] 
+			: Wireless(_r_6_7_8)
+			: USB(_r_6_7_9)
+	:o Type(_r_10)
+		:g (_r_10_12) [1,1] 
+			: Sport(_r_10_12_13)
+			: Classic(_r_10_12_15)
+	:m Display(_r_16)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jan 24, 2019 - 8:21 PM  -->
+<feature_model name="BCON">
+<meta>
+<data name="description">Smart Weather Station</data>
+<data name="creator">Bogdan Muresan</data>
+<data name="address"></data>
+<data name="email">muresan@rhrk.uni-kl.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TUK</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartWeatherStation(_r)
+	:m Capabilities(_r_1)
+		:m Temperature(_r_1_2)
+			:g (_r_1_2_4) [1,*] 
+				: Indoor(_r_1_2_4_5)
+				: Outdoor(_r_1_2_4_10)
+		:o Wind speed and direction(_r_1_3)
+		:o WeatherForecast(_r_1_12)
+		:o Humidity(_r_1_13)
+			:g (_r_1_13_14) [1,*] 
+				: Indoor(_r_1_13_14_15)
+				: Outdoor(_r_1_13_14_18)
+		:o Control(_r_1_19)
+			:o SunBlinds(_r_1_19_20)
+			:o Windows Opener(_r_1_19_21)
+			:o Power Plugs(_r_1_19_22)
+	:m Interfaces(_r_23)
+		:m UI(_r_23_24)
+			:g (_r_23_24_25) [1,1] 
+				: Button(_r_23_24_25_26)
+				: Touch(_r_23_24_25_27)
+		:m Conectivity(_r_23_28)
+			:g (_r_23_28_54) [1,*] 
+				: Wifi-proprietary protocol(_r_23_28_54_55)
+				: Internet(_r_23_28_54_56)
+				: Smart home devices(_r_23_28_54_57)
+				: Mobile phone(_r_23_28_54_58)
+	:m Technology(_r_33)
+		:o Sw update(_r_33_34)
+			:o Firmware(_r_33_34_35)
+			:o OS(_r_33_34_36)
+			:o Aplication Software(_r_33_34_37)
+			:o App download(_r_33_34_38)
+		:m OS(_r_33_39)
+			:g (_r_33_39_48) [1,1] 
+				: Propietary(_r_33_39_48_49)
+				: Android(_r_33_39_48_50)
+		:m Power supply(_r_33_42)
+			:g (_r_33_42_51) [1,1] 
+				: Battery(_r_33_42_51_52)
+				: Wired(_r_33_42_51_53)
+	:m Operation environment(_r_45)
+		:o Region(_r_45_46)
+			:m Language(_r_45_46_51)
+		:m Regulation(_r_45_47)
+			:o Water protection(_r_45_47_48)
+			:o Radio emission(_r_45_47_49)
+		:o Temperature range(_r_45_50)
+	:m Price(_r_43)
+		:g (_r_43_44) [1,1] 
+			: 30(_r_43_44_45)
+			: 100(_r_43_44_46)
+			: 250(_r_43_44_47)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 19, 2018 - 12:43 PM  -->
+<feature_model name="Example from class">
+<meta>
+<data name="description">E-Shop feature model</data>
+<data name="creator">Omer G</data>
+<data name="address"></data>
+<data name="email">omerg7493@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Tel Aviv University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-Shop(_r)
+	:m Catalog(_r_1)
+	:m Payment(_r_2)
+		:g (_r_2_5) [1,*] 
+			: Credit card(_r_2_5_6)
+			: Bank transfer(_r_2_5_7)
+	:m Security(_r_3)
+		:g (_r_3_8) [1,1] 
+			: High(_r_3_8_9)
+			: Standard(_r_3_8_10)
+	:o Search(_r_4)
+	:m just for uploading(_r_11)
+</feature_tree>
+<constraints>
+constraint_3:~_r_2_5_6 or _r_3_8_9
+</constraints>
+</feature_model>

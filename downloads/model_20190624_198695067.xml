@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Jun 24, 2019 - 6:55 PM  -->
+<feature_model name="DSPL">
+<meta>
+<data name="description">DSPL COWS</data>
+<data name="creator">CAMILO ANDRES MORENO</data>
+<data name="address"></data>
+<data name="email">Camolave12@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PUJ</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema(_r)
+	:m CRUD Usuario(_r_2)
+	:m Inicio Sesion(_r_3)
+	:m CRUD Finca(_r_4)
+	:m CRUD Ganado(_r_5)
+		:o Agregar novedades sobre el Ganado(_r_5_18)
+	:m Consulta de Normas Y politicas (_r_6)
+	:m Comunicacion con el ganadero(_r_7)
+	:m Generacion campanas(_r_9)
+	:m CRUD Rutas(_r_10)
+		:m Precio de la leche(_r_10_13)
+		:o Consultar Rutas Cercanas(_r_10_14)
+		:o Consultar informacion sobre precios por ruta(_r_10_15)
+		:o Centros de Acopio(_r_10_16)
+		:o Horarios de Recoleccion(_r_10_17)
+	:m CRUD Enfermedades(_r_11)
+		:o Consultar enfermedades(_r_11_20)
+		:o Consultar foco de enfermedades(_r_11_21)
+		:o Consultar Alertas de Prevencion(_r_11_22)
+		:o Consultar informacion acerca de los contagios(_r_11_23)
+		:o Descarga de reportes sobre enfermedades(_r_11_24)
+		:m Generacion de estrategias para controlar propagacion de enfermedades(_r_11_27)
+	:m CRUD Noticias Sector lechero(_r_26)
+	:m Servicios de capacitacion(_r_28)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

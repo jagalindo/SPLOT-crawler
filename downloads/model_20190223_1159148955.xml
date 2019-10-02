@@ -1,0 +1,153 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Feb 23, 2019 - 6:26 PM  -->
+<feature_model name="PosBurger">
+<meta>
+<data name="description">Cardapio de lanchonete</data>
+<data name="creator">Victor / Cassiano / Marlon</data>
+<data name="address"></data>
+<data name="email">vstorres@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Dev orientado a Reuso</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BurgerPos(_r)
+	:o Milk-Shake(_r_4)
+		:m Tamanho(_r_4_14)
+			:g (_r_4_14_23) [1,1] 
+				: 300 ML(_r_4_14_23_24)
+				: 500 ML(_r_4_14_23_27)
+				: 700 ML(_r_4_14_23_30)
+		:m Sabor(_r_4_15)
+			:g (_r_4_15_33) [1,*] 
+				: Chocolate(_r_4_15_33_34)
+				: Baunilha(_r_4_15_33_35)
+				: Morango(_r_4_15_33_36)
+				: Oreo(_r_4_15_33_37)
+				: Floresta Negra(_r_4_15_33_38)
+				: Negresco(_r_4_15_33_39)
+				: Capuccino(_r_4_15_33_40)
+		:o Calda(_r_4_17)
+			:g (_r_4_17_102) [1,1] 
+				: Morango(_r_4_17_102_103)
+				: Chocolate(_r_4_17_102_104)
+				: Caramelo(_r_4_17_102_105)
+		:o Recheio(_r_4_18)
+			:g (_r_4_18_108) [1,*] 
+				: Granulado(_r_4_18_108_109)
+				: Castanha(_r_4_18_108_110)
+				: Ovomaltine(_r_4_18_108_111)
+	:o Combo(_r_5)
+		:g (_r_5_188) [1,1] 
+			: Combo 1 - Hamburguer(_r_5_188_189)
+			: Combo 2 - Pizza(_r_5_188_190)
+			: Combo 3 - Completo(_r_5_188_191)
+	:o Pizza(_r_9)
+		:m Tamanho(_r_9_45)
+			:g (_r_9_45_50) [1,1] 
+				: P(_r_9_45_50_51)
+				: M(_r_9_45_50_52)
+				: G(_r_9_45_50_53)
+		:o Borda(_r_9_55)
+			:g (_r_9_55_61) [1,1] 
+				: Catupiry(_r_9_55_61_62)
+				: Cheddar(_r_9_55_61_63)
+				: Coxinha(_r_9_55_61_64)
+		:m Formato(_r_9_56)
+			:g (_r_9_56_57) [1,1] 
+				: Quadrada(_r_9_56_57_58)
+				: Redonda(_r_9_56_57_59)
+		:m Sabores(_r_9_198)
+			:g (_r_9_198_199) [1,1] 
+				: Inteira(_r_9_198_199_200)
+					:g (_r_9_198_199_200_202) [1,1] 
+						: Mussarela(_r_9_198_199_200_202_203)
+						: Calabresa(_r_9_198_199_200_202_204)
+						: Quatro Queijos(_r_9_198_199_200_202_205)
+						: Tempero da Galega(_r_9_198_199_200_202_206)
+				: 2 Sabores(_r_9_198_199_201)
+					:m Sabor 1(_r_9_198_199_201_209)
+						:g (_r_9_198_199_201_209_211) [1,1] 
+							: Mussarela(_r_9_198_199_201_209_211_212)
+							: Calabresa(_r_9_198_199_201_209_211_213)
+							: Quatro Queijos(_r_9_198_199_201_209_211_214)
+					:m Sabor 2(_r_9_198_199_201_210)
+						:g (_r_9_198_199_201_210_215) [1,1] 
+							: Mussarela(_r_9_198_199_201_210_215_216)
+							: Calabresa(_r_9_198_199_201_210_215_217)
+							: Quatro Queijos(_r_9_198_199_201_210_215_218)
+	:o Hamburguer(_r_10)
+		:m Tipo de Pao(_r_10_153)
+			:g (_r_10_153_154) [1,1] 
+				: Australiano(_r_10_153_154_155)
+				: Bola(_r_10_153_154_156)
+				: Integral(_r_10_153_154_157)
+		:m Carne(_r_10_158)
+			:g (_r_10_158_159) [1,1] 
+				: Bovina(_r_10_158_159_160)
+				: Suina(_r_10_158_159_161)
+				: Frango(_r_10_158_159_162)
+		:o Queijo(_r_10_163)
+			:g (_r_10_163_164) [1,1] 
+				: Prato(_r_10_163_164_165)
+				: Mussarela(_r_10_163_164_166)
+				: Coalho(_r_10_163_164_167)
+				: Parmesao(_r_10_163_164_168)
+				: Suico(_r_10_163_164_169)
+				: Cheddar(_r_10_163_164_171)
+		:o Salada(_r_10_172)
+			:g (_r_10_172_173) [1,*] 
+				: Alface(_r_10_172_173_174)
+				: Tomate(_r_10_172_173_175)
+				: Cebola(_r_10_172_173_176)
+				: Repolho(_r_10_172_173_177)
+		:o Molho(_r_10_180)
+			:g (_r_10_180_181) [1,*] 
+				: Barbecue(_r_10_180_181_182)
+				: Ketchup(_r_10_180_181_183)
+				: Maionese(_r_10_180_181_184)
+				: Mustarda(_r_10_180_181_185)
+				: Parmesao(_r_10_180_181_186)
+				: Queijo(_r_10_180_181_187)
+	:o Bebida(_r_11)
+		:m Tamanho(_r_11_114)
+			:g (_r_11_114_116) [1,1] 
+				: 350 ML(_r_11_114_116_117)
+				: 600ML(_r_11_114_116_118)
+				: 1 L(_r_11_114_116_119)
+		:m Tipo(_r_11_115)
+			:g (_r_11_115_133) [1,1] 
+				: Agua(_r_11_115_133_134)
+					:g (_r_11_115_133_134_137) [1,1] 
+						: Com Gas(_r_11_115_133_134_137_138)
+						: Sem Gas(_r_11_115_133_134_137_139)
+				: Refrigerante(_r_11_115_133_135)
+					:g (_r_11_115_133_135_140) [1,1] 
+						: Coca Cola(_r_11_115_133_135_140_141)
+						: Guarana(_r_11_115_133_135_140_142)
+						: Fanta(_r_11_115_133_135_140_143)
+						: Dolly(_r_11_115_133_135_140_144)
+						: Guarana Jesus(_r_11_115_133_135_140_148)
+				: Sucos(_r_11_115_133_136)
+					:g (_r_11_115_133_136_145) [1,1] 
+						: Caja(_r_11_115_133_136_145_146)
+						: Acerola(_r_11_115_133_136_145_147)
+						: Caju(_r_11_115_133_136_145_149)
+						: Manga(_r_11_115_133_136_145_150)
+						: Goiaba(_r_11_115_133_136_145_151)
+						: Acai(_r_11_115_133_136_145_152)
+</feature_tree>
+<constraints>
+constraint_17:~_r_9_55 or ~_r_5_188_190
+constraint_18:_r_9_56_57_59 or ~_r_5_188_190
+constraint_19:_r_11_114_116_118 or ~_r_5_188_190
+constraint_11:~_r_10 or ~_r_5_188_190
+constraint_20:_r_11_115_133_135 or ~_r_5_188_190
+constraint_12:~_r_4 or ~_r_5_188_190
+constraint_27:~_r_5_188_190 or _r_9_198_199_200
+constraint_15:_r_9 or ~_r_5_188_190
+constraint_16:_r_9_45_50_52 or ~_r_5_188_190
+</constraints>
+</feature_model>

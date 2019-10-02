@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Dec 7, 2017 - 8:44 AM  -->
+<feature_model name="depresija1">
+<meta>
+<data name="description">depresija1</data>
+<data name="creator">Ugnė</data>
+<data name="address"></data>
+<data name="email">ugneglinsk@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">JBG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Depresija(_r)
+	:m Pozymiai(_r_1)
+		:m Pagrindiniai(_r_1_3)
+			:m Pakitusi nuotaika - atsirades liudesys(_r_1_3_7)
+			:m Interesu ir pasitenkinimo sumazejimas(_r_1_3_8)
+			:m Energijos bei aktyvumo sumazejimas(_r_1_3_10)
+		:m Salutiniai(_r_1_5)
+			:g (_r_1_5_11) [1,*] 
+				: Susilpnejusi demesio koncentracija ir islaikymas(_r_1_5_11_12)
+				: Sumazejusi saviverte ir pasitikejimas savimi(_r_1_5_11_17)
+				: Niurus ir pesimistinis ateities isivaizdavimas(_r_1_5_11_19)
+				: Zalojimosi ar savizudybes idejos arba veiksmai(_r_1_5_11_20)
+				: Sutrikes miegas(_r_1_5_11_21)
+				: Apetito ir svorio pokyciai(_r_1_5_11_22)
+				: Kaltes ir menkavertiskumo idejos(_r_1_5_11_29)
+	:m Tyrimo metodas(_r_2)
+		:g (_r_2_23) [1,*] 
+			: Stebejimas(_r_2_23_24)
+			: Programos ir paciento saveika(_r_2_23_25)
+			: Darbines ar buitines veiklos skyrimas(_r_2_23_27)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3_7 or _r_2_23_24
+constraint_18:_r_2_23_25 or ~_r_1_5_11_29
+constraint_8:~_r_1_5_11_12 or _r_2_23_25
+constraint_9:~_r_1_5_11_12 or _r_2_23_27
+constraint_10:~_r_1_5_11_17 or _r_2_23_25
+constraint_6:~_r_1_3_10 or _r_2_23_27
+constraint_11:~_r_1_5_11_19 or _r_2_23_25
+constraint_7:~_r_1_5_11_12 or _r_2_23_24
+constraint_12:~_r_1_5_11_20 or _r_2_23_24
+constraint_13:~_r_1_5_11_20 or _r_2_23_25
+constraint_4:~_r_1_3_8 or _r_2_23_27
+constraint_14:~_r_1_5_11_21 or _r_2_23_24
+constraint_5:~_r_1_3_10 or _r_2_23_24
+constraint_15:~_r_1_5_11_22 or _r_2_23_24
+constraint_2:~_r_1_3_7 or _r_2_23_25
+constraint_3:~_r_1_3_8 or _r_2_23_24
+</constraints>
+</feature_model>

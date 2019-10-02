@@ -1,0 +1,166 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Nov 12, 2017 - 6:35 PM  -->
+<feature_model name="AP_Model">
+<meta>
+<data name="description">APModel</data>
+<data name="creator">brc_cs</data>
+<data name="address"></data>
+<data name="email">burcu.ozten@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">brc</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r AP_Model(_r)
+	:m Product Information(_r_3)
+		:g (_r_3_56) [1,*] 
+			: Name(_r_3_56_57)
+			: Model Name(_r_3_56_60)
+			: ID(_r_3_56_61)
+			: UPC Code(_r_3_56_62)
+			: HW Rev(_r_3_56_63)
+			: DSL Version(_r_3_56_64)
+			: Signature(_r_3_56_68)
+			: Language Detection(_r_3_56_69)
+			: UI(_r_3_56_70)
+				:g (_r_3_56_70_75) [1,1] 
+					: License(_r_3_56_70_75_76)
+					: PL(_r_3_56_70_75_77)
+					: DA(_r_3_56_70_75_78)
+					: SE(_r_3_56_70_75_79)
+					: FI(_r_3_56_70_75_80)
+					: NO(_r_3_56_70_75_81)
+					: ES(_r_3_56_70_75_82)
+					: IT(_r_3_56_70_75_83)
+					: DE(_r_3_56_70_75_84)
+					: FR(_r_3_56_70_75_85)
+					: RU(_r_3_56_70_75_86)
+					: GR(_r_3_56_70_75_87)
+					: EN(_r_3_56_70_75_88)
+					: TR(_r_3_56_70_75_89)
+					: Default(_r_3_56_70_75_90)
+			: Code(_r_3_56_71)
+				:m Country(_r_3_56_71_73)
+				:m PPP(_r_3_56_71_74)
+			: System Name(_r_3_56_72)
+	:o Login(_r_4)
+		:g (_r_4_91) [1,1] 
+			: TELNET(_r_4_91_92)
+				:m Login Name(_r_4_91_92_94)
+				:m Login Password(_r_4_91_92_95)
+				:m Port(_r_4_91_92_96)
+			: WEBUI(_r_4_91_93)
+				:m Login Name(_r_4_91_93_97)
+				:m Login Password(_r_4_91_93_98)
+				:o Credential(_r_4_91_93_99)
+				:o Expiration(_r_4_91_93_100)
+	:o Recovery Image(_r_5)
+		:g (_r_5_101) [1,1] 
+			: UI Selection(_r_5_101_102)
+			: Limited Image(_r_5_101_103)
+			: Direct Link(_r_5_101_104)
+			: Http Interrupt(_r_5_101_105)
+		:o Main Page(_r_5_106)
+		:o Internet(_r_5_107)
+		:o DHCP Server(_r_5_108)
+	:o Quick Setup Page(_r_6)
+		:g (_r_6_111) [1,1] 
+			: XDSL Setting(_r_6_111_112)
+			: ETH WAN Settings(_r_6_111_113)
+	:m DSL PPP Down Page(_r_7)
+	:m Ethernet WAN(_r_8)
+	:o Mac Cloning(_r_9)
+	:o Internet DSL Router(_r_10)
+		:g (_r_10_96) [1,*] 
+			: MultiPVC DSL Router(_r_10_96_97)
+				:m VC Count(_r_10_96_97_100)
+				:m Default PVC(_r_10_96_97_101)
+				:m NAT(_r_10_96_97_102)
+				:m Firewall(_r_10_96_97_103)
+				:m Protocol(_r_10_96_97_104)
+			: DSL Router Eth(_r_10_96_98)
+				:m VC Count(_r_10_96_98_105)
+				:m Default PVC(_r_10_96_98_106)
+				:m NAT(_r_10_96_98_107)
+				:m Firewall(_r_10_96_98_108)
+				:m Protocol(_r_10_96_98_109)
+			: AP Router(_r_10_96_99)
+				:m VC Count(_r_10_96_99_110)
+				:o Default PVC(_r_10_96_99_111)
+				:o NAT(_r_10_96_99_112)
+				:o Firewall(_r_10_96_99_113)
+				:o Protocol(_r_10_96_99_114)
+	:m LAN(_r_16)
+		:g (_r_16_115) [1,*] 
+			: LAN IP(_r_16_115_116)
+			: LAN Netmask(_r_16_115_117)
+			: DHCP Type(_r_16_115_118)
+			: GW Address(_r_16_115_119)
+	:o VLAN(_r_17)
+		:o VLAN ID(_r_17_120)
+		:o DHCP Type(_r_17_121)
+		:o GW Address(_r_17_122)
+	:m Wireless1(_r_18)
+		:g (_r_18_123) [1,*] 
+			: ISP(_r_18_123_124)
+			: Security(_r_18_123_125)
+			: Status(_r_18_123_126)
+	:m URL Filtering(_r_21)
+	:o Anti DOS(_r_22)
+		:g (_r_22_127) [1,*] 
+			: Anti DOS(_r_22_127_128)
+			: Internet(_r_22_127_129)
+			: TCP Connection(_r_22_127_130)
+			: UDP Connection(_r_22_127_131)
+			: ICMP Connection(_r_22_127_132)
+	:m Routing(_r_24)
+		:g (_r_24_133) [1,1] 
+			: Static(_r_24_133_134)
+			: Default(_r_24_133_135)
+			: RIP(_r_24_133_136)
+	:m IGMP(_r_25)
+		:g (_r_25_137) [1,*] 
+			: Quick Leave(_r_25_137_138)
+			: Upstream(_r_25_137_139)
+			: Interface(_r_25_137_140)
+	:o Remote Access(_r_28)
+		:g (_r_28_141) [1,1] 
+			: Client(_r_28_141_142)
+			: NAS(_r_28_141_143)
+	:o USB Host(_r_39)
+		:g (_r_39_144) [1,*] 
+			: Printer Support(_r_39_144_145)
+			: Disk Support(_r_39_144_146)
+			: FAT File System(_r_39_144_147)
+			: FAT32 File System(_r_39_144_148)
+			: NTFS File System(_r_39_144_149)
+	:m Firmware Upgrade(_r_41)
+	:m Certifications(_r_48)
+		:g (_r_48_150) [1,*] 
+			: UPNP(_r_48_150_151)
+			: DLNA(_r_48_150_152)
+			: WIFI(_r_48_150_153)
+			: LOGO(_r_48_150_154)
+	:o Universal Product Code(_r_50)
+	:o Airties Network Assistant(_r_51)
+		:g (_r_51_155) [1,*] 
+			: Animation(_r_51_155_156)
+			: User Manual(_r_51_155_157)
+			: Device Icon(_r_51_155_158)
+			: USB Driver(_r_51_155_159)
+	:m Hostname(_r_52)
+		:g (_r_52_160) [1,1] 
+			: DNS(_r_52_160_161)
+			: URL(_r_52_160_162)
+	:m WPS(_r_53)
+		:g (_r_53_163) [1,*] 
+			: 24 Ghz(_r_53_163_164)
+			: 5 Ghz(_r_53_163_165)
+	:o Steering(_r_54)
+	:m RSSI Treshold(_r_55)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:52 PM  -->
+<feature_model name="EscuelasFAE">
+<meta>
+<data name="description">COEDMA</data>
+<data name="creator">SGallardoGGuaiguaGMoremo</data>
+<data name="address"></data>
+<data name="email">asofiagc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">MAestria ESPEL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EscuelaCOED(_r)
+	:m GestiondeUsuarios(_r_1)
+	:m RegistrodeAlumnos(_r_2)
+	:m Matricula(_r_3)
+		:o Linea(_r_3_6)
+		:m Manual(_r_3_7)
+	:m Materias(_r_8)
+		:m Creacion(_r_8_9)
+		:m AsignacionCursos(_r_8_11)
+		:m AsignacionProfesores(_r_8_12)
+	:m Profesores(_r_13)
+		:m Creacion(_r_13_14)
+		:m AsignacionMaterias(_r_13_15)
+	:m Calificaciones(_r_16)
+		:m RegistroCalificaciones(_r_16_17)
+	:m CreacionPeriodoAcademico(_r_18)
+	:m Pagos(_r_19)
+		:m Registro(_r_19_20)
+	:m Novedades(_r_22)
+		:o FasedeVuelo(_r_22_23)
+		:o JuegosdeGuerra(_r_22_24)
+		:m CuerpoCadetesAlumnos(_r_22_25)
+</feature_tree>
+<constraints>
+constraint_1:_r_8_9 or _r_13_15
+constraint_4:_r_2 or _r_3 or _r_3_6 or _r_3_7
+constraint_2:_r_2
+constraint_3:_r_2
+</constraints>
+</feature_model>

@@ -1,0 +1,86 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 8:08 PM  -->
+<feature_model name="Computers">
+<meta>
+<data name="description">SPL of computers</data>
+<data name="creator">Maria Arevalo</data>
+<data name="address"></data>
+<data name="email">mi.arevalo10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computer(_r)
+	:m CPU(_r_1)
+		:m RAM(_r_1_7)
+			:g (_r_1_7_11) [1,1] 
+				: 4GB(_r_1_7_11_12)
+				: 8GB(_r_1_7_11_13)
+				: 16GB(_r_1_7_11_14)
+				: 32GB(_r_1_7_11_15)
+				: 64GB(_r_1_7_11_16)
+		:m Procesador(_r_1_8)
+			:g (_r_1_8_17) [1,1] 
+				: Intel(_r_1_8_17_18)
+				: AMD(_r_1_8_17_19)
+		:m Disco Duro(_r_1_9)
+			:g (_r_1_9_20) [1,1] 
+				: 500GB(_r_1_9_20_21)
+				: 1TB(_r_1_9_20_22)
+				: 2TB(_r_1_9_20_23)
+				: 5TB(_r_1_9_20_24)
+				: 10TB(_r_1_9_20_25)
+		:o Tarjeta grafica(_r_1_10)
+			:g (_r_1_10_26) [1,1] 
+				: NVIDIA(_r_1_10_26_27)
+				: ATI Radeon(_r_1_10_26_28)
+	:o Pantalla(_r_2)
+		:o Tecnologia(_r_2_29)
+			:g (_r_2_29_31) [1,*] 
+				: 3D(_r_2_29_31_32)
+				: 4K(_r_2_29_31_33)
+		:o Tamanho(_r_2_30)
+			:g (_r_2_30_34) [1,1] 
+				: 14(_r_2_30_34_35)
+				: 17(_r_2_30_34_36)
+				: 24(_r_2_30_34_37)
+	:m Tipo(_r_3)
+		:g (_r_3_38) [1,1] 
+			: De mesa(_r_3_38_39)
+			: Portatil(_r_3_38_40)
+			: Servidor(_r_3_38_41)
+	:m SO(_r_4)
+		:g (_r_4_42) [1,1] 
+			: PCs(_r_4_42_43)
+				:g (_r_4_42_43_45) [1,1] 
+					: Windows 10(_r_4_42_43_45_46)
+					: Fedora(_r_4_42_43_45_47)
+					: OS X Yosemite(_r_4_42_43_45_48)
+			: Servidores(_r_4_42_44)
+				:g (_r_4_42_44_49) [1,1] 
+					: Windows Server(_r_4_42_44_49_50)
+					: Red Hat Linux(_r_4_42_44_49_51)
+					: OS X Server(_r_4_42_44_49_52)
+	:m Marca(_r_5)
+		:g (_r_5_53) [1,1] 
+			: Dell(_r_5_53_54)
+			: Toshiba(_r_5_53_55)
+			: Lenovo(_r_5_53_56)
+			: Apple(_r_5_53_57)
+			: Clon(_r_5_53_58)
+	:o Planta de poder(_r_6)
+</feature_tree>
+<constraints>
+constraint_1:~_r_3_38_40 or ~_r_5_53_58
+constraint_8:~_r_4_42_43_45_48 or ~_r_4_42_44_49_52 or ~_r_5_53_57
+constraint_10:_r_1_7_11_15 or _r_1_7_11_16 or ~_r_3_38_41
+constraint_9:~_r_3_38_41 or _r_4_42_44
+constraint_11:_r_1_9_20_24 or _r_1_9_20_25 or ~_r_3_38_41
+constraint_7:_r_2 or ~_r_3_38_40
+constraint_4:~_r_1_9_20_24 or ~_r_1_9_20_25 or ~_r_3_38_39 or ~_r_3_38_40
+constraint_5:~_r_1_7_11_15 or ~_r_1_7_11_16 or ~_r_3_38_39 or ~_r_3_38_40 or ~_r_4_42_44
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Feb 26, 2018 - 8:11 AM  -->
+<feature_model name="COMPUTADOR">
+<meta>
+<data name="description">Venta de computadoras</data>
+<data name="creator">Maria arévalo</data>
+<data name="address"></data>
+<data name="email">mi.arevalo10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r COMUTADOR(_r)
+	:m Tipo(_r_11)
+		:g (_r_11_15) [1,1] 
+			: Portatil(_r_11_15_16)
+			: De mesa(_r_11_15_17)
+			: Servidor(_r_11_15_18)
+	:m Marca(_r_12)
+		:g (_r_12_19) [1,1] 
+			: Dell(_r_12_19_20)
+			: Toshiba(_r_12_19_21)
+			: Lenovo(_r_12_19_23)
+	:m Pantalla(_r_13)
+	:m SO(_r_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

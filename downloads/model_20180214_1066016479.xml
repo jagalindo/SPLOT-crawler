@@ -1,0 +1,153 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Feb 18, 2018 - 9:58 PM  -->
+<feature_model name="ISI bikes">
+<meta>
+<data name="description">Un modèle de lignes de vélos à configurer par les ingénieurs de l'ISI</data>
+<data name="creator">Houssem CHEMINGUI</data>
+<data name="address"></data>
+<data name="email">houss.chemingui@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Université panthéon Sorbonne Paris 1</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike(_r)
+	:m Light(_r_1)
+		:g (_r_1_8) [1,1] 
+			: Led blue(_r_1_8_9)
+			: Led Yellow(_r_1_8_10)
+	:o App(_r_2)
+		:o Maps(_r_2_11)
+		:o Navig(_r_2_12)
+		:o Guide(_r_2_13)
+		:o Music(_r_2_14)
+	:m WheelsKind(_r_3)
+		:g (_r_3_15) [1,1] 
+			: All years(_r_3_15_16)
+			: Summer(_r_3_15_17)
+			: Winter(_r_3_15_18)
+	:o EnergySource(_r_4)
+		:g (_r_4_20) [1,*] 
+			: Dynamo(_r_4_20_21)
+			: Battery(_r_4_20_22)
+			: SolarPanel(_r_4_20_29)
+	:m Frame(_r_5)
+		:g (_r_5_23) [1,1] 
+			: Diamond(_r_5_23_24)
+			: Step_throu(_r_5_23_25)
+			: Triathlon(_r_5_23_30)
+	:o Basket(_r_6)
+		:g (_r_6_26) [1,1] 
+			: Wooden(_r_6_26_27)
+			: Wire(_r_6_26_28)
+	:m Running(_r_7)
+		:g (_r_7_29) [1,*] 
+			: foot_pedal(_r_7_29_30)
+			: Engine(_r_7_29_31)
+	:o CompUnit(_r_19)
+		:o GPS(_r_19_32)
+		:o Tablet(_r_19_33)
+	:o AdultAge(_r_31)
+		:g (_r_31_32) [1,1] 
+			: 16--20(_r_31_32_33)
+			: 21--40(_r_31_32_34)
+			: 41--60(_r_31_32_35)
+			: More61(_r_31_32_36)
+	:o RiderKind(_r_39)
+		:g (_r_39_40) [1,1] 
+			: Male(_r_39_40_41)
+			: Female(_r_39_40_42)
+			: Kids(_r_39_40_43)
+	:o AdultHeight(_r_44)
+		:g (_r_44_45) [1,1] 
+			: 100 cm -- 120 cm(_r_44_45_46)
+			: 121 cm -- 150 cm(_r_44_45_47)
+			: 151 cm -- 190 cm(_r_44_45_48)
+			: More than 191 cm(_r_44_45_49)
+	:o Budget(_r_50)
+		:g (_r_50_51) [1,1] 
+			: Less than 300DT(_r_50_51_52)
+			: 301 DT -- 500 DT(_r_50_51_53)
+			: 501 DT -- 800 DT(_r_50_51_54)
+			: More than 801 DT(_r_50_51_55)
+	:o Rider Profile(_r_56)
+		:g (_r_56_57) [1,*] 
+			: Dabster(_r_56_57_58)
+			: Passioned(_r_56_57_59)
+			: Professionnal(_r_56_57_60)
+	:m WheelsSize(_r_61)
+		:g (_r_61_62) [1,1] 
+			: 24inch(_r_61_62_63)
+			: 20 inch(_r_61_62_64)
+			: 27 inch(_r_61_62_65)
+			: 29 inch(_r_61_62_66)
+			: 26 inch(_r_61_62_67)
+	:o MaintenancePlan(_r_68)
+		:g (_r_68_70) [1,1] 
+			: 2 years(_r_68_70_71)
+			: 3 years(_r_68_70_72)
+			: Life Time(_r_68_70_73)
+	:m FrameSet(_r_74)
+		:g (_r_74_75) [1,1] 
+			: Small(_r_74_75_76)
+			: Medium(_r_74_75_77)
+			: Large(_r_74_75_78)
+			: XLarge(_r_74_75_79)
+	:m FrameType(_r_80)
+		:g (_r_80_81) [1,1] 
+			: Iron(_r_80_81_82)
+			: Aluminium(_r_80_81_83)
+			: Carbon(_r_80_81_84)
+	:m FrameColor(_r_85)
+		:g (_r_85_86) [1,*] 
+			: Gold(_r_85_86_87)
+			: Black(_r_85_86_88)
+			: Red(_r_85_86_89)
+			: Blue(_r_85_86_90)
+			: White(_r_85_86_91)
+	:m Usage(_r_92)
+		:g (_r_92_97) [1,*] 
+			: Mountain(_r_92_97_98)
+			: Racing(_r_92_97_99)
+			: Urban(_r_92_97_100)
+	:m Saddle(_r_101)
+		:g (_r_101_102) [1,1] 
+			: Cruiser(_r_101_102_103)
+			: Gel(_r_101_102_104)
+			: Plastic(_r_101_102_105)
+	:m Fork(_r_106)
+		:g (_r_106_107) [1,1] 
+			: Suspension(_r_106_107_108)
+			: Static(_r_106_107_109)
+	:m SeatPost(_r_110)
+		:g (_r_110_111) [1,1] 
+			: CarbonSeat(_r_110_111_112)
+			: Steel(_r_110_111_113)
+	:m HandleBars(_r_114)
+		:g (_r_114_115) [1,1] 
+			: Drop(_r_114_115_116)
+			: Riser(_r_114_115_117)
+			: Pursuit(_r_114_115_118)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1 or _r_4
+constraint_17:~_r_61_62_66 or ~_r_74_75_76
+constraint_8:~_r_61_62_64 or ~_r_92_97_98
+constraint_9:~_r_6 or _r_92_97_100
+constraint_10:~_r_80_81_84 or _r_110_111_112
+constraint_6:~_r_5_23_24 or ~_r_19_32
+constraint_11:~_r_92_97_99 or _r_114_115_116
+constraint_7:~_r_39_40_43 or _r_61_62_64
+constraint_12:~_r_68_70_73 or ~_r_92_97_99
+constraint_13:~_r_92_97_98 or _r_101_102_103
+constraint_4:_r_4_20_22 or ~_r_7_29_31
+constraint_14:~_r_92_97_98 or _r_106_107_108
+constraint_5:_r_2 or ~_r_19_33
+constraint_15:~_r_31 or ~_r_39_40_43
+constraint_2:_r_2_11 or ~_r_2_12
+constraint_16:~_r_39_40_43 or ~_r_44
+constraint_3:~_r_19 or _r_4_20_22
+</constraints>
+</feature_model>

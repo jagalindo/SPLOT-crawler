@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 8:25 PM  -->
+<feature_model name="SmartHome">
+<meta>
+<data name="description">Basic smarthome</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UBB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartHome(_r)
+	:m Windows Control(_r_1)
+		:m Manual Windows(_r_1_2)
+		:o Automated Windows(_r_1_3)
+	:m Heating Control(_r_4)
+		:m Manual Heating(_r_4_5)
+		:o Smart Heating(_r_4_9)
+	:m UI(_r_7)
+		:m Inhome Screen(_r_7_11)
+		:o Internet(_r_7_12)
+</feature_tree>
+<constraints>
+constraint_6:~_r_4_9 or _r_7_12
+constraint_7:~_r_1_3 or _r_7_12
+</constraints>
+</feature_model>

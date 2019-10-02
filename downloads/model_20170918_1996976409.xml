@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 18, 2017 - 3:45 AM  -->
+<feature_model name="Computadores_eanunezt">
+<meta>
+<data name="description">Familia venta de computadores</data>
+<data name="creator">enuenzt</data>
+<data name="address"></data>
+<data name="email">eanunezt@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">enunezt</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Linea(_r_1)
+		:o Mesa(_r_1_2)
+		:o Portatil(_r_1_3)
+		:o Servidor(_r_1_4)
+	:m Marca(_r_5)
+		:o Dell(_r_5_6)
+		:o Toshiba(_r_5_7)
+		:o Lenovo(_r_5_9)
+		:o Clon(_r_5_10)
+	:m OS(_r_11)
+		:o Personales(_r_11_12)
+			:o Win 10(_r_11_12_14)
+			:o Fedora Linux(_r_11_12_15)
+			:o OS X Yosemite Apple(_r_11_12_16)
+		:o Servidores(_r_11_13)
+			:o Win Server(_r_11_13_17)
+			:o Red Hat Linux(_r_11_13_18)
+			:o OS X Server Apple(_r_11_13_19)
+	:m CPU(_r_20)
+		:m RAM(_r_20_21)
+			:g (_r_20_21_24) [1,*] 
+				: 4gb(_r_20_21_24_25)
+				: 8gb(_r_20_21_24_26)
+				: 16gb(_r_20_21_24_27)
+				: 32gb(_r_20_21_24_28)
+				: 64gb(_r_20_21_24_29)
+		:m Procesador(_r_20_22)
+		:m Disco Duro(_r_20_23)
+			:o 500gb(_r_20_23_30)
+			:o 1TB(_r_20_23_31)
+			:o 2TB(_r_20_23_32)
+			:o 5TB(_r_20_23_33)
+			:o 10TB(_r_20_23_34)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

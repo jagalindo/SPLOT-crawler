@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 20, 2017 - 12:06 PM  -->
+<feature_model name="tab">
+<meta>
+<data name="description">une tablette personalisé</data>
+<data name="creator">SabrineGhofraneJamila</data>
+<data name="address"></data>
+<data name="email">boussemasabbrine@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">isi</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tablette(_r)
+	:m cartemere(_r_1)
+	:m processeur(_r_2)
+	:m memoire(_r_3)
+		:g (_r_3_12) [1,1] 
+			: supportcartememoire(_r_3_12_13)
+			: memoire integre(_r_3_12_14)
+	:m battery(_r_4)
+		:g (_r_4_7) [1,1] 
+			: integre(_r_4_7_8)
+			: detachable(_r_4_7_10)
+	:m tactile(_r_6)
+	:o supportcarteSIM(_r_11)
+	:o portusb(_r_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

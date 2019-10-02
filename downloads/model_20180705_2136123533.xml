@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jul 5, 2019 - 6:43 PM  -->
+<feature_model name="HybridCar">
+<meta>
+<data name="description">HybridCar</data>
+<data name="creator">Amal Anda</data>
+<data name="address"></data>
+<data name="email">aanda026@uottawa.ca</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Ottawa</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HybridCar(_r)
+	:m Engine(_r_1)
+		:g (_r_1_2) [1,*] 
+			: Electric(_r_1_2_3)
+			: Fuel(_r_1_2_4)
+			: Hybrid(_r_1_2_5)
+			: Feature-6(_r_1_2_6)
+			: Feature-7(_r_1_2_7)
+			: Feature-8(_r_1_2_8)
+			: Feature-9(_r_1_2_9)
+			: Feature-10(_r_1_2_10)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

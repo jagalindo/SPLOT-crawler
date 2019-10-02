@@ -1,0 +1,73 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 2:57 PM  -->
+<feature_model name="Ubuntu1204_Contrast">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Contrast and Color in Ubuntu12.04 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237)695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering</data>
+<data name="date">Tuesday, May 7, 2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m Appearance(_r1)
+		:m Look(_r2)
+			:m Background(_r3)
+				:g (_id_0) [1,1] 
+					: Wallpapers(_r4)
+						:g (_id_1) [1,1] 
+							: TwilightFrost_1920x1280(_r5)
+							: DelicatePetals_1920x1280(_r6)
+							: MorningDew_1920x1280(_r7)
+							: Murales_1920x1280(_r8)
+							: PrecisePangolin_1920x1280(_r9)
+							: SpeakerWeave_1920x1280(_r10)
+							: Flocking_1920x1280(_r11)
+							: WinterMorning_1920x1280(_r12)
+							: EarlyBlossom_1920x1280(_r13)
+							: GoldenBloom_1920x1280(_r14)
+							: TieMyBoat_1920x1280(_r15)
+							: LondonEyeFromBeneath_1920x1280(_r16)
+							: TheForbiddenCity_1920x1280(_r17)
+							: Flooboards_1920x1280(_r18)
+							: Ubuntu_1920x1280(_r19)
+							: Ubuntu1920x04CommunityWallpapers_MultipleSizes(_r20)
+					: ColorsAndGradients(_r21)
+						:g (_id_2) [1,1] 
+							: VerticalGradient(_r22)
+							: HorizontalGradient(_r23)
+							: SolidColor(_r24)
+			:m Theme(_r25)
+				:g (_id_3) [1,1] 
+					: HighContrastInverse(_r26)
+					: AmbianceDefault(_r27)
+					: Radiance(_r28)
+					: HighContrast(_r29)
+	:m UniversalAccess1(_r30)
+		:m Seeing(_r31)
+			:m Displays2(_r32)
+				:m Contrast(_r33)
+					:g (_id_4) [1,1] 
+						: Low2(_r34)
+						: High2(_r35)
+						: HighInverse(_r36)
+						: Normal2(_r37)
+		:o Typing1(_r38)
+			:o KeyboardSetting(_r39)
+				:o Shortcuts(_r40)
+					:o Windows(_r41)
+						:o ToggleShadedState(_r42)
+							:o Ctrl_Alt_S(_r43)
+					:o UniversalAccess2(_r44)
+						:o HighContrastOnOrOff(_r45)
+							:o Disabled8(_r46)
+	:m BrightnessAndLock(_r47)
+		:m DimScreenToSavePower(_r48)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

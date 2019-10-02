@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 20, 2018 - 1:46 PM  -->
+<feature_model name="DDoS">
+<meta>
+<data name="description">DDoS</data>
+<data name="creator">Paulius</data>
+<data name="address"></data>
+<data name="email">jasenasp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Panev??ys</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r DDoS(_r)
+	:m Hardware(_r_1)
+		:m Computer as router(_r_1_3)
+		:m Computer as attacker(_r_1_7)
+			:g (_r_1_7_21) [1,1] 
+				: One(_r_1_7_21_22)
+				: Multiple(_r_1_7_21_23)
+		:m Computer-victim(_r_1_8)
+		:m Computer as legitimate user(_r_1_27)
+	:m Software(_r_2)
+		:m Internet speed meter(_r_2_12)
+			:g (_r_2_12_15) [1,1] 
+				: iftop(_r_2_12_15_16)
+				: iptraf(_r_2_12_15_17)
+		:m Internet routing tool_iptables(_r_2_19)
+		:m DDoS attack tool(_r_2_24)
+			:g (_r_2_24_25) [1,1] 
+				: From single source(_r_2_24_25_26)
+				: From multiple sources(_r_2_24_25_19)
+				: With amplification(_r_2_24_25_20)
+		:m DDoS filtering tool(_r_2_25)
+			:g (_r_2_25_26) [1,1] 
+				: iptables(_r_2_25_26_27)
+				: AI filter(_r_2_25_26_31)
+		:m Legitimate request tools(_r_2_28)
+			:g (_r_2_28_35) [1,*] 
+				: Web browser(_r_2_28_35_36)
+				: curl(_r_2_28_35_37)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_7 or _r_2_24
+constraint_6:~_r_1_8 or _r_2_28
+constraint_7:~_r_1_27 or _r_2_28
+constraint_4:~_r_1_3 or _r_2_12
+constraint_5:~_r_1_3 or _r_2_25
+constraint_3:~_r_1_3 or _r_2_19
+</constraints>
+</feature_model>

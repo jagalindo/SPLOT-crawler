@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Apr 11, 2019 - 11:21 AM  -->
+<feature_model name="NoSQL DataSchema FMasso">
+<meta>
+<data name="description">NoSQL DataSchema FMasso</data>
+<data name="creator">Paola Gomez</data>
+<data name="address"></data>
+<data name="email">univ-grenoble-alpes.fr</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">univ-grenoble-alpes.fr</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r schemaX(_r)
+	:m colByClass(_r_1)
+		:g (_r_1_3) [1,*] 
+			: colAgencies(_r_1_3_4)
+				:m tAgency(_r_1_3_4_6)
+					:o tAgency_l0_ext(_r_1_3_4_6_9)
+						:m r1_bLines(_r_1_3_4_6_9_10)
+							:g (_r_1_3_4_6_9_10_11) [1,1] 
+								: tAgency_EMBn_tBusiness(_r_1_3_4_6_9_10_11_12)
+								: tAgency_REFn_tBusiness(_r_1_3_4_6_9_10_11_13)
+			: colBusiness(_r_1_3_5)
+				:m tBusiness(_r_1_3_5_14)
+					:o tBusiness_l0_ext(_r_1_3_5_14_15)
+						:m r1_ag(_r_1_3_5_14_15_16)
+							:g (_r_1_3_5_14_15_16_17) [1,1] 
+								: tBusiness_EMB_tAgency(_r_1_3_5_14_15_16_17_18)
+								: tBusiness_REF_tAgency(_r_1_3_5_14_15_16_17_19)
+	:o colByAssoc(_r_2)
+		:m colAgencyBusiness(_r_2_20)
+			:m reftAgency(_r_2_20_21)
+			:m reftBusiness(_r_2_20_22)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3_4_6 or _r_1_3_4_6_9 or _r_1_3_5_14_15_16 or _r_2_20
+constraint_8:_r_1_3_4 or ~_r_2_20
+constraint_10:_r_1_3_5 or ~_r_2_20
+constraint_9:~_r_1_3_4_6_9_10 or ~_r_2_20
+constraint_11:~_r_1_3_5_14_15_16 or ~_r_2_20
+constraint_6:~_r_1_3_4_6_9_10_11_12 or ~_r_1_3_5_14_15_16_17_19
+constraint_7:~_r_1_3_4_6_9_10_11_13 or ~_r_1_3_5_14_15_16_17_19
+constraint_4:_r_1_3_4 or ~_r_1_3_5_14_15_16_17_19
+constraint_5:~_r_1_3_4_6_9_10_11_13 or ~_r_1_3_5_14_15_16_17_18
+constraint_2:_r_1_3_4_6_9_10 or ~_r_1_3_5_14 or _r_1_3_5_14_15 or _r_2_20
+constraint_3:_r_1_3_5 or ~_r_1_3_4_6_9_10_11_13
+</constraints>
+</feature_model>

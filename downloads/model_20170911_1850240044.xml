@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 11, 2017 - 11:00 PM  -->
+<feature_model name="Tripeo">
+<meta>
+<data name="description">Tipo Despegar</data>
+<data name="creator">Max Cruz</data>
+<data name="address"></data>
+<data name="email">max.raul@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Grupo 4</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Tripeo(_r)
+	:m Catalogo(_r_1)
+		:m Busqueda(_r_1_7)
+		:m Crear lugar(_r_1_8)
+		:o Gestionar capacidad(_r_1_9)
+		:m Galeria y contenido(_r_1_10)
+		:o Servicios extra(_r_1_11)
+		:g (_r_1_14) [1,*] 
+			: Gestionar capacidad(_r_1_14_15)
+			: Servicios extra(_r_1_14_16)
+	:m Usuarios(_r_2)
+	:m Reserva(_r_3)
+	:m Facturacion(_r_4)
+	:m Comunicacion(_r_6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

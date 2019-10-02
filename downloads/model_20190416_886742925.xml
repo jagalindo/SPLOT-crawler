@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Apr 16, 2019 - 8:47 AM  -->
+<feature_model name="myfeature">
+<meta>
+<data name="description">myfeature</data>
+<data name="creator">myfeature</data>
+<data name="address"></data>
+<data name="email">myfeature</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">myfeature</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Type name for root feature(_r)
+	:m Feature-1(_r_1)
+	:o Feature-2(_r_2)
+	:o Feature-3(_r_3)
+	:m Feature-4(_r_4)
+	:o Feature-5(_r_5)
+	:m Feature-6(_r_6)
+	:m Feature-7(_r_7)
+	:o Feature-8(_r_8)
+	:g (_r_9) [1,*] 
+		: Feature-10(_r_9_10)
+	:o Feature-11(_r_11)
+	:o Feature-12(_r_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

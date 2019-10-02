@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Feb 5, 2019 - 7:15 AM  -->
+<feature_model name="Analysis of polio management">
+<meta>
+<data name="description">Analysis and management of polio </data>
+<data name="creator">Muhammad Inamullah</data>
+<data name="address">Bajaur Agency</data>
+<data name="email">inam4uom@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Malakand</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Health Center(_r)
+	:m Administration(_r_1)
+		:g (_r_1_4) [1,*] 
+			: DHO(_r_1_4_5)
+			: Admin(_r_1_4_6)
+	:m Technician(_r_7)
+		:g (_r_7_10) [1,*] 
+			: Vaccine Trained(_r_7_10_11)
+			: Monitoring(_r_7_10_12)
+	:m Reg-Desk(_r_25)
+	:m Campaign(_r_26)
+		:g (_r_26_27) [1,*] 
+			: NID(_r_26_27_28)
+			: SNID(_r_26_27_29)
+			: SID(_r_26_27_30)
+	:m Vaccination(_r_24)
+		:g (_r_24_26) [1,*] 
+			: Vaccine type(_r_24_26_27)
+				:m OPV(_r_24_26_27_28)
+				:m IPV(_r_24_26_27_29)
+			: Target child less than five year(_r_24_26_30)
+				:m Vaccinated(_r_24_26_30_31)
+				:m Missed(_r_24_26_30_32)
+				:m Affected(_r_24_26_30_33)
+				:m Refusal(_r_24_26_30_34)
+					:g (_r_24_26_30_34_35) [1,*] 
+						: Demand refusal(_r_24_26_30_34_35_36)
+						: Miss concept(_r_24_26_30_34_35_37)
+</feature_tree>
+<constraints>
+constraint_8:~_r_25 or _r_24_26_30_32
+constraint_10:~_r_25 or _r_24_26_30_34_35_36
+constraint_9:~_r_25 or _r_24_26_30_33
+constraint_11:~_r_25 or _r_24_26_30_34_35_37
+constraint_4:~_r_25 or _r_24_26_30_31
+</constraints>
+</feature_model>

@@ -1,0 +1,60 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 5:35 PM  -->
+<feature_model name="MacOS1010_Zoom">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Zoom in MacOS10.10 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email"> wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m Accessibility(_r1)
+		:m Zoom(_r2)
+			:o UseKeyboardShortcutsToZoom(_r3)
+				:m ToggleZoom(_r4)
+				:m ZoomIn(_r5)
+				:m ZoomOut(_r6)
+				:m ToggleSmoothImages(_r7)
+				:m ToggleKeyboardFocusFollowing(_r8)
+			:o UseScrollGestureWithModifierKeysToZoom(_r9)
+				:g (_id_0) [1,1] 
+					: Option(_r10)
+					: Command(_r11)
+					: Control(_r12)
+			:o SmoothImages(_r13)
+			:o ZoomFollowsTheKeyboardFocus(_r14)
+			:m ZoomStyle(_r15)
+				:g (_id_1) [1,1] 
+					: Fullscreen(_r16)
+					: PictureInPicture(_r17)
+			:m MoreOptions(_r18)
+				:m SetRangeForRapidZoomingInAndOut(_r19)
+					:m MaximumZoom(_r20)
+						:m INTERVAL_From_Two_To_Twenty__Shift2(_r21)
+					:m MinimumZoom(_r22)
+						:m INTERVAL_From_Two_To_Twenty__Shift2_(_r23)
+					:o ShowPreviewRectangleWhenZoomedOut(_r24)
+					:m WhenZoomedInTheScreenImageMoves(_r25)
+						:g (_id_2) [1,1] 
+							: OnlyWhenThePointerReachesAnEdge(_r26)
+							: ContinuouslyWithPointer(_r27)
+							: SoThePointerIsAtOrNearTheCenterOfTheScreen(_r28)
+		:m VoiceOver(_r29)
+			:m OpenVoiceOverUtility(_r30)
+				:m Visuals(_r31)
+					:m VoiceOverCursor(_r32)
+						:m VoiceOverCursorMagnification(_r33)
+	:m Trackpad1(_r34)
+		:m ScrollAndZoom(_r35)
+			:o ZoomInOrOut(_r36)
+			:o SmartZoom(_r37)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

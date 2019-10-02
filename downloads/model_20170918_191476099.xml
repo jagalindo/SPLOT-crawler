@@ -1,0 +1,75 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 18, 2017 - 4:09 AM  -->
+<feature_model name="Computadores_eanunezt">
+<meta>
+<data name="description">Familia venta de computadores</data>
+<data name="creator">enuenzt</data>
+<data name="address"></data>
+<data name="email">eanunezt@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">enunezt</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Linea(_r_1)
+		:o Mesa(_r_1_2)
+		:o Portatil(_r_1_3)
+		:o Servidor(_r_1_4)
+	:m Marca(_r_5)
+		:o Dell(_r_5_6)
+		:o Toshiba(_r_5_7)
+		:o Lenovo(_r_5_9)
+		:o Clon(_r_5_10)
+		:o Apple(_r_5_50)
+	:m OS(_r_11)
+		:o Personal(_r_11_12)
+			:o Win 10(_r_11_12_15)
+			:o Fedora (_r_11_12_16)
+			:o OS X Yosemite(_r_11_12_17)
+		:o Sevidor(_r_11_13)
+			:o WIN Server(_r_11_13_18)
+			:o Red Hat(_r_11_13_19)
+			:o OS X Server (_r_11_13_20)
+	:m CPU(_r_21)
+		:m RAM(_r_21_22)
+			:o 4GB(_r_21_22_28)
+			:o 8GB(_r_21_22_29)
+			:o 16GB(_r_21_22_30)
+			:o 32GB(_r_21_22_31)
+			:o 64GB(_r_21_22_32)
+		:m Procesador(_r_21_23)
+			:o Intel(_r_21_23_39)
+			:o AMD(_r_21_23_40)
+		:m Disco Duro(_r_21_24)
+			:o 500GB(_r_21_24_33)
+			:o 1TB(_r_21_24_35)
+			:o 2TB(_r_21_24_36)
+			:o 5TB(_r_21_24_37)
+			:o 10TB(_r_21_24_38)
+	:m Tarjeta grafica(_r_25)
+		:o NVIDIA(_r_25_41)
+		:o ATI Radeon(_r_25_42)
+	:o Pantalla(_r_26)
+		:o Tecnologia(_r_26_43)
+			:o 3D(_r_26_43_44)
+			:o 4K(_r_26_43_45)
+		:o Pulgadas(_r_26_46)
+			:o 14(_r_26_46_47)
+			:o 17(_r_26_46_48)
+			:o 24(_r_26_46_49)
+	:o Planta de poder(_r_27)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3 or _r_5_10
+constraint_8:_r_1_4 or _r_11 or _r_11_13
+constraint_9:_r_1_4 or _r_21_22_31 or _r_21_22_32 or _r_21_24_37 or _r_21_24_38
+constraint_6:_r_1_2 or _r_1_3 or _r_11 or _r_11_12
+constraint_7:_r_5 or _r_11 or _r_11_12 or _r_11_13 or _r_11_12_17 or _r_11_13_20 or _r_5_50
+constraint_4:_r_1_3 or _r_21_24 or _r_21_24_33 or _r_21_24_35 or _r_21_24_36
+constraint_5:_r_1_3 or _r_21_22 or _r_21_24 or _r_21_22_28 or _r_21_22_29 or _r_21_22_30 or _r_21_24_33 or _r_21_24_35 or _r_21_24_36
+constraint_3:_r_1_3 or _r_26 or _r_26_46
+</constraints>
+</feature_model>

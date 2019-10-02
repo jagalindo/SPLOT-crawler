@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Oct 1, 2018 - 4:31 AM  -->
+<feature_model name="E-commerce Feature Model Diagram">
+<meta>
+<data name="description">Feature Model Diagram for E-commerce domain</data>
+<data name="creator">Nursyahrina</data>
+<data name="address"></data>
+<data name="email">nursyahrina17@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">IF ITB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-Commerce(_r)
+	:m Shop(_r_1)
+		:m Payment(_r_1_11)
+			:g (_r_1_11_14) [1,*] 
+				: Bank Transfer(_r_1_11_14_15)
+				: Cash(_r_1_11_14_16)
+				: Credit Card(_r_1_11_14_17)
+		:o Cart(_r_1_12)
+		:o Pre-order(_r_1_49)
+	:o Multi Store(_r_2)
+		:o Search Store(_r_2_23)
+		:m Profile(_r_2_24)
+		:o Rating(_r_2_34)
+	:o Chat Room(_r_3)
+	:o Contact Us(_r_4)
+	:o Customer Authentication(_r_25)
+	:m Manage Store(_r_19)
+		:m Manage Inventory(_r_19_48)
+	:o Promo(_r_36)
+	:m Catalog(_r_37)
+		:o Search(_r_37_38)
+		:m Products(_r_37_39)
+			:g (_r_37_39_40) [1,*] 
+				: Goods(_r_37_39_40_41)
+				: Services(_r_37_39_40_42)
+			:o Discount(_r_37_39_43)
+			:o Product Image(_r_37_39_45)
+			:o Rating(_r_37_39_46)
+	:m Help(_r_47)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

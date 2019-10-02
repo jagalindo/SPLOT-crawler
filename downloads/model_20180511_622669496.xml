@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, May 11, 2018 - 1:46 PM  -->
+<feature_model name="Complaint">
+<meta>
+<data name="description">Complaint</data>
+<data name="creator">HANIM</data>
+<data name="address"></data>
+<data name="email">farhanim.manap@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Space</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Complaint Management System(_r)
+	:m Complaint Method(_r_1)
+		:o Browser(_r_1_6)
+		:o Mobile(_r_1_7)
+		:o Email(_r_1_8)
+	:m Notification(_r_2)
+		:o Email(_r_2_9)
+		:o Via SMS(_r_2_10)
+	:m Check Status(_r_3)
+		:o Browser(_r_3_11)
+		:o Via SMS(_r_3_12)
+	:m Complaint Management(_r_4)
+		:o Add(_r_4_15)
+		:o Modify(_r_4_16)
+		:o Delete(_r_4_17)
+	:m GUI(_r_5)
+		:o PC(_r_5_18)
+		:o Complaint(_r_5_20)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

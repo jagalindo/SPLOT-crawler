@@ -1,0 +1,66 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Apr 13, 2019 - 1:09 AM  -->
+<feature_model name="SUBWAY FODA">
+<meta>
+<data name="description">Linha de montagem SUBWAY</data>
+<data name="creator">Genilson, Luiz e Jean</data>
+<data name="address"></data>
+<data name="email">luizsales90@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFAL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sanduiche(_r)
+	:m Pao(_r_1)
+		:g (_r_1_6) [1,1] 
+			: 9 graos(_r_1_6_7)
+			: 9 graos aveia e mel(_r_1_6_8)
+			: Italiano(_r_1_6_9)
+			: Parmesao e oregano(_r_1_6_10)
+			: 3 queijos(_r_1_6_11)
+	:m Recheio(_r_2)
+		:g (_r_2_12) [1,1] 
+			: Atum(_r_2_12_13)
+			: Beef Bacon Chipotle(_r_2_12_14)
+			: Beef Barbecue Bacon(_r_2_12_15)
+			: Carne Supreme(_r_2_12_17)
+			: BMT(_r_2_12_19)
+			: Frango(_r_2_12_20)
+			: Frango defumado com cream cheese(_r_2_12_21)
+			: Frango empanado(_r_2_12_22)
+			: Frango Ranch(_r_2_12_23)
+			: Frango Teriyaki(_r_2_12_24)
+			: Steak Cheddar Cremoso(_r_2_12_25)
+			: Steak Churrasco(_r_2_12_26)
+			: Vegetariano(_r_2_12_27)
+	:m Queijo(_r_3)
+		:g (_r_3_28) [1,1] 
+			: Suico(_r_3_28_29)
+			: Prato(_r_3_28_30)
+			: Cheddar(_r_3_28_31)
+	:o Salada(_r_4)
+		:g (_r_4_32) [1,*] 
+			: Alface(_r_4_32_33)
+			: Tomate(_r_4_32_34)
+			: Pepinos(_r_4_32_35)
+			: Pimentao Verde(_r_4_32_36)
+			: Cebola(_r_4_32_37)
+			: Azeitona Preta(_r_4_32_38)
+			: Picles(_r_4_32_39)
+			: Rucula(_r_4_32_40)
+	:o Molho(_r_5)
+	:g (_r_43) [1,1] 
+		: Mostarde e Mel(_r_43_44)
+		: Cebola Agridoce(_r_43_45)
+		: Barbecue(_r_43_46)
+		: Parmesao(_r_43_47)
+		: Chipotle(_r_43_48)
+		: Mostarda(_r_43_49)
+		: Maionese(_r_43_50)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

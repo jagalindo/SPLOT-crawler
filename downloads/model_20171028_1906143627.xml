@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 2, 2017 - 1:08 PM  -->
+<feature_model name="search-engine">
+<meta>
+<data name="description">example from pdf</data>
+<data name="creator">me</data>
+<data name="address"></data>
+<data name="email">xll8@walla,com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TAU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r search-engine(_r)
+	:m doc-type(_r_2)
+		:m html(_r_2_3)
+		:o image(_r_2_6)
+			:g (_r_2_6_18) [1,1] 
+				: gif(_r_2_6_18_19)
+				: svg(_r_2_6_18_20)
+		:o video(_r_2_9)
+	:o search-by-lang(_r_12)
+		:g (_r_12_13) [1,*] 
+			: spanish(_r_12_13_14)
+			: english(_r_12_13_15)
+			: french(_r_12_13_16)
+	:o page-preview(_r_17)
+	:o page-translation(_r_16)
+</feature_tree>
+<constraints>
+constraint_4:~_r_12 or _r_16
+constraint_2:~_r_2_6_18_20 or ~_r_16
+</constraints>
+</feature_model>

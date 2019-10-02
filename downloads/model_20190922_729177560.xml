@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:44 PM  -->
+<feature_model name="SISTEMA DE VENTAS DE FARMACIA EN LINEA">
+<meta>
+<data name="description">VENTAS DE MEICAMNETOS EN LINEA BAJO PLATAFORMA MOBIL</data>
+<data name="creator">JUAN SALGADO , OSCAR CHILUIZA</data>
+<data name="address"></data>
+<data name="email">jmsalgado@espe.edu.ec, owchiluiza@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPEL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SVFAOL(_r)
+	:m REGISTRO CLIENTE(_r_1)
+		:m IDENTIFICACION(_r_1_6)
+		:m DIRECCION(_r_1_7)
+	:m SOLICITUD PEIDO(_r_2)
+		:m MEDIANTE CODIGO PRODUCTO(_r_2_8)
+		:o MEDIANTE CODIGO QR(_r_2_15)
+		:m MEDIANTE IMAGEN RECETE(_r_2_16)
+		:o MEDIANTE IMAGEN WHATSAP(_r_2_17)
+		:m CANCELAR PEDIDO(_r_2_18)
+	:m COMPRA PRODUCTO(_r_3)
+		:m FACTURACION(_r_3_19)
+	:m PAGO PRODUCTO(_r_4)
+		:o DEBITO EN  CUENTA(_r_4_20)
+		:m EFECTIVO(_r_4_21)
+		:o TARJETA CREDITO(_r_4_22)
+		:o CREDITO DIRECTO(_r_4_23)
+	:m DESPACHO(_r_5)
+		:m POR ENTREGAR(_r_5_24)
+		:o EN PROCESO(_r_5_25)
+		:m ENTREGADO(_r_5_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

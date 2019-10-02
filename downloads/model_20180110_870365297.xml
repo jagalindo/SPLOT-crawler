@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jan 10, 2018 - 8:03 PM  -->
+<feature_model name="mobile phone">
+<meta>
+<data name="description">phone</data>
+<data name="creator">Ramon</data>
+<data name="address"></data>
+<data name="email">sephi.gaara@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ramon</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r mobile phone(_r)
+	:m calls(_r_2)
+	:o GPS(_r_3)
+	:m Screen(_r_4)
+		:g (_r_4_6) [1,*] 
+			: Basic(_r_4_6_7)
+			: Colour(_r_4_6_8)
+			: High resolution(_r_4_6_9)
+	:o Media(_r_5)
+		:g (_r_5_10) [1,1] 
+			: Camera(_r_5_10_11)
+			: MP3(_r_5_10_12)
+</feature_tree>
+<constraints>
+constraint_1:~_r_3 or ~_r_4_6_7
+constraint_3:_r_4_6_9 or ~_r_5_10_11
+</constraints>
+</feature_model>

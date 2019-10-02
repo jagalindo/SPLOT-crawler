@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Feb 23, 2019 - 5:50 PM  -->
+<feature_model name="Arma">
+<meta>
+<data name="description">Arma de golpe</data>
+<data name="creator">ALA</data>
+<data name="address"></data>
+<data name="email">ala@ala</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ala</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Arma de golpe(_r)
+	:m Tipos(_r_1)
+		:g (_r_1_7) [1,1] 
+			: Espada(_r_1_7_8)
+			: Machado(_r_1_7_11)
+			: Porrete(_r_1_7_12)
+			: Faca(_r_1_7_13)
+	:m Tamanho(_r_21)
+		:g (_r_21_22) [1,1] 
+			: Curto(_r_21_22_23)
+			: Medio(_r_21_22_24)
+			: Longo(_r_21_22_25)
+	:o Elemental(_r_27)
+		:g (_r_27_28) [1,*] 
+			: Fogo(_r_27_28_29)
+			: Raio(_r_27_28_30)
+			: Gelo(_r_27_28_31)
+			: Veneno(_r_27_28_32)
+	:m Material(_r_33)
+		:g (_r_33_34) [1,1] 
+			: Madeira(_r_33_34_35)
+			: Ferro(_r_33_34_36)
+			: Aco(_r_33_34_37)
+</feature_tree>
+<constraints>
+constraint_18:~_r_1_7_11 or ~_r_33_34_35
+constraint_28:~_r_1_7_12 or ~_r_33_34_36 or ~_r_33_34_37
+constraint_19:~_r_1_7_11 or _r_33_34_36 or _r_33_34_37
+constraint_29:~_r_1_7_12 or _r_33_34_35
+constraint_30:~_r_1_7_13 or ~_r_33_34_35
+constraint_22:~_r_1_7_13 or ~_r_21_22_24 or ~_r_21_22_25
+constraint_23:~_r_1_7_13 or _r_21_22_23
+constraint_31:~_r_1_7_13 or _r_33_34_36 or _r_33_34_37
+constraint_26:~_r_1_7_12 or _r_21_22_24 or _r_21_22_25
+constraint_27:~_r_1_7_12 or ~_r_21_22_23
+constraint_24:~_r_27_28_29 or ~_r_33_34_35
+constraint_25:_r_27_28_30 or _r_27_28_31 or _r_27_28_32 or ~_r_33_34_35
+</constraints>
+</feature_model>

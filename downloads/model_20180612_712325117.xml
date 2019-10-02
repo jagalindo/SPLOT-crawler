@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 13, 2018 - 8:58 PM  -->
+<feature_model name="Feature_Model-YDelgado">
+<meta>
+<data name="description">Exploratory-Study</data>
+<data name="creator">Yenisei Delgado Verdecia</data>
+<data name="address"></data>
+<data name="email">ydelgado@dcc.uchile.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de Chile</data>
+<data name="department">DCC</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ERP_Core(_r)
+	:o account(_r_1)
+		:m base_setup(_r_1_19)
+		:m product(_r_1_20)
+		:m analytic(_r_1_21)
+		:m web_planner(_r_1_22)
+		:m portal(_r_1_23)
+	:o sales(_r_2)
+		:m account(_r_2_24)
+	:o purchase(_r_3)
+		:m stock_account(_r_3_31)
+	:o inventory(_r_25)
+		:m product(_r_25_26)
+		:m barcodes(_r_25_27)
+		:m web_planner(_r_25_28)
+</feature_tree>
+<constraints>
+constraint_4:_r_2_24 or _r_3
+constraint_5:_r_2_24 or _r_25
+constraint_2:_r_1 or _r_2 or _r_3 or _r_25 or _r
+constraint_3:_r_2_24 or _r_2
+</constraints>
+</feature_model>

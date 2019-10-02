@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 22, 2018 - 7:14 PM  -->
+<feature_model name="Buscame">
+<meta>
+<data name="description">Buscame</data>
+<data name="creator">Jefferson da Silva Barbosa</data>
+<data name="address"></data>
+<data name="email">jefferson.sb.es@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Buscame(_r)
+	:m Configuration(_r_1)
+		:g (_r_1_4) [1,1] 
+			: ConfigurationServiceB(_r_1_4_5)
+			: ConfigurationServiceA(_r_1_4_6)
+	:m Localization(_r_2)
+		:g (_r_2_7) [1,1] 
+			: LocalizationServiceC(_r_2_7_8)
+			: LocalizationServiceB(_r_2_7_9)
+			: LocalizationServiceA(_r_2_7_10)
+	:m Product(_r_3)
+		:g (_r_3_11) [1,1] 
+			: ProductServiceC(_r_3_11_12)
+			: ProductServiceB(_r_3_11_13)
+			: ProductServiceA(_r_3_11_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

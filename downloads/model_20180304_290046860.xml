@@ -1,0 +1,90 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Mar 4, 2018 - 9:34 PM  -->
+<feature_model name="VentaComFeature">
+<meta>
+<data name="description">Modelo caracteristicas</data>
+<data name="creator">Julie Sarmiento</data>
+<data name="address"></data>
+<data name="email">ja.sarmiento@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">JulieSar</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VentaComputadores(_r)
+	:m Tipo Computador(_r_1)
+		:g (_r_1_7) [1,1] 
+			: Mesa(_r_1_7_8)
+			: Portatil(_r_1_7_9)
+			: Servidor(_r_1_7_10)
+	:m Marcas(_r_2)
+		:g (_r_2_11) [1,1] 
+			: Dell(_r_2_11_12)
+			: Toshiba(_r_2_11_13)
+			: Lenovo(_r_2_11_14)
+			: Apple(_r_2_11_15)
+			: Clon(_r_2_11_16)
+	:m Sistema Operativo(_r_3)
+		:g (_r_3_17) [1,1] 
+			: Personales(_r_3_17_18)
+				:g (_r_3_17_18_20) [1,1] 
+					: Windows 10(_r_3_17_18_20_21)
+					: Fedora de Linux(_r_3_17_18_20_22)
+					: OS X Yosemite(_r_3_17_18_20_23)
+			: Servidores(_r_3_17_19)
+				:g (_r_3_17_19_24) [1,1] 
+					: Windows Server(_r_3_17_19_24_25)
+					: Red Hat(_r_3_17_19_24_26)
+					: OS X Server(_r_3_17_19_24_27)
+	:m CPU(_r_4)
+		:m Memoria RAM(_r_4_28)
+			:g (_r_4_28_32) [1,1] 
+				: 4GB(_r_4_28_32_33)
+				: 8GB(_r_4_28_32_34)
+				: 16GB(_r_4_28_32_35)
+				: 32GB(_r_4_28_32_36)
+				: 64GB(_r_4_28_32_37)
+		:m Procesador(_r_4_29)
+			:g (_r_4_29_38) [1,1] 
+				: Intel(_r_4_29_38_39)
+				: AMD(_r_4_29_38_40)
+		:m Disco Duro(_r_4_30)
+			:g (_r_4_30_41) [1,1] 
+				: 500GB(_r_4_30_41_42)
+				: 1TB(_r_4_30_41_43)
+				: 2TB(_r_4_30_41_44)
+				: 5TB(_r_4_30_41_45)
+				: 10TB(_r_4_30_41_46)
+		:o Tarjeta Grafica(_r_4_31)
+			:g (_r_4_31_47) [1,1] 
+				: NVIDIA(_r_4_31_47_48)
+				: ATI Radeon(_r_4_31_47_49)
+	:o Pantalla(_r_5)
+		:o Tecnologia(_r_5_50)
+			:g (_r_5_50_52) [1,*] 
+				: 3D(_r_5_50_52_53)
+				: 4K(_r_5_50_52_54)
+		:o Tamano(_r_5_51)
+			:g (_r_5_51_55) [1,1] 
+				: 14 pulgadas(_r_5_51_55_56)
+				: 17 pulgadas(_r_5_51_55_57)
+				: 24 pulgadas(_r_5_51_55_58)
+	:o Planta de Poder(_r_6)
+</feature_tree>
+<constraints>
+constraint_17:~_r_2_11_13 or ~_r_3_17_18_20_23 or ~_r_3_17_19_24_27
+constraint_18:~_r_2_11_14 or ~_r_3_17_18_20_23 or ~_r_3_17_19_24_27
+constraint_19:~_r_2_11_16 or ~_r_3_17_18_20_23 or ~_r_3_17_19_24_27
+constraint_10:~_r_1_7_8 or ~_r_3_17_19 or ~_r_4_28_32_36 or ~_r_4_28_32_37 or ~_r_4_30_41_45 or ~_r_4_30_41_46
+constraint_6:_r_5 or ~_r_1_7_9
+constraint_7:~_r_1_7_9 or ~_r_3_17_19 or ~_r_4_28_32_36 or ~_r_4_28_32_37 or ~_r_4_30_41_45 or ~_r_4_30_41_46
+constraint_12:~_r_1_7_10 or ~_r_3_17_18
+constraint_4:~_r_1_7_9 or ~_r_2_11_16 or ~_r_5_50
+constraint_13:~_r_1_7_10 or ~_r_4_28_32_33 or ~_r_4_28_32_34 or ~_r_4_28_32_35
+constraint_14:~_r_1_7_10 or ~_r_4_30_41_42 or ~_r_4_30_41_43 or ~_r_4_30_41_44
+constraint_15:~_r_5 or _r_5_51
+constraint_16:~_r_2_11_12 or ~_r_3_17_18_20_23 or ~_r_3_17_19_24_27
+</constraints>
+</feature_model>

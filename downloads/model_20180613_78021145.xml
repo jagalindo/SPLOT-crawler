@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 14, 2018 - 10:43 PM  -->
+<feature_model name="ERP_Core_Exploratory-Study">
+<meta>
+<data name="description">ERP Core </data>
+<data name="creator">Yenisei Delgado Verdecia</data>
+<data name="address"></data>
+<data name="email">ydelgado@dcc.uchile.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Chile</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ERP(_r)
+	:g (_r_1) [1,*] 
+		: Inventory(_r_1_14)
+			:m stock(_r_1_14_20)
+		: Sales(_r_1_24)
+			:m sales(_r_1_24_21)
+		: Accounting(_r_1_26)
+			:m analytic(_r_1_26_27)
+			:m web_planer(_r_1_26_28)
+			:m account(_r_1_26_22)
+			:m base_setup(_r_1_26_25)
+			:m product(_r_1_26_26)
+			:m analytic(__r_1_26_27)
+			:m web_planer(__r_1_26_28)
+		: Purchase(_r_1_23)
+			:m purchase(_r_1_23_24)
+</feature_tree>
+<constraints>
+constraint_17:~_r_1_24 or _r_1_26
+</constraints>
+</feature_model>

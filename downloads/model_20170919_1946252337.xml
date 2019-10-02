@@ -1,0 +1,84 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 19, 2017 - 3:55 AM  -->
+<feature_model name="LP Computador">
+<meta>
+<data name="description">Linea de produccion computador</data>
+<data name="creator">jairoC</data>
+<data name="address"></data>
+<data name="email">jr.collante@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">estudiante</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Tipo(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Mesa(_r_1_2_3)
+			: Server(_r_1_2_6)
+			: Portatil(_r_1_2_7)
+	:m Sistema Operativo(_r_9)
+		:g (_r_9_10) [1,1] 
+			: SO_Server(_r_9_10_11)
+				:g (_r_9_10_11_13) [1,1] 
+					: Window Server(_r_9_10_11_13_14)
+					: Red Hat Server(_r_9_10_11_13_15)
+					: OS X Server(_r_9_10_11_13_16)
+			: SO_PC(_r_9_10_12)
+				:g (_r_9_10_12_17) [1,1] 
+					: Windows 10(_r_9_10_12_17_18)
+					: Fedora(_r_9_10_12_17_19)
+					: OS X(_r_9_10_12_17_20)
+	:m Marca(_r_21)
+		:g (_r_21_22) [1,1] 
+			: DELL(_r_21_22_23)
+			: Toshiba(_r_21_22_24)
+			: Apple(_r_21_22_18)
+			: Lenovo(_r_21_22_19)
+			: Clon(_r_21_22_20)
+	:m CPU(__r_21)
+		:m RAM(__r_21_27)
+			:g (__r_21_27_31) [1,1] 
+				: 4GB(__r_21_27_31_32)
+				: 8GB(__r_21_27_31_33)
+				: 16GB(__r_21_27_31_34)
+				: 32GB(__r_21_27_31_35)
+				: 64GB(__r_21_27_31_36)
+		:m Procesador(__r_21_28)
+			:g (__r_21_28_37) [1,1] 
+				: Intel(__r_21_28_37_38)
+				: AMD(__r_21_28_37_39)
+		:m Disco(__r_21_29)
+			:g (__r_21_29_40) [1,1] 
+				: 500GB(__r_21_29_40_41)
+				: 1TB(__r_21_29_40_42)
+				: 2TB(__r_21_29_40_43)
+				: 5TB(__r_21_29_40_44)
+				: 10TB(__r_21_29_40_45)
+		:o Tarjeta grafica(__r_21_30)
+			:g (__r_21_30_46) [1,1] 
+				: NVIDA(__r_21_30_46_47)
+				: ATI(__r_21_30_46_48)
+	:o Pantalla(_r_49)
+		:m Tecnologia(_r_49_50)
+			:g (_r_49_50_52) [1,1] 
+				: Basica(_r_49_50_52_53)
+				: 3D(_r_49_50_52_54)
+				: 4K(_r_49_50_52_55)
+		:m Tamano(_r_49_51)
+			:g (_r_49_51_56) [1,1] 
+				: 14P(_r_49_51_56_57)
+				: 17P(_r_49_51_56_58)
+				: 24P(_r_49_51_56_59)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_7 or _r_49
+constraint_6:_r_9_10_11_13_16 or _r_9_10_12_17_20 or ~_r_21_22_18
+constraint_4:~_r_1_2_6 or _r_9_10_11
+constraint_5:~_r_1_2_7 or ~_r_21_22_20
+constraint_2:~_r_1_2_3 or _r_9_10_12
+constraint_3:~_r_1_2_7 or _r_9_10_12
+</constraints>
+</feature_model>

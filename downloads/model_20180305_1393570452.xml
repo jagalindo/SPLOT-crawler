@@ -1,0 +1,96 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Mar 5, 2018 - 3:31 PM  -->
+<feature_model name="ComputadorasFab">
+<meta>
+<data name="description">Características de posibles computadores</data>
+<data name="creator">Daniel Althviz</data>
+<data name="address"></data>
+<data name="email">d.althviz10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r computador(_r)
+	:m Marca(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Dell(_r_1_2_3)
+			: Toshiba(_r_1_2_4)
+			: Lenovo(_r_1_2_5)
+			: Apple(_r_1_2_6)
+			: Clon(_r_1_2_7)
+	:m Tipo(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Mesa(_r_8_9_10)
+			: Portatil(_r_8_9_11)
+			: Servidor(_r_8_9_12)
+	:m SO(_r_13)
+		:g (_r_13_16) [1,1] 
+			: Personales(_r_13_16_17)
+				:g (_r_13_16_17_19) [1,1] 
+					: Windows 10(_r_13_16_17_19_20)
+					: Fedora(_r_13_16_17_19_21)
+					: OS X Yosemite(_r_13_16_17_19_22)
+			: Servidores(_r_13_16_18)
+				:g (_r_13_16_18_23) [1,1] 
+					: Windows Server(_r_13_16_18_23_24)
+					: Red Hat(_r_13_16_18_23_25)
+					: OS X Server(_r_13_16_18_23_26)
+	:m CPU(_r_27)
+		:m RAM(_r_27_28)
+			:g (_r_27_28_44) [1,1] 
+				: 4GB(_r_27_28_44_45)
+				: 8GB(_r_27_28_44_46)
+				: 16GB(_r_27_28_44_47)
+				: 32GB(_r_27_28_44_48)
+				: 64GB(_r_27_28_44_49)
+		:m Procesador(_r_27_29)
+			:g (_r_27_29_41) [1,1] 
+				: Intel(_r_27_29_41_42)
+				: AMD(_r_27_29_41_43)
+		:m Disco Duro(_r_27_30)
+			:g (_r_27_30_35) [1,1] 
+				: 500GB(_r_27_30_35_36)
+				: 1TB(_r_27_30_35_37)
+				: 2TB(_r_27_30_35_38)
+				: 5TB(_r_27_30_35_39)
+				: 10TB(_r_27_30_35_40)
+		:o GPU(_r_27_31)
+			:g (_r_27_31_32) [1,1] 
+				: NVIDIA(_r_27_31_32_33)
+				: ATI Radeon(_r_27_31_32_34)
+	:o Pantalla(_r_50)
+		:o Tecnologia(_r_50_52)
+			:g (_r_50_52_55) [1,*] 
+				: 3D(_r_50_52_55_56)
+				: 4k(_r_50_52_55_57)
+		:m Tam(_r_50_54)
+			:g (_r_50_54_58) [1,1] 
+				: 14(_r_50_54_58_59)
+				: 17(_r_50_54_58_60)
+				: 24(_r_50_54_58_62)
+	:o PlantaPoder(_r_51)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_7 or ~_r_8_9_11
+constraint_17:~_r_8_9_11 or ~_r_27_28_44_49
+constraint_18:~_r_8_9_11 or ~_r_27_28_44_48
+constraint_19:~_r_8_9_10 or ~_r_27_28_44_48
+constraint_22:~_r_8_9_11 or ~_r_50_52_55_57
+constraint_23:~_r_8_9_11 or ~_r_27_30_35_39
+constraint_10:~_r_8_9_10 or ~_r_13_16_18
+constraint_11:~_r_8_9_11 or ~_r_13_16_18
+constraint_20:~_r_8_9_10 or ~_r_27_28_44_49
+constraint_21:~_r_8_9_11 or ~_r_50_52_55_56
+constraint_12:_r_1_2_6 or ~_r_13_16_18_23_26
+constraint_26:~_r_8_9_10 or ~_r_27_30_35_40
+constraint_13:_r_1_2_6 or ~_r_13_16_17_19_22
+constraint_14:~_r_8_9_12 or _r_13_16_18
+constraint_24:~_r_8_9_11 or ~_r_27_30_35_40
+constraint_15:~_r_8_9_12 or _r_27_28_44_48 or _r_27_28_44_49
+constraint_25:~_r_8_9_10 or ~_r_27_30_35_39
+constraint_16:~_r_8_9_12 or _r_27_30_35_39 or _r_27_30_35_40
+</constraints>
+</feature_model>

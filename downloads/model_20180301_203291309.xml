@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 1, 2018 - 4:28 AM  -->
+<feature_model name="CellPhone">
+<meta>
+<data name="description">Cell</data>
+<data name="creator">MSH</data>
+<data name="address"></data>
+<data name="email">hemayati.m.s@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Cell Phone(_r)
+	:m Tuoch(_r_1)
+		:o Sensitive(_r_1_5)
+		:o MultiTouch(_r_1_6)
+	:m Type(_r_2)
+		:o HandWrite(_r_2_7)
+		:o Type(_r_2_8)
+	:m Call(_r_3)
+		:o telling(_r_3_9)
+		:o typping(_r_3_10)
+	:m SMS(_r_4)
+		:o handwrite(_r_4_11)
+		:o typping(_r_4_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

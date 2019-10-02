@@ -1,0 +1,71 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 8, 2017 - 4:36 PM  -->
+<feature_model name="er2">
+<meta>
+<data name="description">er</data>
+<data name="creator">m</data>
+<data name="address">m</data>
+<data name="email">realmicromatx@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uiu</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ER SYSTEM(_r)
+	:m mobile robot(_r_1)
+		:m Hardware features(_r_1_3)
+			:o Battery Extension(_r_1_3_4)
+			:m sensor(_r_1_3_5)
+				:g (_r_1_3_5_8) [1,*] 
+					: motion(_r_1_3_5_8_9)
+						:g (_r_1_3_5_8_9_15) [1,*] 
+							: Accelerometer(_r_1_3_5_8_9_15_16)
+							: Push button(_r_1_3_5_8_9_15_17)
+					: looks(_r_1_3_5_8_12)
+						:g (_r_1_3_5_8_12_18) [1,*] 
+							: color sensor(_r_1_3_5_8_12_18_19)
+							: Light sensor(_r_1_3_5_8_12_18_20)
+							: Sonar sensor(_r_1_3_5_8_12_18_21)
+							: distance-obstacle sensor(_r_1_3_5_8_12_18_22)
+					: Sensing(_r_1_3_5_8_13)
+						:g (_r_1_3_5_8_13_26) [1,*] 
+							: Temperature(_r_1_3_5_8_13_26_27)
+							: bump-touch-collision sensor(_r_1_3_5_8_13_26_28)
+					: voice-sound(_r_1_3_5_8_14)
+			:m Microcomputer(_r_1_3_6)
+				:g (_r_1_3_6_29) [1,*] 
+					: Atmel(_r_1_3_6_29_30)
+					: Arduion uno(_r_1_3_6_29_31)
+			:m Actuator(_r_1_3_7)
+				:g (_r_1_3_7_34) [1,*] 
+					: Dc Motor(_r_1_3_7_34_35)
+					: LED(_r_1_3_7_34_36)
+					: Ball shooter(_r_1_3_7_34_37)
+					: Large motor(_r_1_3_7_34_38)
+					: Buzzer(_r_1_3_7_34_39)
+					: Sound(_r_1_3_7_34_40)
+					: Medium motor(_r_1_3_7_34_41)
+	:m controller(_r_2)
+		:m Communication(_r_2_42)
+			:g (_r_2_42_43) [1,*] 
+				: USB Cable(_r_2_42_43_44)
+				: Wifi(_r_2_42_43_46)
+				: Bluetooth(_r_2_42_43_47)
+				: SPI(_r_2_42_43_48)
+		:o Tools(_r_2_49)
+			:g (_r_2_49_50) [1,*] 
+				: Cap(_r_2_49_50_51)
+				: Remote Control(_r_2_49_50_52)
+				: joystick-keypad(_r_2_49_50_53)
+		:m Library(_r_2_54)
+			:g (_r_2_54_56) [1,*] 
+				: sound commands(_r_2_54_56_57)
+				: sensing command(_r_2_54_56_58)
+				: looks command(_r_2_54_56_59)
+				: Motion command(_r_2_54_56_60)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

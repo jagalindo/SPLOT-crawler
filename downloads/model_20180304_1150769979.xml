@@ -1,0 +1,91 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Mar 4, 2018 - 10:16 PM  -->
+<feature_model name="Computer sales">
+<meta>
+<data name="description">Computer sales</data>
+<data name="creator">Ivan Taimal</data>
+<data name="address"></data>
+<data name="email">rtaimal@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ComputerSales(_r)
+	:m TypeOfComputer(_r_4)
+		:o Desktop(_r_4_5)
+		:o Laptop(_r_4_6)
+		:o Server(_r_4_7)
+	:m Mark(_r_8)
+		:g (_r_8_13) [1,1] 
+			: Clon(_r_8_13_14)
+			: Lenovo(_r_8_13_15)
+			: Apple(_r_8_13_16)
+			: Toshiba(_r_8_13_17)
+			: Dell(_r_8_13_18)
+	:m OperativeSystem(_r_19)
+		:g (_r_19_31) [1,1] 
+			: OS Personal(_r_19_31_32)
+				:g (_r_19_31_32_35) [1,1] 
+					: Windows 10(_r_19_31_32_35_36)
+					: Fedora(_r_19_31_32_35_37)
+					: Yosemite(_r_19_31_32_35_38)
+			: OS Server(_r_19_31_43)
+				:g (_r_19_31_43_44) [1,1] 
+					: Windows Server(_r_19_31_43_44_45)
+					: Red Hat(_r_19_31_43_44_46)
+					: OSX Server(_r_19_31_43_44_47)
+	:m CPU(_r_48)
+		:m RAM(_r_48_49)
+			:g (_r_48_49_55) [1,1] 
+				: 4G(_r_48_49_55_56)
+				: 8G(_r_48_49_55_57)
+				: 16G(_r_48_49_55_58)
+				: 32G(_r_48_49_55_59)
+				: 64G(_r_48_49_55_60)
+		:m Processor(_r_48_50)
+			:g (_r_48_50_61) [1,1] 
+				: Intel(_r_48_50_61_62)
+				: AMD(_r_48_50_61_63)
+		:m Hard drive(_r_48_51)
+			:g (_r_48_51_64) [1,1] 
+				: 500Gb(_r_48_51_64_65)
+				: 1Tb(_r_48_51_64_66)
+				: 2Tb(_r_48_51_64_67)
+				: 5Tb(_r_48_51_64_68)
+				: 10Tb(_r_48_51_64_69)
+		:o Graphic card(_r_48_52)
+			:g (_r_48_52_70) [1,1] 
+				: Nvidea(_r_48_52_70_71)
+				: ATI Radeon(_r_48_52_70_72)
+	:o Screen(_r_53)
+		:m Size(_r_53_73)
+			:g (_r_53_73_74) [1,1] 
+				: 14 inches(_r_53_73_74_75)
+				: 17 inches(_r_53_73_74_76)
+				: 24 inches(_r_53_73_74_77)
+		:m Technology(_r_53_78)
+			:g (_r_53_78_79) [1,*] 
+				: 3D(_r_53_78_79_80)
+				: 4K(_r_53_78_79_81)
+	:o Power plant(_r_54)
+</feature_tree>
+<constraints>
+constraint_17:_r_4_5 or ~_r_19_31_43
+constraint_18:_r_4_6 or ~_r_19_31_43
+constraint_19:~_r_8_13_16 or ~_r_19_31_43_44_47
+constraint_22:_r_4_7 or ~_r_48_49_55_56 or ~_r_48_49_55_57 or ~_r_48_49_55_58
+constraint_23:_r_4_7 or ~_r_48_51_64_65 or ~_r_48_51_64_66 or ~_r_48_51_64_67
+constraint_10:_r_4_5 or ~_r_48_51_64_68 or ~_r_48_51_64_69
+constraint_11:_r_4_6 or ~_r_48_51_64_68 or ~_r_48_51_64_69
+constraint_20:~_r_8_13_16 or ~_r_19_31_32_35_38
+constraint_12:_r_4_6 or ~_r_8_13_14
+constraint_21:_r_4_7 or ~_r_19_31_32
+constraint_13:_r_4_6 or _r_53
+constraint_14:_r_4_6 or ~_r_53_78
+constraint_15:_r_4_5 or ~_r_48_49_55_59 or ~_r_48_49_55_60
+constraint_16:_r_4_6 or ~_r_48_49_55_59 or ~_r_48_49_55_60
+</constraints>
+</feature_model>

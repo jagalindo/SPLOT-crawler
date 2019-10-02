@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Sep 13, 2019 - 2:39 PM  -->
+<feature_model name="Ejemplo de Clase de SPL">
+<meta>
+<data name="description">Modelo que describe compras en un portal</data>
+<data name="creator">Edison Espinosa</data>
+<data name="address"></data>
+<data name="email">edisonespinosag@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EjercicioClase(_r)
+	:o Registracion(_r_2)
+		:o DireccionFActuracion(_r_2_3)
+		:o PagoRapido(_r_2_4)
+		:o CredencialdeAcceso(_r_2_32)
+			:m Login(_r_2_32_35)
+			:m Clave(_r_2_32_36)
+		:g (_r_2_37) [1,*] 
+			: TarjetaCredito(_r_2_37_38)
+				:m NombreTarjeta(_r_2_37_38_39)
+				:m FechaExpiracion(_r_2_37_38_40)
+				:m NumeroTarjeta(_r_2_37_38_41)
+				:m InformacionSeguridad(_r_2_37_38_42)
+		:o DireccionEnvio(_r_2_43)
+	:m Producto(_r_5)
+		:m ProductoElectronico(_r_5_9)
+		:g (_r_5_25) [1,1] 
+			: ProductoFisico(_r_5_25_26)
+				:m Disponibilidad(_r_5_25_26_27)
+				:m Longitud(_r_5_25_26_28)
+				:m ancho(_r_5_25_26_29)
+				:m altura(_r_5_25_26_30)
+				:m peso(_r_5_25_26_31)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_3 or _r_2_43
+</constraints>
+</feature_model>

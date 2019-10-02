@@ -1,0 +1,62 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Apr 30, 2019 - 11:08 AM  -->
+<feature_model name="Bike Computer">
+<meta>
+<data name="description">All </data>
+<data name="creator">Maria Dehne</data>
+<data name="address"></data>
+<data name="email">maria.dehne@uni-rostock.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uni Rostock</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike Computer Model(_r)
+	:m Bike(_r_1)
+		:m Wheel(_r_1_4)
+			:m Sensor(_r_1_4_34)
+				:g (_r_1_4_34_39) [1,*] 
+					: wireless(_r_1_4_34_39_40)
+					: cable(_r_1_4_34_39_41)
+			:m Magnet(_r_1_4_35)
+		:m Frame(_r_1_5)
+			:m Sensor(_r_1_5_36)
+				:g (_r_1_5_36_44) [1,*] 
+					: wireless(_r_1_5_36_44_45)
+					: cable(_r_1_5_36_44_46)
+			:m Magnet(_r_1_5_37)
+		:m China(_r_1_7)
+		:m USA(_r_1_8)
+	:m BC(_r_3)
+		:m Bracket(_r_3_6)
+			:g (_r_3_6_23) [1,1] 
+				: O-Rings(_r_3_6_23_24)
+				: Cable ties(_r_3_6_23_25)
+		:m Display(_r_3_9)
+		:m Controls(_r_3_10)
+		:m Measurements(_r_3_11)
+			:m Speedometer(_r_3_11_12)
+				:o avg Speed(_r_3_11_12_26)
+			:m Trip Count(_r_3_11_14)
+				:o avg Count(_r_3_11_14_27)
+			:m total Distance(_r_3_11_15)
+			:m Clock(_r_3_11_16)
+				:o stop Watch(_r_3_11_16_28)
+			:m Energy Supply(_r_3_11_18)
+				:g (_r_3_11_18_19) [1,*] 
+					: photovoltaic cell(_r_3_11_18_19_20)
+					: battery(_r_3_11_18_19_21)
+					: rechargeable battery(_r_3_11_18_19_22)
+			:o Pedal Rotation(_r_3_11_47)
+		:o Connector(_r_3_29)
+			:g (_r_3_29_30) [1,1] 
+				: Nike Bike Shoes(_r_3_29_30_31)
+				: GPS(_r_3_29_30_32)
+				: Heartbeat Monitor(_r_3_29_30_33)
+</feature_tree>
+<constraints>
+constraint_2:_r_1_5_36 or ~_r_3_11_47
+</constraints>
+</feature_model>

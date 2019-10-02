@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Apr 9, 2018 - 2:40 PM  -->
+<feature_model name="Testa da Ferramenta">
+<meta>
+<data name="description">apenas um teste para ver a funcionalidade do soft</data>
+<data name="creator">Lanny</data>
+<data name="address">Lucas</data>
+<data name="email">lanny.abrantees@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Lanny's</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Media(_r)
+	:m media-selecao(_r_1)
+	:g (_r_5) [1,*] 
+		: photo(_r_5_6)
+		: music(_r_5_10)
+		: video(_r_5_11)
+		: documents(_r_5_12)
+	:m media management(_r_14)
+		:o favorites(_r_14_15)
+			:m set-favorites(_r_14_15_16)
+			:m view-favorites(_r_14_15_17)
+</feature_tree>
+<constraints>
+constraint_1:_r
+</constraints>
+</feature_model>

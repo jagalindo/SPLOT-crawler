@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 19, 2019 - 10:07 AM  -->
+<feature_model name="Feature Diagram Floricode">
+<meta>
+<data name="description">Feature Diagram Floricode</data>
+<data name="creator">INF students</data>
+<data name="address"></data>
+<data name="email">panagiotis.grimanelis@wur.nl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">WUR</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Feature Diagram Floricode(_r)
+	:m Item Class(_r_1)
+		:m Scientific Name(_r_1_2)
+		:m Regulations(_r_1_3)
+		:m Certifications(_r_1_4)
+		:m Classification(_r_1_5)
+	:m Item Instance(_r_6)
+		:m Height(_r_6_7)
+		:m Width(_r_6_8)
+		:m Weight(_r_6_9)
+		:m Raw materials used(_r_6_10)
+		:m Colour(_r_6_11)
+	:m Item Batch(_r_12)
+		:m Raw Materials(_r_12_13)
+		:m Export Certification(_r_12_14)
+		:m Grower Name(_r_12_15)
+		:m Grower Area(_r_12_16)
+		:m Harvest Date(_r_12_17)
+		:m Shelf Life(_r_12_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

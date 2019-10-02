@@ -1,0 +1,87 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Sep 14, 2019 - 5:06 PM  -->
+<feature_model name="Sistemas de Seguridad">
+<meta>
+<data name="description">Sistema de Seguridad</data>
+<data name="creator">Paul Vega</data>
+<data name="address"></data>
+<data name="email">spvega1@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema de Alarmas(_r)
+	:m Services(_r_2)
+		:m Security(_r_2_12)
+		:m Intrusion(_r_2_13)
+			:m Detection(_r_2_13_25)
+				:m Motion(_r_2_13_25_42)
+			:m Action(_r_2_13_26)
+				:m Door Operation(_r_2_13_26_47)
+				:m Alarm(_r_2_13_26_48)
+				:o Message(_r_2_13_26_49)
+					:o Data(_r_2_13_26_49_50)
+					:m Voice(_r_2_13_26_49_51)
+		:m Fire(_r_2_14)
+			:m Detection(_r_2_14_27)
+				:m Smoke(_r_2_14_27_52)
+			:m Action(_r_2_14_28)
+				:m Water(_r_2_14_28_53)
+				:o Gas(_r_2_14_28_54)
+		:o Flood(_r_2_15)
+			:m Detection(_r_2_15_29)
+				:m Moisture(_r_2_15_29_55)
+			:m Action(_r_2_15_30)
+				:m Water Main(_r_2_15_30_56)
+				:o Pumping(_r_2_15_30_57)
+	:m Administration(_r_3)
+		:m HMI(_r_3_16)
+			:g (_r_3_16_31) [1,1] 
+				: Standard(_r_3_16_31_32)
+				: Advanced(_r_3_16_31_33)
+	:o Communication(_r_7)
+		:m Telephone(_r_7_58)
+		:o Internet(_r_7_59)
+			:m Connection(_r_7_59_60)
+				:g (_r_7_59_60_61) [1,1] 
+					: TCP(_r_7_59_60_61_62)
+					: UDP(_r_7_59_60_61_63)
+	:m Detection Device(_r_8)
+		:m Motion Sensor(_r_8_64)
+		:m Smoke Sensor(_r_8_65)
+		:o Moisture Sensor(_r_8_67)
+	:m Action Devices(_r_9)
+		:m Sprinkler(_r_9_68)
+		:o Sump pump(_r_9_69)
+	:m Monitor Control(_r_10)
+		:m Direct(_r_10_17)
+		:m Scheduled(_r_10_18)
+			:m Periodic(_r_10_18_34)
+			:m One Time(_r_10_18_35)
+		:m Responding Strategy(_r_10_19)
+			:o Sequential(_r_10_19_36)
+			:m Priority(_r_10_19_37)
+		:m Event Based(_r_10_20)
+	:m Quality Attributes(_r_11)
+		:m Usability(_r_11_21)
+		:m Scalability(_r_11_22)
+		:m Reliability(_r_11_23)
+			:m Redundancy Control(_r_11_23_38)
+				:g (_r_11_23_38_39) [1,1] 
+					: Active(_r_11_23_38_39_40)
+					: Standby(_r_11_23_38_39_41)
+		:m Safety(_r_11_24)
+	:m Monitoring and Detecting(_r_43)
+		:g (_r_43_44) [1,1] 
+			: Discrete Value(_r_43_44_45)
+			: Continuous Value(_r_43_44_46)
+</feature_tree>
+<constraints>
+constraint_4:_r_43 or _r_2_14_27_52
+constraint_5:_r_43 or _r_2_15_29_55
+constraint_3:_r_2_13_25_42 or _r_43
+</constraints>
+</feature_model>

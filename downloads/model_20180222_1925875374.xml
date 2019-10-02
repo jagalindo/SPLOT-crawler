@@ -1,0 +1,70 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 22, 2018 - 7:46 PM  -->
+<feature_model name="MobiCent">
+<meta>
+<data name="description">MobiCent</data>
+<data name="creator">Jefferson da Silva Barbosa</data>
+<data name="address"></data>
+<data name="email">jefferson.sb.es@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MobiCent(_r)
+	:m EncryptionAuthentication Method(_r_1)
+		:g (_r_1_4) [1,*] 
+			: None(_r_1_4_5)
+			: LoginPassword(_r_1_4_6)
+			: 3DSecure(_r_1_4_7)
+			: MultiFactor(_r_1_4_8)
+			: PIN(_r_1_4_9)
+			: Certificate(_r_1_4_10)
+	:m Connectivity(_r_2)
+		:g (_r_2_28) [1,*] 
+			: Offline(_r_2_28_29)
+			: Mobile(_r_2_28_30)
+				:o SMS(_r_2_28_30_32)
+				:o NFC(_r_2_28_30_33)
+				:o QR Code(_r_2_28_30_34)
+			: Online(_r_2_28_31)
+	:o Quality of Service(_r_3)
+		:o Perfomance(_r_3_35)
+		:o Scalability(_r_3_36)
+		:o High Avaliability(_r_3_37)
+		:o Reliability(_r_3_38)
+	:m Payment(_r_11)
+		:g (_r_11_14) [1,*] 
+			: Credit Card(_r_11_14_15)
+			: Online Transfer(_r_11_14_16)
+			: Digital Cash(_r_11_14_17)
+			: Voucher(_r_11_14_18)
+	:m Account Storage(_r_12)
+		:g (_r_12_19) [1,*] 
+			: Local Account(_r_12_19_20)
+				:g (_r_12_19_20_25) [1,1] 
+					: Prepaid Card(_r_12_19_20_25_26)
+					: Mobile Wallet(_r_12_19_20_25_27)
+			: Online Account(_r_12_19_21)
+				:g (_r_12_19_21_22) [1,1] 
+					: Third Party(_r_12_19_21_22_23)
+					: Merchant Loyalty(_r_12_19_21_22_24)
+	:o Security(_r_13)
+		:m Auditing(_r_13_39)
+			:o Monitoring(_r_13_39_41)
+			:m Logging(_r_13_39_42)
+		:o Information Security(_r_13_40)
+			:m Integrity(_r_13_40_43)
+			:m Confidentiality(_r_13_40_44)
+				:m TLS(_r_13_40_44_49)
+				:m Disk Encryption(_r_13_40_44_50)
+			:o Authentication(_r_13_40_45)
+			:o Authorization(_r_13_40_46)
+			:o Availability(_r_13_40_47)
+			:o Non-repudiation(_r_13_40_48)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

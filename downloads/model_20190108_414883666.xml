@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 8, 2019 - 5:22 PM  -->
+<feature_model name="GaPSEE">
+<meta>
+<data name="description">GaPSEE game elements</data>
+<data name="creator">Mauricio Souza</data>
+<data name="address"></data>
+<data name="email">mrasouza@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PPGCC/UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r GaPSEE(_r)
+	:o Narrative(_r_1)
+	:o Level(_r_6)
+		:o Goals(_r_6_7)
+			:g (_r_6_7_26) [1,*] 
+				: Tasks(_r_6_7_26_27)
+				: Challenges(_r_6_7_26_28)
+				: Achievements(_r_6_7_26_29)
+		:o Boss Fights(_r_6_10)
+	:o Rewards(_r_14)
+		:g (_r_14_15) [1,*] 
+			: Badges(_r_14_15_16)
+			: Points(_r_14_15_17)
+			: Physical Rewards(_r_14_15_18)
+	:o Time Pressure(_r_19)
+		:o Constraints(_r_19_20)
+		:o Consequence(_r_19_25)
+	:o Feedback(_r_21)
+	:o Leaderboard(_r_22)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

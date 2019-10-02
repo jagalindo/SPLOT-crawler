@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:28 PM  -->
+<feature_model name="Deloite">
+<meta>
+<data name="description">Modelo de tienda de venta de celulares</data>
+<data name="creator">Luis Caiza Soria - Doris Chicaiza</data>
+<data name="address"></data>
+<data name="email">luisito.caiza17@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Pruebas</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Deloite Venta de Celulares(_r)
+	:m Lugar de Venta(_r_1)
+		:o Operador Telecomunicaciones(_r_1_18)
+		:o Web(_r_1_19)
+		:o Super Mercado(_r_1_20)
+	:m Paquetes Ofrecidos por Operadores(_r_22)
+		:o Wifi(_r_22_24)
+		:m Redes Moviles(_r_22_25)
+		:o NS-NC(_r_22_26)
+	:m Servicios(_r_27)
+		:o Suscrito(_r_27_28)
+			:m LLamadas(_r_27_28_31)
+			:o Banda Ancha(_r_27_28_32)
+				:o Facebook(_r_27_28_32_34)
+				:o WhatsApp(_r_27_28_32_35)
+				:o Twitter(_r_27_28_32_36)
+				:o Instagram(_r_27_28_32_37)
+			:o Television(_r_27_28_33)
+		:o Solicitado(_r_27_30)
+			:o Wifi Publico(_r_27_30_38)
+			:o Streaming Pelicula(_r_27_30_40)
+	:m Caracteristicas(_r_41)
+		:m Identificacion(_r_41_42)
+			:o Huellas Digitales(_r_41_42_43)
+			:o Facial(_r_41_42_44)
+			:m Patron(_r_41_42_45)
+		:o Camara(_r_41_47)
+			:o Alta Definicion(_r_41_47_48)
+			:o Media Definicion(_r_41_47_49)
+			:o Sin Camara(_r_41_47_50)
+		:m Sistema Operativo(_r_41_51)
+			:m IOS(_r_41_51_54)
+			:m Android(_r_41_51_55)
+		:o Resistencia al Agua(_r_41_56)
+		:o Mica de vidrio(_r_41_57)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

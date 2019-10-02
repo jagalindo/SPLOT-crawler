@@ -1,0 +1,93 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 4:37 PM  -->
+<feature_model name="Computadores">
+<meta>
+<data name="description">Taller Fábricas de Sotfware</data>
+<data name="creator">Camilo Mendoza</data>
+<data name="address"></data>
+<data name="email">ca.mendoza968@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Marca(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Dell(_r_1_2_3)
+			: Toshiba(_r_1_2_4)
+			: Apple(_r_1_2_5)
+			: Lenovo(_r_1_2_6)
+			: Clon(_r_1_2_7)
+	:m Tipo(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Servidor(_r_8_9_10)
+			: Personal(_r_8_9_11)
+				:g (_r_8_9_11_12) [1,1] 
+					: Desktop(_r_8_9_11_12_13)
+					: Portatil(_r_8_9_11_12_14)
+	:m SO(_r_15)
+		:g (_r_15_16) [1,1] 
+			: SOPersonal(_r_15_16_17)
+				:g (_r_15_16_17_19) [1,1] 
+					: Windows10(_r_15_16_17_19_20)
+					: OSX(_r_15_16_17_19_21)
+					: Fedora(_r_15_16_17_19_22)
+			: SOServidor(_r_15_16_18)
+				:g (_r_15_16_18_23) [1,*] 
+					: WindowsServer(_r_15_16_18_23_24)
+					: RedHat(_r_15_16_18_23_25)
+					: OSXServer(_r_15_16_18_23_26)
+	:m Torre(_r_27)
+		:m RAM(_r_27_28)
+			:g (_r_27_28_29) [1,1] 
+				: 4GB(_r_27_28_29_30)
+				: 8GB(_r_27_28_29_31)
+				: 16GB(_r_27_28_29_32)
+				: 32GB(_r_27_28_29_33)
+				: 64GB(_r_27_28_29_34)
+		:m CPU(_r_27_35)
+			:g (_r_27_35_36) [1,1] 
+				: Intel(_r_27_35_36_37)
+				: AMD(_r_27_35_36_38)
+		:o TarjetaGrafica(_r_27_39)
+			:g (_r_27_39_47) [1,1] 
+				: Nvidia(_r_27_39_47_48)
+				: ATIRadeon(_r_27_39_47_49)
+		:m DD(_r_27_40)
+			:g (_r_27_40_41) [1,1] 
+				: 500GB(_r_27_40_41_42)
+				: 1TB(_r_27_40_41_43)
+				: 2TB(_r_27_40_41_44)
+				: 5TB(_r_27_40_41_45)
+				: 10TB(_r_27_40_41_46)
+	:o Fuente(_r_50)
+	:o Pantalla(_r_51)
+		:m Tamanio(_r_51_52)
+			:g (_r_51_52_53) [1,1] 
+				: 14Pulgadas(_r_51_52_53_54)
+				: 17Pulgadas(_r_51_52_53_55)
+				: 24Pulgadas(_r_51_52_53_56)
+		:o Tecnologia(_r_51_57)
+			:g (_r_51_57_58) [1,*] 
+				: 3D(_r_51_57_58_59)
+				: 4K(_r_51_57_58_60)
+</feature_tree>
+<constraints>
+constraint_8:~_r_8_9_11 or ~_r_27_40_41_46
+constraint_10:~_r_8_9_11 or ~_r_27_28_29_34
+constraint_9:~_r_8_9_11 or ~_r_27_28_29_33
+constraint_11:~_r_8_9_11 or ~_r_15_16_18
+constraint_6:~_r_8_9_11_12_14 or ~_r_51_57
+constraint_12:_r_1_2_5 or ~_r_15_16_17_19_21
+constraint_7:~_r_8_9_11 or ~_r_27_40_41_45
+constraint_13:_r_1_2_5 or ~_r_15_16_18_23_26
+constraint_4:~_r_1_2_7 or ~_r_8_9_11_12_14
+constraint_14:~_r_8_9_10 or _r_15_16_18
+constraint_5:~_r_8_9_11_12_14 or _r_51
+constraint_15:~_r_8_9_10 or _r_27_28_29_33 or _r_27_28_29_34
+constraint_16:~_r_8_9_10 or _r_27_40_41_45 or _r_27_40_41_46
+</constraints>
+</feature_model>

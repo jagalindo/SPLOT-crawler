@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 5:59 PM  -->
+<feature_model name="Windows81_Zoom">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Zoom in Windows8.1 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m AppearanceAndPersonalization(_r1)
+		:o Display(_r2)
+			:o ChangeTheSizeOfAllItems(_r3)
+				:o Magnifier1(_r4)
+					:o ZoomOut(_r5)
+					:o ZoomIn(_r6)
+					:m Views(_r7)
+						:g (_id_0) [1,1] 
+							: Lens(_r8)
+							: Docked(_r9)
+							: FullScreen(_r10)
+					:m Option1(_r11)
+						:m SetHowMuchTheViewChangesWhenZoomingInOrOut(_r12)
+							:g (_id_1) [1,1] 
+								: _150(_r13)
+								: _50(_r14)
+								: _200(_r15)
+								: _25(_r16)
+								: _400(_r17)
+								: _100(_r18)
+						:o Tracking(_r19)
+							:o FollowTheMousePointer(_r20)
+							:o FollowTheKeyboardFocus(_r21)
+							:o HaveMagnifierFollowTheTextInsertionPoint(_r22)
+		:m EaseOfAccessCenter(_r23)
+			:m MakeTheMouseEasierToUse(_r24)
+				:m MousePointers(_r25)
+					:g (_id_2) [1,1] 
+						: LargeInverting(_r26)
+						: LargeBlack(_r27)
+						: RegularInverting(_r28)
+						: LargeWhite(_r29)
+						: ExtraLargeWhite(_r30)
+						: ExtraLargeBlack(_r31)
+						: RegularWhite(_r32)
+						: ExtraLargeInverting(_r33)
+						: RegularBlack(_r34)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

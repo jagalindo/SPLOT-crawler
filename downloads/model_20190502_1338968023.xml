@@ -1,0 +1,70 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, May 2, 2019 - 12:06 PM  -->
+<feature_model name="LauraHoellFM">
+<meta>
+<data name="description">Feature Model</data>
+<data name="creator">Laura Höll </data>
+<data name="address"></data>
+<data name="email">laura.hoell@uni-rostock.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universität Rostock </data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BC(_r)
+	:m Display(_r_1)
+	:m 4controls(_r_2)
+	:m bracket(_r_3)
+		:g (_r_3_23) [1,*] 
+			: cable ties(_r_3_23_24)
+		:g (_r_3_25) [1,*] 
+			: O-rings(_r_3_25_26)
+	:m bike(_r_4)
+		:m wheel(_r_4_27)
+			:m sensor(_r_4_27_29)
+				:g (_r_4_27_29_33) [1,*] 
+					: wireless(_r_4_27_29_33_34)
+				:g (_r_4_27_29_36) [1,*] 
+					: cable(_r_4_27_29_36_37)
+			:m magnet(_r_4_27_30)
+		:m frame(_r_4_28)
+			:m sensor(_r_4_28_31)
+				:g (_r_4_28_31_38) [1,*] 
+					: wireless(_r_4_28_31_38_39)
+				:g (_r_4_28_31_41) [1,*] 
+					: cable(_r_4_28_31_41_42)
+			:m magnet(_r_4_28_32)
+	:m connection(_r_5)
+		:g (_r_5_10) [1,*] 
+			: GPS(_r_5_10_11)
+		:g (_r_5_12) [1,*] 
+			: Nike(_r_5_12_13)
+		:g (_r_5_14) [1,*] 
+			: heart beat(_r_5_14_15)
+	:m energy supply(_r_6)
+		:g (_r_6_16) [1,*] 
+			: photovoltaic(_r_6_16_17)
+		:g (_r_6_18) [1,*] 
+			: battery(_r_6_18_19)
+		:g (_r_6_20) [1,*] 
+			: rechargeable(_r_6_20_21)
+	:m China(_r_7)
+	:m US(_r_8)
+	:m measurements(_r_9)
+		:m speedometer(_r_9_43)
+		:m trip counter(_r_9_44)
+		:m total distance(_r_9_45)
+		:m clock(_r_9_46)
+		:o deluxe(_r_9_47)
+			:m pedal rotation(_r_9_47_48)
+</feature_tree>
+<constraints>
+constraint_1:_r_5 or ~_r_4_27_29_33_34
+constraint_4:~_r_8 or _r_9_47_48
+constraint_5:~_r_7 or _r_4_27_29_36_37
+constraint_2:~_r_4_27_29 or _r_9_43
+constraint_3:~_r_4_28_31 or _r_9_47_48
+</constraints>
+</feature_model>

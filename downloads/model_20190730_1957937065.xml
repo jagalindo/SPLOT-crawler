@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Aug 9, 2019 - 9:03 PM  -->
+<feature_model name="Borrador LPS tienda virtual">
+<meta>
+<data name="description">definición de tienda virtual y sus principales características  para definir eventual repositorio</data>
+<data name="creator">SSC</data>
+<data name="address"></data>
+<data name="email">samuel.sepulveda@ufrontera.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFRO</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tienda virtual(_r)
+	:o buscador(_r_1)
+		:g (_r_1_2) [1,1] 
+			: basico(_r_1_2_3)
+			: avanzado(_r_1_2_4)
+	:m catalogo(_r_5)
+		:g (_r_5_6) [1,*] 
+			: general(_r_5_6_7)
+			: por categorias(_r_5_6_8)
+	:o carrito(_r_9)
+		:g (_r_9_10) [1,*] 
+			: funcional(_r_9_10_11)
+			: vista(_r_9_10_12)
+	:o medio pago(_r_13)
+		:g (_r_13_14) [1,*] 
+			: transferencia(_r_13_14_15)
+			: tarjeta credito(_r_13_14_16)
+			: tarjeta debito(_r_13_14_17)
+			: paypal(_r_13_14_18)
+	:m administracion(_r_19)
+		:m pagina(_r_19_21)
+			:m CRUD productos(_r_19_21_23)
+			:m CRUD categorias(_r_19_21_24)
+			:m estilos(_r_19_21_25)
+		:m usuarios(_r_19_22)
+			:m CRUD usuarios(_r_19_22_26)
+	:m plataforma(_r_27)
+		:g (_r_27_28) [1,*] 
+			: web(_r_27_28_29)
+			: movil(_r_27_28_30)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_4 or _r_5_6_8
+</constraints>
+</feature_model>

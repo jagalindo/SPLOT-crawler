@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Jul 29, 2018 - 12:06 PM  -->
+<feature_model name="social network applications">
+<meta>
+<data name="description">FM of  Social network applications SPL</data>
+<data name="creator">KimBin</data>
+<data name="address"></data>
+<data name="email">kimbin804@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Hongik</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r social network application(_r)
+	:m login(_r_1)
+	:m logout(_r_2)
+	:m register(_r_3)
+	:o search(_r_4)
+		:g (_r_4_10) [1,*] 
+			: by name(_r_4_10_11)
+			: by email(_r_4_10_12)
+			: by contact number(_r_4_10_13)
+	:o manage friends(_r_5)
+		:m request(_r_5_14)
+			:g (_r_5_14_16) [1,*] 
+				: friend request(_r_5_14_16_17)
+				: follow request(_r_5_14_16_18)
+		:m remove(_r_5_15)
+			:g (_r_5_15_19) [1,*] 
+				: unfollow(_r_5_15_19_20)
+				: unfriend(_r_5_15_19_21)
+				: block(_r_5_15_19_22)
+	:o message(_r_6)
+		:m text(_r_6_30)
+		:o audio(_r_6_31)
+		:o group DM(_r_6_32)
+	:o call(_r_7)
+		:m voice call(_r_7_33)
+		:o video call(_r_7_34)
+		:o group call(_r_7_35)
+	:m notifications(_r_8)
+	:o post(_r_9)
+		:g (_r_9_24) [1,*] 
+			: create post(_r_9_24_25)
+			: view post(_r_9_24_26)
+				:o comment(_r_9_24_26_27)
+				:o like(_r_9_24_26_28)
+				:o share(_r_9_24_26_29)
+</feature_tree>
+<constraints>
+constraint_1:_r_5_14_16_17 or ~_r_5_15_19_21
+constraint_2:_r_5_14_16_18 or ~_r_5_15_19_20
+constraint_3:_r_5_14_16_17 or ~_r_5_15_19_22
+</constraints>
+</feature_model>

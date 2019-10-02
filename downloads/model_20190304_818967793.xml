@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Mar 4, 2019 - 9:02 PM  -->
+<feature_model name="RTBB">
+<meta>
+<data name="description">Requirement Tracing a BB  </data>
+<data name="creator">JTR</data>
+<data name="address"></data>
+<data name="email">jtri245@uky.edu</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">jtr-org</data>
+<data name="department"></data>
+<data name="date">3/4/2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Requirement Tracing Black Box(_r)
+	:m Take in Trace Matrix(_r_1)
+		:m Accept Different Formats For Matrix(_r_1_6)
+			:g (_r_1_6_11) [1,*] 
+				: XML(_r_1_6_11_12)
+				: CSV(_r_1_6_11_13)
+				: SQL(_r_1_6_11_14)
+		:m Ensure Test are Iter(_r_1_10)
+	:m Build B-star(_r_2)
+		:m Build-Speed(_r_2_17)
+			:g (_r_2_17_54) [1,1] 
+				: Fast(_r_2_17_54_55)
+				: Medium-Reboust(_r_2_17_54_56)
+	:m Provide Reporting(_r_3)
+		:m Format(_r_3_42)
+			:g (_r_3_42_43) [1,*] 
+				: pdf(_r_3_42_43_44)
+				: xml(_r_3_42_43_45)
+				: excel(_r_3_42_43_46)
+				: sql(_r_3_42_43_47)
+		:m Report-On(_r_3_48)
+			:g (_r_3_48_49) [1,*] 
+				: B-Star Drift Compared to B(_r_3_48_49_50)
+				: B-Star Drift Compared to Historic B-Star(_r_3_48_49_51)
+				: B-Star Min Complexity to Cover Universe(_r_3_48_49_52)
+				: B-Star Scatter Plot of Universe(_r_3_48_49_53)
+	:m Store Historic Data(_r_5)
+		:m Sql-backend (_r_5_32)
+		:o Exportable(_r_5_33)
+	:m Recommendation To End User (_r_26)
+		:g (_r_26_28) [1,*] 
+			: Determine if the Universe is sufficiently sized(_r_26_28_29)
+			: Determine if there exist a subdivision of features in test case(_r_26_28_30)
+			: Determine if features are conjoined(_r_26_28_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

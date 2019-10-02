@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 22, 2018 - 7:34 PM  -->
+<feature_model name="SmartHomeRise">
+<meta>
+<data name="description">SmartHomeRise</data>
+<data name="creator">Jefferson da Silva Barbosa</data>
+<data name="address"></data>
+<data name="email">jefferson.sb.es@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartHomeRise(_r)
+	:m SecurityControl(_r_1)
+		:o Alarm(_r_1_4)
+		:m LockDoors(_r_1_5)
+		:o PanicMode(_r_1_6)
+		:m PresenceIlusion(_r_1_7)
+	:m IluminationControl(_r_2)
+		:m UserIlumination(_r_2_8)
+		:o AutomatedIlumination(_r_2_9)
+			:g (_r_2_9_12) [1,*] 
+				: ByPresence(_r_2_9_12_13)
+				: ByLuminosity(_r_2_9_12_14)
+	:o TemperatureControl(_r_3)
+		:m UserControl(_r_3_10)
+			:g (_r_3_10_15) [1,1] 
+				: FromWindow(_r_3_10_15_16)
+				: FromAirConditioning(_r_3_10_15_21)
+		:o AutomatedControl(_r_3_11)
+			:g (_r_3_11_18) [1,*] 
+				: FromWindow(_r_3_11_18_19)
+				: FromAirConditioning(_r_3_11_18_22)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 19, 2017 - 3:11 AM  -->
+<feature_model name="PC">
+<meta>
+<data name="description">PC</data>
+<data name="creator">Diego Prens Ramos</data>
+<data name="address"></data>
+<data name="email">armandorp10@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UNIANDES</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computer(_r)
+	:m brand(_r_1)
+		:o DELL(_r_1_5)
+		:o Toshiba(_r_1_6)
+		:o Lenovo(_r_1_7)
+		:o Apple(_r_1_8)
+		:o Clon(_r_1_9)
+	:m type(_r_2)
+		:o table(_r_2_3)
+		:o laptop(_r_2_4)
+	:m OS(_r_10)
+		:o Personal(_r_10_11)
+			:o W10(_r_10_11_13)
+			:o Fedora(_r_10_11_14)
+			:o OS X Yosemite(_r_10_11_15)
+		:o Server(_r_10_12)
+			:o Windows Server(_r_10_12_16)
+			:o Red Hat(_r_10_12_17)
+			:o OS X Server(_r_10_12_18)
+	:m CPU(_r_19)
+		:m RAM(_r_19_20)
+			:g (_r_19_20_28) [1,1] 
+				: 4GB(_r_19_20_28_29)
+				: 8GB(_r_19_20_28_30)
+				: 16GB(_r_19_20_28_31)
+				: 32GB(_r_19_20_28_32)
+				: 64GB(_r_19_20_28_33)
+		:m procesador(_r_19_21)
+			:g (_r_19_21_40) [1,1] 
+				: Intel(_r_19_21_40_41)
+				: AMD(_r_19_21_40_42)
+		:m DD(_r_19_22)
+			:g (_r_19_22_34) [1,1] 
+				: 500GB(_r_19_22_34_35)
+				: 1TB(_r_19_22_34_36)
+				: 2TB(_r_19_22_34_37)
+				: 5TB(_r_19_22_34_38)
+				: 10TB(_r_19_22_34_39)
+		:o graphic card(_r_19_24)
+			:g (_r_19_24_43) [1,1] 
+				: NVIDIA(_r_19_24_43_44)
+				: ATI(_r_19_24_43_45)
+	:o Display(_r_46)
+		:m Tecnology(_r_46_48)
+			:g (_r_46_48_49) [1,*] 
+				: 4K(_r_46_48_49_50)
+				: 3D(_r_46_48_49_51)
+			:m Size(_r_46_48_52)
+				:g (_r_46_48_52_53) [1,1] 
+					: 14(_r_46_48_52_53_54)
+					: 17(_r_46_48_52_53_55)
+					: 24(_r_46_48_52_53_56)
+	:o Source(_r_47)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

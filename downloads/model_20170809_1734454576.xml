@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Aug 9, 2017 - 6:10 AM  -->
+<feature_model name="Audio Player">
+<meta>
+<data name="description">feature model for audio player</data>
+<data name="creator">Prof. Chae</data>
+<data name="address"></data>
+<data name="email">hschae@pusan.ac.kr</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PNU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Media Player(_r)
+	:m Format(_r_1)
+		:m Basic Format(_r_1_2)
+			:m WAV(_r_1_2_4)
+			:m MP3(_r_1_2_5)
+		:o Extra Format(_r_1_6)
+			:g (_r_1_6_7) [1,1] 
+				: AVI(_r_1_6_7_8)
+				: AU(_r_1_6_7_9)
+	:m Function(_r_3)
+		:m Basic Control(_r_3_10)
+			:m Start(_r_3_10_12)
+			:m Stop(_r_3_10_13)
+			:o Pause(_r_3_10_14)
+			:o Resume(_r_3_10_15)
+		:m Advanced Control(_r_3_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

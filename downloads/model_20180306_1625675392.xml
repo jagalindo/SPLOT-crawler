@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 6:01 AM  -->
+<feature_model name="Taller1_VentaComputadores">
+<meta>
+<data name="description">Fábricas de Software 201810 - Taller 1</data>
+<data name="creator">Juan Camilo Tangarife Palacio</data>
+<data name="address"></data>
+<data name="email">jc.tangarife1927@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Tipo(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Computador de mesa(_r_1_2_3)
+			: Portatil(_r_1_2_4)
+			: Servidor(_r_1_2_5)
+	:m Marca(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Dell(_r_6_7_8)
+			: Tohiba(_r_6_7_9)
+			: Lenovo(_r_6_7_10)
+			: Apple(_r_6_7_11)
+			: Clon(_r_6_7_12)
+	:m Sistema operativo(_r_13)
+		:g (_r_13_14) [1,1] 
+			: OS Personal(_r_13_14_15)
+				:g (_r_13_14_15_17) [1,1] 
+					: Windows 10(_r_13_14_15_17_18)
+					: Fedora(_r_13_14_15_17_19)
+					: OS X Yosemite(_r_13_14_15_17_20)
+			: OS Servidor(_r_13_14_16)
+				:g (_r_13_14_16_21) [1,1] 
+					: Windows Server(_r_13_14_16_21_22)
+					: Red Hat(_r_13_14_16_21_23)
+					: OS X Server(_r_13_14_16_21_24)
+	:m CPU(_r_25)
+		:m Memoria RAM(_r_25_26)
+			:g (_r_25_26_32) [1,1] 
+				: 4 GB(_r_25_26_32_33)
+				: 8 GB(_r_25_26_32_34)
+				: 16 GB(_r_25_26_32_35)
+				: 32 GB(_r_25_26_32_36)
+				: 64 GB(_r_25_26_32_37)
+		:m Procesador(_r_25_27)
+			:g (_r_25_27_44) [1,1] 
+				: Intel(_r_25_27_44_45)
+				: AMD(_r_25_27_44_46)
+		:m Disco duro(_r_25_28)
+			:g (_r_25_28_38) [1,1] 
+				: 500 GB(_r_25_28_38_39)
+				: 1 TB(_r_25_28_38_40)
+				: 2 TB(_r_25_28_38_41)
+				: 5 TB(_r_25_28_38_42)
+				: 10 TB(_r_25_28_38_43)
+		:o Tarjeta grafica(_r_25_29)
+			:g (_r_25_29_51) [1,1] 
+				: NVIDIA(_r_25_29_51_52)
+				: ATI Radeon(_r_25_29_51_53)
+	:o Pantalla(_r_47)
+		:m Tecnologia(_r_47_55)
+			:g (_r_47_55_57) [1,*] 
+				: 3D(_r_47_55_57_58)
+				: 4K(_r_47_55_57_59)
+		:m Tamanho(_r_47_56)
+			:g (_r_47_56_60) [1,1] 
+				: 14 pulgadas(_r_47_56_60_61)
+				: 17 pulgadas(_r_47_56_60_62)
+				: 24 pulgadas(_r_47_56_60_63)
+	:o Planta de poder(_r_54)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

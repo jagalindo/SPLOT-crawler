@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 5:47 PM  -->
+<feature_model name="Ubuntu1204_Zoom">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Zoom in Ubuntu12.04 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:o UniversalAccess1(_r1)
+		:o Typing1(_r2)
+			:o KeyboardSetting(_r3)
+				:o Shortcuts(_r4)
+					:o UniversalAccess2(_r5)
+						:o TurnZoomOnOrOff(_r6)
+							:o Alt_Super_plus8(_r7)
+						:o ZoomIn(_r8)
+							:o Alt_Super_plusEqual(_r9)
+						:o ZoomOut(_r10)
+							:o Alt_Super_plusMinus(_r11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

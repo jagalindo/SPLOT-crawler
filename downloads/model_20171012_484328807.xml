@@ -1,0 +1,69 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 12, 2017 - 10:27 AM  -->
+<feature_model name="STM 32">
+<meta>
+<data name="description">lignes de produits de l'STM32</data>
+<data name="creator">Fatma Khadija Olfa</data>
+<data name="address"></data>
+<data name="email">fatma.bouassida@esprit.tn</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPRIT</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r stm32(_r)
+	:m microontroler(_r_1)
+	:m camera(_r_2)
+	:m ADC(_r_3)
+	:m DAC(_r_4)
+	:m GPIO(_r_5)
+		:g (_r_5_27) [1,*] 
+			: GPIO A(_r_5_27_28)
+		:g (_r_5_29) [1,*] 
+			: GPIO B(_r_5_29_30)
+		:g (_r_5_31) [1,*] 
+			: GPIO C (_r_5_31_32)
+		:g (_r_5_33) [1,*] 
+			: GPIO D(_r_5_33_34)
+		:g (_r_5_35) [1,*] 
+			: GPIO E (_r_5_35_36)
+		:g (_r_5_37) [1,*] 
+			: GPIO F(_r_5_37_38)
+		:g (_r_5_39) [1,*] 
+			: GPIO H(_r_5_39_40)
+		:g (_r_5_41) [1,*] 
+			: GPIO I(_r_5_41_42)
+	:m Memoire(_r_6)
+		:g (_r_6_7) [1,*] 
+			: Flashmemory(_r_6_7_8)
+		:g (_r_6_9) [1,*] 
+			: external memory interface(_r_6_9_10)
+	:m Timer(_r_11)
+		:g (_r_11_12) [1,*] 
+			: 5x 16 bits timer(_r_11_12_13)
+		:g (_r_11_14) [1,*] 
+			: 2x 32 bits timer(_r_11_14_15)
+	:m camera interface(_r_16)
+	:m CAN(_r_17)
+	:m SPI(_r_18)
+	:m USART(_r_19)
+	:m Micro USB(_r_20)
+	:m User button(_r_21)
+	:m Leds(_r_22)
+	:m Clocks(_r_23)
+	:m DMA(_r_24)
+	:m Ethernet Mac(_r_43)
+	:m Power supply(_r_44)
+	:m Feature-45(_r_45)
+	:m AHB bus(_r_46)
+		:g (_r_46_47) [1,*] 
+			: AHB1  150 MHz(_r_46_47_48)
+		:g (_r_46_49) [1,*] 
+			: AHB2 168 MHz(_r_46_49_50)
+	:m I2C(_r_51)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

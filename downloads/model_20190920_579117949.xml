@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 6:00 PM  -->
+<feature_model name="Jose Rosero">
+<meta>
+<data name="description">SPL para seguridad</data>
+<data name="creator">Jose Rosero</data>
+<data name="address"></data>
+<data name="email">jlrosero3@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Espe</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Fitur SPL(_r)
+	:m Registro Personal(_r_1)
+		:m Sin Imagen(_r_1_2)
+		:o Con Imagen(_r_1_3)
+	:o Validar Antecedentes(_r_4)
+	:m Acceso a Personal(_r_5)
+	:o Notificar(_r_6)
+		:g (_r_6_7) [1,*] 
+			: Departamento de Seguridad(_r_6_7_8)
+			: UPC(_r_6_7_11)
+	:o Escaneo(_r_13)
+		:m Corporal(_r_13_14)
+			:g (_r_13_14_19) [1,1] 
+				: Con Armas(_r_13_14_19_20)
+				: Sin Armas(_r_13_14_19_23)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3 or _r_4
+constraint_4:~_r_1_2 or _r_4
+constraint_5:_r_6_7_11 or ~_r_13_14_19_20
+constraint_2:~_r_4 or _r_6_7_11
+constraint_3:~_r_6_7_8 or _r_6_7_11
+</constraints>
+</feature_model>

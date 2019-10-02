@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 13, 2019 - 9:29 PM  -->
+<feature_model name="Electric Car">
+<meta>
+<data name="description">Electric car with basic features</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UBB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Electric_Car(_r)
+	:m Battery(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Li-Ion(_r_1_2_3)
+			: Lead Acid Battery(_r_1_2_4)
+		:o Fast charge(_r_1_10)
+	:m Electric Engine(_r_5)
+	:m Motor Controller(_r_6)
+	:o Autopilot(_r_8)
+	:o GPS(_r_11)
+	:o Parking Assistant(_r_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

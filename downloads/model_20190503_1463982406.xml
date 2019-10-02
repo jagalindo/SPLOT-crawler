@@ -1,0 +1,73 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, May 3, 2019 - 8:25 PM  -->
+<feature_model name="Bike Computers Supplyes Equipment">
+<meta>
+<data name="description">The model describes the full complectation of a BC to be able to manage worldwide supplyes </data>
+<data name="creator">Kossovich, Turov, Repp</data>
+<data name="address"></data>
+<data name="email">koss.null@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Rostock uni.</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike Computer(_r)
+	:m Bracket(_r_1)
+		:m Mount Place(_r_1_6)
+			:o Wheel(_r_1_6_7)
+			:g (_r_1_6_34) [1,*] 
+				: Frame(_r_1_6_34_36)
+				: Handlebars(_r_1_6_34_37)
+					:g (_r_1_6_34_37_38) [1,*] 
+						: Cable ties(_r_1_6_34_37_38_39)
+						: O-rings(_r_1_6_34_37_38_40)
+	:m Version(_r_2)
+		:m Basic(_r_2_26)
+		:o Advanced(_r_2_27)
+		:o Deluxe(_r_2_28)
+	:m Market type(_r_3)
+		:g (_r_3_30) [1,*] 
+			: Others(_r_3_30_31)
+			: US(_r_3_30_32)
+			: China(_r_3_30_33)
+	:m Sensors(_r_4)
+		:m Speedometer(_r_4_41)
+			:m Connection type(_r_4_41_43)
+				:g (_r_4_41_43_44) [1,*] 
+					: Wireless(_r_4_41_43_44_45)
+					: Cable(_r_4_41_43_44_46)
+			:m Sensor(_r_4_41_47)
+			:m Magnet(_r_4_41_48)
+		:m Clock(_r_4_42)
+	:m Features(_r_13)
+		:m measuring speed(_r_13_14)
+		:m total distance(_r_13_15)
+		:m trip count(_r_13_16)
+		:m clock(_r_13_17)
+		:o average trip(_r_13_18)
+		:o average speed(_r_13_19)
+		:o stopwatch(_r_13_20)
+		:o pedal rotation(_r_13_21)
+		:o device connection(_r_13_22)
+			:o GPS(_r_13_22_23)
+			:o heartbeat(_r_13_22_24)
+			:o Nike shoes(_r_13_22_25)
+	:m Energy supply(_r_49)
+		:g (_r_49_50) [1,*] 
+			: battery(_r_49_50_51)
+			: rechargable battery(_r_49_50_52)
+			: photovolatic cell(_r_49_50_53)
+</feature_tree>
+<constraints>
+constraint_17:_r_13_14 or _r_13_15 or _r_13_16 or _r_13_17 or _r_13_18 or _r_13_19 or _r_13_20 or _r_2_27
+constraint_18:_r_13_14 or _r_13_15 or _r_13_16 or _r_13_17 or _r_13_18 or _r_13_19 or _r_13_20 or _r_13_21 or _r_13_22 or _r_2_28
+constraint_10:_r_13_21 or _r_3_30_32 or _r_4_41_43_44_45
+constraint_11:~_r_1_6_7 or _r_4_41_47 or _r_4_41_48
+constraint_12:~_r_3_30_33 or ~_r_4_41_43_44_45
+constraint_7:~_r_13_22_25 or _r_4_41_43_44_45
+constraint_14:~_r_4_41_43_44_45 or ~_r_49_50_53
+constraint_2:_r_13_14 or _r_13_15 or _r_13_16 or _r_13_17 or _r_2_26
+</constraints>
+</feature_model>

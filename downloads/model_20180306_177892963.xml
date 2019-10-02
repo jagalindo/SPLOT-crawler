@@ -1,0 +1,88 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 3:11 AM  -->
+<feature_model name="Taller 1. Punto 2">
+<meta>
+<data name="description">Venta computadores</data>
+<data name="creator">Felipe Martinez</data>
+<data name="address"></data>
+<data name="email">f.martinez11@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Venta de Computadores(_r)
+	:m Tipo de computador(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Servidor(_r_1_2_3)
+			: Computador Portatil(_r_1_2_4)
+			: Computador de Mesa(_r_1_2_5)
+	:m Marca(_r_6)
+		:g (_r_6_8) [1,1] 
+			: Dell(_r_6_8_9)
+			: Toshiba(_r_6_8_10)
+			: Lenovo(_r_6_8_11)
+			: Apple(_r_6_8_12)
+			: Computador Clon(_r_6_8_13)
+	:m Sistema Operativo(_r_14)
+		:g (_r_14_15) [1,1] 
+			: Windows 10(_r_14_15_16)
+			: Fedora(_r_14_15_17)
+			: OS X Yosemite(_r_14_15_18)
+			: Red Hat Linux(_r_14_15_19)
+			: Windows Server(_r_14_15_20)
+			: OS X Server(_r_14_15_21)
+	:m CPU(_r_22)
+		:m Memoria Ram(_r_22_23)
+			:g (_r_22_23_24) [1,1] 
+				: 4GB(_r_22_23_24_25)
+				: 8GB(_r_22_23_24_26)
+				: 16GB(_r_22_23_24_27)
+				: 64GB(_r_22_23_24_28)
+				: 32GB(_r_22_23_24_29)
+		:m Procesador(_r_22_30)
+			:g (_r_22_30_31) [1,1] 
+				: Intel(_r_22_30_31_32)
+				: AMD(_r_22_30_31_33)
+		:m Disco Duro(_r_22_34)
+			:g (_r_22_34_35) [1,1] 
+				: 500GB(_r_22_34_35_36)
+				: 1TB(_r_22_34_35_37)
+				: 2TB(_r_22_34_35_38)
+				: 5TB(_r_22_34_35_39)
+				: 10TB(_r_22_34_35_40)
+		:o Tarjeta Grafica(_r_22_41)
+			:g (_r_22_41_42) [1,1] 
+				: NVIDIA(_r_22_41_42_43)
+				: ATI Radeon(_r_22_41_42_44)
+	:o Pantalla(_r_46)
+		:m Tecnologia(_r_46_47)
+			:g (_r_46_47_49) [1,*] 
+				: 3D(_r_46_47_49_50)
+				: 4K(_r_46_47_49_51)
+		:m Tamanio(_r_46_48)
+			:g (_r_46_48_52) [1,1] 
+				: 14 Pulgadas(_r_46_48_52_53)
+				: 17 Pulgadas(_r_46_48_52_54)
+				: 22 Pulgadas(_r_46_48_52_55)
+</feature_tree>
+<constraints>
+constraint_17:~_r_1_2_4 or _r_22_34_35_36 or _r_22_34_35_37 or _r_22_34_35_38
+constraint_18:~_r_1_2_5 or _r_22_34_35_36 or _r_22_34_35_37 or _r_22_34_35_38
+constraint_19:~_r_1_2_4 or _r_22_23_24_25 or _r_22_23_24_26 or _r_22_23_24_27
+constraint_22:~_r_1_2_5 or _r_14_15_16 or _r_14_15_17 or _r_14_15_18
+constraint_23:_r_6_8_12 or ~_r_14_15_21
+constraint_6:~_r_1_2_4 or _r_46_47_49_50
+constraint_20:~_r_1_2_5 or _r_22_23_24_25 or _r_22_23_24_26 or _r_22_23_24_27
+constraint_7:~_r_1_2_4 or _r_46_47_49_51
+constraint_12:~_r_6_8_12 or _r_14_15_18 or _r_14_15_21
+constraint_21:~_r_1_2_4 or _r_14_15_16 or _r_14_15_17 or _r_14_15_18
+constraint_13:~_r_1_2_3 or _r_14_15_19 or _r_14_15_20 or _r_14_15_21
+constraint_5:~_r_1_2_4 or ~_r_6_8_13
+constraint_24:_r_6_8_12 or ~_r_14_15_18
+constraint_15:~_r_1_2_3 or _r_22_23_24_28 or _r_22_23_24_29
+constraint_16:~_r_1_2_3 or _r_22_34_35_39 or _r_22_34_35_40
+</constraints>
+</feature_model>

@@ -1,0 +1,101 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Sep 16, 2017 - 9:59 PM  -->
+<feature_model name="Computador">
+<meta>
+<data name="description">Familia de computadores</data>
+<data name="creator">Diego Mahecha</data>
+<data name="address"></data>
+<data name="email">diegohernando@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Tipo(_r_1)
+		:g (_r_1_42) [1,*] 
+			: Escritorio(_r_1_42_43)
+			: Portatil(_r_1_42_44)
+			: Servidor(_r_1_42_45)
+	:m Marca(_r_2)
+		:g (_r_2_36) [1,1] 
+			: Dell(_r_2_36_37)
+			: Toshiba(_r_2_36_38)
+			: Lenovo(_r_2_36_39)
+			: Apple(_r_2_36_40)
+			: Clon(_r_2_36_41)
+	:m Sistema Operativo(_r_13)
+		:g (_r_13_16) [1,*] 
+			: Servidor(_r_13_16_17)
+				:g (_r_13_16_17_46) [1,1] 
+					: Windows Server(_r_13_16_17_46_47)
+					: Red Hat Linux(_r_13_16_17_46_48)
+					: OSX Server(_r_13_16_17_46_49)
+			: Personal(_r_13_16_18)
+				:g (_r_13_16_18_50) [1,1] 
+					: Windows 10(_r_13_16_18_50_51)
+					: OSX(_r_13_16_18_50_52)
+					: Fedora(_r_13_16_18_50_53)
+	:m CPU(_r_27)
+		:m Memoria RAM(_r_27_29)
+			:g (_r_27_29_56) [1,*] 
+				: 4 GB(_r_27_29_56_57)
+				: 8 GB(_r_27_29_56_58)
+				: 16 GB(_r_27_29_56_59)
+				: 32 GB(_r_27_29_56_60)
+				: 64 GB(_r_27_29_56_61)
+		:m Procesador(_r_27_30)
+			:g (_r_27_30_68) [1,1] 
+				: Intel(_r_27_30_68_69)
+				: AMD(_r_27_30_68_70)
+		:m Disco Duro(_r_27_31)
+			:g (_r_27_31_62) [1,*] 
+				: 500 GB(_r_27_31_62_63)
+				: 1 TB(_r_27_31_62_64)
+				: 2 TB(_r_27_31_62_65)
+				: 5 TB(_r_27_31_62_66)
+				: 10 TB(_r_27_31_62_67)
+		:o Tarjeta Grafica(_r_27_33)
+			:g (_r_27_33_71) [1,1] 
+				: NVIDIA(_r_27_33_71_72)
+				: ATI Radeon(_r_27_33_71_73)
+	:o Pantalla(_r_74)
+		:m Tecnologia(_r_74_76)
+			:o 3D(_r_74_76_85)
+			:o 4K(_r_74_76_86)
+		:m Tamanio(_r_74_77)
+			:g (_r_74_77_81) [1,1] 
+				: 14(_r_74_77_81_82)
+				: 17(_r_74_77_81_83)
+				: 24(_r_74_77_81_84)
+	:o Planta de Poder(_r_75)
+</feature_tree>
+<constraints>
+constraint_39:~_r_2_36_40 or _r_13_16_18_50_52
+constraint_30:~_r_1_42_43 or _r_27_31_62_64
+constraint_43:~_r_13_16_17 or _r_27_29_56_60
+constraint_34:~_r_1_42_44 or _r_27_29_56_58
+constraint_42:~_r_1_42_45 or _r_27_31_62_67
+constraint_33:~_r_1_42_44 or _r_27_29_56_57
+constraint_44:~_r_1_42_45 or _r_27_29_56_61
+constraint_31:~_r_1_42_43 or _r_27_31_62_65
+constraint_38:~_r_1_42_43 or _r_27_29_56_59
+constraint_37:~_r_1_42_43 or _r_27_29_56_58
+constraint_36:~_r_1_42_43 or _r_27_29_56_57
+constraint_35:~_r_1_42_44 or _r_27_29_56_59
+constraint_28:~_r_1_42_44 or _r_27_31_62_65
+constraint_29:~_r_1_42_43 or _r_27_31_62_63
+constraint_40:~_r_2_36_40 or _r_13_16_17_46_49
+constraint_41:~_r_1_42_45 or _r_27_31_62_66
+constraint_8:~_r_1_42_44 or _r_74
+constraint_6:~_r_2_36_41 or ~_r_1_42_44
+constraint_26:~_r_1_42_44 or _r_27_31_62_63
+constraint_27:~_r_1_42_44 or _r_27_31_62_64
+constraint_15:~_r_13_16_17 or ~_r_1_42_44
+constraint_24:~_r_1_42_44 or ~_r_74_76_85
+constraint_16:~_r_13_16_17 or ~_r_1_42_43
+constraint_25:~_r_1_42_44 or ~_r_74_76_86
+</constraints>
+</feature_model>

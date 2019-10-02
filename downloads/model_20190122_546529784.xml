@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 22, 2019 - 6:45 PM  -->
+<feature_model name="SmartHomeRiSE">
+<meta>
+<data name="description">Dynamic Software Line to home automation </data>
+<data name="creator">Michelle Carvalho</data>
+<data name="address"></data>
+<data name="email">michellellcarvalho@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">RiSE research group</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference">On the implementation of dynamic software product lines: An exploratory study. Journal of Systems and Software 136: 74-100 (2018)</data>
+</meta>
+<feature_tree>
+:r SmartHome(_r)
+	:o Temperature_Control(_r_1)
+		:o Automated_Control(_r_1_10)
+			:g (_r_1_10_15) [1,*] 
+				: Automated_From_Window(_r_1_10_15_16)
+				: Automated_From_AirConditioner(_r_1_10_15_17)
+		:m User_Control(_r_1_11)
+			:g (_r_1_11_18) [1,1] 
+				: User_From_Window(_r_1_11_18_19)
+				: User_From_AirConditioner(_r_1_11_18_20)
+	:m Security_Control(_r_2)
+		:o Alarm(_r_2_4)
+		:m Loock_Doors(_r_2_5)
+		:o Panic_Mode(_r_2_6)
+		:m Presence_Illusion(_r_2_7)
+	:m Illumination_Control(_r_3)
+		:o Automated_Illumination(_r_3_8)
+			:g (_r_3_8_12) [1,*] 
+				: By_Presence(_r_3_8_12_13)
+				: By_Luminosity(_r_3_8_12_14)
+		:m User_Illumination(_r_3_9)
+</feature_tree>
+<constraints>
+constraint_5:~_r_2_4 or ~_r_2_6
+</constraints>
+</feature_model>

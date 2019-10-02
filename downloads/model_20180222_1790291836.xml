@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 22, 2018 - 7:20 PM  -->
+<feature_model name="Mobile Unit">
+<meta>
+<data name="description">Mobile Unit</data>
+<data name="creator">Jefferson da Silva Barbosa</data>
+<data name="address"></data>
+<data name="email">jefferson.sb.es@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Unit(_r)
+	:m Method(_r_1)
+		:g (_r_1_3) [1,1] 
+			: RSSI(_r_1_3_4)
+			: TDoA(_r_1_3_5)
+			: ToA(_r_1_3_6)
+			: AoA(_r_1_3_7)
+	:m Hardware(_r_2)
+		:m RF Transceiver(_r_2_14)
+		:o Ultrasonic Receiver(_r_2_15)
+		:m Power Generator(_r_2_16)
+		:m RS232(_r_2_17)
+		:m MCU(_r_2_18)
+		:o Sensors(_r_2_19)
+			:g (_r_2_19_21) [1,*] 
+				: Humidity(_r_2_19_21_22)
+				: Temperature Sensor(_r_2_19_21_23)
+				: Pressure Sensor(_r_2_19_21_24)
+		:o Antenna Array(_r_2_20)
+	:m Algorithm(_r_8)
+		:g (_r_8_9) [1,*] 
+			: MinMax(_r_8_9_10)
+			: Maximum Likelihood(_r_8_9_11)
+			: Trilateration(_r_8_9_12)
+			: Triangulation(_r_8_9_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

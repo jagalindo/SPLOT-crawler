@@ -1,0 +1,70 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 30, 2018 - 4:26 PM  -->
+<feature_model name="FM_ABE">
+<meta>
+<data name="description">A tree like feature model for ABE</data>
+<data name="creator">Tianpei Xia</data>
+<data name="address"></data>
+<data name="email">txia4@ncsu.edu</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">NC State University</data>
+<data name="department">CSC</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Analogy Based Estimation(_r)
+	:m Case Subset Selector(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Outlier(_r_1_2_3)
+			: Prototype(_r_1_2_4)
+			: Remove Nothing(_r_1_2_5)
+	:o Feature Weighting Method(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Information Gain(_r_6_7_8)
+			: Relief(_r_6_7_9)
+			: Principal Components(_r_6_7_10)
+			: Correlation-based Feature Selection(_r_6_7_11)
+			: Consistency-Based Subset Evaluation(_r_6_7_12)
+			: Wrapper Subset Evaluation(_r_6_7_13)
+			: Feature Weighted ABE(_r_6_7_14)
+			: Analogy-X(_r_6_7_15)
+	:o Discretization Method(_r_17)
+		:g (_r_17_18) [1,1] 
+			: Equal Frequency(_r_17_18_19)
+			: Equal Width(_r_17_18_20)
+			: Entropy(_r_17_18_21)
+			: PKID(_r_17_18_22)
+			: Remain Same(_r_17_18_23)
+	:m Similarity Measure(_r_24)
+		:g (_r_24_25) [1,1] 
+			: Weighted Euclidean(_r_24_25_26)
+			: Unweighted Euclidean(_r_24_25_27)
+			: Max Distance(_r_24_25_28)
+			: Triangular Distribution(_r_24_25_29)
+			: Minkowski(_r_24_25_30)
+			: Mean of Ranking(_r_24_25_31)
+	:m Adaption Mechanism(_r_32)
+		:g (_r_32_35) [1,1] 
+			: Median(_r_32_35_36)
+			: Weighted Mean(_r_32_35_37)
+			: Unweighted Mean(_r_32_35_38)
+			: Second Learner(_r_32_35_39)
+	:m Analogy Selection(_r_40)
+		:g (_r_40_41) [1,1] 
+			: Dynamic(_r_40_41_42)
+			: Fixed(_r_40_41_43)
+				:g (_r_40_41_43_44) [1,1] 
+					: Set K as 1(_r_40_41_43_44_45)
+					: Set K as 2(_r_40_41_43_44_46)
+					: Set K as 3(_r_40_41_43_44_47)
+					: Set K as 4(_r_40_41_43_44_48)
+					: Set K as 5(_r_40_41_43_44_49)
+</feature_tree>
+<constraints>
+constraint_6:~_r_6 or _r_17
+constraint_4:~_r_6_7_9 or _r_17
+constraint_2:~_r_1_2_3 or _r_24_25_27
+constraint_3:~_r_6_7_8 or _r_17
+</constraints>
+</feature_model>

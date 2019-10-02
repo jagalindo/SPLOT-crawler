@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Aug 30, 2019 - 2:16 AM  -->
+<feature_model name="SCM Feature Model">
+<meta>
+<data name="description">Feature Model for Manufacturing</data>
+<data name="creator">Oman Komarudin</data>
+<data name="address"></data>
+<data name="email">oman.komarudin@ui.ac.id</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">OmanK</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SXFM_SCM(_r)
+	:m RawMaterialWH(_r_1)
+		:m Incoming(_r_1_4)
+			:m FromImport(_r_1_4_6)
+			:o FromLocal(_r_1_4_7)
+			:o FromSubcon(_r_1_4_13)
+			:o FromScrap(_r_1_4_14)
+		:m Outgoing(_r_1_5)
+			:m ToProduction(_r_1_5_11)
+			:o ToSubCon(_r_1_5_12)
+			:o ToExtermination(_r_1_5_15)
+	:m Production(_r_2)
+		:o Incoming(_r_2_16)
+		:m Outgoing(_r_2_17)
+			:m NextProcess(_r_2_17_18)
+			:o ToScrap(_r_2_17_19)
+			:o ToSubCon(_r_2_17_23)
+	:m FinishGoodsWH(_r_3)
+		:o Incoming(_r_3_20)
+		:m Outgoing(_r_3_21)
+			:m ToExport(_r_3_21_22)
+			:o ToScrap(_r_3_21_24)
+</feature_tree>
+<constraints>
+constraint_5:_r_1_5_12 or ~_r_1_4_13
+constraint_2:~_r_1_4_14 or _r_2_17_19
+constraint_3:~_r_1_4_14 or _r_3_21_24
+</constraints>
+</feature_model>

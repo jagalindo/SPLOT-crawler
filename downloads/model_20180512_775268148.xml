@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, May 12, 2018 - 4:43 AM  -->
+<feature_model name="SPLOT- Student Attendance System">
+<meta>
+<data name="description">Student Attendance System Features Model</data>
+<data name="creator">ashraff</data>
+<data name="address"></data>
+<data name="email">ash.systm@gmail.com</data>
+<data name="phone">0133499411</data>
+<data name="website"></data>
+<data name="organization">utmspace</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Student Attendance System(_r)
+	:m Submit Attendance Method(_r_1)
+		:g (_r_1_6) [1,1] 
+			: Barcode(_r_1_6_7)
+			: Fingerprint(_r_1_6_8)
+			: Access Card(_r_1_6_9)
+	:m Record Information(_r_19)
+		:g (_r_19_20) [1,*] 
+			: View(_r_19_20_21)
+			: Update(_r_19_20_22)
+			: Monitoring Attendance Status(_r_19_20_23)
+			: Tracking Absence Student(_r_19_20_24)
+	:o Notification(_r_25)
+		:g (_r_25_26) [1,1] 
+			: Email(_r_25_26_27)
+			: Via SMS(_r_25_26_28)
+	:m Attendance Management CMS(_r_29)
+		:g (_r_29_30) [1,*] 
+			: Add New Class(_r_29_30_31)
+			: Update Class(_r_29_30_32)
+			: Delete Class(_r_29_30_33)
+			: View Class(_r_29_30_34)
+			: View Report(_r_29_30_35)
+	:m Class Schedule(_r_36)
+		:g (_r_36_37) [1,*] 
+			: View(_r_36_37_38)
+			: Add New Class Schedule(_r_36_37_39)
+			: Update Class Schedule(_r_36_37_40)
+			: Assign New Class Schedule(_r_36_37_41)
+</feature_tree>
+<constraints>
+constraint_3:_r_29_30_31 or _r_36_37_39
+</constraints>
+</feature_model>

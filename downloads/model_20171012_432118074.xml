@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 12, 2017 - 11:35 AM  -->
+<feature_model name="eval_board">
+<meta>
+<data name="description">evaluation_board_for_microcontroller</data>
+<data name="creator">Messaoud_Hajji_Bachouch</data>
+<data name="address"></data>
+<data name="email">mohamedamin.messaoud@esprit.tn</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">5Sleam</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eval_board2(_r)
+	:m Printed-Circuit-Board(_r_1)
+		:m Microcontroller(_r_1_2)
+			:m microprocessor(_r_1_2_3)
+			:m Direct-Access-Memory(_r_1_2_4)
+			:m Memory(_r_1_2_5)
+				:m Flash(_r_1_2_5_6)
+				:m Random-Access-Memory(_r_1_2_5_7)
+			:m Serial-Interface-UART(_r_1_2_9)
+			:o Communication-Interfaces(_r_1_2_10)
+				:g (_r_1_2_10_21) [1,*] 
+					: Serial(_r_1_2_10_21_22)
+					: Parallel(_r_1_2_10_21_23)
+			:o Input-Output(_r_1_2_11)
+			:m Reset-input(_r_1_2_31)
+		:o Pins(_r_1_12)
+			:g (_r_1_12_14) [1,*] 
+				: Analog(_r_1_12_14_15)
+				: Digital(_r_1_12_14_16)
+		:o Communication-interfaces(_r_1_17)
+			:g (_r_1_17_18) [1,*] 
+				: Serial(_r_1_17_18_19)
+				: Parallel(_r_1_17_18_20)
+		:m Linker(_r_1_29)
+		:m Debugger(_r_1_30)
+		:m Button(_r_1_32)
+			:m Reset(_r_1_32_33)
+			:o User(_r_1_32_34)
+		:m Led(_r_1_35)
+			:m On-oFF-Led(_r_1_35_36)
+			:o User-Led(_r_1_35_37)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

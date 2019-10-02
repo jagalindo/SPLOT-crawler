@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 22, 2019 - 10:46 AM  -->
+<feature_model name="Baking Case Study">
+<meta>
+<data name="description">Toy model</data>
+<data name="creator">Inmaculada Ayala</data>
+<data name="address"></data>
+<data name="email">ayala@lcc.uma.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de Málaga</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r System(_r)
+	:m SAEngine(_r_1)
+		:m Plans(_r_1_3)
+			:o MadeWithLove(_r_1_3_21)
+			:o MadeIndustrial(_r_1_3_23)
+			:o MadeByHand(_r_1_3_24)
+		:m Goals(_r_1_4)
+	:m Services(_r_2)
+		:o Baking(_r_2_6)
+			:m Baking_parameters(_r_2_6_7)
+				:m Love(_r_2_6_7_9)
+					:g (_r_2_6_7_9_10) [1,1] 
+						: Yes(_r_2_6_7_9_10_11)
+						: No(_r_2_6_7_9_10_12)
+				:m Manufacturing(_r_2_6_7_13)
+					:g (_r_2_6_7_13_14) [1,1] 
+						: handmade(_r_2_6_7_13_14_15)
+						: industrial(_r_2_6_7_13_14_16)
+			:m Baking_quality(_r_2_6_8)
+			:g (_r_2_6_17) [1,1] 
+				: q1(_r_2_6_17_18)
+				: q2(_r_2_6_17_19)
+				: q3(_r_2_6_17_20)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_6_7_9_10_11 or _r_2_6_7_13_14_15 or ~_r_2_6_17_18
+constraint_6:~_r_2_6_7_9 or ~_r_2_6_7_9_10_11 or ~_r_1_3_21
+constraint_4:~_r_2_6_7_13_14_15 or ~_r_1_3_24
+constraint_5:~_r_2_6_7_13_14_16 or ~_r_1_3_23
+constraint_2:_r_2_6_7_9_10_12 or _r_2_6_7_13_14_15 or ~_r_2_6_17_19
+constraint_3:_r_2_6_7_13_14_16 or ~_r_2_6_17_20
+</constraints>
+</feature_model>

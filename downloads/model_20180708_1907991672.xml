@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Jul 8, 2018 - 12:07 PM  -->
+<feature_model name="e commerce">
+<meta>
+<data name="description">online eshop model </data>
+<data name="creator">john</data>
+<data name="address"></data>
+<data name="email">john_william@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">XYZ</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eshop(_r)
+	:m payment(_r_8)
+		:g (_r_8_9) [1,1] 
+			: credit card(_r_8_9_10)
+			: bank tranfser(_r_8_9_13)
+			: CoD(_r_8_9_14)
+	:m cart(_r_15)
+		:m view cart(_r_15_16)
+		:o update cart(_r_15_17)
+	:m cataloge(_r_18)
+		:m view item(_r_18_19)
+		:m add cart item(_r_18_20)
+		:o wish list(_r_18_21)
+		:o search(_r_18_22)
+	:o login(_r_23)
+	:o logout(_r_24)
+	:o register(_r_25)
+	:o order history(_r_26)
+		:o feedback(_r_26_27)
+			:g (_r_26_27_29) [1,*] 
+				: report(_r_26_27_29_30)
+				: review(_r_26_27_29_31)
+		:m view history(_r_26_28)
+	:m security(_r_32)
+		:g (_r_32_33) [1,1] 
+			: High(_r_32_33_34)
+			: standard(_r_32_33_35)
+</feature_tree>
+<constraints>
+constraint_1:_r_23 or ~_r_26_28
+constraint_8:~_r_8_9_10 or ~_r_32_33_35
+constraint_9:~_r_8_9_13 or ~_r_32_33_35
+constraint_6:~_r_23 or _r_24
+constraint_7:~_r_15_17 or _r_23
+constraint_4:~_r_18_21 or _r_23
+constraint_5:~_r_23 or _r_25
+constraint_2:~_r_8_9_10 or _r_23
+constraint_3:~_r_8_9_13 or _r_23
+</constraints>
+</feature_model>

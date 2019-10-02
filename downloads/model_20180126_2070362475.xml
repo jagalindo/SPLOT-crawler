@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Feb 2, 2018 - 4:27 PM  -->
+<feature_model name="BCON">
+<meta>
+<data name="description">Weather station model</data>
+<data name="creator">Author1</data>
+<data name="address"></data>
+<data name="email">artem.kanailov@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU KL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Station(_r)
+	:m Measure(_r_15)
+		:m Temperature(_r_15_16)
+		:o Wind speed(_r_15_17)
+		:o Humidity(_r_15_18)
+		:o Precipitation(_r_15_19)
+		:o Air Pressure(_r_15_20)
+	:m Connectivity options(_r_21)
+		:g (_r_21_25) [1,*] 
+			: WLAN(_r_21_25_26)
+			: Mobile network(_r_21_25_27)
+	:o Notify events(_r_28)
+	:o Forecast(_r_29)
+	:o Indicate low battery(_r_30)
+	:m Configure(_r_31)
+		:m Unit selection(_r_31_32)
+		:o Langiage selection(_r_31_34)
+		:o Color scheme selection(_r_31_35)
+		:o Update background image(_r_31_36)
+		:o SW update(_r_31_37)
+	:m Interface(_r_38)
+		:m Buttons(_r_38_41)
+			:g (_r_38_41_42) [1,1] 
+				: 1 button(_r_38_41_42_43)
+				: 4 buttons(_r_38_41_42_44)
+		:m Display(_r_38_45)
+			:g (_r_38_45_46) [1,1] 
+				: BW(_r_38_45_46_47)
+				: Color(_r_38_45_46_48)
+				: Touch(_r_38_45_46_49)
+				: Small(_r_38_45_46_50)
+				: Large(_r_38_45_46_51)
+	:o App(_r_52)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

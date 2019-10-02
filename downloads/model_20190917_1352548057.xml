@@ -1,0 +1,85 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 3:39 PM  -->
+<feature_model name="Windows70_Contrast">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Contrast and Color in Windows7.0 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237)695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date">Friday, May 10, 2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m AppearanceAndPersonalization(_r1)
+		:m Personalization(_r2)
+			:o MyThemes(_r3)
+				:o GetMoreThemesOnline(_r4)
+			:o AeroThemes(_r5)
+				:g (_id_0) [1,1] 
+					: Windows7Basic(_r6)
+					: WindowsClassic(_r7)
+					: HighContrast_1(_r8)
+					: HighContrast_2(_r9)
+					: HighContrastBlack(_r10)
+					: HighContrastWhite(_r11)
+			:o BasicAndHighContrastThemes(_r12)
+			:m DesktopBackground(_r13)
+				:o PictureLocation(_r14)
+					:g (_id_1) [1,1] 
+						: SolidColors(_r15)
+						: VirtualNode(_r16)
+							:g (_id_2) [1,1] 
+								: PicturesLibrary(_r17)
+								: TopRatedPhotos(_r18)
+								: WindowsDesktopBackgrounds(_r19)
+									:g (_id_3) [1,1] 
+										: LinesAndColors2(_r20)
+										: Windows2(_r21)
+										: Flowers2(_r22)
+							:m PicturePosition(_r23)
+								:g (_id_4) [1,1] 
+									: Stretch(_r24)
+									: Tile(_r25)
+									: Fill(_r26)
+									: Fit(_r27)
+									: Center(_r28)
+							:o ChangePictureEvery(_r29)
+								:g (_id_5) [1,1] 
+									: _1Day(_r30)
+									: _5Minutes(_r31)
+									: _20Minutes(_r32)
+									: _1Hour(_r33)
+									: _10Minutes(_r34)
+									: _10Seceonds(_r35)
+									: _30Seconds(_r36)
+									: _1Minute(_r37)
+									: _3Minutes(_r38)
+									: _15Minutes(_r39)
+									: _30Minutes(_r40)
+							:o Shuffle(_r41)
+			:m WindowColor(_r42)
+				:m Element(_r43)
+				:m Color1(_r44)
+				:m Color2(_r45)
+		:m EaseOfAccessCenter(_r46)
+			:m MakeTheComputerEasierToSee(_r47)
+				:m HighContrast(_r48)
+					:m ChooseAHighContrastTheme(_r49)
+						:m LinkFor_Personalization(_r50)
+					:o TurnOnOrOffHighContrastWhenLeftALTPlusLeftSCHIFTplusPRINT_SCREENisPressed(_r51)
+						:o DisplayAWarningMessageWhenTurningASettingOn1(_r52)
+						:o MakeASoundWhenTurningASettingOnOrOff1(_r53)
+			:m MakeTheMouseEasierToUse(_r54)
+				:m MousePointers(_r55)
+					:g (_id_6) [1,1] 
+						: RegularInverting(_r56)
+						: RegularWhite(_r57)
+						: RegularBlack(_r58)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

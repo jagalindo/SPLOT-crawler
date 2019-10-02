@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Sep 20, 2019 - 9:03 PM  -->
+<feature_model name="SISTEMA PARA LA GESTION DE LA SEGURIDAD">
+<meta>
+<data name="description">MODELO PARA LA GESTION DE SOFTWRE DE SEGURIDAD</data>
+<data name="creator">OSCAR CHILUIZA, JUAN SALGADO</data>
+<data name="address"></data>
+<data name="email">owchiluiza@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Oscar Chiluiza</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SISTEMA SEGURIDAD OWJS(_r)
+	:m Registrar(_r_1)
+	:o Acceso(_r_2)
+		:g (_r_2_5) [1,*] 
+			: Persona(_r_2_5_6)
+		:g (_r_2_8) [1,*] 
+			: Control Armas(_r_2_8_9)
+	:m Notificacion(_r_3)
+		:g (_r_3_10) [1,1] 
+			: Personal(_r_3_10_11)
+		:g (_r_3_12) [1,1] 
+			: Dep Seguridad(_r_3_12_13)
+	:o Escanear(_r_4)
+		:o Cuerpo(_r_4_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

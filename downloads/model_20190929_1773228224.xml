@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 29, 2019 - 6:42 AM  -->
+<feature_model name="MP_aduni_latest">
+<meta>
+<data name="description">mobile phone</data>
+<data name="creator">rabatul aduni</data>
+<data name="address"></data>
+<data name="email">rabatuladuni@Gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">utm</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MobilePhone(_r)
+	:m MobileMedia(_r_2)
+		:o VideoPlayer(_r_2_7)
+		:m Games(_r_2_8)
+		:o Camera(_r_2_9)
+		:o MusicPlayer(_r_2_10)
+	:m MobileCall(_r_3)
+		:o VideoCall(_r_3_11)
+		:m VoiceCall(_r_3_12)
+	:o MobileGPS(_r_4)
+	:m MobileMessage(_r_5)
+		:o VoiceMessage(_r_5_15)
+			:o VideoMessage(_r_5_15_17)
+		:m TextMessage(_r_5_16)
+	:m MobileScreen(_r_6)
+		:o BasicColor(_r_6_13)
+		:o HighResolution(_r_6_14)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_9 or ~_r_3_11
+constraint_10:~_r_2_7 or ~_r_6_13
+constraint_9:~_r_4 or ~_r_6_13
+constraint_11:~_r_2_10 or ~_r_6_13
+constraint_12:~_r_3_11 or ~_r_6_13
+constraint_4:_r_2_9 or ~_r_5_15_17
+constraint_2:~_r_2_9 or _r_6_14
+constraint_3:~_r_2_7 or _r_6_14
+</constraints>
+</feature_model>

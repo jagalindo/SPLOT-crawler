@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 29, 2017 - 9:57 PM  -->
+<feature_model name="drupal sawsen">
+<meta>
+<data name="description">goood</data>
+<data name="creator">sawsen</data>
+<data name="address"></data>
+<data name="email">aouichisawsen94@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">sawdrup</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r drupal sawsen(_r)
+	:m tt(_r_1)
+		:o k(_r_1_7)
+		:o m(_r_1_8)
+	:m fhhh(_r_2)
+		:g (_r_2_3) [1,*] 
+			: ff(_r_2_3_4)
+				:g (_r_2_3_4_5) [1,1] 
+					: fffffff(_r_2_3_4_5_6)
+	:o yous(_r_9)
+	:g (_r_10) [1,1] 
+		: Feature-11(_r_10_11)
+			:m kkkk(_r_10_11_12)
+</feature_tree>
+<constraints>
+constraint_1:_r_1 or _r_2_3_4
+</constraints>
+</feature_model>

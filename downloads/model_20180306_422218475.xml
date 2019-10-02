@@ -1,0 +1,98 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 4:45 AM  -->
+<feature_model name="Venta Computadores">
+<meta>
+<data name="description">venta de computadores</data>
+<data name="creator">Jairo Ruano</data>
+<data name="address"></data>
+<data name="email">jruano30@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Yo</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VentaComputadores(_r)
+	:m Tipo(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Servidor(_r_6_7_10)
+			: Personal(_r_6_7_77)
+				:g (_r_6_7_77_78) [1,1] 
+					: Portatil(_r_6_7_77_78_79)
+					: Mesa(_r_6_7_77_78_80)
+	:m Marca(_r_11)
+		:g (_r_11_20) [1,1] 
+			: Dell(_r_11_20_21)
+			: Toshiba(_r_11_20_22)
+			: Lenovo(_r_11_20_23)
+			: Apple(_r_11_20_24)
+			: Clon(_r_11_20_25)
+	:m SO(_r_26)
+		:g (_r_26_27) [1,1] 
+			: Para Personales(_r_26_27_28)
+				:g (_r_26_27_28_29) [1,1] 
+					: Windows 10(_r_26_27_28_29_30)
+					: Fedora(_r_26_27_28_29_31)
+					: OS X Yosemite(_r_26_27_28_29_32)
+			: Para Servidores(_r_26_27_33)
+				:g (_r_26_27_33_34) [1,1] 
+					: Windows Server(_r_26_27_33_34_35)
+					: Red Hat(_r_26_27_33_34_36)
+					: OS X Server(_r_26_27_33_34_37)
+	:m CPU(_r_38)
+		:m RAM(_r_38_40)
+			:g (_r_38_40_84) [1,1] 
+				: Poca Memoria(_r_38_40_84_85)
+					:g (_r_38_40_84_85_89) [1,1] 
+						: 4 GB(_r_38_40_84_85_89_90)
+						: 8 GB(_r_38_40_84_85_89_91)
+						: 16 GB(_r_38_40_84_85_89_92)
+				: Mucha Memoria(_r_38_40_84_88)
+					:g (_r_38_40_84_88_93) [1,1] 
+						: 32 GB(_r_38_40_84_88_93_94)
+						: 64 GB(_r_38_40_84_88_93_95)
+		:m Procesador(_r_38_51)
+			:g (_r_38_51_52) [1,1] 
+				: Intel(_r_38_51_52_53)
+				: AMD(_r_38_51_52_54)
+		:m Disco Duro(_r_38_55)
+			:g (_r_38_55_56) [1,1] 
+				: Poca Capacidad(_r_38_55_56_96)
+					:g (_r_38_55_56_96_98) [1,1] 
+						: 500 GB(_r_38_55_56_96_98_99)
+						: 1 TB(_r_38_55_56_96_98_100)
+						: 2 TB(_r_38_55_56_96_98_101)
+				: Mucha Capacidad(_r_38_55_56_97)
+					:g (_r_38_55_56_97_102) [1,1] 
+						: 5 TB(_r_38_55_56_97_102_103)
+						: 10 TB(_r_38_55_56_97_102_105)
+		:o Tarjeta Grafica(_r_38_62)
+			:g (_r_38_62_63) [1,1] 
+				: Nvidia(_r_38_62_63_64)
+				: ATI Radeon(_r_38_62_63_65)
+	:o Pantalla(_r_66)
+		:o Tecnologia Avanzada(_r_66_67)
+			:g (_r_66_67_68) [1,*] 
+				: 3D(_r_66_67_68_69)
+				: 4K(_r_66_67_68_70)
+		:m Tamanio(_r_66_71)
+			:g (_r_66_71_72) [1,1] 
+				: 14p(_r_66_71_72_73)
+				: 17p(_r_66_71_72_74)
+				: 24p(_r_66_71_72_75)
+	:o Planta de Poder(_r_76)
+</feature_tree>
+<constraints>
+constraint_17:~_r_11_20_24 or _r_26_27_28_29_32 or _r_26_27_33_34_37
+constraint_8:_r_6_7_77 or _r_38_40_84_88
+constraint_10:~_r_26_27_33 or ~_r_6_7_77
+constraint_9:_r_6_7_77 or _r_38_55_56_97
+constraint_6:_r_66 or ~_r_6_7_77_78_79
+constraint_12:~_r_6_7_10 or _r_26_27_33
+constraint_7:~_r_66_67 or ~_r_6_7_77_78_79
+constraint_13:_r_6_7_10 or _r_38_40_84_85
+constraint_14:_r_6_7_10 or _r_38_55_56_96
+constraint_5:~_r_11_20_25 or ~_r_6_7_77_78_79
+</constraints>
+</feature_model>

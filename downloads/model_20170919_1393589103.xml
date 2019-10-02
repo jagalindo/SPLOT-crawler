@@ -1,0 +1,99 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 19, 2017 - 9:10 PM  -->
+<feature_model name="Computadores">
+<meta>
+<data name="description">Computadores</data>
+<data name="creator">Juan Mojica</data>
+<data name="address"></data>
+<data name="email">jcmojicap@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UA</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computadores(_r)
+	:m Marca(_r_1)
+		:g (_r_1_4) [1,1] 
+			: Dell(_r_1_4_5)
+			: Toshiba(_r_1_4_6)
+			: Lenovo(_r_1_4_7)
+			: Apple(_r_1_4_8)
+			: Clon(_r_1_4_9)
+		:m Feature-29(_r_1_29)
+	:m Tipo(_r_12)
+		:g (_r_12_13) [1,1] 
+			: De mesa(_r_12_13_14)
+			: Portatil(_r_12_13_15)
+			: Servidor(_r_12_13_16)
+	:m Sistema operativo(_r_17)
+		:g (_r_17_18) [1,1] 
+			: Para computadores personales(_r_17_18_19)
+				:g (_r_17_18_19_21) [1,1] 
+					: Windows 10(_r_17_18_19_21_22)
+					: Fedora(_r_17_18_19_21_23)
+					: OS X Yosemite(_r_17_18_19_21_24)
+			: Para servidores(_r_17_18_20)
+				:g (_r_17_18_20_25) [1,1] 
+					: Windows server(_r_17_18_20_25_26)
+					: Red hat(_r_17_18_20_25_27)
+					: OS X Server(_r_17_18_20_25_28)
+	:m Memoria RAM(_r_30)
+		:g (_r_30_31) [1,1] 
+			: 4GB(_r_30_31_32)
+			: 8GB(_r_30_31_33)
+			: 16GB(_r_30_31_34)
+			: 32GB(_r_30_31_35)
+			: 64GB(_r_30_31_36)
+	:m Procesador(_r_39)
+		:g (_r_39_40) [1,1] 
+			: Intel(_r_39_40_41)
+			: AMD(_r_39_40_42)
+	:m Disco duro(_r_43)
+		:g (_r_43_44) [1,1] 
+			: 500GB(_r_43_44_45)
+			: 1TB(_r_43_44_46)
+			: 2TB(_r_43_44_47)
+			: 5TB(_r_43_44_48)
+			: 10TB(_r_43_44_49)
+	:o Tarjeta grafica(_r_50)
+		:g (_r_50_51) [1,1] 
+			: NVIDIA(_r_50_51_52)
+			: ATI Radeon(_r_50_51_53)
+	:o Pantalla(_r_54)
+		:o Tecnologia(_r_54_55)
+			:g (_r_54_55_58) [1,*] 
+				: 3D(_r_54_55_58_59)
+				: 4K(_r_54_55_58_60)
+		:g (_r_54_61) [1,*] 
+			: Tamanio(_r_54_61_62)
+				:g (_r_54_61_62_63) [1,1] 
+					: 14 pulgadas(_r_54_61_62_63_64)
+					: 17 pulgadas(_r_54_61_62_63_65)
+					: 24 pulgadas(_r_54_61_62_63_66)
+	:o Fuente de poder(_r_67)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_4_9 or ~_r_12_13_15
+constraint_17:~_r_12_13_14 or ~_r_43_44_48
+constraint_18:~_r_12_13_14 or ~_r_43_44_49
+constraint_19:~_r_12_13_15 or ~_r_43_44_48
+constraint_22:~_r_12_13_15 or ~_r_54_55_58_60
+constraint_8:~_r_12_13_14 or ~_r_17_18_20
+constraint_23:~_r_12_13_15 or ~_r_30_31_35
+constraint_9:~_r_12_13_15 or ~_r_17_18_20
+constraint_10:~_r_1_4_8 or _r_17_18_19_21_24 or _r_17_18_20_25_28
+constraint_20:~_r_12_13_15 or ~_r_43_44_49
+constraint_11:~_r_12_13_16 or _r_17_18_20
+constraint_21:~_r_12_13_15 or ~_r_54_55_58_59
+constraint_26:~_r_12_13_14 or ~_r_30_31_36
+constraint_13:~_r_12_13_16 or _r_43_44_48 or _r_43_44_49
+constraint_14:~_r_12_13_16 or ~_r_30_31_32
+constraint_24:~_r_12_13_15 or ~_r_30_31_36
+constraint_2:~_r_12_13_15 or _r_54
+constraint_15:~_r_12_13_16 or ~_r_30_31_33
+constraint_25:~_r_12_13_14 or ~_r_30_31_35
+constraint_16:~_r_12_13_16 or ~_r_30_31_34
+</constraints>
+</feature_model>

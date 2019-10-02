@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jan 17, 2019 - 1:06 PM  -->
+<feature_model name="Augmeted Reality">
+<meta>
+<data name="description">Model Features of an augmented reality application</data>
+<data name="creator">Angel Cañete</data>
+<data name="address"></data>
+<data name="email">angelcv@lcc.uma.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UMA</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Augmeted Reality(_r)
+	:m Tracker(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Recursive(_r_1_2_3)
+				:o Optical Flow(_r_1_2_3_7)
+					:m Window Size(_r_1_2_3_7_8)
+					:m Iterations(_r_1_2_3_7_13)
+					:m Method(_r_1_2_3_7_14)
+						:g (_r_1_2_3_7_14_20) [1,1] 
+							: Gunnar Farnerback(_r_1_2_3_7_14_20_21)
+							: Lucas-Kanade(_r_1_2_3_7_14_20_22)
+				:o Texture Based(_r_1_2_3_23)
+				:o Edge based(_r_1_2_3_25)
+			: Tracking by detection(_r_1_2_6)
+				:g (_r_1_2_6_26) [1,*] 
+					: Edge Based(_r_1_2_6_26_27)
+					: Texture Based(_r_1_2_6_26_28)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

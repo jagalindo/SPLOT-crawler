@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 14, 2019 - 10:15 AM  -->
+<feature_model name="SmartHome-25Features">
+<meta>
+<data name="description">SmartHome FM with 25 features</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UBB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartHome(_r)
+	:m Windows_Control(_r_1)
+		:m Manual_Windows(_r_1_2)
+		:o Automated_Windows(_r_1_3)
+	:m Heating_Control(_r_4)
+		:m Manual_Heating(_r_4_5)
+		:o Smart_Heating(_r_4_6)
+	:m UI(_r_7)
+		:m Inhome_Screen(_r_7_8)
+		:o Internet_App(_r_7_9)
+	:o Security(_r_10)
+		:o Burglar_Alarm(_r_10_11)
+			:g (_r_10_11_12) [1,*] 
+				: Siren(_r_10_11_12_13)
+				: Bell(_r_10_11_12_14)
+				: Light(_r_10_11_12_15)
+				: Notification(_r_10_11_12_16)
+		:o Authorization(_r_10_17)
+		:o Authentication(_r_10_18)
+			:o Fingerprint_Reader(_r_10_18_24)
+			:m Password(_r_10_18_25)
+	:o LAN(_r_19)
+	:o Door_Lock(_r_20)
+		:o Keypad_Reader(_r_20_21)
+		:o Card_Reader(_r_20_22)
+		:o Fingerprint_Reader(_r_20_23)
+</feature_tree>
+<constraints>
+constraint_1:~_r_7_9 or _r_19
+constraint_4:~_r_7_9 or _r_19
+constraint_2:~_r_4_6 or _r_7_9
+constraint_3:~_r_1_3 or _r_7_9
+</constraints>
+</feature_model>

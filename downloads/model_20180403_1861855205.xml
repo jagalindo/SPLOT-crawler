@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Apr 3, 2018 - 1:39 PM  -->
+<feature_model name="JBPM">
+<meta>
+<data name="description">JBPM</data>
+<data name="creator">Seden KIRAS</data>
+<data name="address"></data>
+<data name="email">sedenkiras@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">İYTE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r JBPM(_r)
+	:m Runtime Management(_r_1)
+		:m Process Management(_r_1_7)
+		:m Task Management(_r_1_8)
+	:m Execution(_r_2)
+		:m Core Engine(_r_2_12)
+		:o Human Task Service(_r_2_13)
+		:m Web Services(_r_2_14)
+			:g (_r_2_14_15) [1,*] 
+				: CDI(_r_2_14_15_16)
+			:g (_r_2_14_22) [1,*] 
+				: REST(_r_2_14_22_23)
+			:g (_r_2_14_24) [1,*] 
+				: JMS(_r_2_14_24_25)
+	:m Modeling and Deployment(_r_3)
+	:o Reporting(_r_4)
+		:m Business Activity Monitoring(_r_4_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 15, 2019 - 2:52 PM  -->
+<feature_model name="SPL Seguridad">
+<meta>
+<data name="description">SPL en clase de Seguridad</data>
+<data name="creator">Jeannette Laverde</data>
+<data name="address"></data>
+<data name="email">nagashitouken@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SistemaDeSeguridad(_r)
+	:m RegistrarDatos(_r_1)
+	:g (_r_2) [1,*] 
+		: Acceso(_r_2_3)
+			:m Personal(_r_2_3_4)
+			:o ControlArmas(_r_2_3_5)
+	:m Notificacion(_r_6)
+		:o Personal(_r_6_7)
+		:o Seguridad(_r_6_8)
+	:o Escanear(_r_9)
+		:o Persona(_r_9_10)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

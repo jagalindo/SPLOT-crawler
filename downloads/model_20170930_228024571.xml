@@ -1,0 +1,116 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Sep 30, 2017 - 5:42 PM  -->
+<feature_model name="magician101">
+<meta>
+<data name="description">Framework for Machine Learning Tasks</data>
+<data name="creator">Tianpei Jianfeng</data>
+<data name="address"></data>
+<data name="email">txia4@ncsu.edu</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">NC State University</data>
+<data name="department">CSC</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Machine Learning(_r)
+	:m Data(_r_1)
+		:m Types(_r_1_4)
+			:g (_r_1_4_11) [1,1] 
+				: Continuous(_r_1_4_11_12)
+				: BinaryArray(_r_1_4_11_16)
+				: Combination(_r_1_4_11_17)
+				: Enumeration(_r_1_4_11_18)
+				: Text(_r_1_4_11_19)
+		:m Distance Metrics(_r_1_5)
+			:g (_r_1_5_22) [1,1] 
+				: Euclidean(_r_1_5_22_23)
+				: Jaccard(_r_1_5_22_25)
+				: Cosine(_r_1_5_22_26)
+				: Manhattan(_r_1_5_22_27)
+				: Minkowski(_r_1_5_22_28)
+		:o Noises(_r_1_6)
+			:o Missing values(_r_1_6_29)
+			:o Outliers(_r_1_6_30)
+			:o Additive noises(_r_1_6_33)
+			:o Imbalanced data(_r_1_6_62)
+		:o Dependency(_r_1_7)
+			:g (_r_1_7_34) [1,1] 
+				: Binary(_r_1_7_34_35)
+				: Multiple(_r_1_7_34_36)
+				: None(_r_1_7_34_60)
+		:m Preprocessing(_r_1_10)
+			:g (_r_1_10_38) [1,*] 
+				: Normalization(_r_1_10_38_39)
+				: Word2Vec(_r_1_10_38_40)
+				: SMOTE(_r_1_10_38_63)
+		:m Scales(_r_1_55)
+			:g (_r_1_55_56) [1,1] 
+				: Small(_r_1_55_56_57)
+				: Large(_r_1_55_56_58)
+				: Extreme Large(_r_1_55_56_59)
+	:m Learning(_r_2)
+		:o Reinforcement Learning(_r_2_42)
+			:m Markov Decision Processes(_r_2_42_46)
+		:o Supervised Learning(_r_2_43)
+			:m Classfication Regression(_r_2_43_50)
+				:g (_r_2_43_50_51) [1,*] 
+					: Artificial Neural Networks(_r_2_43_50_51_52)
+					: Bayesian Networks(_r_2_43_50_51_53)
+					: KNN(_r_2_43_50_51_57)
+					: Decision Tree(_r_2_43_50_51_58)
+					: SVM(_r_2_43_50_51_59)
+					: Linear Regression(_r_2_43_50_51_61)
+		:o Unsupervised Learning(_r_2_45)
+			:o Clustering(_r_2_45_60)
+				:g (_r_2_45_60_64) [1,1] 
+					: K-Means(_r_2_45_60_64_65)
+					: Gaussians(_r_2_45_60_64_66)
+					: Hierarchical(_r_2_45_60_64_67)
+			:o Association Rule(_r_2_45_61)
+				:g (_r_2_45_61_68) [1,1] 
+					: Apriori(_r_2_45_61_68_69)
+					: FP-growth(_r_2_45_61_68_70)
+					: AprioriDP(_r_2_45_61_68_71)
+			:o Dimension Reduction(_r_2_45_62)
+				:g (_r_2_45_62_72) [1,1] 
+					: PCA(_r_2_45_62_72_73)
+					: WHERE(_r_2_45_62_72_74)
+					: SVD(_r_2_45_62_72_75)
+	:o Visualization(_r_3)
+		:g (_r_3_76) [1,*] 
+			: Scatter Plots(_r_3_76_77)
+			: Boxplots(_r_3_76_78)
+			: Histogram(_r_3_76_79)
+			: F1 Recall Precission(_r_3_76_80)
+			: ConfusionMatrix(_r_3_76_81)
+			: ROC(_r_3_76_82)
+</feature_tree>
+<constraints>
+constraint_30:~_r_1_6_62 or _r_1_10_38_63
+constraint_32:~_r_1_7_34_36 or ~_r_2_43_50_51_59
+constraint_31:~_r_3_76_80 or ~_r_1_6_62
+constraint_17:_r_1_5 or ~_r_2_45_60
+constraint_18:_r_1_5 or ~_r_2_45_62
+constraint_28:_r_1_4_11_16 or ~_r_1_5_22_25
+constraint_19:~_r_2_45_62_72_75 or ~_r_1_55_56_59
+constraint_29:_r_1_4_11_12 or ~_r_1_5_22_26
+constraint_22:~_r_2_45_62_72_73 or ~_r_1_55_56_59
+constraint_8:_r_2_43 or ~_r_3_76_79
+constraint_23:_r_1_4_11_19 or ~_r_1_10_38_40
+constraint_9:_r_1_4_11_12 or ~_r_3_76_77
+constraint_10:_r_2_45 or ~_r_1_7_34_60
+constraint_20:~_r_2_43_50_51_59 or ~_r_1_55_56_59
+constraint_6:_r_1_7_34_36 or ~_r_3_76_81
+constraint_11:~_r_2_42 or _r_1_55_56_57
+constraint_21:~_r_2_45_60_64_65 or ~_r_1_55_56_59
+constraint_7:_r_3_76_80 or ~_r_3_76_82
+constraint_26:_r_1_5 or ~_r_1_10_38_39
+constraint_4:_r_2_43 or ~_r_3_76_81
+constraint_27:~_r_1_4_11_16 or _r_1_5_22_25
+constraint_5:_r_1_7_34_35 or ~_r_3_76_80
+constraint_24:~_r_1_4_11_19 or _r_1_10_38_40
+constraint_25:_r_1_5 or ~_r_1_6
+constraint_3:_r_2_43 or ~_r_3_76_80
+</constraints>
+</feature_model>

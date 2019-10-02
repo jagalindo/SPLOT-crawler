@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 15, 2019 - 2:41 PM  -->
+<feature_model name="Seguridad">
+<meta>
+<data name="description">Spl para seguridad</data>
+<data name="creator">Edison Espinosa</data>
+<data name="address"></data>
+<data name="email">edisonespinosag@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Seguridad(_r)
+	:m registardatos(_r_1)
+	:g (_r_2) [1,*] 
+		: Acceso(_r_2_3)
+			:m pesonal(_r_2_3_4)
+			:o controlarmas(_r_2_3_5)
+	:m Notificacion(_r_6)
+		:o personal(_r_6_7)
+		:o depsegurida(_r_6_8)
+	:o escanear(_r_9)
+		:o Feature-10(_r_9_10)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

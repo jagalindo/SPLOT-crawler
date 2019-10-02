@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 30, 2018 - 4:42 AM  -->
+<feature_model name="Aduni_MP">
+<meta>
+<data name="description">mobilephone</data>
+<data name="creator">Aduni</data>
+<data name="address"></data>
+<data name="email">abyuni256@Gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">utm</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MobilePhone(_r)
+	:m MobileMessage(_r_1)
+		:m MobileText(_r_1_4)
+		:o MobileVideo(_r_1_5)
+		:o MobileVoice(_r_1_6)
+	:m MobileCall(_r_7)
+		:m VoiceCall(_r_7_12)
+		:o VideoCall(_r_7_13)
+	:o MobileMedia(_r_8)
+		:o MobileCamera(_r_8_9)
+		:m MobileMusic(_r_8_11)
+</feature_tree>
+<constraints>
+constraint_2:~_r_1_5 or _r_8_9
+constraint_3:~_r_8_9 or _r_7_13
+</constraints>
+</feature_model>

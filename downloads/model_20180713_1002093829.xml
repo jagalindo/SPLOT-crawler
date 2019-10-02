@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 18, 2018 - 4:42 PM  -->
+<feature_model name="Test Oracle">
+<meta>
+<data name="description">Test Oracle for Vesta</data>
+<data name="creator">A.Esat GENC</data>
+<data name="address"></data>
+<data name="email">a.esatgenc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Vestel</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Test Oracle(_r)
+	:o Keypoint Detector(_r_3)
+		:g (_r_3_9) [1,1] 
+			: FAST(_r_3_9_10)
+			: STAR(_r_3_9_16)
+			: SIFT(_r_3_9_17)
+			: SURF(_r_3_9_18)
+			: ORB(_r_3_9_23)
+			: BRISK(_r_3_9_25)
+			: SimpleBlob(_r_3_9_27)
+	:o Descriptor Extractor(_r_4)
+		:g (_r_4_24) [1,1] 
+			: SIFT(_r_4_24_25)
+			: SURF(_r_4_24_26)
+			: BRIEF(_r_4_24_27)
+			: BRISK(_r_4_24_28)
+			: ORB(_r_4_24_29)
+			: FREAK(_r_4_24_30)
+	:o Transformation(_r_6)
+		:g (_r_6_31) [1,1] 
+			: Affine Transform(_r_6_31_32)
+			: Perspective Transform(_r_6_31_33)
+	:m Image Matching(_r_8)
+		:g (_r_8_44) [1,*] 
+			: Histogram Matching(_r_8_44_45)
+			: Template Matching(_r_8_44_46)
+			: Pixel Matching(_r_8_44_47)
+</feature_tree>
+<constraints>
+constraint_8:~_r_3 or _r_4
+constraint_9:~_r_4 or _r_6
+constraint_10:~_r_3 or _r_6
+constraint_6:_r_3 or ~_r_4
+constraint_11:_r_4 or ~_r_6
+constraint_7:_r_3 or ~_r_6
+</constraints>
+</feature_model>

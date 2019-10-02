@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 14, 2018 - 2:48 PM  -->
+<feature_model name="Voice Recording System">
+<meta>
+<data name="description">VRS</data>
+<data name="creator">Saifuddin</data>
+<data name="address"></data>
+<data name="email">mdsaifu@outlook.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Veriva Systems Sdn. Bhd.</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Voice Recording System(_r)
+	:m Login(_r_1)
+		:m Detail Call Recording Display(_r_1_3)
+			:m Call Direction(_r_1_3_9)
+			:m Call Duration(_r_1_3_10)
+			:m Transaction ID(_r_1_3_11)
+			:m Agent Login Name(_r_1_3_12)
+			:m User Comment(_r_1_3_13)
+		:m Recording Mode Trigger(_r_1_5)
+			:o On Demand Recording(_r_1_5_14)
+			:o Schedule Recording(_r_1_5_15)
+		:m Remote Client Access Software(_r_1_6)
+			:m Live Monitoring Access Network(_r_1_6_16)
+			:m Reporting Module(_r_1_6_17)
+			:m Security Log(_r_1_6_18)
+		:m Audible Alarm(_r_1_7)
+			:o Application Hang(_r_1_7_19)
+			:o Activity Threshold Exceed(_r_1_7_21)
+			:o Hard Drive Impending Failures(_r_1_7_22)
+			:o Instant Alarm Popup Across Network(_r_1_7_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

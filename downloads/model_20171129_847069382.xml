@@ -1,0 +1,64 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 29, 2017 - 7:16 AM  -->
+<feature_model name="Educational Robotic">
+<meta>
+<data name="description">The feature model with the pedagogical</data>
+<data name="creator">Junaidah</data>
+<data name="address"></data>
+<data name="email">junenaidah36@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Educational Robotic(_r)
+	:m Task(_r_3)
+		:g (_r_3_9) [1,*] 
+			: Follow Line(_r_3_9_10)
+			: Follow Light(_r_3_9_13)
+			: Avoid Obstacle(_r_3_9_14)
+				:o Detect Object(_r_3_9_14_16)
+				:o Detect Collision(_r_3_9_14_17)
+			: Manual Control(_r_3_9_15)
+	:m Sensor(_r_4)
+		:g (_r_4_54) [1,*] 
+			: Light Sensing(_r_4_54_55)
+			: Distance Sensing(_r_4_54_57)
+			: Optical Sensing(_r_4_54_58)
+			: Accelerometer Sensing(_r_4_54_59)
+		:o Switch Button Sensing(_r_4_56)
+	:m Actuator(_r_5)
+		:o LED(_r_5_26)
+		:o Sound(_r_5_27)
+		:o Buzzer(_r_5_28)
+		:o Motor(_r_5_29)
+			:g (_r_5_29_45) [1,*] 
+				: Medium motor(_r_5_29_45_46)
+				: Large Motor(_r_5_29_45_47)
+			:o Ball Shooter(_r_5_29_48)
+	:m Library(_r_6)
+		:o Sensor Library(_r_6_34)
+		:o Actuator Library(_r_6_35)
+	:m Software(_r_7)
+		:g (_r_7_40) [1,1] 
+			: Arduino IDE(_r_7_40_41)
+			: AvrStudio(_r_7_40_42)
+			: EV3(_r_7_40_43)
+			: Snap(_r_7_40_44)
+	:m Communication(_r_8)
+		:g (_r_8_49) [1,*] 
+			: SPI(_r_8_49_50)
+			: Bluetooth(_r_8_49_51)
+			: WIFI(_r_8_49_52)
+			: USB Cable(_r_8_49_53)
+</feature_tree>
+<constraints>
+constraint_6:_r_3_9_15 or _r_4_56 or _r_4_54_59
+constraint_4:_r_3_9_14_17 or _r_4_56
+constraint_5:_r_3_9_14_16 or _r_4_54_57
+constraint_2:_r_3_9_10 or _r_4_54_58
+constraint_3:_r_3_9_13 or _r_4_54_55
+</constraints>
+</feature_model>

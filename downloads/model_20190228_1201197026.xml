@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 28, 2019 - 10:31 AM  -->
+<feature_model name="e-shop-new">
+<meta>
+<data name="description">e-shop partial</data>
+<data name="creator">stefania gnesi</data>
+<data name="address"></data>
+<data name="email">stefania.gnesi@isti.cnr.it</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">isti-cnr</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r e-shop-new(_r)
+	:m shipping(_r_1)
+		:m home-address(_r_1_2)
+		:o shop(_r_1_3)
+	:o tracking(_r_4)
+	:o feedback(_r_5)
+		:m rating(_r_5_6)
+		:m review(_r_5_7)
+	:o publishing-feedback(_r_8)
+	:m search-item(_r_9)
+		:m list-item-av(_r_9_10)
+		:o popup-no-av(_r_9_11)
+	:m customer-profile(_r_12)
+		:m list-active-orders(_r_12_13)
+		:o completed-orders(_r_12_14)
+	:m payment(_r_15)
+</feature_tree>
+<constraints>
+constraint_6:_r_5_7 or ~_r_8
+constraint_5:_r_5_6 or ~_r_8
+</constraints>
+</feature_model>

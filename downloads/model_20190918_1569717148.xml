@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Sep 18, 2019 - 3:08 AM  -->
+<feature_model name="Sistema de Seguridad">
+<meta>
+<data name="description">Software Product Line para un Sistema de Seguridad</data>
+<data name="creator">Doris Chicaiza</data>
+<data name="address"></data>
+<data name="email">dorischicaiza78@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">MIS ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SistemaSeguridad(_r)
+	:m BDD(_r_1)
+		:o Consultar(_r_1_8)
+		:o Actualizar(_r_1_9)
+	:m Registrar(_r_2)
+		:g (_r_2_10) [1,*] 
+			: Cargar Datos(_r_2_10_11)
+		:g (_r_2_12) [1,*] 
+			: Imagen(_r_2_12_13)
+	:o Acceso(_r_4)
+		:g (_r_4_14) [1,*] 
+			: Persona(_r_4_14_15)
+				:m Antecedentes Penales(_r_4_14_15_21)
+		:g (_r_4_19) [1,*] 
+			: Control Armas(_r_4_19_20)
+	:m Notificacion(_r_6)
+		:o Fitur(_r_6_22)
+		:o UPC(_r_6_23)
+	:m Escaneo(_r_7)
+		:o Rostro(_r_7_25)
+		:o Cuerpo(_r_7_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

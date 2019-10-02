@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Aug 1, 2019 - 3:29 AM  -->
+<feature_model name="Eshop">
+<meta>
+<data name="description">eshop applications feature model</data>
+<data name="creator">KimBin</data>
+<data name="address"></data>
+<data name="email">kimbin804@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Hongik</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-shop(_r)
+	:m catalogue(_r_1)
+		:o search(_r_1_8)
+		:o wish list(_r_1_9)
+		:m add item to cart(_r_1_10)
+		:m view item(_r_1_11)
+	:m cart(_r_2)
+		:o update product(_r_2_12)
+		:m view cart(_r_2_13)
+	:m payment(_r_3)
+		:g (_r_3_16) [1,*] 
+			: credit card(_r_3_16_17)
+			: COD(_r_3_16_18)
+			: bank transfer(_r_3_16_19)
+	:o order history(_r_4)
+		:m view history(_r_4_20)
+		:o feedback(_r_4_21)
+			:g (_r_4_21_23) [1,*] 
+				: report problem(_r_4_21_23_24)
+				: review(_r_4_21_23_25)
+	:o login(_r_5)
+	:o logout(_r_6)
+	:o register(_r_7)
+	:m security(_r_26)
+		:g (_r_26_27) [1,1] 
+			: high(_r_26_27_28)
+			: standard(_r_26_27_29)
+</feature_tree>
+<constraints>
+constraint_1:~_r_5 or _r_7
+constraint_7:~_r_3_16_17 or ~_r_26_27_29
+constraint_4:_r_5 or ~_r_6
+constraint_5:~_r_3_16_17 or ~_r_26_27_29
+constraint_2:~_r_4 or _r_5
+constraint_3:~_r_1_9 or _r_5
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Jun 18, 2018 - 5:12 PM  -->
+<feature_model name="eShop">
+<meta>
+<data name="description">eShop</data>
+<data name="creator">Bharath Machavarapu</data>
+<data name="address">Bharath M</data>
+<data name="email">307407@gmail.com</data>
+<data name="phone">9999999999</data>
+<data name="website">www.bharathm.com</data>
+<data name="organization">bharath m</data>
+<data name="department">business analysis</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r eShop(_r)
+	:m Cart(_r_1)
+		:m Check Out(_r_1_4)
+		:m Move to Wish List(_r_1_5)
+		:o Cancel Order(_r_1_6)
+	:m Log In(_r_2)
+	:o Wish List(_r_3)
+	:g (_r_7) [1,*] 
+		: Log Out(_r_7_8)
+	:m Payment(_r_9)
+		:m Net Banking(_r_9_10)
+		:m Credit Card(_r_9_11)
+</feature_tree>
+<constraints>
+constraint_2:_r or _r_1 or _r_1_4 or _r_1_5 or _r_1_6
+</constraints>
+</feature_model>

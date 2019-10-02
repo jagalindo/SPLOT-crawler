@@ -1,0 +1,42 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 21, 2019 - 8:06 PM  -->
+<feature_model name="NoSQL schema simple">
+<meta>
+<data name="description">NoSQL schema simple</data>
+<data name="creator">paola gomez</data>
+<data name="address"></data>
+<data name="email">paolag010@gmail.com </data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">univ grenoble</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r schemaX(_r)
+	:m colByClass(_r_1)
+		:g (_r_1_3) [1,*] 
+			: colB(_r_1_3_4)
+				:m tB(_r_1_3_4_10)
+					:o tB_l0_ext(_r_1_3_4_10_12)
+						:m r2_cs(_r_1_3_4_10_12_14)
+							:g (_r_1_3_4_10_12_14_16) [1,1] 
+								: tB EMB tC(_r_1_3_4_10_12_14_16_17)
+								: tB REF tC(_r_1_3_4_10_12_14_16_18)
+			: colC(_r_1_3_5)
+				:m tC(_r_1_3_5_11)
+					:o tC_l0_ext(_r_1_3_5_11_13)
+						:m r2_b(_r_1_3_5_11_13_15)
+							:g (_r_1_3_5_11_13_15_19) [1,1] 
+								: tC EMB tB(_r_1_3_5_11_13_15_19_20)
+								: tC REF tB(_r_1_3_5_11_13_15_19_21)
+	:o colByAssoc(_r_2)
+		:m colBC(_r_2_6)
+			:m ref tB(_r_2_6_22)
+			:m ref tC(_r_2_6_23)
+</feature_tree>
+<constraints>
+constraint_12:~_r_1_3_4_10_12_14_16_18 or ~_r_2_6_23
+constraint_13:~_r_1_3_5_11_13_15_19_21 or ~_r_2_6_22
+</constraints>
+</feature_model>

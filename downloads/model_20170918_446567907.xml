@@ -1,0 +1,89 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 18, 2017 - 4:15 AM  -->
+<feature_model name="FelixRuizComputerModel">
+<meta>
+<data name="description">modelo computer</data>
+<data name="creator">Felix</data>
+<data name="address">ruiz</data>
+<data name="email">fe.ruiz@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Tipo(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Mesa(_r_1_2_3)
+			: Portatil(_r_1_2_6)
+			: Servidor(_r_1_2_7)
+	:m Marca(_r_9)
+		:g (_r_9_12) [1,1] 
+			: Dell(_r_9_12_13)
+			: Toshiba(_r_9_12_14)
+			: Lenovo(_r_9_12_15)
+			: Apple(_r_9_12_16)
+			: Clone(_r_9_12_17)
+	:m SistemaOperativo(_r_19)
+		:g (_r_19_21) [1,1] 
+			: SOPersonal(_r_19_21_22)
+				:g (_r_19_21_22_24) [1,1] 
+					: Windows10(_r_19_21_22_24_25)
+					: Fedora(_r_19_21_22_24_26)
+					: OSXYosemite(_r_19_21_22_24_30)
+			: SOServer(_r_19_21_23)
+				:g (_r_19_21_23_31) [1,1] 
+					: WindowsServer(_r_19_21_23_31_32)
+					: RedHat(_r_19_21_23_31_33)
+					: Xserver(_r_19_21_23_31_34)
+	:m CPU(_r_35)
+		:m RAM(_r_35_37)
+			:g (_r_35_37_41) [1,1] 
+				: 4G(_r_35_37_41_42)
+				: 8G(_r_35_37_41_43)
+				: 16G(_r_35_37_41_44)
+				: 32G(_r_35_37_41_45)
+				: 64G(_r_35_37_41_46)
+		:m Procesador(_r_35_38)
+			:o Intel(_r_35_38_47)
+			:o AMD(_r_35_38_48)
+		:m DiscoDuro(_r_35_39)
+			:g (_r_35_39_49) [1,1] 
+				: 500G(_r_35_39_49_50)
+				: 1TB(_r_35_39_49_51)
+				: 2TB(_r_35_39_49_52)
+				: 5TB(_r_35_39_49_53)
+				: 10TB(_r_35_39_49_54)
+		:o TarjetaGrafica(_r_35_40)
+			:g (_r_35_40_56) [1,1] 
+				: NVIDIA(_r_35_40_56_57)
+				: ATIRadeon(_r_35_40_56_58)
+	:o Pantalla(_r_59)
+		:m Tecnologia(_r_59_60)
+			:g (_r_59_60_63) [1,*] 
+				: 3D(_r_59_60_63_64)
+				: 4K(_r_59_60_63_65)
+		:m Tamano(_r_59_62)
+			:g (_r_59_62_66) [1,1] 
+				: 4(_r_59_62_66_67)
+				: 17(_r_59_62_66_68)
+				: 24(_r_59_62_66_69)
+	:o PlantaPoder(_r_70)
+</feature_tree>
+<constraints>
+constraint_8:~_r_1_2_6 or _r_35_37_41_42 or _r_35_37_41_43 or _r_35_37_41_44
+constraint_10:~_r_1_2_6 or ~_r_19_21_23
+constraint_9:~_r_1_2_3 or _r_35_37_41_42 or _r_35_37_41_43 or _r_35_37_41_44
+constraint_11:~_r_1_2_3 or ~_r_19_21_23
+constraint_6:~_r_1_2_6 or ~_r_59_60_63_64 or ~_r_59_60_63_65
+constraint_12:~_r_9_12_16 or _r_19_21_22_24_30
+constraint_7:~_r_1_2_6 or _r_35_39_49_50 or _r_35_39_49_51 or _r_35_39_49_52
+constraint_13:~_r_1_2_7 or _r_19_21_23
+constraint_4:~_r_1_2_6 or _r_9_12_17
+constraint_14:~_r_1_2_7 or _r_35_37_41_45 or _r_35_37_41_46
+constraint_5:~_r_1_2_6 or _r_59
+constraint_15:~_r_1_2_7 or _r_35_39_49_53 or _r_35_39_49_54
+</constraints>
+</feature_model>

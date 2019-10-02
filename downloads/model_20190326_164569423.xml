@@ -1,0 +1,29 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 26, 2019 - 2:00 AM  -->
+<feature_model name="E-Shop_mjaved_UN">
+<meta>
+<data name="description">Required.</data>
+<data name="creator">Muhammad Javed</data>
+<data name="address"></data>
+<data name="email">sadsad@sadsa.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Mr.</data>
+<data name="department"></data>
+<data name="date">26-03-2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-Shop(_r)
+	:o Feature-36(_r_36)
+	:m Feature-37(_r_37)
+	:m Feature-38(_r_38)
+	:m Feature-39(_r_39)
+	:m Feature-40(_r_40)
+	:o Feature-41(_r_41)
+	:o Feature-42(_r_42)
+	:o Feature-43(_r_43)
+	:o Feature-44(_r_44)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

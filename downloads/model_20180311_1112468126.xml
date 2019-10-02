@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 15, 2018 - 1:39 PM  -->
+<feature_model name="SWAMP Platform">
+<meta>
+<data name="description">SWAMP Platform</data>
+<data name="creator">Carlos</data>
+<data name="address"></data>
+<data name="email">cak@ufabc.edu.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFABC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SWAMP Platform(_r)
+	:m Collect Soil Sensor Data(_r_1)
+		:m Collect Data from Wireless Sensors(_r_1_26)
+	:m Collect Meterological Data(_r_2)
+		:m Collect Data from Automated Meteorological Stations(_r_2_27)
+	:m Collect Drone Sensor Data(_r_3)
+		:g (_r_3_4) [1,*] 
+			: Use Drone as a Data Mule(_r_3_4_5)
+			: Use Drone as a Flying Camera(_r_3_4_8)
+		:m Generate Drone Flying Plan(_r_3_28)
+	:m Transmit Sensor Data to Storage(_r_9)
+		:g (_r_9_10) [1,*] 
+			: Transmit Sensor Data to the Fog Node(_r_9_10_11)
+			: Transmit Sensor Data to the Cloud(_r_9_10_12)
+	:m Generate Irrigation Prescription Map(_r_14)
+		:m Generate Irrigation Map using Water Need Models for(_r_14_25)
+		:m Access Water Need Models(_r_14_31)
+		:m Access Historical Production Data(_r_14_32)
+		:m Access Meteorological Data(_r_14_33)
+		:m Access Weather Data(_r_14_34)
+		:o Use Machine Learning for Parameter Tuning for Water Need Models(_r_14_35)
+		:o Generate Irrigation Map using Machine Learning based Data Analytics(_r_14_37)
+	:m Apply Irrigation Prescription Map(_r_15)
+		:g (_r_15_17) [1,*] 
+			: Apply Automated Irrigation(_r_15_17_18)
+				:m Apply Irrigation Map in Automated Actuators for Plots(_r_15_17_18_22)
+				:o Apply Irrigation Map in Automated Actuators for Management Zones(_r_15_17_18_23)
+			: Apply Human-in-the-loop Irrigation(_r_15_17_19)
+				:m Generate and Send Irrigation Prescription Map in a Readable Format(_r_15_17_19_24)
+	:m Monitor Water Consumption from Different Plots(_r_20)
+	:o Monitor Water Consumption from Different Management Zones(_r_21)
+	:m Obtain Weather Information(_r_29)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

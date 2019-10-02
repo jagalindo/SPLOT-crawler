@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Aug 25, 2019 - 11:51 PM  -->
+<feature_model name="Modelo do City-Tur">
+<meta>
+<data name="description">Teste do feature model do city-tur</data>
+<data name="creator">Igor</data>
+<data name="address"></data>
+<data name="email">igoronofre2000@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Estudante</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r City-Tur(_r)
+	:m Info-City(_r_1)
+	:m Tempo-Clima(_r_2)
+		:g (_r_2_7) [1,1] 
+			: API HG Weather(_r_2_7_8)
+			: API OPEN Weather(_r_2_7_9)
+	:m Pontos-Turisticos(_r_3)
+		:g (_r_3_10) [1,1] 
+			: API HERE(_r_3_10_11)
+				:g (_r_3_10_11_13) [1,*] 
+					: Nome e detalhes HERE(_r_3_10_11_13_14)
+					: Imagem HERE(_r_3_10_11_13_16)
+			: API TOMTOM(_r_3_10_12)
+				:g (_r_3_10_12_17) [1,*] 
+					: Nome e detalhes TOMTOM(_r_3_10_12_17_18)
+					: Imagem TOMTOM(_r_3_10_12_17_19)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

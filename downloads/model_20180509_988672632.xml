@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 9, 2018 - 7:45 PM  -->
+<feature_model name="LenguApp">
+<meta>
+<data name="description">Modelo características artículo</data>
+<data name="creator">Luisa Rincón</data>
+<data name="address"></data>
+<data name="email">lufe089@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Pontificia Universidad Javeriana</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r LenguApp(_r)
+	:m Instruccion(_r_1)
+		:g (_r_1_43) [1,1] 
+			: Texto(_r_1_43_44)
+			: Ideografico(_r_1_43_45)
+			: Audio(_r_1_43_46)
+	:m Objetivos(_r_2)
+		:g (_r_2_38) [1,*] 
+			: Identificar(_r_2_38_39)
+			: Nominar(_r_2_38_40)
+			: Comparar(_r_2_38_41)
+			: Describir(_r_2_38_42)
+	:o Distractores(_r_3)
+	:o Sonido(_r_4)
+	:m AspectosLenguaje(_r_5)
+		:g (_r_5_25) [1,1] 
+			: CategoriaSemantica(_r_5_25_26)
+				:g (_r_5_25_26_28) [1,1] 
+					: Animales(_r_5_25_26_28_29)
+					: Escuela(_r_5_25_26_28_30)
+					: Vehiculos(_r_5_25_26_28_31)
+					: Frutas-verduras(_r_5_25_26_28_32)
+					: Personas(_r_5_25_26_28_33)
+			: Gramatica(_r_5_25_27)
+				:g (_r_5_25_27_34) [1,*] 
+					: Verbos(_r_5_25_27_34_35)
+					: Adjetivos(_r_5_25_27_34_36)
+					: Adverbios(_r_5_25_27_34_37)
+	:m Dificultad(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Baja(_r_6_7_8)
+			: Media(_r_6_7_11)
+			: Alta(_r_6_7_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

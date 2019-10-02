@@ -1,0 +1,122 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Feb 23, 2019 - 5:41 PM  -->
+<feature_model name="Montadora de carro">
+<meta>
+<data name="description">Montagem de carro </data>
+<data name="creator">ane, douglas, marconi, sandra, valdir</data>
+<data name="address"></data>
+<data name="email">valdir.ramos07@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">pos ES</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r CARRO(_r)
+	:m Portas(_r_13)
+		:g (_r_13_18) [1,1] 
+			: 4(_r_13_18_19)
+			: 3(_r_13_18_20)
+			: 2(_r_13_18_21)
+	:m Motor(_r_22)
+		:g (_r_22_23) [1,1] 
+			: 1-0(_r_22_23_24)
+			: 1-6(_r_22_23_25)
+			: 2-0(_r_22_23_26)
+			: 2-0 Turbo(_r_22_23_27)
+	:m Cor(_r_28)
+		:g (_r_28_34) [1,1] 
+			: 1 cor(_r_28_34_35)
+				:g (_r_28_34_35_45) [1,1] 
+					: Prata(_r_28_34_35_45_46)
+					: Preto(_r_28_34_35_45_47)
+					: Branco(_r_28_34_35_45_48)
+					: Vermelho(_r_28_34_35_45_49)
+					: Azul(_r_28_34_35_45_50)
+			: 2 cores(_r_28_34_36)
+				:g (_r_28_34_36_39) [1,1] 
+					: Azul e branco(_r_28_34_36_39_40)
+					: Branco e vermelho(_r_28_34_36_39_41)
+					: Preto e branco(_r_28_34_36_39_42)
+					: Vermelho e Preto(_r_28_34_36_39_43)
+	:m Marca(_r_51)
+		:g (_r_51_52) [1,1] 
+			: Volkswagen(_r_51_52_53)
+				:g (_r_51_52_53_60) [1,1] 
+					: Gol(_r_51_52_53_60_61)
+					: Voyage(_r_51_52_53_60_68)
+					: Tiguan(_r_51_52_53_60_69)
+					: Novo Polo(_r_51_52_53_60_70)
+					: Up(_r_51_52_53_60_72)
+					: Jetta(_r_51_52_53_60_74)
+			: Chevrolet(_r_51_52_54)
+				:g (_r_51_52_54_64) [1,1] 
+					: Onix(_r_51_52_54_64_65)
+					: Prisma(_r_51_52_54_64_71)
+					: Camaro(_r_51_52_54_64_73)
+					: Cruze(_r_51_52_54_64_75)
+					: Trailblazer(_r_51_52_54_64_76)
+					: Spin(_r_51_52_54_64_77)
+			: Renault(_r_51_52_55)
+				:g (_r_51_52_55_78) [1,1] 
+					: Sandero(_r_51_52_55_78_79)
+					: Kwid(_r_51_52_55_78_80)
+					: Zoe(_r_51_52_55_78_81)
+					: Captur(_r_51_52_55_78_82)
+					: Duster(_r_51_52_55_78_83)
+					: Logan(_r_51_52_55_78_84)
+			: Toyota(_r_51_52_56)
+				:g (_r_51_52_56_85) [1,1] 
+					: Corola(_r_51_52_56_85_86)
+					: Prius(_r_51_52_56_85_87)
+					: Rav4(_r_51_52_56_85_88)
+					: Etios(_r_51_52_56_85_89)
+					: SW4(_r_51_52_56_85_90)
+					: Hillux(_r_51_52_56_85_91)
+			: Honda(_r_51_52_57)
+				:g (_r_51_52_57_92) [1,1] 
+					: Civic(_r_51_52_57_92_93)
+					: HRV(_r_51_52_57_92_94)
+					: Fit(_r_51_52_57_92_95)
+					: City(_r_51_52_57_92_96)
+					: Accord(_r_51_52_57_92_97)
+					: CR-V(_r_51_52_57_92_98)
+			: Hyundai(_r_51_52_58)
+				:g (_r_51_52_58_99) [1,1] 
+					: HB20(_r_51_52_58_99_100)
+					: HB20s(_r_51_52_58_99_101)
+					: Tucson(_r_51_52_58_99_102)
+					: Santa Fe(_r_51_52_58_99_103)
+					: Creta(_r_51_52_58_99_104)
+					: IX35(_r_51_52_58_99_105)
+			: Fiat(_r_51_52_59)
+				:g (_r_51_52_59_106) [1,1] 
+					: Uno(_r_51_52_59_106_107)
+					: Doblo(_r_51_52_59_106_108)
+					: Argo(_r_51_52_59_106_109)
+					: Mobi(_r_51_52_59_106_110)
+					: 500(_r_51_52_59_106_111)
+					: Grand Siena(_r_51_52_59_106_112)
+			: BMW(_r_51_52_113)
+				:g (_r_51_52_113_114) [1,1] 
+					: X-1(_r_51_52_113_114_115)
+					: 320i(_r_51_52_113_114_116)
+					: M6(_r_51_52_113_114_117)
+					: i8(_r_51_52_113_114_118)
+					: M2(_r_51_52_113_114_119)
+					: Serie 1 Hatch(_r_51_52_113_114_120)
+	:o acessorios(_r_140)
+		:g (_r_140_141) [1,*] 
+			: ar(_r_140_141_142)
+			: trava eletrica(_r_140_141_143)
+			: vidro eletrico(_r_140_141_144)
+			: banco de couro(_r_140_141_145)
+			: teto solar(_r_140_141_146)
+			: central multimedia(_r_140_141_147)
+			: direcao eletrica(_r_140_141_148)
+			: gas(_r_140_141_149)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

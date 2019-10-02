@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, May 2, 2019 - 1:45 PM  -->
+<feature_model name="SMarty Experiments Family">
+<meta>
+<data name="description">A family of experiments for the SMarty approach</data>
+<data name="creator">Edson OliveiraJr</data>
+<data name="address"></data>
+<data name="email">edson@din.uem.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">State University of Maringá</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SMarty-ExperFamily(_r)
+	:m Perspective(_r_1)
+		:g (_r_1_5) [1,*] 
+			: SPL Design(_r_1_5_6)
+			: Product Configuration(_r_1_5_9)
+	:m UML Diagram(_r_2)
+		:g (_r_2_10) [1,*] 
+			: Use Case Diagram(_r_2_10_11)
+			: Class Diagram(_r_2_10_12)
+			: Component Diagram(_r_2_10_13)
+			: Sequence Diagram(_r_2_10_14)
+			: Activity Diagram(_r_2_10_15)
+	:m Control(_r_3)
+		:g (_r_3_16) [1,*] 
+			: PLUS(_r_3_16_17)
+			: Ziadi et al(_r_3_16_18)
+			: Razavian(_r_3_16_19)
+	:m Training(_r_4)
+	:o Traceability(_r_21)
+		:g (_r_21_22) [1,*] 
+			: Forward(_r_21_22_23)
+			: Backward(_r_21_22_24)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

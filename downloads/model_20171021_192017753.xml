@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Oct 21, 2017 - 3:10 PM  -->
+<feature_model name="Mobile Phone Product Line">
+<meta>
+<data name="description"> the phone characteristics</data>
+<data name="creator">Lucas Machado</data>
+<data name="address"> Brazil </data>
+<data name="email">Lucas Machado@gmail.com</data>
+<data name="phone">045698774</data>
+<data name="website">Lucas Machado, Juliana Pereira, Lucas Garcia, Eduardo Figueiredo </data>
+<data name="organization">computer science</data>
+<data name="department">Department of Computer Science, Federal University of Minas Gerais (UFMG),</data>
+<data name="date">//</data>
+<data name="reference">//</data>
+</meta>
+<feature_tree>
+:r MobileMedia(_r)
+	:m MediaSelection(_r_1)
+		:g (_r_1_11) [1,*] 
+			: Photo(_r_1_11_12)
+			: Music(_r_1_11_15)
+			: Video(_r_1_11_16)
+	:m MediaManagement(_r_2)
+		:o Favourites(_r_2_17)
+			:m SetFavourites(_r_2_17_28)
+			:m ViewFavourites(_r_2_17_29)
+		:o CopyMedia(_r_2_18)
+		:o SMS Transfer(_r_2_22)
+			:m ReceivePhoto(_r_2_22_30)
+			:m SendPhoto(_r_2_22_31)
+	:m ScreenSize(_r_5)
+		:g (_r_5_23) [1,1] 
+			: Screen1(_r_5_23_24)
+			: Screen2(_r_5_23_25)
+			: Screen3(_r_5_23_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,77 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 2:08 AM  -->
+<feature_model name="PC Store Model">
+<meta>
+<data name="description">Model for productos in a PC store</data>
+<data name="creator">Camilo Forero</data>
+<data name="address"></data>
+<data name="email">rc.forero@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PC Store(_r)
+	:m Brand(_r_1)
+		:g (_r_1_4) [1,1] 
+			: Dell(_r_1_4_5)
+			: Lenovo(_r_1_4_7)
+			: Apple(_r_1_4_8)
+			: Toshiba(_r_1_4_9)
+			: Clon(_r_1_4_10)
+	:m Type(_r_13)
+		:g (_r_13_14) [1,1] 
+			: Server(_r_13_14_15)
+			: Desktop(_r_13_14_16)
+			: Laptop(_r_13_14_17)
+	:m Ram(_r_18)
+		:g (_r_18_18) [1,1] 
+			: 4GB(_r_18_18_19)
+			: 8GB(_r_18_18_20)
+			: 16GB(_r_18_18_21)
+			: 32GB(_r_18_18_22)
+			: 64GB(_r_18_18_23)
+	:m HD(_r_19)
+		:g (_r_19_24) [1,1] 
+			: 500GB(_r_19_24_25)
+			: 1TB(_r_19_24_26)
+			: 2TB(_r_19_24_27)
+			: 5TB(_r_19_24_28)
+			: 10TB(_r_19_24_29)
+	:o Video Card(_r_20)
+		:g (_r_20_30) [1,1] 
+			: NVIDIA(_r_20_30_31)
+			: ATI Radeon(_r_20_30_32)
+	:m Processor(_r_21)
+		:g (_r_21_33) [1,1] 
+			: Intel(_r_21_33_34)
+			: AMD(_r_21_33_35)
+	:m OS(_r_22)
+		:g (_r_22_36) [1,1] 
+			: Server OS(_r_22_36_37)
+				:g (_r_22_36_37_43) [1,1] 
+					: Windows Server(_r_22_36_37_43_44)
+					: Red Hat(_r_22_36_37_43_45)
+					: X Server(_r_22_36_37_43_46)
+			: Desktop-Laptop(_r_22_36_38)
+				:g (_r_22_36_38_39) [1,1] 
+					: Windows 10(_r_22_36_38_39_40)
+					: Fedora(_r_22_36_38_39_41)
+					: X Yosemit(_r_22_36_38_39_42)
+	:o Screen(_r_23)
+		:o Technology(_r_23_47)
+			:o 3D(_r_23_47_49)
+			:o 4K(_r_23_47_50)
+		:o Size(_r_23_48)
+			:g (_r_23_48_51) [1,1] 
+				: 14 IN(_r_23_48_51_52)
+				: 17 IN(_r_23_48_51_53)
+				: 24 IN(_r_23_48_51_54)
+	:o Power Source(_r_55)
+</feature_tree>
+<constraints>
+constraint_1:_r_13_14_15 or _r_22_36_37
+</constraints>
+</feature_model>

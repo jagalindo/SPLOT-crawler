@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 5, 2018 - 3:15 AM  -->
+<feature_model name="Biblioteca Virtual">
+<meta>
+<data name="description">Diagrama de Feature de uma Biblioteca Virtual</data>
+<data name="creator">Karen Gomes</data>
+<data name="address"></data>
+<data name="email">kngs@ic.ufal.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Ufal</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Biblioteca Virtual(_r)
+	:m GUI(_r_1)
+		:g (_r_1_2) [1,*] 
+			: Web(_r_1_2_3)
+				:g (_r_1_2_3_5) [1,*] 
+					: Desktop(_r_1_2_3_5_6)
+					: Mobile(_r_1_2_3_5_7)
+			: App(_r_1_2_4)
+	:m Login(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Padrao(_r_8_9_10)
+			: Rede Social(_r_8_9_11)
+	:m Logout(_r_12)
+	:m Pesquisa(_r_13)
+		:g (_r_13_14) [1,1] 
+			: Simples(_r_13_14_15)
+			: Avancada(_r_13_14_16)
+	:m Cadastro Usuario(_r_17)
+		:g (_r_17_18) [1,1] 
+			: Padrao(_r_17_18_19)
+			: Rede Social(_r_17_18_20)
+	:m Cadastro Livro(_r_21)
+	:m Emprestimo(_r_22)
+		:g (_r_22_25) [1,1] 
+			: Novo(_r_22_25_26)
+			: Renovacao(_r_22_25_27)
+	:m Multa(_r_28)
+		:o Pagamento(_r_28_29)
+			:g (_r_28_29_30) [1,1] 
+				: Boleto(_r_28_29_30_31)
+				: Cartao(_r_28_29_30_32)
+					:g (_r_28_29_30_32_33) [1,1] 
+						: Credito(_r_28_29_30_32_33_34)
+						: Debito(_r_28_29_30_32_33_35)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

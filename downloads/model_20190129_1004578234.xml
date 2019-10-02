@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 29, 2019 - 8:55 PM  -->
+<feature_model name="SmartHomeRiSE">
+<meta>
+<data name="description">Dynamic Software Line to home automation</data>
+<data name="creator">Michelle Carvalho</data>
+<data name="address"></data>
+<data name="email">michellellcarvalho@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Federal University of Bahia</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartHome(_r)
+	:m IlluminationControl(_r_1)
+		:m UserIllumination(_r_1_10)
+		:o AutomatedIllumination(_r_1_11)
+			:g (_r_1_11_12) [1,*] 
+				: ByPresence(_r_1_11_12_13)
+			:g (_r_1_11_14) [1,*] 
+				: ByLuminosity(_r_1_11_14_15)
+	:m SecurityControl(_r_2)
+		:o Alarm(_r_2_4)
+		:o LockDoors(_r_2_5)
+		:o PanicMode(_r_2_6)
+		:o PresenceIllusion(_r_2_7)
+	:o TemperatureControl(_r_3)
+		:m UserTemperature(_r_3_16)
+			:g (_r_3_16_23) [1,1] 
+				: FromWindowUser(_r_3_16_23_24)
+			:g (_r_3_16_25) [1,1] 
+				: FromAirConditionerUser(_r_3_16_25_26)
+		:g (_r_3_17) [1,*] 
+			: AutomatedTemperature(_r_3_17_18)
+				:g (_r_3_17_18_19) [1,*] 
+					: FromWindowTemperature(_r_3_17_18_19_20)
+				:g (_r_3_17_18_21) [1,*] 
+					: FromAirConditionerAutomated(_r_3_17_18_21_22)
+</feature_tree>
+<constraints>
+constraint_1:~_r_2_4 or ~_r_2_6
+</constraints>
+</feature_model>

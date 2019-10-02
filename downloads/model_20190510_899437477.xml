@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, May 10, 2019 - 11:07 AM  -->
+<feature_model name="SmartTV-Basic">
+<meta>
+<data name="description">SmartTV-Basic</data>
+<data name="creator">Adrian</data>
+<data name="address"></data>
+<data name="email">ady_p_15@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Student</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartTV(_r)
+	:m Display(_r_2)
+		:o LED(_r_2_17)
+		:o OLED(_r_2_18)
+	:m Speakers(_r_3)
+	:o Connectivity(_r_5)
+		:o Wifi(_r_5_6)
+		:o Wired(_r_5_7)
+		:o Bluetooth(_r_5_8)
+	:m OS(_r_11)
+		:g (_r_11_12) [1,1] 
+			: WebOS(_r_11_12_13)
+			: AndroidTV(_r_11_12_14)
+			: Tizen(_r_11_12_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

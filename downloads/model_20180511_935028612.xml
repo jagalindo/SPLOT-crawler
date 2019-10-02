@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 14, 2018 - 9:58 AM  -->
+<feature_model name="Complaint Management System">
+<meta>
+<data name="description">Complaint Management System feature model for municipal council around Selangor</data>
+<data name="creator">Complaint_IT</data>
+<data name="address">KL</data>
+<data name="email">Complaint_IT@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTM</data>
+<data name="department"></data>
+<data name="date">11052018</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Complaint Management System(_r)
+	:m Complaint Method(_r_1)
+		:g (_r_1_2) [1,*] 
+			: Mobile(_r_1_2_7)
+			: PC(_r_1_2_35)
+	:m Notification(_r_9)
+		:m Email(_r_9_11)
+		:o SMS(_r_9_21)
+	:m Report(_r_25)
+		:m View(_r_25_26)
+		:o Print(_r_25_27)
+	:m Search Complaint(_r_38)
+		:g (_r_38_39) [1,*] 
+			: Keyword(_r_38_39_40)
+			: List(_r_38_39_41)
+	:m Complaint Management(_r_21)
+		:g (_r_21_24) [1,*] 
+			: Add(_r_21_24_25)
+			: Update(_r_21_24_26)
+				:g (_r_21_24_26_29) [1,*] 
+					: Category(_r_21_24_26_29_30)
+					: Priority(_r_21_24_26_29_31)
+			: View(_r_21_24_27)
+			: Delete(_r_21_24_28)
+</feature_tree>
+<constraints>
+constraint_6:~_r_1_2_35 or ~_r_9_21
+constraint_4:~_r_38 or _r_21
+constraint_5:~_r_25 or _r_21
+</constraints>
+</feature_model>

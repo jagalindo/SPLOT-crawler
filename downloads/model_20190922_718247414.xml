@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:46 PM  -->
+<feature_model name="Software para la atencion de pacientes">
+<meta>
+<data name="description">Software hospital</data>
+<data name="creator">Jeannette Laverde, Paco Lema</data>
+<data name="address"></data>
+<data name="email">jalaverde@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SoftwareParaLaAtencionDePacientes(_r)
+	:m HistorialPacientes(_r_37)
+		:g (_r_37_38) [1,1] 
+			: NuevoRegistro(_r_37_38_39)
+			: ActualizarRegistros(_r_37_38_40)
+	:o GestionDeMedicinas(_r_41)
+		:o NuevoStock(_r_41_50)
+		:o ActualizarStock(_r_41_51)
+	:o ExamenesLaboratorio(_r_42)
+	:m Pago(_r_44)
+		:g (_r_44_45) [1,1] 
+			: Efectivo(_r_44_45_46)
+			: Tarjeta(_r_44_45_48)
+	:o Turnos(_r_52)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

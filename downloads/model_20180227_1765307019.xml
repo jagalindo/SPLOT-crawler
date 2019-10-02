@@ -1,0 +1,176 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 8, 2018 - 11:41 AM  -->
+<feature_model name="HoussemBikeV6">
+<meta>
+<data name="description">Bike model</data>
+<data name="creator">Houssem CHEMINGUI</data>
+<data name="address"></data>
+<data name="email">houss.chemingui@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ENSI Manouba</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike(_r)
+	:m SupportedAge(_r_1)
+		:g (_r_1_118) [1,1] 
+			: 4_9(_r_1_118_119)
+			: 10_19(_r_1_118_121)
+			: 20_40(_r_1_118_122)
+			: 41_60(_r_1_118_123)
+			: More60(_r_1_118_124)
+	:m SupportedGender(_r_9)
+		:g (_r_9_10) [1,1] 
+			: Male(_r_9_10_11)
+			: Female(_r_9_10_12)
+	:o SupportedHeight(_r_14)
+		:g (_r_14_15) [1,1] 
+			: 0-5_0-99(_r_14_15_16)
+			: 1_1-29(_r_14_15_17)
+			: 1-3_1-59(_r_14_15_18)
+			: 1-6_1-99(_r_14_15_19)
+			: More2(_r_14_15_20)
+	:m Budget(_r_21)
+		:g (_r_21_22) [1,1] 
+			: -500(_r_21_22_23)
+			: 501_999(_r_21_22_24)
+			: 1000_1999(_r_21_22_25)
+			: More2000(_r_21_22_26)
+	:m RiderPorfile(_r_27)
+		:g (_r_27_28) [1,1] 
+			: Dabster(_r_27_28_29)
+			: Professional(_r_27_28_30)
+			: Passionned(_r_27_28_31)
+	:m WheelsSize(_r_32)
+		:g (_r_32_33) [1,1] 
+			: 24inch(_r_32_33_34)
+			: 26inch(_r_32_33_35)
+			: 27-5inch(_r_32_33_36)
+			: 29inch(_r_32_33_37)
+			: 20inch(_r_32_33_38)
+			: 15inch(_r_32_33_39)
+	:o Light(_r_40)
+		:g (_r_40_41) [1,1] 
+			: LedBlue(_r_40_41_42)
+			: LedYellow(_r_40_41_43)
+	:o WheelsKind(_r_44)
+		:g (_r_44_45) [1,1] 
+			: AllYear(_r_44_45_46)
+			: Summer(_r_44_45_47)
+			: Winter(_r_44_45_48)
+	:o Application(_r_49)
+		:o GoogleMaps(_r_49_50)
+		:o Navigator(_r_49_51)
+		:o Guider(_r_49_52)
+		:o Music(_r_49_53)
+	:o SupportedWeight(_r_54)
+		:g (_r_54_55) [1,1] 
+			: Less14(_r_54_55_56)
+			: 15_30(_r_54_55_57)
+			: 31_60(_r_54_55_58)
+			: 61_90(_r_54_55_59)
+			: 91_120(_r_54_55_60)
+			: More121(_r_54_55_61)
+	:o EnergySource(_r_62)
+		:g (_r_62_63) [1,1] 
+			: SolarPanel(_r_62_63_64)
+			: Dynamo(_r_62_63_65)
+			: Battery(_r_62_63_66)
+	:o Basket(_r_67)
+		:g (_r_67_68) [1,1] 
+			: Wooden(_r_67_68_69)
+			: SteelWires(_r_67_68_70)
+	:m Running(_r_71)
+		:g (_r_71_74) [1,*] 
+			: FootPedal(_r_71_74_75)
+			: Engine(_r_71_74_76)
+	:o CompUnit(_r_77)
+		:g (_r_77_78) [1,1] 
+			: GPS(_r_77_78_79)
+			: Tablet(_r_77_78_80)
+	:m FrameDesign(_r_81)
+		:g (_r_81_82) [1,1] 
+			: Triathlon(_r_81_82_83)
+			: StepThrough(_r_81_82_84)
+			: Diamond(_r_81_82_85)
+	:m MaintenancePlan(_r_86)
+		:g (_r_86_87) [1,1] 
+			: 2years(_r_86_87_88)
+			: 3years(_r_86_87_89)
+			: LifeTime(_r_86_87_90)
+	:m FrameSet(_r_91)
+		:g (_r_91_92) [1,1] 
+			: XLarge(_r_91_92_93)
+			: Large(_r_91_92_94)
+			: Medium(_r_91_92_95)
+			: Small(_r_91_92_96)
+	:m FrameType(_r_97)
+		:g (_r_97_100) [1,1] 
+			: Iron(_r_97_100_101)
+			: Alu(_r_97_100_102)
+			: Carbon(_r_97_100_103)
+	:m FrameColor(_r_104)
+		:g (_r_104_105) [1,*] 
+			: White(_r_104_105_106)
+			: Blue(_r_104_105_107)
+			: Red(_r_104_105_108)
+	:m Usage(_r_109)
+		:g (_r_109_110) [1,1] 
+			: Work(_r_109_110_111)
+			: Urban(_r_109_110_112)
+			: Racing(_r_109_110_114)
+			: Mountain(_r_109_110_115)
+	:m Saddle(_r_116)
+		:g (_r_116_117) [1,1] 
+			: Plastic(_r_116_117_118)
+			: Gel(_r_116_117_119)
+	:m Fork(_r_120)
+		:g (_r_120_121) [1,1] 
+			: Suspension(_r_120_121_122)
+			: Static(_r_120_121_123)
+	:m SeatPost(_r_124)
+		:g (_r_124_125) [1,1] 
+			: CarbonPost(_r_124_125_126)
+			: IronPost(_r_124_125_127)
+	:m HandleBars(_r_128)
+		:g (_r_128_129) [1,1] 
+			: Drop(_r_128_129_130)
+			: Riser(_r_128_129_131)
+			: Pursuit(_r_128_129_132)
+	:o TheftPreventions(_r_133)
+		:g (_r_133_134) [1,*] 
+			: AmovibleSeat(_r_133_134_135)
+			: Lock(_r_133_134_136)
+			: AlarmSystem(_r_133_134_137)
+			: GeolocalisationSystem(_r_133_134_138)
+	:o Accessories(_r_139)
+		:g (_r_139_140) [1,*] 
+			: Mudguards(_r_139_140_141)
+			: AirPump(_r_139_140_142)
+			: KaskRoad(_r_139_140_143)
+			: BikeCovers(_r_139_140_144)
+			: WaterBottles(_r_139_140_145)
+			: SmallPannier(_r_139_140_146)
+			: BigPannier(_r_139_140_147)
+</feature_tree>
+<constraints>
+constraint_1:~_r_77_78_79 or _r_133_134_138
+constraint_8:_r_62_63_66 or ~_r_77
+constraint_9:~_r_32_33_39 or ~_r_91_92_93
+constraint_10:~_r_32_33_37 or ~_r_91_92_96
+constraint_6:~_r_67 or ~_r_109_110_114
+constraint_11:~_r_21_22_23 or ~_r_133
+constraint_7:~_r_71_74_76 or ~_r_109_110_114
+constraint_12:~_r_21_22_23 or ~_r_139
+constraint_13:~_r_1_118_119 or ~_r_128_129_130
+constraint_4:~_r_40 or _r_62
+constraint_14:~_r_1_118_119 or _r_32_33_39
+constraint_5:~_r_67 or ~_r_109_110_115
+constraint_2:~_r_109_110_115 or _r_120_121_122
+constraint_15:~_r_14_15_20 or _r_91_92_93
+constraint_3:_r_97_100_103 or ~_r_124_125_126
+constraint_16:~_r_14_15_16 or _r_91_92_96
+</constraints>
+</feature_model>

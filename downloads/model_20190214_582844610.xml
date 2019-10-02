@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 14, 2019 - 2:52 AM  -->
+<feature_model name="Cellular Phone">
+<meta>
+<data name="description">Mobile Phone model</data>
+<data name="creator">SPL Uniandes</data>
+<data name="address"></data>
+<data name="email">d.althviz10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Cellular Phone(_r)
+	:m LCD(_r_1)
+		:g (_r_1_5) [1,1] 
+			: Touch Screen(_r_1_5_6)
+			: Normal(_r_1_5_7)
+	:m Input Device(_r_2)
+		:g (_r_2_8) [1,*] 
+			: KeyPad(_r_2_8_9)
+			: Stylus(_r_2_8_10)
+	:o External Memory(_r_3)
+	:m Battery(_r_4)
+		:g (_r_4_11) [1,1] 
+			: Small Size(_r_4_11_12)
+			: Large Size(_r_4_11_13)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_5_7 or ~_r_2_8_10
+constraint_2:~_r_1_5_6 or _r_4_11_13
+</constraints>
+</feature_model>

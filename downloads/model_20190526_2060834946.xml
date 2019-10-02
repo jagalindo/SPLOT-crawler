@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 27, 2019 - 2:57 PM  -->
+<feature_model name="PIV">
+<meta>
+<data name="description">Catalogur de produits pour PIV</data>
+<data name="creator">STOM</data>
+<data name="address"></data>
+<data name="email">mstonge5@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PIV</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PIV_bann(_r)
+	:o ourlets(_r_1)
+		:g (_r_1_2) [1,1] 
+			: gougeon(_r_1_2_3)
+			: a_plat(_r_1_2_4)
+	:o oeillets(_r_14)
+		:g (_r_14_15) [1,1] 
+			: oeilletsReg(_r_14_15_16)
+			: oeilletsRenf(_r_14_15_17)
+	:o finition(_r_18)
+		:g (_r_18_22) [1,1] 
+			: couture(_r_18_22_23)
+			: soudureColle(_r_18_22_24)
+			: coutureRV(_r_18_22_25)
+	:o lamination(_r_19)
+</feature_tree>
+<constraints>
+constraint_6:~_r_1 or ~_r_14
+</constraints>
+</feature_model>

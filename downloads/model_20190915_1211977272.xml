@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 15, 2019 - 4:49 PM  -->
+<feature_model name="Examen Paul Vega">
+<meta>
+<data name="description">Modelo Examen </data>
+<data name="creator">Paul Vega</data>
+<data name="address"></data>
+<data name="email">spvega1@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema(_r)
+	:m Enabling tools(_r_2)
+		:m Version(_r_2_6)
+			:g (_r_2_6_21) [1,1] 
+				: SVN(_r_2_6_21_22)
+				: CVS VERSION(_r_2_6_21_25)
+		:m CVS(_r_2_7)
+		:m WEB SITE(_r_2_8)
+		:m bug(_r_2_9)
+	:m tool(_r_3)
+		:m update(_r_3_10)
+		:m extensible(_r_3_11)
+		:o version control(_r_3_12)
+		:m multi plataform(_r_3_13)
+		:m multi language(_r_3_14)
+	:m documentation(_r_4)
+		:m FAQS(_r_4_15)
+		:m COOK BOOKS(_r_4_16)
+		:m TUTORIAL(_r_4_17)
+	:m Communication(_r_5)
+		:m MAILING LIST(_r_5_18)
+		:o NEW GROUP(_r_5_19)
+		:o WIKIS(_r_5_20)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_6 or _r_2_7
+</constraints>
+</feature_model>

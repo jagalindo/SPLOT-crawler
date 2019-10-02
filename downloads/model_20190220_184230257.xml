@@ -1,0 +1,76 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Feb 21, 2019 - 7:45 PM  -->
+<feature_model name="NoSQL DataSchema">
+<meta>
+<data name="description">NoSQL DataSchema</data>
+<data name="creator">Paola Gomez</data>
+<data name="address"></data>
+<data name="email">NoSQL DataSchema</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">univ-grenoble-alpes.fr </data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tesispaola(_r)
+	:m colByclass(_r_1)
+		:g (_r_1_39) [1,*] 
+			: colA(_r_1_39_40)
+				:m tA(_r_1_39_40_43)
+					:o tA_l0_ext(_r_1_39_40_43_46)
+						:m r1_as(_r_1_39_40_43_46_50)
+							:g (_r_1_39_40_43_46_50_55) [1,1] 
+								: tA EMB tB(_r_1_39_40_43_46_50_55_56)
+									:o tB_l1_ext_1(_r_1_39_40_43_46_50_55_56_58)
+										:m r2_cs_1(_r_1_39_40_43_46_50_55_56_58_59)
+										:g (_r_1_39_40_43_46_50_55_56_58_60) [1,1] 
+											: tB EMB tC_1(_r_1_39_40_43_46_50_55_56_58_60_61)
+											: tb REF tC_1(_r_1_39_40_43_46_50_55_56_58_60_62)
+								: tA REF tB(_r_1_39_40_43_46_50_55_57)
+			: colB(_r_1_39_41)
+				:m tB(_r_1_39_41_44)
+					:o tB_l0_ext(_r_1_39_41_44_47)
+						:g (_r_1_39_41_44_47_52) [1,*] 
+							: r1_a(_r_1_39_41_44_47_52_53)
+								:g (_r_1_39_41_44_47_52_53_63) [1,1] 
+									: tB EMB tA(_r_1_39_41_44_47_52_53_63_64)
+									: tB REF tA(_r_1_39_41_44_47_52_53_63_65)
+							: r2_cs(_r_1_39_41_44_47_52_54)
+								:g (_r_1_39_41_44_47_52_54_66) [1,1] 
+									: tB EMB tC(_r_1_39_41_44_47_52_54_66_67)
+									: tB REF tC(_r_1_39_41_44_47_52_54_66_68)
+			: colC(_r_1_39_42)
+				:m tC(_r_1_39_42_45)
+					:o tC_l0_ext(_r_1_39_42_45_49)
+						:m r2_b(_r_1_39_42_45_49_51)
+							:g (_r_1_39_42_45_49_51_69) [1,1] 
+								: tC EMB tB(_r_1_39_42_45_49_51_69_70)
+									:o tB_l1_ext_2(_r_1_39_42_45_49_51_69_70_72)
+										:m r1_a_1(_r_1_39_42_45_49_51_69_70_72_73)
+											:g (_r_1_39_42_45_49_51_69_70_72_73_74) [1,1] 
+												: tB EMB tA_1(_r_1_39_42_45_49_51_69_70_72_73_74_75)
+												: tB REF tA_1(_r_1_39_42_45_49_51_69_70_72_73_74_76)
+								: tC REF tB(_r_1_39_42_45_49_51_69_71)
+	:o ColBy Assoc(_r_2)
+		:g (_r_2_50) [1,*] 
+			: ColAB(_r_2_50_51)
+				:m Ref tA(_r_2_50_51_53)
+				:m Ref tB(_r_2_50_51_55)
+			: ColBC(_r_2_50_52)
+				:m Ref tB(_r_2_50_52_56)
+				:m Ref tC(_r_2_50_52_57)
+</feature_tree>
+<constraints>
+constraint_17:~_r_2_50_52_56 or ~_r_1_39_41
+constraint_8:~_r_1_39_42 or ~_r_1_39_40_43_46_50_55_56_58_60_62
+constraint_10:~_r_1_39_42 or ~_r_1_39_41_44_47_52_54_66_68
+constraint_9:~_r_1_39_40 or ~_r_1_39_41_44_47_52_53_63_65
+constraint_11:~_r_1_39_40 or ~_r_1_39_42_45_49_51_69_70_72_73_74_76
+constraint_12:~_r_1_39_41 or ~_r_1_39_40_43_46_50_55_57
+constraint_13:~_r_1_39_41 or ~_r_1_39_42_45_49_51_69_71
+constraint_14:~_r_2_50_52_56 or ~_r_1_39_41
+constraint_15:~_r_2_50_52_57 or ~_r_1_39_42
+constraint_16:~_r_2_50_51_53 or ~_r_1_39_40
+</constraints>
+</feature_model>

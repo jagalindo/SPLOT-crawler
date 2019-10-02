@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, May 12, 2018 - 8:02 AM  -->
+<feature_model name="Student Attendance System">
+<meta>
+<data name="description">Student Attendance System</data>
+<data name="creator">Ashraff, Zam, Danil, Mahmood</data>
+<data name="address"></data>
+<data name="email">mhzjml@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Student Sdn bhd</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SAS(_r)
+	:m Submit Attendance Method(_r_1)
+		:g (_r_1_7) [1,1] 
+			: Barcode(_r_1_7_8)
+			: Finger Print(_r_1_7_9)
+			: Access Card(_r_1_7_10)
+	:m Record Information(_r_3)
+		:g (_r_3_13) [1,*] 
+			: View(_r_3_13_14)
+			: Update(_r_3_13_17)
+			: Monitoring Attendance Status(_r_3_13_18)
+			: Tracking Attendance Activity(_r_3_13_19)
+	:m Notification(_r_4)
+		:g (_r_4_22) [1,1] 
+			: Email(_r_4_22_23)
+			: Via SMS(_r_4_22_24)
+	:m Class Management(_r_5)
+		:g (_r_5_20) [1,*] 
+			: Add New Class(_r_5_20_21)
+			: Update Class Detail(_r_5_20_22)
+			: Delete Class(_r_5_20_23)
+			: View Class(_r_5_20_24)
+	:m Class Schedule(_r_6)
+		:g (_r_6_27) [1,*] 
+			: View(_r_6_27_28)
+			: Add New Schedule(_r_6_27_29)
+			: Edit Schedule(_r_6_27_30)
+			: Assign New Schedule(_r_6_27_31)
+</feature_tree>
+<constraints>
+constraint_1:_r_5_20_21 or ~_r_6_27_29
+constraint_2:~_r_1_7_8 or ~_r_1_7_9
+</constraints>
+</feature_model>

@@ -1,0 +1,67 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 3:19 PM  -->
+<feature_model name="Ubuntu1410_Contrast">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Contrast and Color in Ubuntu14.10 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237)695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering </data>
+<data name="date">Thursday, May 9, 2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m Appearance(_r1)
+		:m Look(_r2)
+			:m Background(_r3)
+				:g (_id_0) [1,1] 
+					: Wallpapers(_r4)
+						:g (_id_1) [1,1] 
+							: Salcantayperu_2560x1701(_r5)
+							: EmptySpace_2560x1702(_r6)
+							: WarmGrasses_2560x1696(_r7)
+							: HorsesOnSanDunes_2560x1600(_r8)
+							: Ubuntu1410CommunityWallpapers(_r9)
+							: GoldenLeaves_2560x1600(_r10)
+							: RedesDehilo_2560x1600(_r11)
+							: KronachLeuchtet2014_2845x1600(_r12)
+							: UtopicUnicom_2560x1600(_r13)
+							: SunnyAutumn_2842x1600(_r14)
+							: Ubuntu_2560x1600(_r15)
+							: xgu47hf2_2560x1600(_r16)
+					: ColorAndGradients(_r17)
+						:g (_id_2) [1,1] 
+							: VerticalGradient(_r18)
+							: HorizontalGradient(_r19)
+							: SolidColor(_r20)
+			:m Theme(_r21)
+				:g (_id_3) [1,1] 
+					: HighContrast1(_r22)
+					: Adwaita(_r23)
+					: AmbianceDefault(_r24)
+					: Radiance(_r25)
+	:o TextEntry(_r26)
+		:o KeyboardSetting(_r27)
+			:o Shortcuts(_r28)
+				:o UniversalAccess2(_r29)
+					:o HighContrastOnOrOff(_r30)
+						:o Disabled7(_r31)
+				:o Windows(_r32)
+					:o ToggleShadedState(_r33)
+						:o Ctrl_Alt_S2(_r34)
+	:o UniversalAccess1(_r35)
+		:o Seeing(_r36)
+			:o HighContrast2(_r37)
+	:m Preferences(_r38)
+		:m ScreenSaver(_r39)
+			:g (_id_4) [1,1] 
+				: Cosmos(_r40)
+				: Picture(_r41)
+				: Random(_r42)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

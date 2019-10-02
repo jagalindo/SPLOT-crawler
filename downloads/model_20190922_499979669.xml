@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:14 PM  -->
+<feature_model name="NoEsCameron (SPL)">
+<meta>
+<data name="description">Software para la reserva de paquetes turísticos</data>
+<data name="creator">Paul Vega</data>
+<data name="address"></data>
+<data name="email">paul.milcape@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department">Maestria en Software</data>
+<data name="date">22/09/2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r NoEsCameron(_r)
+	:m Gestionar usuarios(_r_1)
+		:m Clientes(_r_1_21)
+		:o Empleados(_r_1_22)
+	:m Gestionar paquetes(_r_2)
+	:m Reservar paquetes(_r_4)
+	:m Servicios(_r_5)
+		:o Alojamiento(_r_5_10)
+		:m Transporte(_r_5_11)
+		:o Actividades(_r_5_13)
+			:g (_r_5_13_14) [1,*] 
+				: Excursiones(_r_5_13_14_15)
+				: Deportes extremos(_r_5_13_14_16)
+				: Ruta gastronomica(_r_5_13_14_24)
+		:o Alimentacion(_r_5_23)
+	:m Pago(_r_17)
+		:g (_r_17_18) [1,*] 
+			: Tarjeta credito(_r_17_18_19)
+			: PayPal(_r_17_18_20)
+	:o Control de activos(_r_25)
+		:g (_r_25_26) [1,*] 
+			: Personal guia(_r_25_26_27)
+			: Equipo de seguridad(_r_25_26_28)
+			: Equipo de deporte extremo(_r_25_26_29)
+	:m Atributos de Calidad(_r_30)
+		:m Usabilidad(_r_30_31)
+		:m Fiabilidad(_r_30_32)
+		:m Confiabilidad(_r_30_33)
+</feature_tree>
+<constraints>
+constraint_6:~_r_5_13_14_24 or _r_25_26_27
+constraint_7:~_r_5_13_14_16 or _r_25_26_28 or _r_25_26_29
+constraint_2:~_r_4 or _r_17
+constraint_3:~_r_5_13_14_15 or _r_25_26_27
+</constraints>
+</feature_model>

@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Apr 16, 2019 - 8:35 AM  -->
+<feature_model name="Web annotator feature model">
+<meta>
+<data name="description">Feature model to create web annotator products</data>
+<data name="creator">Xabier Garmendia</data>
+<data name="address"></data>
+<data name="email">xagardi8@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">EHU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r WEB ANNOTATOR(_r)
+	:m ANNOTATION(_r_1)
+		:m CREATE(_r_1_9)
+		:m DELETE(_r_1_10)
+		:m SELECT(_r_1_12)
+			:o BY USER(_r_1_12_13)
+		:o VALIDATE(_r_1_15)
+		:o REPLY(_r_1_16)
+		:o COMMENT(_r_1_18)
+			:o SENTIMENT ANALYSIS(_r_1_18_19)
+			:o ADD REFERENCE(_r_1_18_20)
+			:o CATEGORIZE(_r_1_18_21)
+	:m SOURCE(_r_2)
+		:m URL REDIRECTION(_r_2_3)
+			:o DOI(_r_2_3_5)
+			:o SCIENCE DIRECT(_r_2_3_6)
+			:o ACM(_r_2_3_7)
+			:o DROPBOX(_r_2_3_8)
+		:o LOCAL FILES(_r_2_4)
+	:m STORAGE(_r_22)
+		:g (_r_22_26) [1,*] 
+			: HYPOTHESIS(_r_22_26_27)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

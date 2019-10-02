@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Apr 8, 2015 - 9:35 AM  -->
+<feature_model name="VODPlayer">
+<meta>
+<data name="description">feature diagran for a VOD Player PL</data>
+<data name="creator">leticia</data>
+<data name="address"></data>
+<data name="email">leticia.montalvillo@ehu.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Onekin</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VODPlayer(_r)
+	:m ChooseMovie(_r_1)
+		:o ViewMovieDetail(_r_1_13)
+	:m PlayMovie(_r_8)
+		:o StopMovie(_r_8_14)
+		:o PauseMovie(_r_8_15)
+	:o QuitPlayer(_r_16)
+	:o ChangeMoviesServer(_r_17)
+		:g (_r_17_24) [1,1] 
+			: ManualChange(_r_17_24_25)
+			: AssitedChange(_r_17_24_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

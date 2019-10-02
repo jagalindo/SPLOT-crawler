@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Jun 11, 2018 - 7:14 PM  -->
+<feature_model name="Odoo requirements definition">
+<meta>
+<data name="description">Oddo-req</data>
+<data name="creator">cecilia</data>
+<data name="address"></data>
+<data name="email">cecilia@dcc.uchile.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de Chile</data>
+<data name="department">Computer Science Department</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Odoo-SPL(_r)
+	:g (_r_1) [1,*] 
+		: Sale(_r_1_2)
+		: Purchase(_r_1_3)
+		: Inventory(_r_1_4)
+		: Accounting(_r_1_12)
+			:m Product(_r_1_12_13)
+			:m Analytic(_r_1_12_14)
+			:m Portal(_r_1_12_15)
+			:m Web-planner(_r_1_12_16)
+			:m Base-setup(_r_1_12_17)
+</feature_tree>
+<constraints>
+constraint_6:~_r_1_4 or _r_1_12
+constraint_4:~_r_1_2 or _r_1_12
+constraint_5:~_r_1_3 or _r_1_12
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 27, 2019 - 6:11 AM  -->
+<feature_model name="E-SHOP">
+<meta>
+<data name="description">e-shop experiences</data>
+<data name="creator">MM</data>
+<data name="address"></data>
+<data name="email">meftah.zenati.manel@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">RIADI</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-SHOP(_r)
+	:m Authenifiant(_r_1)
+	:m Commande(_r_2)
+		:m Produit(_r_2_10)
+	:m Payement(_r_3)
+		:g (_r_3_5) [1,1] 
+			: Carte B(_r_3_5_6)
+			: Agence(_r_3_5_7)
+			: Livraison(_r_3_5_8)
+			: PayPal(_r_3_5_9)
+	:o Recherche(_r_4)
+</feature_tree>
+<constraints>
+constraint_4:_r_2 or _r_3
+constraint_3:_r_1 or _r_3
+</constraints>
+</feature_model>

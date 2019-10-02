@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Dec 7, 2017 - 8:15 AM  -->
+<feature_model name="depresija">
+<meta>
+<data name="description">depresija</data>
+<data name="creator">Ugnė</data>
+<data name="address"></data>
+<data name="email">ugneglinsk@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">JBG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Depresija(_r)
+	:m Pagrindiniai(_r_1)
+		:m Pakitusi nuotaika(_r_1_4)
+		:m Interesu ir pasitenkinimo sumazejimas(_r_1_6)
+		:m Energijos bei aktyvumo sumazejimas(_r_1_9)
+	:m Salutiniai(_r_2)
+	:g (_r_12) [1,*] 
+		: Susilpnejusi demesio koncentracija ir islaikymas(_r_12_13)
+		: Sumazejusi saviverte ir pasitikejimas savimi(_r_12_20)
+		: Kaltes ir menkavertiskumo idejos(_r_12_21)
+		: Niurus ir pesimistinis ateities isivaizdavimas(_r_12_22)
+		: Zalojimosi ar savizudybes idejos arba veiksmai(_r_12_23)
+		: Sutrikes miegas (_r_12_24)
+		: Apetito ir svorio pokyciai(_r_12_25)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

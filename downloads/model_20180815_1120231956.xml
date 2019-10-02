@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Jan 14, 2019 - 1:49 PM  -->
+<feature_model name="BIG MOBILEPHONE">
+<meta>
+<data name="description">fm</data>
+<data name="creator">RABATUL ADUNI</data>
+<data name="address"></data>
+<data name="email">abyuni256@Gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">utm</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MobilePhone(_r)
+	:m MobileCall(_r_1)
+		:m VoiceCall(_r_1_5)
+		:o VideoCall(_r_1_6)
+	:m MobileMessages(_r_2)
+		:m TextMessage(_r_2_7)
+		:o VoiceMessage(_r_2_8)
+		:o VideoMessage(_r_2_9)
+	:m MobileMedia(_r_3)
+		:g (_r_3_22) [1,*] 
+			: Camera(_r_3_22_23)
+			: Games(_r_3_22_24)
+			: MusicPlayer(_r_3_22_25)
+			: VideoPlayer(_r_3_22_26)
+			: GPS(_r_3_22_27)
+	:m MobileSettings(_r_4)
+		:m ScreenSettings(_r_4_16)
+			:g (_r_4_16_41) [1,1] 
+				: HD(_r_4_16_41_42)
+				: Basic(_r_4_16_41_43)
+		:m StorageSettings(_r_4_18)
+		:m ProfileSettings(_r_4_19)
+			:m Display(_r_4_19_33)
+			:m Audio(_r_4_19_36)
+		:o ConnectionSettings(_r_4_21)
+			:o WiFi(_r_4_21_37)
+			:o HotSPOT(_r_4_21_38)
+			:m MobileData(_r_4_21_39)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_6 or _r_3_22_23
+constraint_22:~_r_3_22_27 or _r_4_21_37
+constraint_10:~_r_3_22_27 or ~_r_4_16_41_43
+constraint_23:~_r_3_22_27 or _r_4_21_39
+constraint_11:~_r_4_21_37 or ~_r_4_16_41_43
+constraint_12:~_r_4_21_38 or ~_r_4_16_41_43
+constraint_21:~_r_3_22_27 or _r_4_21_38
+constraint_13:_r_3_22_25 or _r_4_16_41_43
+constraint_14:_r_3_22_26 or _r_4_16_41_43
+constraint_2:~_r_2_9 or _r_3_22_23
+</constraints>
+</feature_model>

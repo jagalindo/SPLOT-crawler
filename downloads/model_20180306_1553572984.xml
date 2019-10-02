@@ -1,0 +1,101 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 6, 2018 - 3:34 AM  -->
+<feature_model name="Computador">
+<meta>
+<data name="description">Computador</data>
+<data name="creator">José Suspes</data>
+<data name="address"></data>
+<data name="email">je.suspes@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m TipoEquipo(_r_2)
+		:g (_r_2_5) [1,1] 
+			: PC(_r_2_5_6)
+		:g (_r_2_9) [1,1] 
+			: Portatil(_r_2_9_10)
+		:g (_r_2_11) [1,1] 
+			: Server(_r_2_11_12)
+	:m Marca(_r_13)
+		:g (_r_13_14) [1,1] 
+			: Dell(_r_13_14_15)
+		:g (_r_13_16) [1,*] 
+			: Toshiba(_r_13_16_17)
+		:g (_r_13_18) [1,1] 
+			: Lenovo(_r_13_18_19)
+		:g (_r_13_22) [1,1] 
+			: Apple(_r_13_22_23)
+		:g (_r_13_98) [1,1] 
+			: Clon(_r_13_98_99)
+	:m SistemaOperativo(_r_26)
+		:g (_r_26_27) [1,1] 
+			: SOPC(_r_26_27_28)
+				:g (_r_26_27_28_31) [1,1] 
+					: Win10(_r_26_27_28_31_32)
+				:g (_r_26_27_28_33) [1,1] 
+					: Fedora(_r_26_27_28_33_34)
+				:g (_r_26_27_28_35) [1,1] 
+					: OS XYosemite(_r_26_27_28_35_36)
+		:g (_r_26_29) [1,1] 
+			: SOServert(_r_26_29_30)
+				:g (_r_26_29_30_37) [1,1] 
+					: RedHat(_r_26_29_30_37_38)
+				:g (_r_26_29_30_39) [1,1] 
+					: WinServer(_r_26_29_30_39_40)
+				:g (_r_26_29_30_41) [1,1] 
+					: OSXServer(_r_26_29_30_41_42)
+	:m CPU(_r_43)
+		:m MemoriaRAM(_r_43_45)
+			:g (_r_43_45_49) [1,1] 
+				: 4GB(_r_43_45_49_50)
+			:g (_r_43_45_51) [1,1] 
+				: 8GB(_r_43_45_51_52)
+			:g (_r_43_45_53) [1,1] 
+				: 16GB(_r_43_45_53_54)
+			:g (_r_43_45_55) [1,1] 
+				: 32GB(_r_43_45_55_56)
+			:g (_r_43_45_57) [1,1] 
+				: 64GB(_r_43_45_57_58)
+		:m Procesador(_r_43_46)
+			:g (_r_43_46_59) [1,1] 
+				: Intel(_r_43_46_59_60)
+			:g (_r_43_46_61) [1,1] 
+				: AMD(_r_43_46_61_62)
+		:m DiscoDuro(_r_43_47)
+			:g (_r_43_47_63) [1,1] 
+				: 500GB(_r_43_47_63_64)
+			:g (_r_43_47_65) [1,1] 
+				: 1TB(_r_43_47_65_66)
+			:g (_r_43_47_67) [1,1] 
+				: 2TB(_r_43_47_67_68)
+			:g (_r_43_47_69) [1,1] 
+				: 5TB(_r_43_47_69_70)
+			:g (_r_43_47_71) [1,1] 
+				: 10TB(_r_43_47_71_72)
+		:o TarjetaGrafica(_r_43_48)
+			:g (_r_43_48_73) [1,1] 
+				: NVIDIA(_r_43_48_73_74)
+			:g (_r_43_48_75) [1,1] 
+				: ATIRadeon(_r_43_48_75_76)
+	:o Pantalla(_r_79)
+		:o Tecnologia(_r_79_84)
+			:g (_r_79_84_86) [1,*] 
+				: 3D(_r_79_84_86_87)
+			:g (_r_79_84_88) [1,*] 
+				: 4k(_r_79_84_88_89)
+		:o Tamano(_r_79_85)
+			:g (_r_79_85_92) [1,1] 
+				: 14(_r_79_85_92_93)
+			:g (_r_79_85_94) [1,1] 
+				: 17(_r_79_85_94_95)
+			:g (_r_79_85_96) [1,1] 
+				: 24(_r_79_85_96_97)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jun 12, 2018 - 8:37 AM  -->
+<feature_model name="Fruit Logistics">
+<meta>
+<data name="description">Fruit Logistics</data>
+<data name="creator">Lisanne Schoneveld</data>
+<data name="address"></data>
+<data name="email">lisanne.schoneveld@wur.nl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Wageningen Universiteit</data>
+<data name="department"></data>
+<data name="date">12-06-2018</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Fruit Logistics(_r)
+	:m Actors(_r_1)
+		:m Farmer(_r_1_2)
+		:m Shop(_r_1_6)
+		:o Distribution Centre(_r_1_7)
+		:m Transport(_r_1_8)
+	:m Logistics Units(_r_9)
+		:g (_r_9_12) [1,*] 
+			: Pallet(_r_9_12_13)
+			: Racks(_r_9_12_14)
+			: Bulk Containers(_r_9_12_15)
+			: Hand-Held containers(_r_9_12_16)
+			: Box(_r_9_12_17)
+			: Bag(_r_9_12_18)
+			: Tray(_r_9_12_19)
+				:g (_r_9_12_19_20) [1,*] 
+					: Blue Rigid Trays(_r_9_12_19_20_21)
+						:g (_r_9_12_19_20_21_37) [1,*] 
+							: H(_r_9_12_19_20_21_37_38)
+							: M(_r_9_12_19_20_21_37_39)
+							: L(_r_9_12_19_20_21_37_40)
+							: T(_r_9_12_19_20_21_37_41)
+							: S(_r_9_12_19_20_21_37_42)
+					: Blue Folding Trays(_r_9_12_19_20_22)
+						:g (_r_9_12_19_20_22_30) [1,*] 
+							: 24(_r_9_12_19_20_22_30_31)
+							: 18(_r_9_12_19_20_22_30_32)
+							: 13(_r_9_12_19_20_22_30_33)
+							: 610(_r_9_12_19_20_22_30_34)
+							: 46(_r_9_12_19_20_22_30_35)
+							: 410(_r_9_12_19_20_22_30_36)
+					: Green Trays(_r_9_12_19_20_23)
+						:g (_r_9_12_19_20_23_24) [1,*] 
+							: 246(_r_9_12_19_20_23_24_25)
+							: 24603(_r_9_12_19_20_23_24_26)
+							: 216(_r_9_12_19_20_23_24_27)
+							: 206(_r_9_12_19_20_23_24_28)
+							: 186(_r_9_12_19_20_23_24_29)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

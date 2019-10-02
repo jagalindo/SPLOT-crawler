@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 22, 2019 - 4:44 PM  -->
+<feature_model name="PetSof">
+<meta>
+<data name="description">Software veterinario</data>
+<data name="creator">Blanca Logro Christian Tigse </data>
+<data name="address">Latacunga</data>
+<data name="email">lilianalogro@gmail.com</data>
+<data name="phone">0980777002</data>
+<data name="website"></data>
+<data name="organization">Edison Espinosa</data>
+<data name="department">ESPE</data>
+<data name="date">22-9-2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PetSof - Software Veterinario(_r)
+	:m Control de acceso(_r_1)
+	:m Gestion de clientes(_r_2)
+		:m Registro del propietario(_r_2_6)
+		:m Registro mascota(_r_2_7)
+	:m Servicios(_r_17)
+		:m Atencion medica(_r_17_18)
+			:m Registro de los medicos(_r_17_18_19)
+			:m Registro del medicamento(_r_17_18_20)
+			:m Historial clinico(_r_17_18_21)
+			:m Registro atencion medica(_r_17_18_22)
+			:o Reservas(_r_17_18_31)
+		:o Tienda de mascotas(_r_17_23)
+			:m Registrar al vendedor(_r_17_23_24)
+			:m Registrar productos(_r_17_23_25)
+			:m Registrar venta(_r_17_23_26)
+		:o Spa(_r_17_27)
+			:m Registro de personal(_r_17_27_28)
+			:m Registro de lista de servicios(_r_17_27_29)
+			:m Registro de servicio(_r_17_27_30)
+			:o Reservas(_r_17_27_32)
+</feature_tree>
+<constraints>
+constraint_17:_r_17_23_25 or ~_r_17_23_26
+constraint_18:_r_17_23_24 or ~_r_17_23_26
+constraint_22:_r_17_27_28 or _r_17_27_29 or ~_r_17_27_30
+constraint_23:_r_2_6 or _r_2_7 or ~_r_17_27_30
+constraint_20:_r_2_6 or _r_2_7 or ~_r_17_18_31
+constraint_21:_r_2_6 or _r_2_7 or ~_r_17_27_32
+constraint_12:~_r_17_18_21 or _r_17_18_22
+constraint_13:_r_2_6 or ~_r_17_18_22
+constraint_14:_r_2_7 or ~_r_17_18_22
+constraint_15:_r_2_6 or ~_r_17_23_26
+constraint_16:_r_2_7 or ~_r_17_23_26
+</constraints>
+</feature_model>

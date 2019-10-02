@@ -1,0 +1,64 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Jun 29, 2019 - 4:44 PM  -->
+<feature_model name="Fórum de Discussão do AVA SOLAR">
+<meta>
+<data name="description">Fórum de Discussão</data>
+<data name="creator">Emanuel Coutinho</data>
+<data name="address"></data>
+<data name="email">emanuel.coutinho@ufc.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal do Ceará</data>
+<data name="department">Campus Quixadá</data>
+<data name="date">16/06/2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Forum de Discussao(_r)
+	:m Plataforma(_r_6)
+		:g (_r_6_51) [1,1] 
+			: Web(_r_6_51_52)
+			: Mobile(_r_6_51_53)
+	:m Aplicacao(_r_24)
+		:m Funcoes Basicas(_r_24_38)
+			:m Postar(_r_24_38_40)
+			:m Responder(_r_24_38_41)
+			:m Visualizar(_r_24_38_42)
+		:m Funcoes Adicionais(_r_24_39)
+			:m Acompanhamento(_r_24_39_43)
+				:m Tutoria(_r_24_39_43_44)
+					:o Manual(_r_24_39_43_44_45)
+					:o Automatico(_r_24_39_43_44_46)
+				:o Analise(_r_24_39_43_47)
+				:o Estatistica(_r_24_39_43_48)
+			:o Dicas(_r_24_39_49)
+			:o Correcao Automatica(_r_24_39_50)
+	:m Servicos(_r_25)
+		:m Idioma(_r_25_26)
+			:g (_r_25_26_27) [1,1] 
+				: Portugues(_r_25_26_27_28)
+				: Ingles(_r_25_26_27_29)
+				: Espanhol(_r_25_26_27_30)
+		:m Midia(_r_25_31)
+			:o Camera(_r_25_31_63)
+			:o TextToSpeech(_r_25_31_64)
+			:o SpeechToText(_r_25_31_65)
+	:m Qualidade Sonora(_r_31)
+		:g (_r_31_36) [1,1] 
+			: 128 Kbps(_r_31_36_37)
+			: 192 Kbps(_r_31_36_39)
+			: 256 Kbps(_r_31_36_41)
+	:m Arquivo(_r_42)
+		:g (_r_42_43) [1,1] 
+			: Texto(_r_42_43_44)
+			: Imagem(_r_42_43_45)
+			: Video(_r_42_43_46)
+	:m Som(_r_49)
+	:m Rede(_r_50)
+		:g (_r_50_51) [1,1] 
+			: WiFi(_r_50_51_52)
+			: 3G(_r_50_51_53)
+			: 4G(_r_50_51_54)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

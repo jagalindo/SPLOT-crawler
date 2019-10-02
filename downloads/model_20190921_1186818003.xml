@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Sep 21, 2019 - 6:01 PM  -->
+<feature_model name="SisSeg Examen">
+<meta>
+<data name="description">Sistema de seguridad</data>
+<data name="creator">Jeannette</data>
+<data name="address"></data>
+<data name="email">jalaverde@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPE</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SisSeg Examen(_r)
+	:m Registro(_r_1)
+		:m Registrar datos personales(_r_1_2)
+		:m Registar imagen(_r_1_3)
+	:o AccesoBD(_r_4)
+		:m Antecedentes(_r_4_14)
+	:m Notificaciones(_r_5)
+		:g (_r_5_19) [1,1] 
+			: ChoferTaxi(_r_5_19_20)
+			: AgenteSeguridad(_r_5_19_21)
+	:m Conectividad(_r_8)
+		:g (_r_8_22) [1,1] 
+			: WiFi(_r_8_22_23)
+			: DatosMovil(_r_8_22_24)
+	:m Escanear(_r_11)
+		:g (_r_11_15) [1,*] 
+			: Cara(_r_11_15_16)
+			: Cuerpo(_r_11_15_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,62 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Feb 3, 2019 - 6:20 AM  -->
+<feature_model name="Feature Model For Polio Management">
+<meta>
+<data name="description">This feature will manage the vaccination and all the record of the children</data>
+<data name="creator">Muhammad Khan</data>
+<data name="address"></data>
+<data name="email">mailtomuhammadkhan@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University Of Malakand</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Health Center(_r)
+	:m Admin(_r_1)
+		:m DHCSO(_r_1_7)
+			:m Administration(_r_1_7_8)
+	:m Technician(_r_2)
+		:m Vacc Trained(_r_2_9)
+		:m Monitoring(_r_2_10)
+	:m Population(_r_3)
+		:m Children less than 5 years(_r_3_11)
+			:g (_r_3_11_13) [1,1] 
+				: Vaccinated(_r_3_11_13_14)
+			:g (_r_3_11_15) [1,1] 
+				: Missed(_r_3_11_15_16)
+			:g (_r_3_11_17) [1,1] 
+				: Refusal(_r_3_11_17_18)
+					:g (_r_3_11_17_18_21) [1,1] 
+						: Demand Refusal(_r_3_11_17_18_21_22)
+					:g (_r_3_11_17_18_23) [1,1] 
+						: Miss Concept(_r_3_11_17_18_23_24)
+					:g (_r_3_11_17_18_25) [1,1] 
+						: Religious(_r_3_11_17_18_25_26)
+					:g (_r_3_11_17_18_27) [1,1] 
+						: Silent Refusal(_r_3_11_17_18_27_28)
+			:g (_r_3_11_19) [1,1] 
+				: Affected(_r_3_11_19_20)
+		:m Children greater than 5 years(_r_3_12)
+	:m Vaccine(_r_4)
+		:g (_r_4_31) [1,*] 
+			: IPV(_r_4_31_32)
+		:g (_r_4_33) [1,*] 
+			: OPV(_r_4_33_34)
+	:m Reg Desk(_r_5)
+	:o Campaign(_r_6)
+		:g (_r_6_35) [1,*] 
+			: NID(_r_6_35_36)
+		:g (_r_6_37) [1,*] 
+			: SNID(_r_6_37_38)
+		:g (_r_6_39) [1,*] 
+			: SID(_r_6_39_40)
+		:g (_r_6_41) [1,*] 
+			: Mop Up(_r_6_41_42)
+</feature_tree>
+<constraints>
+constraint_1:_r_5 or _r_3_11
+constraint_2:_r_5 or _r_3_12
+</constraints>
+</feature_model>

@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 14, 2018 - 8:49 PM  -->
+<feature_model name="Fahrrad Computer">
+<meta>
+<data name="description">Aufgabe der Anwendungen der Unternehmenmodelierung</data>
+<data name="creator">Ahmed neffati</data>
+<data name="address"></data>
+<data name="email">ahm.neffati@yahoo.fr</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">universität rostock</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Fahrrad Computer(_r)
+	:g (_r_1) [1,1] 
+		: Luxusversion(_r_1_2)
+			:m Erweiterteversion(_r_1_2_3)
+				:m Grundversion(_r_1_2_3_4)
+					:m Geschwindigkeit(_r_1_2_3_4_15)
+						:m Magnet(_r_1_2_3_4_15_21)
+						:m Sensor(_r_1_2_3_4_15_22)
+							:g (_r_1_2_3_4_15_22_26) [1,*] 
+								: Kabel(_r_1_2_3_4_15_22_26_27)
+								: drahtloser(_r_1_2_3_4_15_22_26_28)
+					:m Gesamtstrecke(_r_1_2_3_4_16)
+					:m Strecke(_r_1_2_3_4_17)
+					:m Uhrzeit(_r_1_2_3_4_18)
+				:m Durchschnittsgeschwindigkeit(_r_1_2_3_11)
+				:m Durchschnittliche-Streckenlange (_r_1_2_3_13)
+				:m Stoppuhr(_r_1_2_3_14)
+			:m Trittfrequenz(_r_1_2_5)
+				:m Magnet(_r_1_2_5_23)
+				:m Sensor(_r_1_2_5_24)
+					:g (_r_1_2_5_24_30) [1,*] 
+						: Kabel(_r_1_2_5_24_30_31)
+						: drahtloser(_r_1_2_5_24_30_32)
+			:o Herzfrequenz(_r_1_2_6)
+			:o GPS(_r_1_2_7)
+			:o Nike(_r_1_2_8)
+	:m energieversorgung(_r_35)
+		:g (_r_35_36) [1,*] 
+			: Batterie(_r_35_36_37)
+			: wiederaufladbarer Akku (_r_35_36_39)
+			: Solarzelle(_r_35_36_40)
+</feature_tree>
+<constraints>
+constraint_1:_r
+</constraints>
+</feature_model>

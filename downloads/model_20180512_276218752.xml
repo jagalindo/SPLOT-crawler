@@ -1,0 +1,62 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, May 12, 2018 - 2:05 PM  -->
+<feature_model name="Bike Computer Release  v2">
+<meta>
+<data name="description"> feature model for a family of bike computers</data>
+<data name="creator">Aleksandr</data>
+<data name="address"></data>
+<data name="email">dyadyushkin.a@yandex.ru</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">student</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike Computer(_r)
+	:m Markets(_r_1)
+		:m USA(_r_1_2)
+		:m China(_r_1_3)
+		:m Other(_r_1_4)
+	:m Interface(_r_5)
+		:m Display(_r_5_6)
+		:m 4 Controls(_r_5_7)
+	:m Fixation on handlebars(_r_8)
+		:m O-rings(_r_8_9)
+		:m Cable ties(_r_8_10)
+	:m Energy supply(_r_11)
+		:m A battery(_r_11_12)
+		:m A rechargable battery(_r_11_13)
+		:m A photovoltaic cell(_r_11_14)
+	:m Functionality(_r_15)
+		:m Basic(_r_15_16)
+			:m Total distance counter(_r_15_16_20)
+			:m Speedometer(_r_15_16_21)
+				:m Speedometer sensor and magnet(_r_15_16_21_24)
+					:m Wired Speedometer(_r_15_16_21_24_25)
+					:m Wireless Speedometer(_r_15_16_21_24_26)
+			:m Trip counter(_r_15_16_22)
+			:m Clock(_r_15_16_23)
+		:o Advanced(_r_15_17)
+			:m Average trip(_r_15_17_27)
+			:m Average speed(_r_15_17_28)
+			:m Stopwatch(_r_15_17_29)
+		:o Delux(_r_15_19)
+			:o GPS(_r_15_19_30)
+			:m Pedal rotation(_r_15_19_31)
+				:m Pedal rotation sensor and magnet(_r_15_19_31_33)
+					:m Wired Pedal rotation(_r_15_19_31_33_34)
+					:m Wireless Pedal rotation(_r_15_19_31_33_35)
+						:o Nike bike shoes(_r_15_19_31_33_35_36)
+			:o Heartbeat monitor(_r_15_19_32)
+</feature_tree>
+<constraints>
+constraint_28:_r_8_9 or _r_8_10
+constraint_29:_r_11_12 or _r_11_13 or _r_11_14
+constraint_30:_r_15_16_21_24_25 or _r_15_16_21_24_26
+constraint_20:~_r_15_16 or _r_15_17
+constraint_21:~_r_15_17 or _r_15_19
+constraint_31:_r_15_19_31_33_34 or _r_15_19_31_33_35
+constraint_25:_r_1_2 or _r_1_3 or _r_1_4
+</constraints>
+</feature_model>

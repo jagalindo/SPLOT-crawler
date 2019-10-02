@@ -1,0 +1,47 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Dec 4, 2017 - 10:30 AM  -->
+<feature_model name="CRM">
+<meta>
+<data name="description">FM for CRM product line</data>
+<data name="creator">Me</data>
+<data name="address"></data>
+<data name="email">manel.mannoula@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">CRI</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r CRM(_r)
+	:o Authentifcation(_r_1)
+		:g (_r_1_7) [1,*] 
+			: Login(_r_1_7_8)
+			: Google(_r_1_7_9)
+	:m Sales(_r_3)
+		:g (_r_3_10) [1,1] 
+			: Online(_r_3_10_11)
+			: Offline(_r_3_10_12)
+	:m agenda and rdv(_r_4)
+		:g (_r_4_23) [1,*] 
+			: Tel(_r_4_23_24)
+			: Mail(_r_4_23_25)
+			: Rdv(_r_4_23_26)
+	:m contacts(_r_5)
+	:o prospection(_r_6)
+		:o Contact client(_r_6_13)
+			:g (_r_6_13_15) [1,*] 
+				: Tel(_r_6_13_15_16)
+				: RDV(_r_6_13_15_17)
+				: Mail(_r_6_13_15_18)
+		:o Analyse data(_r_6_14)
+			:g (_r_6_14_19) [1,*] 
+				: Collectes datas via tel(_r_6_14_19_20)
+				: Historique ventes(_r_6_14_19_21)
+				: Notes(_r_6_14_19_22)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1 or _r_3
+constraint_3:~_r_4 or _r_5
+</constraints>
+</feature_model>

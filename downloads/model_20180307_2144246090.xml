@@ -1,0 +1,88 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 7, 2018 - 3:44 AM  -->
+<feature_model name="Computadoras">
+<meta>
+<data name="description">.</data>
+<data name="creator">Santiago Cabrera</data>
+<data name="address"></data>
+<data name="email">s.cabrera@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computadoras(_r)
+	:m Tipo(_r_13)
+		:g (_r_13_14) [1,1] 
+			: Personal(_r_13_14_15)
+				:m Tipo(_r_13_14_15_17)
+					:g (_r_13_14_15_17_18) [1,1] 
+						: De mesa(_r_13_14_15_17_18_19)
+						: Portatil(_r_13_14_15_17_18_20)
+				:m Sistema operativo(_r_13_14_15_21)
+					:g (_r_13_14_15_21_22) [1,1] 
+						: Windows 10(_r_13_14_15_21_22_23)
+						: Fedora(_r_13_14_15_21_22_24)
+						: OS X Yosemite(_r_13_14_15_21_22_25)
+			: Servidor(_r_13_14_16)
+				:m Sistemas operativos(_r_13_14_16_26)
+					:g (_r_13_14_16_26_27) [1,*] 
+						: Windows server(_r_13_14_16_26_27_28)
+						: Red hat(_r_13_14_16_26_27_29)
+						: OS X server(_r_13_14_16_26_27_30)
+	:m Marca(_r_31)
+		:g (_r_31_32) [1,1] 
+			: Dell(_r_31_32_33)
+			: Toshiba(_r_31_32_34)
+			: Lenovo(_r_31_32_35)
+			: Apple(_r_31_32_36)
+			: Clon(_r_31_32_37)
+	:m CPU(_r_38)
+		:m RAM(_r_38_39)
+			:g (_r_38_39_40) [1,1] 
+				: 4GB(_r_38_39_40_41)
+				: 8GB(_r_38_39_40_42)
+				: 16GB(_r_38_39_40_43)
+				: 32GB(_r_38_39_40_44)
+				: 64GB(_r_38_39_40_45)
+		:m Procesador(_r_38_46)
+			:g (_r_38_46_47) [1,1] 
+				: Intel(_r_38_46_47_48)
+				: AMD(_r_38_46_47_49)
+		:m Disco Duro(_r_38_50)
+			:g (_r_38_50_51) [1,1] 
+				: 500GB(_r_38_50_51_52)
+				: 1TB(_r_38_50_51_53)
+				: 2TB(_r_38_50_51_54)
+				: 5TB(_r_38_50_51_55)
+				: 10TB(_r_38_50_51_56)
+		:o Tarjeta de video(_r_38_57)
+			:g (_r_38_57_58) [1,1] 
+				: NVIDIA(_r_38_57_58_59)
+				: ATI Radeon(_r_38_57_58_60)
+	:o Pantalla(_r_61)
+		:m Tecnologia(_r_61_62)
+			:o 3D(_r_61_62_63)
+			:o 4K(_r_61_62_64)
+		:m Ancho(_r_61_65)
+			:g (_r_61_65_66) [1,1] 
+				: 14in(_r_61_65_66_67)
+				: 17in(_r_61_65_66_68)
+				: 24in(_r_61_65_66_69)
+	:o Planta de poder(_r_70)
+</feature_tree>
+<constraints>
+constraint_1:~_r_13_14_15_17_18_20 or ~_r_31_32_37
+constraint_8:~_r_13_14_15 or _r_38_39_40_41 or _r_38_39_40_42 or _r_38_39_40_43
+constraint_9:~_r_13_14_15_21_22_25 or _r_31_32_36
+constraint_10:~_r_13_14_16_26_27_30 or _r_31_32_36
+constraint_6:~_r_13_14_15_17_18_20 or ~_r_61_62_64
+constraint_11:~_r_13_14_16 or _r_38_39_40_44 or _r_38_39_40_45
+constraint_7:~_r_13_14_15 or _r_38_50_51_52 or _r_38_50_51_53 or _r_38_50_51_54
+constraint_12:~_r_13_14_16 or _r_38_50_51_55 or _r_38_50_51_56
+constraint_5:~_r_13_14_15_17_18_20 or ~_r_61_62_63
+constraint_3:~_r_13_14_15_17_18_20 or _r_61
+</constraints>
+</feature_model>

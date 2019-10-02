@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Nov 4, 2018 - 4:07 PM  -->
+<feature_model name="model">
+<meta>
+<data name="description">model</data>
+<data name="creator">MODEL</data>
+<data name="address"></data>
+<data name="email">admin@rehmail.rocks</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">me</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobilephone(_r)
+	:o GPS(_r_1)
+	:o Media(_r_2)
+		:g (_r_2_16) [1,*] 
+			: Camera(_r_2_16_17)
+			: MP3(_r_2_16_18)
+	:m Calls(_r_7)
+	:m Screen(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Basic(_r_8_9_10)
+			: Colour(_r_8_9_11)
+			: High res(_r_8_9_12)
+</feature_tree>
+<constraints>
+constraint_1:_r or _r_1 or _r_2 or _r_7 or _r_8 or _r_8_9_10 or _r_8_9_11 or _r_8_9_12
+</constraints>
+</feature_model>

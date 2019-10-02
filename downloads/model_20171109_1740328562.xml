@@ -1,0 +1,56 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 9, 2017 - 12:53 PM  -->
+<feature_model name="Bike Shop">
+<meta>
+<data name="description">Configuration Systems Bike Shop</data>
+<data name="creator">Gabl Sebastian, Huber Christian</data>
+<data name="address"></data>
+<data name="email">sebastian.gabl@student.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TUGraz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike Shop(_r)
+	:m Bike Type(_r_1)
+		:g (_r_1_5) [1,1] 
+			: Mountain bike(_r_1_5_6)
+			: City bike(_r_1_5_7)
+			: Racing bike(_r_1_5_8)
+	:m Frame Type(_r_2)
+		:g (_r_2_15) [1,1] 
+			: Diamond(_r_2_15_16)
+			: Step-Through(_r_2_15_17)
+			: Triathlon(_r_2_15_18)
+	:m Wheels(_r_3)
+		:g (_r_3_19) [1,1] 
+			: less than 24(_r_3_19_20)
+			: more than 24(_r_3_19_21)
+			: 26(_r_3_19_34)
+	:o Lights(_r_4)
+	:o Usage Type(_r_22)
+		:g (_r_22_25) [1,*] 
+			: Offroad(_r_22_25_26)
+			: Speed(_r_22_25_27)
+			: Night(_r_22_25_28)
+			: Size(_r_22_25_29)
+				:g (_r_22_25_29_30) [1,1] 
+					: tall(_r_22_25_29_30_31)
+					: small(_r_22_25_29_30_32)
+</feature_tree>
+<constraints>
+constraint_10:_r_1_5_8 or ~_r_22_25_27
+constraint_9:_r_1_5_6 or ~_r_22_25_26
+constraint_11:_r_4 or ~_r_22_25_28
+constraint_6:~_r_4 or ~_r_1_5_8
+constraint_7:_r_4 or ~_r_1_5_7
+constraint_13:_r_3_19_21 or ~_r_22_25_29_30_31
+constraint_4:~_r_1_5_7 or ~_r_2_15_18
+constraint_14:_r_3_19_20 or ~_r_22_25_29_30_32
+constraint_5:~_r_1_5_8 or ~_r_2_15_17
+constraint_2:~_r_1_5_6 or ~_r_2_15_17
+constraint_3:~_r_1_5_6 or ~_r_2_15_18
+</constraints>
+</feature_model>

@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 16, 2018 - 5:07 PM  -->
+<feature_model name="tiendavirtual">
+<meta>
+<data name="description">tiendavirtual</data>
+<data name="creator">ITOS</data>
+<data name="address"></data>
+<data name="email">leonjaramillo@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ITOS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tiendavirtual(_r)
+	:m envios(_r_1)
+	:m compras(_r_2)
+		:m carrito(_r_2_4)
+		:m pagos(_r_2_5)
+			:o offline(_r_2_5_32)
+				:g (_r_2_5_32_34) [1,*] 
+					: consignacion(_r_2_5_32_34_35)
+					: contra-entrega(_r_2_5_32_34_36)
+			:o online(_r_2_5_33)
+				:g (_r_2_5_33_37) [1,*] 
+					: paypal(_r_2_5_33_37_38)
+					: credito(_r_2_5_33_37_39)
+					: debito(_r_2_5_33_37_40)
+					: cupon(_r_2_5_33_37_41)
+		:m facturacion(_r_2_6)
+			:m certificado(_r_2_6_18)
+			:o facturafisica(_r_2_6_19)
+			:o facturaonline(_r_2_6_20)
+	:m productos(_r_3)
+		:o categorias(_r_3_7)
+		:o descuentos(_r_3_8)
+		:m catalogo(_r_3_9)
+			:m galeria(_r_3_9_31)
+			:o compartir(_r_3_9_42)
+				:g (_r_3_9_42_43) [1,*] 
+					: porcorreo(_r_3_9_42_43_44)
+					: porfacebook(_r_3_9_42_43_45)
+					: porwhatsapp(_r_3_9_42_43_46)
+					: porinstagram(_r_3_9_42_43_47)
+					: portwitter(_r_3_9_42_43_48)
+			:m busqueda(_r_3_9_49)
+				:g (_r_3_9_49_50) [1,*] 
+					: porrango(_r_3_9_49_50_51)
+					: porpalabras(_r_3_9_49_50_52)
+					: porcategoria(_r_3_9_49_50_53)
+</feature_tree>
+<constraints>
+constraint_10:_r_3_7 or ~_r_3_9_49_50_53
+constraint_9:~_r_3_8 or ~_r_2_5_32
+</constraints>
+</feature_model>

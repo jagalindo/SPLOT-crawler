@@ -1,0 +1,80 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 4, 2017 - 2:53 PM  -->
+<feature_model name="configurabledrone">
+<meta>
+<data name="description">Configurable drone, real model in Simulink</data>
+<data name="creator">Aitor Arrieta</data>
+<data name="address"></data>
+<data name="email">aarrieta@mondragon.edu</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Mondragon University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Drone(_r)
+	:m sw(_r_1)
+		:m tracksystem(_r_1_3)
+			:g (_r_1_3_4) [1,*] 
+				: point2point(_r_1_3_4_5)
+				: personfollowing(_r_1_3_4_7)
+				: concretecoordenates(_r_1_3_4_8)
+		:m Control(_r_1_9)
+			:g (_r_1_9_10) [1,1] 
+				: pi(_r_1_9_10_11)
+				: p(_r_1_9_10_12)
+		:o Safety(_r_1_13)
+			:g (_r_1_13_14) [1,*] 
+				: CollisionAvoidance(_r_1_13_14_15)
+				: WindAvoidance(_r_1_13_14_16)
+				: AutoHome(_r_1_13_14_17)
+				: EmergencySystem(_r_1_13_14_18)
+		:o RTOS(_r_1_19)
+			:g (_r_1_19_20) [1,1] 
+				: FreeRTOS(_r_1_19_20_21)
+				: EmbeddedLinux(_r_1_19_20_22)
+		:o BatteriesManagement(_r_1_23)
+			:g (_r_1_23_24) [1,1] 
+				: AutoBatteryCharge(_r_1_23_24_25)
+				: BatteryLanding(_r_1_23_24_26)
+	:m hw(_r_27)
+		:m Battery(_r_27_28)
+			:g (_r_27_28_29) [1,1] 
+				: LongDuration(_r_27_28_29_30)
+				: ShortDuration(_r_27_28_29_31)
+		:m Sensors(_r_27_32)
+			:o ObstacleSensor(_r_27_32_33)
+				:g (_r_27_32_33_34) [1,1] 
+					: ObSenA(_r_27_32_33_34_35)
+					: ObSenB(_r_27_32_33_34_36)
+					: ObSenC(_r_27_32_33_34_37)
+			:m Gyroscope(_r_27_32_38)
+				:g (_r_27_32_38_39) [1,1] 
+					: GyrA(_r_27_32_38_39_40)
+					: GyrB(_r_27_32_38_39_41)
+					: GyrC(_r_27_32_38_39_42)
+			:m GPS(_r_27_32_43)
+				:g (_r_27_32_43_44) [1,1] 
+					: GPS_A(_r_27_32_43_44_45)
+					: GPS_B(_r_27_32_43_44_46)
+					: GPS_C(_r_27_32_43_44_47)
+			:o BatterySensor(_r_27_32_48)
+				:g (_r_27_32_48_49) [1,1] 
+					: BS_A(_r_27_32_48_49_50)
+					: BS_B(_r_27_32_48_49_51)
+					: BS_C(_r_27_32_48_49_52)
+		:m Actuators(_r_27_53)
+			:m Rotors(_r_27_53_54)
+				:g (_r_27_53_54_55) [1,1] 
+					: HighSpeed(_r_27_53_54_55_56)
+					: LowSpeed(_r_27_53_54_55_57)
+			:o FlyLed(_r_27_53_58)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_13_14_15 or _r_27_32_33
+constraint_6:~_r_1_23_24_25 or ~_r_1_23_24_26 or ~_r_27_32_48
+constraint_5:_r_1_23_24_26 or _r_27_32_48
+constraint_3:_r_1_23_24_25 or _r_27_32_48
+</constraints>
+</feature_model>

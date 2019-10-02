@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Dec 2, 2017 - 10:11 AM  -->
+<feature_model name="Farnaz koohestani">
+<meta>
+<data name="description">EBS</data>
+<data name="creator">Farnaz koohestani</data>
+<data name="address"></data>
+<data name="email">farnazko60@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Malard</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EBS(_r)
+	:m FIN(_r_1)
+		:m AP(_r_1_10)
+		:m GL(_r_1_11)
+	:m PUR(_r_2)
+		:m Purchase Requsition-PR(_r_2_5)
+			:m PR Header(_r_2_5_8)
+			:m PR Line(_r_2_5_9)
+		:m Summary Requsition(_r_2_6)
+			:m Cancel Requsition(_r_2_6_7)
+	:m INV(_r_3)
+		:m Master Item(_r_3_12)
+			:m Purchasing(_r_3_12_14)
+		:m OU(_r_3_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

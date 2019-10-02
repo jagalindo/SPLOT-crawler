@@ -1,0 +1,92 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 19, 2017 - 2:54 PM  -->
+<feature_model name="punto2">
+<meta>
+<data name="description">Variabilidad computadores</data>
+<data name="creator">Johanna Gutiérrez</data>
+<data name="address"></data>
+<data name="email">johannagut0@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computadores(_r)
+	:m Marca(_r_1)
+		:g (_r_1_49) [1,1] 
+			: Dell(_r_1_49_50)
+			: Toshiba(_r_1_49_51)
+			: Lenovo(_r_1_49_52)
+			: Apple(_r_1_49_53)
+			: Clon(_r_1_49_54)
+	:m CPU(_r_3)
+		:m RAM(_r_3_14)
+			:g (_r_3_14_86) [1,1] 
+				: 4GB(_r_3_14_86_87)
+				: 8GB(_r_3_14_86_88)
+				: 16GB(_r_3_14_86_89)
+				: 32GB(_r_3_14_86_90)
+				: 64GB(_r_3_14_86_91)
+		:m Procesador(_r_3_15)
+			:g (_r_3_15_92) [1,1] 
+				: Intel(_r_3_15_92_93)
+				: AMD(_r_3_15_92_94)
+		:m Disco duro(_r_3_17)
+			:g (_r_3_17_95) [1,1] 
+				: 500GB(_r_3_17_95_96)
+				: 1TB(_r_3_17_95_97)
+				: 2TB(_r_3_17_95_98)
+				: 5TB(_r_3_17_95_99)
+				: 10TB(_r_3_17_95_100)
+		:o Tarjeta grafica(_r_3_18)
+			:g (_r_3_18_101) [1,1] 
+				: NVIDIA(_r_3_18_101_102)
+				: ATI Radeon(_r_3_18_101_103)
+	:o Pantalla(_r_4)
+		:o Tecnologia(_r_4_31)
+			:g (_r_4_31_104) [1,*] 
+				: 3D(_r_4_31_104_105)
+				: 4K(_r_4_31_104_106)
+		:o Tamano(_r_4_32)
+			:g (_r_4_32_107) [1,1] 
+				: 14(_r_4_32_107_108)
+				: 17(_r_4_32_107_109)
+				: 24(_r_4_32_107_110)
+	:o Planta de poder(_r_5)
+	:m Tipo(_r_52)
+		:g (_r_52_111) [1,1] 
+			: Escritorio(_r_52_111_112)
+			: Portatil(_r_52_111_113)
+			: Servidor(_r_52_111_114)
+	:m Sistema operativo(_r_74)
+		:g (_r_74_75) [1,1] 
+			: SO computadores personales(_r_74_75_76)
+				:g (_r_74_75_76_82) [1,1] 
+					: Windows 10(_r_74_75_76_82_83)
+					: Fedora(_r_74_75_76_82_84)
+					: OS X Yosimite(_r_74_75_76_82_85)
+			: SO servidores(_r_74_75_77)
+				:g (_r_74_75_77_78) [1,1] 
+					: Windows server(_r_74_75_77_78_79)
+					: Red hat(_r_74_75_77_78_80)
+					: OS X server(_r_74_75_77_78_81)
+</feature_tree>
+<constraints>
+constraint_18:_r_3_17_95_96 or _r_3_17_95_97 or _r_3_17_95_98 or ~_r_52_111_112
+constraint_19:_r_3_17_95_96 or _r_3_17_95_97 or _r_3_17_95_98 or ~_r_52_111_113
+constraint_22:~_r_74_75_77 or ~_r_52_111_112
+constraint_23:~_r_74_75_77 or ~_r_52_111_113
+constraint_6:~_r_4_31_104_105 or ~_r_52_111_113
+constraint_20:_r_3_14_86_87 or _r_3_14_86_88 or _r_3_14_86_89 or ~_r_52_111_112
+constraint_7:~_r_4_31_104_106 or ~_r_52_111_113
+constraint_21:_r_3_14_86_87 or _r_3_14_86_88 or _r_3_14_86_89 or ~_r_52_111_113
+constraint_26:_r_3_14_86_90 or _r_3_14_86_91 or ~_r_52_111_114
+constraint_27:_r_3_17_95_99 or _r_3_17_95_100 or ~_r_52_111_114
+constraint_5:_r_4 or ~_r_52_111_113
+constraint_24:~_r_1_49_53 or _r_74_75_77_78_81 or _r_74_75_76_82_85
+constraint_3:~_r_1_49_54 or ~_r_52_111_113
+constraint_25:_r_74_75_77 or ~_r_52_111_114
+</constraints>
+</feature_model>

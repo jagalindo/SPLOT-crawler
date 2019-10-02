@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Sep 20, 2019 - 8:38 PM  -->
+<feature_model name="Fitur">
+<meta>
+<data name="description">Sistema de seguridad</data>
+<data name="creator">Jose Mise</data>
+<data name="address"></data>
+<data name="email">jlmise@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">espe</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FITUR(_r)
+	:m Registro(_r_3)
+		:m cargar imagen(_r_3_4)
+	:m Ingreso(_r_6)
+		:m personal(_r_6_14)
+			:m buscar antecedentes criminales(_r_6_14_15)
+	:o Notificacion(_r_9)
+		:m UPC(_r_9_12)
+		:m Seguridad(_r_9_13)
+	:m Escanear(_r_16)
+		:m Imagen(_r_16_18)
+		:o Cuerpo(_r_16_19)
+	:o Inconsistencias(_r_20)
+		:g (_r_20_23) [1,*] 
+			: no registrado(_r_20_23_24)
+			: armas(_r_20_23_25)
+</feature_tree>
+<constraints>
+constraint_5:_r_6 or _r_9 or _r_16 or _r_20
+constraint_2:_r_9 or _r_9_12 or _r_9_13
+constraint_3:_r_6 or _r_16 or _r_16_18
+</constraints>
+</feature_model>

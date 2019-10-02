@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Oct 14, 2017 - 9:47 AM  -->
+<feature_model name="Hello World">
+<meta>
+<data name="description">Hello world describe all the features</data>
+<data name="creator">Ashish Saini</data>
+<data name="address"></data>
+<data name="email">saini.sunny9@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">GKV haridwar</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HelloWorld(_r)
+	:m Hello(_r_1)
+	:o Feature(_r_2)
+		:g (_r_2_4) [1,1] 
+			: Beautiful(_r_2_4_5)
+			: Wonderful(_r_2_4_8)
+	:o World(_r_3)
+	:m Natural(_r_12)
+		:g (_r_12_13) [1,*] 
+			: Animals(_r_12_13_14)
+			: Tree(_r_12_13_15)
+			: Birds(_r_12_13_16)
+</feature_tree>
+<constraints>
+constraint_2:_r_2 or _r_3
+</constraints>
+</feature_model>

@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Dec 5, 2018 - 8:51 PM  -->
+<feature_model name="GPL- Coffee">
+<meta>
+<data name="description">a graph library product line, from the batory 2005 paper description</data>
+<data name="creator">Angela Villota</data>
+<data name="address"></data>
+<data name="email">angievig@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Paris 1, Universidad Icesi</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference">Coffee framework</data>
+</meta>
+<feature_tree>
+:r GPL(_r)
+	:m Graph type(_r_1)
+		:g (_r_1_7) [1,1] 
+			: Directed(_r_1_7_8)
+			: Undirected(_r_1_7_9)
+	:o Weight(_r_2)
+		:g (_r_2_10) [1,1] 
+			: Weighted(_r_2_10_11)
+			: Unweighted(_r_2_10_12)
+	:o Search(_r_3)
+		:g (_r_3_13) [1,1] 
+			: BFS(_r_3_13_14)
+			: DFS(_r_3_13_15)
+	:m Algorithms(_r_6)
+		:g (_r_6_16) [1,*] 
+			: MST(_r_6_16_17)
+				:g (_r_6_16_17_19) [1,1] 
+					: Prim(_r_6_16_17_19_20)
+					: Kruskal(_r_6_16_17_19_21)
+			: CycleCheck(_r_6_16_18)
+			: StronglyCon(_r_6_16_19)
+			: ShortestPath(_r_6_16_20)
+			: VertexNum(_r_6_16_21)
+			: Connected(_r_6_16_22)
+</feature_tree>
+<constraints>
+constraint_1:~_r_6_16_19 or ~_r_6_16_22
+constraint_8:_r_2_10_12 or ~_r_6_16_17
+constraint_9:_r_1_7_9 or ~_r_6_16_19
+constraint_6:_r_1_7_8 or ~_r_6_16_20
+constraint_7:_r_1_7_9 or ~_r_6_16_17
+constraint_4:_r_3_13_15 or ~_r_6_16_18
+constraint_5:_r_3 or ~_r_6_16_22
+constraint_2:~_r_6_16_19 or ~_r_6_16_20
+constraint_3:~_r_6_16_17 or ~_r_6_16_20
+</constraints>
+</feature_model>

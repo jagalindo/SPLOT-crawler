@@ -1,0 +1,249 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Feb 19, 2019 - 3:47 PM  -->
+<feature_model name="FQAs">
+<meta>
+<data name="description">Functional Quality Attributes: Operationalizations of Quality Attributes</data>
+<data name="creator">José Miguel Horcas Aguilera</data>
+<data name="address"></data>
+<data name="email">horcas@lcc.uma.es</data>
+<data name="phone"></data>
+<data name="website">http://caosd.lcc.uma.es/</data>
+<data name="organization">Universidad de Málaga</data>
+<data name="department">CAOSD group</data>
+<data name="date">February 2019</data>
+<data name="reference">February 2019</data>
+</meta>
+<feature_tree>
+:r FQAs(_r)
+	:g (_r_1) [1,*] 
+		: Security(_r_1_2)
+			:g (_r_1_2_6) [1,*] 
+				: Encryption(_r_1_2_6_7)
+					:m EncryptionAlgorithms(_r_1_2_6_7_48)
+						:g (_r_1_2_6_7_48_49) [1,1] 
+							: Asymmetric(_r_1_2_6_7_48_49_50)
+								:g (_r_1_2_6_7_48_49_50_52) [1,1] 
+									: RSA(_r_1_2_6_7_48_49_50_52_53)
+									: DSA(_r_1_2_6_7_48_49_50_52_58)
+									: ECDSA(_r_1_2_6_7_48_49_50_52_59)
+							: Symmetric(_r_1_2_6_7_48_49_51)
+								:g (_r_1_2_6_7_48_49_51_54) [1,1] 
+									: AES(_r_1_2_6_7_48_49_51_54_55)
+									: DESede(_r_1_2_6_7_48_49_51_54_56)
+									: Blowfish(_r_1_2_6_7_48_49_51_54_57)
+									: DES(_r_1_2_6_7_48_49_51_54_60)
+					:o KeySize(_r_1_2_6_7_61)
+					:m EncryptionImplementations(_r_1_2_6_7_62)
+						:g (_r_1_2_6_7_62_63) [1,1] 
+							: JavaxCrypto(_r_1_2_6_7_62_63_64)
+							: BouncyCastle(_r_1_2_6_7_62_63_65)
+					:m EncryptionOperations(_r_1_2_6_7_66)
+						:g (_r_1_2_6_7_66_67) [1,1] 
+							: Encrypt(_r_1_2_6_7_66_67_68)
+							: Decrypt(_r_1_2_6_7_66_67_69)
+					:m Mode(_r_1_2_6_7_71)
+						:g (_r_1_2_6_7_71_72) [1,1] 
+							: CBC(_r_1_2_6_7_71_72_73)
+							: ECB(_r_1_2_6_7_71_72_74)
+							: CFB(_r_1_2_6_7_71_72_78)
+							: CTR(_r_1_2_6_7_71_72_79)
+							: CTS(_r_1_2_6_7_71_72_80)
+					:m Padding(_r_1_2_6_7_75)
+						:g (_r_1_2_6_7_75_76) [1,1] 
+							: PKCS5(_r_1_2_6_7_75_76_77)
+							: PKCS1(_r_1_2_6_7_75_76_81)
+							: OAEP(_r_1_2_6_7_75_76_82)
+				: Authentication(_r_1_2_6_8)
+					:m AuthenticationImplementations(_r_1_2_6_8_25)
+						:g (_r_1_2_6_8_25_26) [1,1] 
+							: JAAS(_r_1_2_6_8_25_26_27)
+							: SpringSecurity(_r_1_2_6_8_25_26_30)
+					:m AuthenticationOperations(_r_1_2_6_8_31)
+						:g (_r_1_2_6_8_31_32) [1,1] 
+							: Authenticate(_r_1_2_6_8_31_32_33)
+					:m AuthenticationMechanism(_r_1_2_6_8_34)
+						:g (_r_1_2_6_8_34_35) [1,1] 
+							: UserPassword(_r_1_2_6_8_34_35_36)
+							: DigitalCertificate(_r_1_2_6_8_34_35_37)
+								:o PseudonymousCertificate(_r_1_2_6_8_34_35_37_235)
+							: Biometric(_r_1_2_6_8_34_35_38)
+							: SocialID(_r_1_2_6_8_34_35_39)
+							: Pin(_r_1_2_6_8_34_35_40)
+							: MatrixCode(_r_1_2_6_8_34_35_41)
+					:o PasswordLength(_r_1_2_6_8_42)
+					:o PasswordType(_r_1_2_6_8_43)
+						:g (_r_1_2_6_8_43_44) [1,1] 
+							: Numeric(_r_1_2_6_8_43_44_45)
+							: Alphanumeric(_r_1_2_6_8_43_44_46)
+							: SpecialChars(_r_1_2_6_8_43_44_47)
+					:o LimitedSession(_r_1_2_6_8_225)
+					:o AuthenticationLogging(_r_1_2_6_8_226)
+					:o AnonymousUser(_r_1_2_6_8_227)
+				: Hashing(_r_1_2_6_9)
+					:m HashingImplementations(_r_1_2_6_9_12)
+						:g (_r_1_2_6_9_12_13) [1,1] 
+							: JavaSecurityMessageDigest(_r_1_2_6_9_12_13_14)
+							: Guava(_r_1_2_6_9_12_13_15)
+					:m HashingOperations(_r_1_2_6_9_16)
+						:g (_r_1_2_6_9_16_17) [1,1] 
+							: Hash(_r_1_2_6_9_16_17_18)
+					:m HashingAlgorithms(_r_1_2_6_9_19)
+						:g (_r_1_2_6_9_19_20) [1,1] 
+							: MD5(_r_1_2_6_9_19_20_21)
+							: SHA1(_r_1_2_6_9_19_20_22)
+							: SHA256(_r_1_2_6_9_19_20_23)
+							: SHA512(_r_1_2_6_9_19_20_24)
+				: Confidentiality(_r_1_2_6_231)
+				: Privacy(_r_1_2_6_232)
+				: Integrity(_r_1_2_6_233)
+				: Non-Repudiation(_r_1_2_6_234)
+		: Usability(_r_1_3)
+			:g (_r_1_3_83) [1,*] 
+				: Logging(_r_1_3_83_84)
+					:m LoggingOperations(_r_1_3_83_84_86)
+						:g (_r_1_3_83_84_86_87) [1,1] 
+							: Log(_r_1_3_83_84_86_87_88)
+					:m LoggingImplementations(_r_1_3_83_84_89)
+						:g (_r_1_3_83_84_89_90) [1,1] 
+							: Log4J(_r_1_3_83_84_89_90_91)
+							: LogBack(_r_1_3_83_84_89_90_92)
+							: JavaUtilLogging(_r_1_3_83_84_89_90_93)
+							: SimpleImplementationSLF4J(_r_1_3_83_84_89_90_94)
+					:m Handler(_r_1_3_83_84_95)
+						:g (_r_1_3_83_84_95_96) [1,1] 
+							: ConsoleLog(_r_1_3_83_84_95_96_97)
+							: FileLog(_r_1_3_83_84_95_96_100)
+							: DatabaseLog(_r_1_3_83_84_95_96_103)
+					:m Format(_r_1_3_83_84_104)
+						:g (_r_1_3_83_84_104_105) [1,1] 
+							: TXT(_r_1_3_83_84_104_105_106)
+							: XML(_r_1_3_83_84_104_105_107)
+							: HTML(_r_1_3_83_84_104_105_108)
+							: JSON(_r_1_3_83_84_104_105_150)
+					:m Level(_r_1_3_83_84_109)
+						:g (_r_1_3_83_84_109_110) [1,*] 
+							: Trace(_r_1_3_83_84_109_110_111)
+							: Debug(_r_1_3_83_84_109_110_112)
+							: Info(_r_1_3_83_84_109_110_113)
+							: Warning(_r_1_3_83_84_109_110_114)
+							: Error(_r_1_3_83_84_109_110_115)
+					:o CypheredMessages(_r_1_3_83_84_116)
+					:o HistoryLog(_r_1_3_83_84_222)
+					:o ErrorLog(_r_1_3_83_84_223)
+						:o TraceFile(_r_1_3_83_84_223_224)
+				: ContextualHelp(_r_1_3_83_85)
+					:m ContextualHelpOperations(_r_1_3_83_85_117)
+						:g (_r_1_3_83_85_117_118) [1,1] 
+							: ShowHelp(_r_1_3_83_85_117_118_119)
+					:m ContextualHelpImplementations(_r_1_3_83_85_120)
+						:g (_r_1_3_83_85_120_121) [1,1] 
+							: JavaWizardAPI(_r_1_3_83_85_120_121_122)
+					:m HelpType(_r_1_3_83_85_123)
+						:g (_r_1_3_83_85_123_126) [1,*] 
+							: Tutorial(_r_1_3_83_85_123_126_127)
+							: Wizard(_r_1_3_83_85_123_126_128)
+					:m UserType(_r_1_3_83_85_129)
+						:g (_r_1_3_83_85_129_130) [1,*] 
+							: Beginner(_r_1_3_83_85_129_130_131)
+							: Intermediate(_r_1_3_83_85_129_130_132)
+							: Advanced(_r_1_3_83_85_129_130_133)
+							: Expert(_r_1_3_83_85_129_130_134)
+					:o AuthenticatedUser(_r_1_3_83_85_135)
+				: ExecutionControl(_r_1_3_83_206)
+					:g (_r_1_3_83_206_208) [1,*] 
+						: Undo(_r_1_3_83_206_208_209)
+						: Redo(_r_1_3_83_206_208_210)
+						: Cancel(_r_1_3_83_206_208_211)
+						: GoBack(_r_1_3_83_206_208_212)
+					:o Shortcuts(_r_1_3_83_206_213)
+				: Internationalization(_r_1_3_83_207)
+					:m Locale(_r_1_3_83_207_214)
+				: Feedback(_r_1_3_83_215)
+					:g (_r_1_3_83_215_216) [1,*] 
+						: InteractionFeedback(_r_1_3_83_215_216_217)
+						: ProgressFeedback(_r_1_3_83_215_216_218)
+						: SystemStatusDisplay(_r_1_3_83_215_216_219)
+						: Alerts(_r_1_3_83_215_216_220)
+		: Persistence(_r_1_4)
+			:g (_r_1_4_136) [1,*] 
+				: FileStorage(_r_1_4_136_137)
+					:m FileStorageOperations(_r_1_4_136_137_139)
+						:g (_r_1_4_136_137_139_140) [1,1] 
+							: CreateFile(_r_1_4_136_137_139_140_141)
+							: ModifyFile(_r_1_4_136_137_139_140_142)
+							: DeleteFile(_r_1_4_136_137_139_140_143)
+					:m FileType(_r_1_4_136_137_144)
+						:g (_r_1_4_136_137_144_145) [1,1] 
+							: Binary(_r_1_4_136_137_144_145_146)
+							: TXTFile(_r_1_4_136_137_144_145_147)
+							: XMLFile(_r_1_4_136_137_144_145_148)
+							: JSONFile(_r_1_4_136_137_144_145_149)
+					:m FileStorageImplementations(_r_1_4_136_137_151)
+						:g (_r_1_4_136_137_151_152) [1,1] 
+							: JavaIO(_r_1_4_136_137_151_152_153)
+					:o TemporalFile(_r_1_4_136_137_205)
+				: DatabaseStorage(_r_1_4_136_138)
+					:m DatabaseStorageOperations(_r_1_4_136_138_154)
+						:g (_r_1_4_136_138_154_155) [1,1] 
+							: Store(_r_1_4_136_138_154_155_156)
+							: Query(_r_1_4_136_138_154_155_157)
+					:m DatabaseStorageImplementations(_r_1_4_136_138_158)
+						:g (_r_1_4_136_138_158_159) [1,1] 
+							: MySQL(_r_1_4_136_138_158_159_160)
+							: MongoDB(_r_1_4_136_138_158_159_161)
+							: OracleDB(_r_1_4_136_138_158_159_162)
+					:m DatabaseType(_r_1_4_136_138_163)
+						:g (_r_1_4_136_138_163_167) [1,1] 
+							: Relational(_r_1_4_136_138_163_167_168)
+							: NoSQL(_r_1_4_136_138_163_167_169)
+					:m DataType(_r_1_4_136_138_170)
+						:g (_r_1_4_136_138_170_171) [1,*] 
+							: Integers(_r_1_4_136_138_170_171_172)
+							: Strings(_r_1_4_136_138_170_171_173)
+							: Floats(_r_1_4_136_138_170_171_174)
+							: Objects(_r_1_4_136_138_170_171_175)
+					:o SecureDatabase(_r_1_4_136_138_204)
+		: ContextAwareness(_r_1_5)
+			:g (_r_1_5_195) [1,*] 
+				: LocationAware(_r_1_5_195_196)
+					:g (_r_1_5_195_196_201) [1,*] 
+						: GPS(_r_1_5_195_196_201_202)
+						: WiFiLocation(_r_1_5_195_196_201_203)
+				: TimeAware(_r_1_5_195_197)
+				: DeviceAware(_r_1_5_195_198)
+					:g (_r_1_5_195_198_228) [1,*] 
+						: BatteryStatus(_r_1_5_195_198_228_229)
+						: IRSensor(_r_1_5_195_198_228_230)
+				: UserAware(_r_1_5_195_199)
+				: EnvironmentAware(_r_1_5_195_200)
+		: Performance(_r_1_176)
+			:g (_r_1_176_177) [1,*] 
+				: Caching(_r_1_176_177_178)
+					:m CachingOperations(_r_1_176_177_178_179)
+						:g (_r_1_176_177_178_179_181) [1,1] 
+							: CacheStore(_r_1_176_177_178_179_181_182)
+							: CacheQuery(_r_1_176_177_178_179_181_183)
+							: CacheUpdate(_r_1_176_177_178_179_181_184)
+					:m CachingImplementations(_r_1_176_177_178_180)
+						:g (_r_1_176_177_178_180_185) [1,1] 
+							: JavaCachingSystem(_r_1_176_177_178_180_185_186)
+							: Caffeine(_r_1_176_177_178_180_185_187)
+					:m MaxSizeCache(_r_1_176_177_178_188)
+					:m CacheType(_r_1_176_177_178_189)
+						:g (_r_1_176_177_178_189_190) [1,1] 
+							: LocalCache(_r_1_176_177_178_189_190_191)
+							: RemoteCache(_r_1_176_177_178_189_190_192)
+					:o MaxLifeSeconds(_r_1_176_177_178_193)
+					:o EternalObjects(_r_1_176_177_178_194)
+</feature_tree>
+<constraints>
+constraint_8:_r_1_5_195_197 or ~_r_1_5_195_198_228_229
+constraint_10:_r_1_2_6_8 or ~_r_1_4_136_138_204
+constraint_6:_r_1_3_83_215_216_220 or ~_r_1_5_195_198_228_229
+constraint_11:_r_1_2_6_8 or ~_r_1_3_83_85_135
+constraint_12:_r_1_4_136_137 or ~_r_1_3_83_84_223_224
+constraint_13:_r_1_2_6_7 or ~_r_1_3_83_84_116
+constraint_14:~_r_1_3_83_84_89_90_94 or ~_r_1_3_83_84_104_105_107
+constraint_2:_r_1_2_6_8 or ~_r_1_2_6_232
+constraint_3:_r_1_2_6_7 or ~_r_1_2_6_231
+</constraints>
+</feature_model>

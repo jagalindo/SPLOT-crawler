@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2019 - 4:54 PM  -->
+<feature_model name="Windows70_TextSize">
+<meta>
+<data name="description">Feature model representing paths to accessibility options associated with Size and Type of Font in Windows7.0 Operating System.</data>
+<data name="creator">Austin Waffo</data>
+<data name="address">P.O.Box 8390 - Yaounde Cameroon</data>
+<data name="email">wkaustin1@gmail.com</data>
+<data name="phone">(+237) 695536640</data>
+<data name="website"></data>
+<data name="organization">The University Of Yaounde I - Cameroun</data>
+<data name="department">National Advanced School Of Engineering</data>
+<data name="date">Friday, May 17, 2019.</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RootFeatures(_r0)
+	:m AppearanceAndPersonalization(_r1)
+		:m Personalization(_r2)
+			:m WindowColor(_r3)
+				:m Element(_r4)
+				:m Size(_r5)
+					:m Interval_From_Six_To_TwentyFive(_r6)
+		:m EaseOfAccessCenter(_r7)
+			:m MakeTheComputerEasierToSee(_r8)
+				:m MakeThingsOnTheScreenEasierToSee(_r9)
+					:m SetTheThicknessOfTheBlinkingCursor(_r10)
+						:m Interval_From_One_To_TwentyFive(_r11)
+		:m Fonts(_r12)
+			:o PreviewDeleteOrShowAndHideFonts(_r13)
+			:m Polices(_r14)
+			:m ChangeFontSettings(_r15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

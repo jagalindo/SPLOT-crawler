@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 9, 2018 - 4:21 PM  -->
+<feature_model name="E-shop">
+<meta>
+<data name="description">FM of E-shop SPL</data>
+<data name="creator">KimBin</data>
+<data name="address"></data>
+<data name="email">kimbin804@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Hongit</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r E-shop(_r)
+	:o login(_r_1)
+	:o logout(_r_2)
+	:o register(_r_3)
+	:m catalogue(_r_4)
+		:o search(_r_4_8)
+		:o wishlist(_r_4_9)
+		:m view item(_r_4_10)
+		:m add to cart(_r_4_11)
+	:m cart(_r_5)
+		:m view cart(_r_5_12)
+		:m open cart(_r_5_13)
+		:o update product(_r_5_14)
+		:m confirm order(_r_5_15)
+	:m payment(_r_6)
+		:g (_r_6_16) [1,*] 
+			: COD(_r_6_16_17)
+			: bank transfer(_r_6_16_18)
+			: credit card(_r_6_16_19)
+	:o order history(_r_7)
+		:m view history(_r_7_20)
+		:o feedback(_r_7_21)
+			:m review(_r_7_21_22)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1 or _r_3
+constraint_2:_r_1 or ~_r_7
+constraint_3:_r_1 or ~_r_2
+</constraints>
+</feature_model>

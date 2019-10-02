@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 28, 2017 - 10:22 PM  -->
+<feature_model name="catalogo">
+<meta>
+<data name="description">um catalogo</data>
+<data name="creator">wally</data>
+<data name="address"></data>
+<data name="email">emailteste</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">none</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r e-shop(_r)
+	:m catalogo(_r_3)
+	:m pagamento(_r_4)
+		:g (_r_4_5) [1,*] 
+			: transferencia(_r_4_5_6)
+			: cartaodecredito(_r_4_5_7)
+	:m seguranca(_r_8)
+		:g (_r_8_10) [1,1] 
+			: alta(_r_8_10_11)
+			: padrao(_r_8_10_12)
+	:m procura(_r_13)
+	:m produtos(_r_14)
+	:m p2(_r_15)
+	:m p3(_r_16)
+	:m p4(_r_17)
+	:m p5(_r_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,108 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 19, 2017 - 8:20 PM  -->
+<feature_model name="Computer">
+<meta>
+<data name="description">Computer setup</data>
+<data name="creator">NM</data>
+<data name="address"></data>
+<data name="email">pilspam@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">NM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Computador(_r)
+	:m Tipo(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Mesa(_r_1_2_3)
+			: Portatil(_r_1_2_4)
+			: Servidor(_r_1_2_5)
+	:m Marca(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Dell(_r_6_7_8)
+			: Toshiba(_r_6_7_9)
+			: Lenovo(_r_6_7_10)
+			: Apple(_r_6_7_11)
+			: Clon(_r_6_7_12)
+	:m SO(_r_13)
+		:g (_r_13_14) [1,1] 
+			: SO Personal(_r_13_14_15)
+				:g (_r_13_14_15_17) [1,1] 
+					: Windows 10(_r_13_14_15_17_18)
+					: Fedora(_r_13_14_15_17_19)
+					: OS X(_r_13_14_15_17_20)
+			: SO Servidor(_r_13_14_16)
+				:g (_r_13_14_16_21) [1,1] 
+					: Windows Server(_r_13_14_16_21_22)
+					: RedHat(_r_13_14_16_21_23)
+					: OS X Server(_r_13_14_16_21_25)
+	:m CPU(_r_26)
+		:m RAM(_r_26_27)
+			:g (_r_26_27_31) [1,1] 
+				: 4GB(_r_26_27_31_32)
+				: 8GB(_r_26_27_31_33)
+				: 16GB(_r_26_27_31_34)
+				: 32GB(_r_26_27_31_35)
+				: 64GB(_r_26_27_31_67)
+		:m Procesador(_r_26_28)
+			:g (_r_26_28_42) [1,1] 
+				: Intel(_r_26_28_42_43)
+				: AMD(_r_26_28_42_46)
+		:m Disco Duro(_r_26_29)
+			:g (_r_26_29_36) [1,1] 
+				: 500GB(_r_26_29_36_37)
+				: 1TB(_r_26_29_36_38)
+				: 2TB(_r_26_29_36_39)
+				: 5TB(_r_26_29_36_40)
+				: 10TB(_r_26_29_36_41)
+		:o Tarjeta grafica(_r_26_30)
+			:g (_r_26_30_50) [1,1] 
+				: NVIDIA(_r_26_30_50_51)
+				: ATI Radeon(_r_26_30_50_52)
+	:o Pantalla(_r_53)
+		:m Tecnologia(_r_53_55)
+			:g (_r_53_55_57) [1,*] 
+				: 3D(_r_53_55_57_58)
+				: 4K(_r_53_55_57_59)
+				: Normal(_r_53_55_57_68)
+		:m Tamano(_r_53_56)
+			:g (_r_53_56_62) [1,1] 
+				: 14(_r_53_56_62_63)
+				: 17(_r_53_56_62_64)
+				: 24(_r_53_56_62_65)
+	:o Planta de Poder(_r_54)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_4 or ~_r_6_7_12
+constraint_45:~_r_6_7_8 or ~_r_13_14_15_17_20
+constraint_47:~_r_6_7_9 or ~_r_13_14_15_17_20
+constraint_46:~_r_6_7_8 or ~_r_13_14_16_21_25
+constraint_49:~_r_6_7_10 or ~_r_13_14_15_17_20
+constraint_48:~_r_6_7_9 or ~_r_13_14_16_21_25
+constraint_19:~_r_1_2_4 or _r_53
+constraint_50:~_r_6_7_10 or ~_r_13_14_16_21_25
+constraint_51:~_r_6_7_12 or ~_r_13_14_15_17_20
+constraint_52:~_r_6_7_12 or ~_r_13_14_16_21_25
+constraint_39:~_r_1_2_3 or ~_r_13_14_16
+constraint_30:~_r_1_2_4 or ~_r_26_29_36_41
+constraint_59:~_r_1_2_5 or ~_r_26_29_36_39
+constraint_33:~_r_1_2_4 or ~_r_26_27_31_35
+constraint_58:~_r_1_2_5 or ~_r_26_29_36_38
+constraint_32:~_r_1_2_3 or ~_r_26_29_36_41
+constraint_57:~_r_1_2_5 or ~_r_26_29_36_37
+constraint_31:~_r_1_2_3 or ~_r_26_29_36_40
+constraint_56:~_r_1_2_5 or ~_r_26_27_31_34
+constraint_38:~_r_1_2_4 or ~_r_13_14_16
+constraint_55:~_r_1_2_5 or ~_r_26_27_31_33
+constraint_37:~_r_1_2_3 or ~_r_26_27_31_67
+constraint_36:~_r_1_2_3 or ~_r_26_27_31_35
+constraint_54:~_r_1_2_5 or ~_r_26_27_31_32
+constraint_35:~_r_1_2_4 or ~_r_26_27_31_67
+constraint_53:~_r_1_2_5 or ~_r_13_14_15
+constraint_28:~_r_1_2_4 or ~_r_53_55_57_59
+constraint_29:~_r_1_2_4 or ~_r_26_29_36_40
+constraint_27:~_r_1_2_4 or ~_r_53_55_57_58
+</constraints>
+</feature_model>

@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 5, 2017 - 2:35 PM  -->
+<feature_model name="Eval_board">
+<meta>
+<data name="description">a model of regular ev_b</data>
+<data name="creator">ali</data>
+<data name="address"></data>
+<data name="email">amin@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ESPRIT</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Evaluation_Board(_r)
+	:m CPU(_r_1)
+	:m Flash_memory(_r_2)
+	:m Ram_memory(_r_3)
+	:m DMA(_r_4)
+	:m Reset_Btn(_r_5)
+	:m InOut(_r_6)
+	:o Periphery(_r_7)
+		:g (_r_7_9) [1,*] 
+			: SPI(_r_7_9_13)
+		:m UART(_r_7_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

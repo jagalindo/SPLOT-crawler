@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 12, 2017 - 12:54 PM  -->
+<feature_model name="uController">
+<meta>
+<data name="description">uController</data>
+<data name="creator">Zouai Amine</data>
+<data name="address"></data>
+<data name="email">amine.zouai@esprit.tn</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Zouai Amine</data>
+<data name="department"></data>
+<data name="date">09/10/2017</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Board(_r)
+	:m uController(_r_1)
+		:m Horloge(_r_1_6)
+		:m ROM(_r_1_8)
+		:o Operating system(_r_1_14)
+		:m RAM(_r_1_15)
+		:m Flash Memory(_r_1_16)
+	:m PinsIO(_r_3)
+		:m Digital(_r_3_25)
+		:m Analog(_r_3_26)
+	:m Bus Communication(_r_4)
+		:g (_r_4_19) [1,*] 
+			: SPI(_r_4_19_20)
+			: I2C(_r_4_19_21)
+			: UART(_r_4_19_22)
+			: CAN(_r_4_19_23)
+	:o buttons(_r_9)
+	:o LEDs(_r_10)
+	:o USB(_r_11)
+	:o HDMI(_r_12)
+	:o Ecran(_r_13)
+	:o WIFI(_r_17)
+	:o Bluetooth(_r_24)
+	:m Alimentation(_r_27)
+	:o ADC(_r_28)
+	:m DMA(_r_30)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Nov 18, 2018 - 12:59 PM  -->
+<feature_model name="PizzaModel">
+<meta>
+<data name="description">bar</data>
+<data name="creator">bar</data>
+<data name="address"></data>
+<data name="email">bar820@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">none</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Pizza(_r)
+	:m Topping(_r_1)
+		:o Salami(_r_1_2)
+		:o Ham(_r_1_3)
+		:o Mozzarelle(_r_1_4)
+	:m Size(_r_5)
+		:g (_r_5_7) [1,1] 
+			: Normal(_r_5_7_8)
+			: Big(_r_5_7_9)
+	:m Dough(_r_12)
+		:g (_r_12_13) [1,1] 
+			: Neapolitan(_r_12_13_14)
+			: Sicilian(_r_12_13_15)
+	:o CheesyCrust(_r_16)
+</feature_tree>
+<constraints>
+constraint_2:~_r_5_7_9 or _r_16
+</constraints>
+</feature_model>

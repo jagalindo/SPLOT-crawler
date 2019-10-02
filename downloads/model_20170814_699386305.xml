@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 14, 2017 - 2:12 AM  -->
+<feature_model name="ABMS">
+<meta>
+<data name="description">ABMS</data>
+<data name="creator">ANP</data>
+<data name="address"></data>
+<data name="email">abnerp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFRGS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ABMS(_r)
+	:o Agent(_r_1)
+		:o Mobility(_r_1_3)
+			:o Randon(_r_1_3_4)
+			:o Path(_r_1_3_5)
+			:o Basic(_r_1_3_6)
+		:o Creation(_r_1_7)
+			:o Center(_r_1_7_8)
+			:o Randon(_r_1_7_9)
+			:o Path(_r_1_7_10)
+	:o Environment(_r_2)
+		:o Load GIS(_r_2_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
