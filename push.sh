@@ -11,8 +11,8 @@ commit_website_files() {
 }
 
 upload_files() {
-	git remote add origin-master https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git > /dev/null 2>&1
-	git push --quiet --set-upstream origin-master master
+	git add ./downloads/*
+	git push --quiet https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git
 }
 
 setup_git
