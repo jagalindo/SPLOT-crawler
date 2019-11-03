@@ -8,6 +8,7 @@ script:
 - python3 ./splot-crawl.py
 - git config --global user.email "jagalindo@us.es"
 - git config --global user.name "Travis CI"
+- git checkout -b master
 - git add ./downloads/*
 - git commit -m "Travis built"
 - git remote add origin-master https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git > /dev/null 2>&1
