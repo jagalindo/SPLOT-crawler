@@ -1,0 +1,71 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 1, 2019 - 9:50 PM  -->
+<feature_model name="SOLAR VLE Discussion Forum">
+<meta>
+<data name="description">Discussion Forum</data>
+<data name="creator">Emanuel Coutinho</data>
+<data name="address"></data>
+<data name="email">emanuel.coutinho@ufc.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Federal University of Ceara</data>
+<data name="department">Quixadá Campus</data>
+<data name="date">12/10/2019</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Discussion Forum(_r)
+	:m Platform(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Web(_r_1_2_3)
+			: Mobile(_r_1_2_4)
+	:m Application(_r_5)
+		:m Basic Functions(_r_5_15)
+			:m Post(_r_5_15_17)
+			:m Reply(_r_5_15_18)
+			:m Visualize(_r_5_15_19)
+		:m Additional Functions(_r_5_16)
+			:m Accompaniment(_r_5_16_20)
+				:m Tutoring(_r_5_16_20_23)
+					:o Manual(_r_5_16_20_23_24)
+					:o Automatic(_r_5_16_20_23_25)
+				:o Analyze(_r_5_16_20_26)
+				:o Statistic(_r_5_16_20_27)
+			:o Tips(_r_5_16_21)
+			:o AutoCorretion(_r_5_16_22)
+	:m Services(_r_6)
+		:m Language(_r_6_28)
+			:g (_r_6_28_30) [1,1] 
+				: Portuguese(_r_6_28_30_31)
+				: English(_r_6_28_30_33)
+				: Spanish(_r_6_28_30_34)
+		:m Media(_r_6_29)
+			:o Camera(_r_6_29_35)
+			:o TextToSpeech(_r_6_29_36)
+			:o SpeechToText(_r_6_29_37)
+	:m Sound Quality(_r_7)
+		:g (_r_7_38) [1,1] 
+			: 128 kbps(_r_7_38_39)
+			: 192 kbps(_r_7_38_40)
+			: 256 kbps(_r_7_38_41)
+	:m File(_r_8)
+		:g (_r_8_42) [1,1] 
+			: Text(_r_8_42_43)
+			: Image(_r_8_42_44)
+			: Video(_r_8_42_45)
+	:m Sound(_r_9)
+	:m Network(_r_10)
+		:g (_r_10_11) [1,1] 
+			: WiFi(_r_10_11_12)
+			: 3G(_r_10_11_13)
+			: 4G(_r_10_11_14)
+</feature_tree>
+<constraints>
+constraint_10:~_r_7_38_41 or _r_10_11_12
+constraint_9:~_r_8_42_45 or _r_10_11_12
+constraint_11:~_r_6_29_35 or _r_10_11_13 or _r_10_11_14
+constraint_12:~_r_8_42_44 or ~_r_10_11_13
+constraint_14:~_r_7_38_40 or _r_10_11_14
+constraint_15:~_r_5_16_20_27 or _r_10_11_12
+constraint_16:~_r_5_16_20_26 or _r_10_11_12
+</constraints>
+</feature_model>

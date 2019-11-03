@@ -1,0 +1,102 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Oct 23, 2019 - 8:19 PM  -->
+<feature_model name="ProfileItems">
+<meta>
+<data name="description">Describe profile items</data>
+<data name="creator">Merve</data>
+<data name="address"></data>
+<data name="email">mervebuyukdalgic@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Ozyegin Univercity</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r TV(_r)
+	:o Connectivity(_r_1)
+		:o GracenoteSupport(_r_1_14)
+			:o Enabled(_r_1_14_64)
+			:o Disabled(_r_1_14_65)
+		:o HbbTV(_r_1_15)
+			:o Enabled(_r_1_15_62)
+			:o Disabled(_r_1_15_63)
+		:o Portal(_r_1_16)
+	:o Country(_r_2)
+		:o Austria(_r_2_17)
+		:o Belgium(_r_2_18)
+		:o CzechRepublic(_r_2_19)
+		:o Denmark(_r_2_20)
+		:o Finland(_r_2_21)
+		:o France(_r_2_22)
+		:o Germany(_r_2_23)
+		:o Ireland(_r_2_24)
+		:o Italy(_r_2_25)
+		:o Netherlands(_r_2_26)
+		:o Norway(_r_2_27)
+		:o Sweden(_r_2_28)
+		:o Turkey(_r_2_29)
+		:o UnitedKingdom(_r_2_30)
+	:o Customer(_r_3)
+		:o Bush(_r_3_31)
+		:o Finlux(_r_3_32)
+		:o Hitachi(_r_3_33)
+		:o JVC(_r_3_34)
+		:o Panasonic(_r_3_35)
+		:o Philips(_r_3_36)
+		:o Phoenix(_r_3_37)
+		:o SEG(_r_3_38)
+		:o Telefunken(_r_3_39)
+		:o Toshiba(_r_3_40)
+	:o DefaultStandbySearch(_r_4)
+		:o Enabled(_r_4_41)
+		:o Disabled(_r_4_42)
+	:o DynamicChannelUpdate(_r_5)
+		:o Enabled(_r_5_43)
+		:o Disabled(_r_5_44)
+	:o FreeviewPlay(_r_6)
+		:o BBC(_r_6_45)
+			:o Enabled(_r_6_45_46)
+			:o Disabled(_r_6_45_47)
+		:o FreeviewPlayEnabled(_r_6_48)
+			:o Enabled(_r_6_48_49)
+			:o Disabled(_r_6_48_50)
+	:o Language(_r_7)
+		:o Czech(_r_7_51)
+		:o Danish(_r_7_52)
+		:o Dutch(_r_7_53)
+		:o English(_r_7_54)
+		:o Finnish(_r_7_55)
+		:o French(_r_7_56)
+		:o German(_r_7_57)
+		:o Italian(_r_7_58)
+		:o Norwegian(_r_7_59)
+		:o Swedish(_r_7_60)
+		:o Turkish(_r_7_61)
+	:o PVR(_r_8)
+		:o BackgroundPVR(_r_8_66)
+		:o CopyNever(_r_8_67)
+		:o RetentionLimit(_r_8_68)
+	:o SatelliteSupport(_r_9)
+		:o AstraHDPlus(_r_9_69)
+		:o DSmart(_r_9_70)
+		:o Fransat(_r_9_71)
+		:o ORF(_r_9_72)
+		:o Tivibu(_r_9_73)
+		:o Tivusat(_r_9_74)
+		:o Turksat(_r_9_75)
+	:o OAD(_r_10)
+		:o ManualOAD(_r_10_76)
+		:o StandbyOAD(_r_10_77)
+	:o PatentItems(_r_11)
+		:o AutoZoomMode(_r_11_78)
+		:o DVBSubtitles(_r_11_79)
+		:o DVBT2(_r_11_80)
+		:o TextTransparency(_r_11_81)
+	:o ChannelList(_r_13)
+		:o DeleteAndMoveUpSupport(_r_13_82)
+		:o HDFilter(_r_13_83)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
