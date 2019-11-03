@@ -9,7 +9,7 @@ script:
 - git config --global user.email "jagalindo@us.es"
 - git config --global user.name "Travis CI"
 - git add ./downloads/*
-- git commit -m "Travis build: `date`"
+- git commit -m "Travis build: ${TRAVIS_BUILD_NUMBER}"
 - git push --quiet https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git master
 env:
   global:
