@@ -6,7 +6,10 @@ install:
 - pip install -r requirements.txt
 script:
 - python3 ./splot-crawl.py
+- git config --global user.email "jagalindo@us.es"
+- git config --global user.name "Travis CI"
 - git add ./downloads/*
+- git commit --message "Travis build: $DATE"
 - git push --quiet https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git master
 env:
   global:
