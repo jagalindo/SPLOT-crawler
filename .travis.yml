@@ -10,7 +10,7 @@ script:
 - git config --global user.name "Travis CI"
 - git add ./downloads/*
 - git commit -m "Travis built"
-- git push --quiet master https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git
+- git push --quiet https://${GH_TOKEN}@github.com/jagalindo/SPLOT-crawler.git master
 env:
   global:
     secure: U2RKEHSrwZyIC/tZkigM8ky3qUqFOHso+G8ut02296mCtJdjjdKn/mrmTE/6Vgiz7m5yqm45BUDkplE6zoFWuHZOts7g9Udr97GZaaCI5j+RjO2UtRa7NfhTjZay0GQhVS5Y5U4xaBGSoTtXOJq7Rw2i5qpIEjKYi9MdEOb+nzU0XckvBt96oNCAuRHeZ6rZFJs/sVa8jTITZc54Ww9FO0avnwhemdLX9FDTVxnLY/tmrubbEnxb+bpEdtX/obttl9Sf7MMd3lj8BW1ECv1XV//+bmqGmc5E3A1J+5qTMzgzshpwpml0A7NOW1BmSWyTY2fKaGzXvyDGybld1nz6ITI5rbQOrp1p6L6CuJg93x/P6NUBjBFJ4HZnV5poLHahWgj6pC27Kw0mEXET9OWvomoIFeBq0bvawS4BhJe7eeGzkjt6aX6JH6hAhoOXKXpE859Rw8C5H8Aa+P542kZ06kgl9St4Lne3kfuhpq18tY4K1zWxpuB+1sQS/TMYM1FA1Jmr4EeFdNhf67ecaY8DNl4i4p/dATK82q/VYZkixMH6dOOA+LVuacaN9bTG6VZVSQWy1NjMsWh9IVSmsSdPnHQj0QplW97sC83Jzh/CqVaiotoweqeUAJbMvhsFnZm1RaUVIXtg5jlOPjkzbOcJZM/lINP8SzUo3bnIVB4DRi8=
