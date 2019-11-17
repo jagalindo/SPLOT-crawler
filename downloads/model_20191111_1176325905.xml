@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 11, 2019 - 8:23 AM  -->
+<feature_model name="HIS">
+<meta>
+<data name="description">HIS</data>
+<data name="creator">HIS</data>
+<data name="address"></data>
+<data name="email">234@gmx.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">HIS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HIS(_r)
+	:m SUPERVISION_SYSTEM(_r_1)
+		:m FIRE(_r_1_5)
+		:m INTRUSION(_r_1_6)
+		:o FLOOD(_r_1_7)
+	:m CONTROL(_r_2)
+		:m LIGHT_CONTROL(_r_2_8)
+		:o APPLIANCES_CONTROL(_r_2_9)
+		:m TEMPERATURE(_r_2_10)
+	:o SERVICES(_r_4)
+		:g (_r_4_13) [1,*] 
+			: VIDEO(_r_4_13_14)
+			: RADIO(_r_4_13_15)
+			: INTERNET(_r_4_13_16)
+				:g (_r_4_13_16_17) [1,1] 
+					: POWER_LINE(_r_4_13_16_17_18)
+					: FIBER_CHANNEL(_r_4_13_16_17_19)
+					: WIRELESS(_r_4_13_16_17_20)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

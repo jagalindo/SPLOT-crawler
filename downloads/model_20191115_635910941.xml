@@ -1,0 +1,75 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 15, 2019 - 5:51 PM  -->
+<feature_model name="Owncloud">
+<meta>
+<data name="description">Preferences Owncloud</data>
+<data name="creator">Alfredo</data>
+<data name="address"></data>
+<data name="email">alfredorusso71@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">NoOne</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r root(_r)
+	:m App(_r_1)
+		:m preferences(_r_1_2)
+			:m preferences_category_camera_uploads(_r_1_2_5)
+			:m preferences_category_secutiry(_r_1_2_6)
+		:m preferences_camera_uploads(_r_1_3)
+			:m preferences_picture_uploads(_r_1_3_7)
+				:g (_r_1_3_7_16) [1,1] 
+					: preferences_picture_uploads_true(_r_1_3_7_16_17)
+					: preferences_picture_uploads_false(_r_1_3_7_16_18)
+			:m preferences_picture_uploads_path(_r_1_3_11)
+			:m preferences_picture_uploads_via_wifi_only(_r_1_3_12)
+				:g (_r_1_3_12_13) [1,1] 
+					: preferences_picture_uploads_via_wifi_only_true(_r_1_3_12_13_14)
+					: preferences_picture_uploads_via_wifi_only_false(_r_1_3_12_13_15)
+			:m preferences_video_uploads(_r_1_3_19)
+				:g (_r_1_3_19_20) [1,1] 
+					: preferences_video_uploads_true(_r_1_3_19_20_21)
+					: preferences_video_uploads_false(_r_1_3_19_20_22)
+			:m preferences_video_uploads_path(_r_1_3_30)
+			:m preferences_picture_uploads_via_wifi_only(_r_1_3_31)
+				:g (_r_1_3_31_32) [1,1] 
+					: preferences_picture_uploads_via_wifi_only_true(_r_1_3_31_32_33)
+					: preferences_picture_uploads_via_wifi_only_false(_r_1_3_31_32_34)
+			:m preferences_camera_folder(_r_1_3_35)
+			:m preferences_original_file_will_be(_r_1_3_36)
+				:g (_r_1_3_36_37) [1,1] 
+					: preferences_original_file_will_be_original_folder(_r_1_3_36_37_38)
+					: preferences_original_file_will_be_app_folder(_r_1_3_36_37_39)
+		:m preferences_security(_r_1_4)
+			:m preferences_passcode_lock(_r_1_4_40)
+				:g (_r_1_4_40_41) [1,1] 
+					: preferences_passcode_lock_true(_r_1_4_40_41_42)
+					: preferences_passcode_lock_false(_r_1_4_40_41_43)
+			:m preferences_pattern_lock(_r_1_4_44)
+				:g (_r_1_4_44_47) [1,1] 
+					: preferences_pattern_lock_true(_r_1_4_44_47_48)
+					: preferences_pattern_lock_false(_r_1_4_44_47_49)
+			:m preferences_fingerprint_lock(_r_1_4_45)
+				:g (_r_1_4_45_50) [1,1] 
+					: preferences_fingerprint_lock_true(_r_1_4_45_50_51)
+					: preferences_fingerprint_lock_false(_r_1_4_45_50_52)
+			:m preferences_touches_with_other_visible_windows(_r_1_4_46)
+				:g (_r_1_4_46_53) [1,1] 
+					: preferences_touches_with_other_visible_windows_true(_r_1_4_46_53_54)
+					: preferences_touches_with_other_visible_windows_false(_r_1_4_46_53_55)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_3_11 or _r_1_3_7_16_17
+constraint_8:_r_1_3_19_20_21 or _r_1_3_36
+constraint_10:_r_1_4_45 or _r_1_4_44_47_48
+constraint_9:_r_1_4_40_41_42 or _r_1_4_45
+constraint_6:_r_1_3_19_20_21 or _r_1_3_35
+constraint_7:_r_1_3_7_16_17 or _r_1_3_36
+constraint_4:_r_1_3_19_20_21 or _r_1_3_31
+constraint_5:_r_1_3_7_16_17 or _r_1_3_35
+constraint_2:_r_1_3_12 or _r_1_3_7_16_17
+constraint_3:_r_1_3_19_20_21 or _r_1_3_30
+</constraints>
+</feature_model>
