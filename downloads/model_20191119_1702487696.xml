@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 19, 2019 - 12:39 PM  -->
+<feature_model name="eTranspport">
+<meta>
+<data name="description">online cab service</data>
+<data name="creator">salam</data>
+<data name="address"></data>
+<data name="email">salamislamabad2019@gmail.com</data>
+<data name="phone">00923478259840</data>
+<data name="website"></data>
+<data name="organization">unisoft</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r eTransport(_r)
+	:m login(_r_1)
+	:m logout(_r_2)
+	:m register(_r_3)
+		:g (_r_3_38) [1,*] 
+			: book later(_r_3_38_39)
+		:g (_r_3_40) [1,*] 
+			: book now(_r_3_40_41)
+	:m book a ride(_r_4)
+	:m payment(_r_5)
+		:g (_r_5_32) [1,*] 
+			: wallet(_r_5_32_33)
+		:g (_r_5_34) [1,*] 
+			: cash(_r_5_34_35)
+		:g (_r_5_36) [1,*] 
+			: credit card(_r_5_36_37)
+	:o contact captin(_r_6)
+		:g (_r_6_7) [1,*] 
+			: SMS(_r_6_7_8)
+		:g (_r_6_9) [1,*] 
+			: Call(_r_6_9_10)
+	:o help(_r_11)
+		:o contact us(_r_11_17)
+		:o report problem(_r_11_18)
+	:o invite friends(_r_12)
+		:g (_r_12_22) [1,*] 
+			: via email(_r_12_22_23)
+		:g (_r_12_24) [1,*] 
+			: via SMS(_r_12_24_25)
+	:o rides information(_r_13)
+		:g (_r_13_28) [1,*] 
+			: history(_r_13_28_29)
+		:g (_r_13_30) [1,*] 
+			: schedule(_r_13_30_31)
+	:m notification(_r_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
