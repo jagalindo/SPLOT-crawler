@@ -1,0 +1,47 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 26, 2019 - 1:46 AM  -->
+<feature_model name="LPS tienda virtual final">
+<meta>
+<data name="description">definición de tienda virtual y sus principales características  para definir eventual repositorio</data>
+<data name="creator">Alonso Bobadilla</data>
+<data name="address"></data>
+<data name="email">a.bobadilla02@ufromail.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFRO</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tienda virtual(_r)
+	:o buscador(_r_1)
+		:g (_r_1_6) [1,1] 
+			: basico(_r_1_6_7)
+			: avanzado(_r_1_6_8)
+	:m catalogo(_r_2)
+		:g (_r_2_9) [1,*] 
+			: general(_r_2_9_10)
+			: por categorias(_r_2_9_11)
+	:o carrito(_r_3)
+		:g (_r_3_12) [1,*] 
+			: funcional(_r_3_12_13)
+			: vista(_r_3_12_14)
+	:o medio pago(_r_4)
+		:g (_r_4_15) [1,*] 
+			: transferencia(_r_4_15_16)
+			: tarjeta credito(_r_4_15_17)
+			: tarjeta debito(_r_4_15_18)
+			: paypal(_r_4_15_19)
+	:m administracion(_r_5)
+		:m pagina(_r_5_20)
+			:m CRUD productos(_r_5_20_22)
+			:o CRUD categorias(_r_5_20_23)
+			:m estilos(_r_5_20_24)
+		:m CRUD usuarios(_r_5_21)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_6_8 or _r_2_9_11
+constraint_2:_r_2_9_11 or ~_r_5_20_23
+constraint_3:_r_4 or ~_r_3_12_13
+</constraints>
+</feature_model>
