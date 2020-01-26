@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Jan 20, 2020 - 11:01 AM  -->
+<feature_model name="Smart Home Feature Model">
+<meta>
+<data name="description">Smart Home</data>
+<data name="creator">brc_cs</data>
+<data name="address"></data>
+<data name="email">burcu.ozten@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Airties</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Smart Home(_r)
+	:o Smart Climate System(_r_2)
+		:g (_r_2_3) [1,*] 
+			: Room Temperature Detector(_r_2_3_4)
+				:g (_r_2_3_4_5) [1,1] 
+					: Seasonal Climate Controller(_r_2_3_4_5_6)
+					: Summer Climate Controller(_r_2_3_4_5_7)
+					: Winter Climate Controller(_r_2_3_4_5_8)
+			: Pool Temperature Controller(_r_2_3_9)
+				:g (_r_2_3_9_10) [1,*] 
+					: Warm(_r_2_3_9_10_11)
+					: Normal(_r_2_3_9_10_12)
+					: Cold(_r_2_3_9_10_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

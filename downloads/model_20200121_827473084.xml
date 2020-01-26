@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 21, 2020 - 11:45 PM  -->
+<feature_model name="Home_Automation_System">
+<meta>
+<data name="description">HAS</data>
+<data name="creator">Lutfu Melih Bugra Oguzer</data>
+<data name="address"></data>
+<data name="email">bugraog@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">-</data>
+<data name="department"></data>
+<data name="date">1/22/2020</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Smart_Home_System(_r)
+	:o Devices(_r_1)
+		:g (_r_1_32) [1,*] 
+			: Light(_r_1_32_33)
+			: MobilePhone(_r_1_32_34)
+			: Siren(_r_1_32_35)
+			: WallPanel(_r_1_32_36)
+	:o Actuators(_r_24)
+		:m Alarm(_r_24_25)
+		:g (_r_24_26) [1,*] 
+			: LightController(_r_24_26_27)
+			: ShutterController(_r_24_26_28)
+			: TemperatureController(_r_24_26_29)
+	:o Sensors(_r_37)
+		:g (_r_37_38) [1,*] 
+			: DoorOpenDetector(_r_37_38_39)
+			: GlassBreakDetector(_r_37_38_40)
+			: SmokeDetector(_r_37_38_41)
+			: SunsetDetector(_r_37_38_42)
+			: WaterDetector(_r_37_38_43)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
