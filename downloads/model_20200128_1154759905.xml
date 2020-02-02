@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 28, 2020 - 3:45 PM  -->
+<feature_model name="WebPortal">
+<meta>
+<data name="description">description</data>
+<data name="creator">Moi</data>
+<data name="address"></data>
+<data name="email">maxime.guenego@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Fac</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r WebPortal(_r)
+	:o DriveProg(_r_1)
+		:g (_r_1_13) [1,1] 
+			: XML(_r_1_13_14)
+			: Database(_r_1_13_15)
+	:m WebServer(_r_2)
+		:o Logging(_r_2_5)
+			:g (_r_2_5_10) [1,1] 
+				: DB(_r_2_5_10_11)
+				: File(_r_2_5_10_12)
+		:o Protocols(_r_2_6)
+			:g (_r_2_6_16) [1,*] 
+				: Nntp(_r_2_6_16_17)
+				: Ftp(_r_2_6_16_18)
+				: Https(_r_2_6_16_19)
+		:m Content(_r_2_7)
+			:m Static(_r_2_7_8)
+			:o Active(_r_2_7_9)
+	:o Security(_r_3)
+		:g (_r_3_20) [1,*] 
+			: DataStorage(_r_3_20_21)
+			: DataTransfer(_r_3_20_22)
+			: UserAuth(_r_3_20_23)
+	:o Performance(_r_4)
+		:g (_r_4_24) [1,1] 
+			: Ms(_r_4_24_25)
+			: Sec(_r_4_24_26)
+			: Min(_r_4_24_27)
+</feature_tree>
+<constraints>
+constraint_7:~_r_2_5_10_11 or _r_1_13_15
+constraint_4:~_r_2_6_16_19 or ~_r_4_24_25
+constraint_5:~_r_2_5_10_12 or _r_2_6_16_18
+constraint_3:_r_2_6_16_19 or ~_r_3_20_22
+</constraints>
+</feature_model>

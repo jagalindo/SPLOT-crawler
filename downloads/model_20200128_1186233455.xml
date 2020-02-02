@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jan 28, 2020 - 3:25 PM  -->
+<feature_model name="WebPortal">
+<meta>
+<data name="description">portail web</data>
+<data name="creator">Lucie</data>
+<data name="address"></data>
+<data name="email">lucie.godefert42@laposte.net</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Sorbonne</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r WebPortal(_r)
+	:m WebServer(_r_1)
+		:o Logging(_r_1_12)
+			:g (_r_1_12_42) [1,1] 
+				: DB(_r_1_12_42_43)
+				: File(_r_1_12_42_44)
+		:o Protocole(_r_1_13)
+			:g (_r_1_13_33) [1,*] 
+				: Nmtp(_r_1_13_33_34)
+				: Ftp(_r_1_13_33_35)
+				: Https(_r_1_13_33_36)
+		:m Content(_r_1_16)
+			:m Static(_r_1_16_21)
+			:o Active(_r_1_16_22)
+	:o DriverProg(_r_2)
+		:g (_r_2_39) [1,1] 
+			: XML(_r_2_39_40)
+			: Database(_r_2_39_41)
+	:o Security(_r_3)
+		:g (_r_3_45) [1,*] 
+			: Datastorage(_r_3_45_46)
+			: Data transfer(_r_3_45_47)
+			: UserAuth(_r_3_45_48)
+	:o Performance(_r_5)
+		:g (_r_5_49) [1,1] 
+			: Ms(_r_5_49_50)
+			: Sec(_r_5_49_51)
+			: Min(_r_5_49_52)
+</feature_tree>
+<constraints>
+constraint_8:_r_1_13_33_35 or ~_r_1_12_42_44
+constraint_9:_r_2_39_41 or ~_r_1_12_42_43
+constraint_6:_r_1_13_33_36 or ~_r_3_45_47
+constraint_7:~_r_1_13_33_36 or ~_r_5_49_50
+</constraints>
+</feature_model>
