@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Feb 12, 2020 - 4:08 PM  -->
+<feature_model name="GitFlow">
+<meta>
+<data name="description">Feature modelling of GitFlow</data>
+<data name="creator">Julio Cesar Cortes Rios</data>
+<data name="address"></data>
+<data name="email">juliocesar.cortesrios@manchester.ac.uk</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Manchester</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r GitFlow(_r)
+	:m Setup and initialization(_r_1)
+	:m File management(_r_2)
+	:m Syncing(_r_3)
+	:m Branching strategy(_r_4)
+		:m Creating lines of development(_r_4_7)
+			:m Identifying the lines of development(_r_4_7_8)
+				:m main-origin_master(_r_4_7_8_10)
+			:m Ensuring the state of a line of development(_r_4_7_9)
+				:m production_ready(_r_4_7_9_11)
+	:m Integration strategy(_r_5)
+	:m Additional features(_r_6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
