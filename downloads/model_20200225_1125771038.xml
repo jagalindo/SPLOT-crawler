@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Feb 25, 2020 - 7:02 PM  -->
+<feature_model name="Mobile Media v2">
+<meta>
+<data name="description">Mobile Media complex</data>
+<data name="creator">JM Horcas</data>
+<data name="address"></data>
+<data name="email">horcas@lcc.uma.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UMA</data>
+<data name="department"></data>
+<data name="date">Feb 2020</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MobileMedia2(_r)
+	:m MediaSelection(_r_4)
+		:g (_r_4_5) [1,*] 
+			: Photo(_r_4_5_6)
+			: Music(_r_4_5_7)
+				:m MusicPlayer(_r_4_5_7_9)
+			: Video(_r_4_5_8)
+	:m MediaManagement(_r_10)
+		:o Favourites(_r_10_11)
+			:m SetFavourites(_r_10_11_14)
+			:m ViewFavourites(_r_10_11_16)
+		:o CopyMedia(_r_10_12)
+		:o SMSTransfer(_r_10_13)
+			:o ReceivePhoto(_r_10_13_17)
+			:o SendPhoto(_r_10_13_18)
+	:m ScreenSize(_r_19)
+		:g (_r_19_20) [1,1] 
+			: Screen1(_r_19_20_21)
+			: Screen2(_r_19_20_22)
+			: Screen3(_r_19_20_23)
+	:m Speakerphone(_r_24)
+	:m Calendar(_r_25)
+	:m Radio(_r_26)
+	:m CallManager(_r_27)
+	:o TVDigital(_r_28)
+	:m OS(_r_29)
+		:g (_r_29_30) [1,1] 
+			: Android(_r_29_30_31)
+			: WindowsMobile(_r_29_30_32)
+			: Symbian(_r_29_30_33)
+			: iOS(_r_29_30_34)
+	:o TouchScreen(_r_35)
+	:o Connectivity(_r_36)
+		:g (_r_36_37) [1,*] 
+			: Bluetooth(_r_36_37_38)
+			: WiFi(_r_36_37_39)
+				:g (_r_36_37_39_40) [1,*] 
+					: Gmail(_r_36_37_39_40_41)
+					: GoogleMaps(_r_36_37_39_40_42)
+					: Youtube(_r_36_37_39_40_44)
+	:o GPS(_r_45)
+	:o ResolutionCamera(_r_46)
+		:g (_r_46_47) [1,1] 
+			: Resolution3MP(_r_46_47_48)
+			: Resolution8MP(_r_46_47_49)
+	:m Language(_r_50)
+		:g (_r_50_51) [1,*] 
+			: Portuguese(_r_50_51_52)
+			: English(_r_50_51_53)
+			: Spanish(_r_50_51_54)
+</feature_tree>
+<constraints>
+constraint_1:_r_4_5_8 or ~_r_46
+constraint_2:_r_4_5_6 or ~_r_46
+constraint_3:~_r_10_12 or _r_10_13
+</constraints>
+</feature_model>
