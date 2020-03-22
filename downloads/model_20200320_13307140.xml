@@ -1,0 +1,29 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Mar 20, 2020 - 7:33 PM  -->
+<feature_model name="ATM">
+<meta>
+<data name="description">ATM</data>
+<data name="creator">karam</data>
+<data name="address"></data>
+<data name="email">it_karam@yahoo.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UMniho</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ATM(_r)
+	:m check_balance(_r_1)
+		:o show_balance_screen(_r_1_2)
+	:m withdrawal_cash(_r_3)
+		:o withdrawal_cash_limit(_r_3_4)
+	:m deposit_cash(_r_5)
+	:o transfer_money(_r_6)
+	:m dummy(_r_7)
+	:m dummy2(_r_8)
+	:m dummy3(_r_9)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

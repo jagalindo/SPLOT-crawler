@@ -1,0 +1,166 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Mar 16, 2020 - 4:56 PM  -->
+<feature_model name="SCRUM Adaptations - SML">
+<meta>
+<data name="description">Represents hierarchical organization of adaptationsofSCRUM</data>
+<data name="creator">Luciano A. Garcia</data>
+<data name="address"></data>
+<data name="email">lucianogarcia11@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">State University of Maringá</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SCRUM_SML(_r)
+	:m Rules(_r_1)
+		:m SCRUMTeam(_r_1_2)
+			:m Roles(_r_1_2_5)
+				:g (_r_1_2_5_8) [1,*] 
+					: PO(_r_1_2_5_8_9)
+						:m Activities(_r_1_2_5_8_9_16)
+							:g (_r_1_2_5_8_9_16_20) [1,*] 
+								: Apo1(_r_1_2_5_8_9_16_20_21)
+								: Apo2(_r_1_2_5_8_9_16_20_27)
+								: Apo3(_r_1_2_5_8_9_16_20_28)
+								: Apo4(_r_1_2_5_8_9_16_20_29)
+								: Apo5(_r_1_2_5_8_9_16_20_30)
+								: Apo6(_r_1_2_5_8_9_16_20_31)
+								: Apo11(_r_1_2_5_8_9_16_20_32)
+								: Apo13(_r_1_2_5_8_9_16_20_33)
+								: Apo14(_r_1_2_5_8_9_16_20_34)
+						:m Num_persons(_r_1_2_5_8_9_17)
+							:g (_r_1_2_5_8_9_17_35) [1,*] 
+								: One(_r_1_2_5_8_9_17_35_36)
+								: Two(_r_1_2_5_8_9_17_35_37)
+								: More_two(_r_1_2_5_8_9_17_35_38)
+						:m Presence(_r_1_2_5_8_9_18)
+							:g (_r_1_2_5_8_9_18_39) [1,*] 
+								: Ppo1(_r_1_2_5_8_9_18_39_40)
+								: Ppo2(_r_1_2_5_8_9_18_39_41)
+						:m Composing(_r_1_2_5_8_9_19)
+							:g (_r_1_2_5_8_9_19_42) [1,*] 
+								: Cpo1(_r_1_2_5_8_9_19_42_43)
+								: Cpo2(_r_1_2_5_8_9_19_42_44)
+								: Cpo4(_r_1_2_5_8_9_19_42_45)
+								: Cpo5(_r_1_2_5_8_9_19_42_46)
+								: Cpo6(_r_1_2_5_8_9_19_42_47)
+								: Cpo7(_r_1_2_5_8_9_19_42_48)
+								: Cpo8(_r_1_2_5_8_9_19_42_49)
+								: Cpo9(_r_1_2_5_8_9_19_42_50)
+								: Cpo10(_r_1_2_5_8_9_19_42_51)
+					: DevTeam(_r_1_2_5_8_25)
+						:m Presence_dt(_r_1_2_5_8_25_52)
+							:m physical_dt(_r_1_2_5_8_25_52_53)
+						:m Composing_dt(_r_1_2_5_8_25_54)
+							:m developer(_r_1_2_5_8_25_54_55)
+						:m Activities_dt(_r_1_2_5_8_25_56)
+							:g (_r_1_2_5_8_25_56_57) [1,*] 
+								: Atd2(_r_1_2_5_8_25_56_57_58)
+								: Atd3(_r_1_2_5_8_25_56_57_59)
+								: Atd5(_r_1_2_5_8_25_56_57_60)
+								: Atd6(_r_1_2_5_8_25_56_57_61)
+								: Atd7(_r_1_2_5_8_25_56_57_62)
+								: Atd8(_r_1_2_5_8_25_56_57_63)
+								: Atd10(_r_1_2_5_8_25_56_57_64)
+								: Atd11(_r_1_2_5_8_25_56_57_65)
+								: Atd12(_r_1_2_5_8_25_56_57_66)
+						:m Num_person_dt(_r_1_2_5_8_25_67)
+							:g (_r_1_2_5_8_25_67_68) [1,1] 
+								: Less_3(_r_1_2_5_8_25_67_68_69)
+								: From_4_to_5(_r_1_2_5_8_25_67_68_70)
+								: From_6_to_8(_r_1_2_5_8_25_67_68_71)
+								: Equal_9(_r_1_2_5_8_25_67_68_72)
+								: more_9(_r_1_2_5_8_25_67_68_73)
+					: SM(_r_1_2_5_8_26)
+		:m Events(_r_1_3)
+			:o RP(_r_1_3_74)
+				:m Time(_r_1_3_74_76)
+					:o One_week(_r_1_3_74_76_77)
+			:m Sprint(_r_1_3_75)
+				:m Planning(_r_1_3_75_78)
+					:m Time_p(_r_1_3_75_78_82)
+						:g (_r_1_3_75_78_82_83) [1,1] 
+							: one_week_p(_r_1_3_75_78_82_83_84)
+							: three_hours(_r_1_3_75_78_82_83_85)
+							: sixteen_hours(_r_1_3_75_78_82_83_86)
+							: two_hours(_r_1_3_75_78_82_83_87)
+				:m Review(_r_1_3_75_79)
+					:m Time_r(_r_1_3_75_79_88)
+						:g (_r_1_3_75_79_88_89) [1,1] 
+							: r_8_hours(_r_1_3_75_79_88_89_90)
+							: r_5_minutes(_r_1_3_75_79_88_89_91)
+				:m DailySCRUM(_r_1_3_75_80)
+					:m Frequency(_r_1_3_75_80_92)
+						:g (_r_1_3_75_80_92_95) [1,1] 
+							: Many_times_a_day(_r_1_3_75_80_92_95_96)
+							: Three_times_week(_r_1_3_75_80_92_95_97)
+							: Twice_a_week(_r_1_3_75_80_92_95_98)
+							: Daily(_r_1_3_75_80_92_95_99)
+					:m Time_d(_r_1_3_75_80_93)
+						:g (_r_1_3_75_80_93_100) [1,1] 
+							: t_5_minutes(_r_1_3_75_80_93_100_101)
+							: t_15_to_20_minutes(_r_1_3_75_80_93_100_102)
+							: t_15_to_35_minutes(_r_1_3_75_80_93_100_103)
+							: t_15_minutes(_r_1_3_75_80_93_100_104)
+					:m Presence_d(_r_1_3_75_80_94)
+						:m Physical(_r_1_3_75_80_94_105)
+						:o Virtual(_r_1_3_75_80_94_106)
+							:g (_r_1_3_75_80_94_106_107) [1,*] 
+								: Google_Group(_r_1_3_75_80_94_106_107_108)
+								: Online(_r_1_3_75_80_94_106_107_109)
+								: Chat(_r_1_3_75_80_94_106_107_110)
+								: Email(_r_1_3_75_80_94_106_107_111)
+								: Google_docs(_r_1_3_75_80_94_106_107_112)
+				:m lenght(_r_1_3_75_81)
+					:g (_r_1_3_75_81_113) [1,1] 
+						: One_week(_r_1_3_75_81_113_114)
+						: Two_weeks(_r_1_3_75_81_113_115)
+						: Two_half_weeks(_r_1_3_75_81_113_116)
+						: Three_weeks(_r_1_3_75_81_113_117)
+						: Four_weeks(_r_1_3_75_81_113_118)
+						: Eight_weeks(_r_1_3_75_81_113_119)
+		:m Artifacts(_r_1_4)
+			:m PB(_r_1_4_120)
+				:m Prioritization(_r_1_4_120_123)
+					:g (_r_1_4_120_123_126) [1,1] 
+						: PO_DevTeam(_r_1_4_120_123_126_127)
+						: PO_SM_DevTeam(_r_1_4_120_123_126_128)
+						: Refinery_Requirements(_r_1_4_120_123_126_129)
+						: LOEs(_r_1_4_120_123_126_130)
+						: PO_alone(_r_1_4_120_123_126_131)
+				:m Representation(_r_1_4_120_124)
+					:g (_r_1_4_120_124_132) [1,1] 
+						: User_Stories(_r_1_4_120_124_132_133)
+						: Use_Cases(_r_1_4_120_124_132_134)
+				:m Estimate(_r_1_4_120_125)
+					:g (_r_1_4_120_125_135) [1,1] 
+						: Planning_Poker(_r_1_4_120_125_135_136)
+						: PO_DevTeam2(_r_1_4_120_125_135_137)
+						: Story_points_and_points_of_value(_r_1_4_120_125_135_138)
+						: Experienced_professionals(_r_1_4_120_125_135_139)
+						: SM_DevTeam(_r_1_4_120_125_135_140)
+			:m SB(_r_1_4_121)
+				:m Selection(_r_1_4_121_141)
+					:m DevTeam2(_r_1_4_121_141_142)
+				:m Status(_r_1_4_121_143)
+					:m Not_Started(_r_1_4_121_143_144)
+					:m In_progress(_r_1_4_121_143_145)
+					:m Completed(_r_1_4_121_143_146)
+					:m Blocked(_r_1_4_121_143_147)
+				:m Progress(_r_1_4_121_148)
+					:m Estimated_Time(_r_1_4_121_148_149)
+					:m PB_ID(_r_1_4_121_148_150)
+			:m Increment(_r_1_4_122)
+</feature_tree>
+<constraints>
+constraint_8:_r_1_2_5_8_9 or ~_r_1_4_120_125_135_137
+constraint_10:_r_1_2_5_8_25 or ~_r_1_4_121_141_142
+constraint_9:_r_1_2_5_8_26 or ~_r_1_4_120_125_135_140
+constraint_11:_r_1_2_5_8_9_17_35_36 or ~_r_1_4_120_123_126_131
+constraint_6:_r_1_2_5_8_9 or ~_r_1_4_120_123_126_128
+constraint_7:_r_1_2_5_8_9 or ~_r_1_4_120_123_126_131
+constraint_5:_r_1_2_5_8_9 or ~_r_1_4_120_123_126_127
+</constraints>
+</feature_model>
