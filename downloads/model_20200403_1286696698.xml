@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Apr 3, 2020 - 2:38 PM  -->
+<feature_model name="Warren">
+<meta>
+<data name="description">B2B Squad Features</data>
+<data name="creator">Leonardo Dalcin</data>
+<data name="address"></data>
+<data name="email">leonardo.dalcin@warrenbrasil.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Warren Brasil</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r B2B Squad Features(_r)
+	:m Cadastro(_r_1)
+		:g (_r_1_28) [1,1] 
+			: Cliente(_r_1_28_29)
+				:m Suitability(_r_1_28_29_56)
+					:g (_r_1_28_29_56_59) [1,1] 
+						: Feito pelo cliente(_r_1_28_29_56_59_60)
+							:m Link de convite(_r_1_28_29_56_59_60_62)
+						: Feito pelo parceiro(_r_1_28_29_56_59_61)
+							:m Email para criar senha(_r_1_28_29_56_59_61_63)
+				:m Senha(_r_1_28_29_65)
+					:g (_r_1_28_29_65_66) [1,1] 
+						: Email(_r_1_28_29_65_66_67)
+						: Link(_r_1_28_29_65_66_69)
+			: Parceiro(_r_1_28_30)
+				:m Nome completo(_r_1_28_30_37)
+				:m Email(_r_1_28_30_38)
+				:m Telefone(_r_1_28_30_39)
+				:m Cidade(_r_1_28_30_40)
+				:m Estado(_r_1_28_30_41)
+				:m Ocupacao(_r_1_28_30_42)
+				:o Instituicao onde trabalha(_r_1_28_30_43)
+				:m Certificacoes(_r_1_28_30_44)
+					:g (_r_1_28_30_44_45) [1,*] 
+						: CPA-10(_r_1_28_30_44_45_46)
+						: CPA-20(_r_1_28_30_44_45_47)
+						: CFP(_r_1_28_30_44_45_48)
+						: CGA(_r_1_28_30_44_45_49)
+						: CEA(_r_1_28_30_44_45_50)
+						: CFA(_r_1_28_30_44_45_53)
+						: CNPI(_r_1_28_30_44_45_54)
+						: ACIIA(_r_1_28_30_44_45_55)
+				:m Senha(_r_1_28_30_64)
+	:m Login(_r_6)
+		:m Requisitar dados ao user(_r_6_73)
+			:m Email(_r_6_73_74)
+			:m Senha(_r_6_73_75)
+	:o Listar Dados Do Cliente(_r_76)
+		:m Perfil De Investimento(_r_76_77)
+			:m Perguntas e respostas(_r_76_77_78)
+			:m Nivel de risco(_r_76_77_79)
+</feature_tree>
+<constraints>
+constraint_2:_r_1_28_30_38 or _r_1_28_29_65_66_67 or _r_6_73_74
+</constraints>
+</feature_model>

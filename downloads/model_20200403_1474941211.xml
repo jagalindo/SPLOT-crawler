@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Apr 3, 2020 - 12:13 PM  -->
+<feature_model name="a">
+<meta>
+<data name="description">v</data>
+<data name="creator">c</data>
+<data name="address"></data>
+<data name="email">2</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">4</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SHS(_r)
+	:m Admittance Control (_r_1)
+		:g (_r_1_5) [1,1] 
+			: Magnet Card Access(_r_1_5_6)
+			: Pin Access(_r_1_5_7)
+	:m Home Functions (_r_2)
+		:g (_r_2_10) [1,*] 
+			: Lighting Control(_r_2_10_11)
+			: Door Control (_r_2_10_12)
+			: Window Control (_r_2_10_13)
+	:o Room Surveillance (_r_3)
+		:g (_r_3_14) [1,1] 
+			: Camera Surveillance (_r_3_14_15)
+			: Indoor Motion Detection(_r_3_14_16)
+	:o Intrusion Detection (_r_4)
+		:m Cullet Detection (_r_4_17)
+		:o comprise Outdoor Motion Detection (_r_4_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
