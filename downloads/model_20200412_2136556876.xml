@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Apr 12, 2020 - 1:32 PM  -->
+<feature_model name="software paltform">
+<meta>
+<data name="description">software paltform based dspl</data>
+<data name="creator">akbari</data>
+<data name="address"></data>
+<data name="email">a.azimiau@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">iust</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r akbari(_r)
+	:m akbari 1(_r_1)
+	:o aakbari(_r_2)
+	:m as(_r_3)
+		:o ad(_r_3_4)
+		:o de(_r_3_5)
+	:m Feature-6(_r_6)
+		:o Feature-7(_r_6_7)
+		:o Feature-8(_r_6_8)
+	:m Feature-9(_r_9)
+		:o Feature-10(_r_9_10)
+		:o Feature-11(_r_9_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
