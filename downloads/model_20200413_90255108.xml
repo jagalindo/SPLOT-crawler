@@ -1,0 +1,76 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Apr 13, 2020 - 11:28 AM  -->
+<feature_model name="Lot Picker">
+<meta>
+<data name="description">random app</data>
+<data name="creator">Miro</data>
+<data name="address"></data>
+<data name="email">micromatx2@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Fun</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Lot Picker(_r)
+	:m Facilities(_r_1)
+	:m Time Selection(_r_2)
+		:g (_r_2_5) [1,1] 
+			: Today(_r_2_5_6)
+			: Yesterday(_r_2_5_7)
+			: User Defined(_r_2_5_9)
+			: Weeks(_r_2_5_10)
+			: Past 13 weeks(_r_2_5_11)
+			: Past 4 weeks(_r_2_5_12)
+			: Past 52 weeks(_r_2_5_13)
+	:o Dimension Selection(_r_14)
+		:g (_r_14_19) [1,*] 
+			: General(_r_14_19_20)
+				:g (_r_14_19_20_21) [1,*] 
+					: Route(_r_14_19_20_21_22)
+					: Operation(_r_14_19_20_21_23)
+					: Transcode(_r_14_19_20_21_24)
+					: Owner(_r_14_19_20_21_25)
+			: Others(_r_14_19_26)
+				:g (_r_14_19_26_27) [1,*] 
+					: EDC(_r_14_19_26_27_28)
+					: Attributes(_r_14_19_26_27_29)
+					: Marking Text(_r_14_19_26_27_30)
+			: 4M(_r_14_19_31)
+				:g (_r_14_19_31_32) [1,*] 
+					: Part Number(_r_14_19_31_32_33)
+					: Tool(_r_14_19_31_32_34)
+					: Equipment(_r_14_19_31_32_35)
+						:g (_r_14_19_31_32_35_36) [1,*] 
+							: Show only cluster components(_r_14_19_31_32_35_36_37)
+							: Equipment(_r_14_19_31_32_35_36_38)
+							: My Groups(_r_14_19_31_32_35_36_39)
+							: Equipment Groups(_r_14_19_31_32_35_36_40)
+					: Product Options(_r_14_19_31_32_57)
+						:g (_r_14_19_31_32_57_65) [1,*] 
+							: Process Class(_r_14_19_31_32_57_65_66)
+							: Process Group(_r_14_19_31_32_57_65_67)
+							: Technology(_r_14_19_31_32_57_65_68)
+							: Basic Type(_r_14_19_31_32_57_65_69)
+							: Process Type(_r_14_19_31_32_57_65_70)
+							: Product(_r_14_19_31_32_57_65_71)
+					: Package Options(_r_14_19_31_32_58)
+						:g (_r_14_19_31_32_58_59) [1,*] 
+							: Package(_r_14_19_31_32_58_59_60)
+							: Package Family(_r_14_19_31_32_58_59_61)
+							: Package Class(_r_14_19_31_32_58_59_62)
+							: Package Group(_r_14_19_31_32_58_59_63)
+							: Package Technology(_r_14_19_31_32_58_59_64)
+					: Material(_r_14_19_31_32_72)
+					: Recipe(_r_14_19_31_32_73)
+					: Wafer Slice(_r_14_19_31_32_74)
+					: Sales Name(_r_14_19_31_32_75)
+	:m Data Source(_r_76)
+		:g (_r_76_77) [1,1] 
+			: WIP(_r_76_77_78)
+			: Moves(_r_76_77_79)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
