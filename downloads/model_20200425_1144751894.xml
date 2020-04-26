@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Apr 25, 2020 - 10:16 PM  -->
+<feature_model name="Banana">
+<meta>
+<data name="description">BananaModel</data>
+<data name="creator">Sefika Efeoglu</data>
+<data name="address"></data>
+<data name="email">sefikaefeoglu@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UniPotsdam</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BananaOS(_r)
+	:m BananaFS(_r_1)
+	:m ARM Processor(_r_2)
+	:o Browser(_r_3)
+		:g (_r_3_6) [1,1] 
+			: PigeonBrowser(_r_3_6_7)
+			: BananaBrowser(_r_3_6_8)
+	:m Support Model(_r_4)
+		:g (_r_4_11) [1,1] 
+			: Other(_r_4_11_12)
+			: Remote(_r_4_11_13)
+	:m HelpCenter(_r_5)
+</feature_tree>
+<constraints>
+constraint_1:~_r or _r_1
+constraint_4:~_r_4 or _r_4_11_12 or _r_4_11_13
+constraint_5:_r_3 or _r_3_6_7 or _r_3_6_8
+constraint_2:~_r or _r_3
+constraint_3:~_r or _r_5
+</constraints>
+</feature_model>
