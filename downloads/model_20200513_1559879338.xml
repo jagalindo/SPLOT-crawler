@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 13, 2020 - 9:08 PM  -->
+<feature_model name="featursbahaa">
+<meta>
+<data name="description">softwaRE</data>
+<data name="creator">ahaa</data>
+<data name="address"></data>
+<data name="email">bahaa2awad@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">bmc</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r featurextraction(_r)
+	:m Feature-1(_r_1)
+	:o Feature-2(_r_2)
+	:g (_r_3) [1,*] 
+		: Feature-4(_r_3_4)
+			:m sdsd(_r_3_4_7)
+		: dsdsds(_r_3_6)
+			:o sdsd(_r_3_6_8)
+			:o sdsd(_r_3_6_9)
+	:m sdsd(_r_5)
+		:o sdsd(_r_5_10)
+		:m sdsdsss(_r_5_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
