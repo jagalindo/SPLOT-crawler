@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, May 24, 2020 - 9:38 PM  -->
+<feature_model name="ABC">
+<meta>
+<data name="description">DEF</data>
+<data name="creator">1</data>
+<data name="address"></data>
+<data name="email">2@4.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">1</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BC(_r)
+	:m function(_r_1)
+		:m speedometer(_r_1_9)
+		:m total distance(_r_1_10)
+		:m trip count(_r_1_11)
+		:m clock(_r_1_12)
+		:o average trip(_r_1_13)
+		:o average speed(_r_1_14)
+		:o stopwatch(_r_1_15)
+		:o pedal rotation(_r_1_17)
+	:m display(_r_2)
+	:m 4 controls(_r_3)
+	:o magnet(_r_4)
+	:o sensor(_r_5)
+		:g (_r_5_27) [1,1] 
+			: cable(_r_5_27_28)
+			: wireless(_r_5_27_29)
+	:m energy supply(_r_6)
+		:g (_r_6_30) [1,1] 
+			: battery(_r_6_30_31)
+			: rechargeable battery(_r_6_30_32)
+			: photovoltaic(_r_6_30_33)
+	:m bracket(_r_7)
+		:g (_r_7_34) [1,1] 
+			: cable ties(_r_7_34_35)
+			: O-rings(_r_7_34_36)
+	:m market(_r_8)
+		:g (_r_8_23) [1,1] 
+			: US(_r_8_23_24)
+			: Chinese(_r_8_23_25)
+			: Other(_r_8_23_26)
+	:m version(_r_18)
+		:m basic(_r_18_43)
+		:o advanced(_r_18_44)
+		:o deluxe(_r_18_45)
+	:m connection(_r_37)
+		:g (_r_37_46) [1,*] 
+			: heartbeat monitor(_r_37_46_47)
+			: navigation system(_r_37_46_48)
+			: nike bike shoes(_r_37_46_49)
+</feature_tree>
+<constraints>
+constraint_30:~_r_37 or _r_18_45
+constraint_31:_r_5_27_29 or ~_r_37_46_49
+constraint_28:~_r_8_23_24 or ~_r_5_27_28
+constraint_29:~_r_8_23_25 or ~_r_5_27_29
+constraint_22:~_r_1_14 or _r_18_44
+constraint_9:_r_4 or ~_r_1_9
+constraint_10:_r_5 or ~_r_1_17
+constraint_23:~_r_1_15 or _r_18_44
+constraint_11:_r_4 or ~_r_1_17
+constraint_7:_r_5 or ~_r_1_9
+constraint_21:~_r_1_13 or _r_18_44
+constraint_26:~_r_5_27_29 or ~_r_6_30_33
+constraint_24:~_r_1_17 or _r_18_45
+</constraints>
+</feature_model>
