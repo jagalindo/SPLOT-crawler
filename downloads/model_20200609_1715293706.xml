@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jun 9, 2020 - 11:22 PM  -->
+<feature_model name="Smartwatch">
+<meta>
+<data name="description">Smartwatch</data>
+<data name="creator">Viet-Man Le</data>
+<data name="address"></data>
+<data name="email">vietman.le@ist.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Institute for Software Technology, Graz University of Technology</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Smartwatch(_r)
+	:m Connector(_r_1)
+		:g (_r_1_2) [1,*] 
+			: GPS(_r_1_2_3)
+			: Cellular(_r_1_2_4)
+			: Wifi(_r_1_2_5)
+			: Bluetooth(_r_1_2_6)
+	:m Screen(_r_7)
+		:g (_r_7_8) [1,1] 
+			: Analog(_r_7_8_9)
+			: High Resolution(_r_7_8_10)
+			: E-ink(_r_7_8_11)
+	:o Camera(_r_12)
+	:o Compass(_r_13)
+</feature_tree>
+<constraints>
+constraint_1:_r_7_8_10 or ~_r_12
+constraint_2:~_r_1_2_4 or ~_r_7_8_9
+</constraints>
+</feature_model>
