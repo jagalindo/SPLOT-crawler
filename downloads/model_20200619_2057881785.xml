@@ -1,0 +1,67 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jun 19, 2020 - 7:40 PM  -->
+<feature_model name="Bike computers">
+<meta>
+<data name="description">Bike computers feature model</data>
+<data name="creator">Vladislav Maliutin, Georgy Moskvitin</data>
+<data name="address"></data>
+<data name="email">gekomo97@gmail.com, vladmalsims@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Rostock University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BC(_r)
+	:m Version(_r_1)
+		:m Basic(_r_1_2)
+			:m Clock(_r_1_2_5)
+			:m Total distance(_r_1_2_6)
+			:m Trip count(_r_1_2_7)
+			:m Speedometer(_r_1_2_8)
+				:m Magnet(_r_1_2_8_9)
+				:m Wheel sensor(_r_1_2_8_10)
+					:g (_r_1_2_8_10_37) [1,1] 
+						: Wireless wheel sensor(_r_1_2_8_10_37_53)
+						: Conventional Wheel sensor(_r_1_2_8_10_37_56)
+		:o Advanced(_r_1_3)
+			:m Average trip(_r_1_3_22)
+			:m Average speed(_r_1_3_23)
+			:m Stopwatch(_r_1_3_24)
+		:o Deluxe(_r_1_4)
+			:m Pedal rotation(_r_1_4_26)
+				:m Magnet(_r_1_4_26_30)
+				:m Pedal sensor(_r_1_4_26_31)
+					:g (_r_1_4_26_31_32) [1,1] 
+						: Wireless Pedal sensor(_r_1_4_26_31_32_54)
+						: Conventional Pedal sensor(_r_1_4_26_31_32_55)
+			:o GPS-navigation connect(_r_1_4_27)
+			:o Nike bike shoes connection(_r_1_4_28)
+			:o HR monitor connection(_r_1_4_29)
+	:m Display(_r_11)
+	:m 4 controls(_r_12)
+	:m Mounting with bracket(_r_13)
+		:g (_r_13_19) [1,1] 
+			: Cable ties(_r_13_19_20)
+			: O-rings(_r_13_19_21)
+	:m Energy supply(_r_40)
+		:g (_r_40_41) [1,1] 
+			: Battery(_r_40_41_42)
+			: Rechargeable battery(_r_40_41_44)
+			: Photovoltaic cell(_r_40_41_46)
+	:m Market(_r_47)
+		:o USA(_r_47_48)
+		:o China(_r_47_49)
+		:o Others(_r_47_51)
+</feature_tree>
+<constraints>
+constraint_10:~_r_40_41_46 or ~_r_1_4_26_31_32_54
+constraint_11:~_r_40_41_46 or ~_r_1_2_8_10_37_53
+constraint_6:_r_1_3 or ~_r_1_4
+constraint_12:~_r_47_49 or ~_r_1_2_8_10_37_53
+constraint_7:_r_1_2 or ~_r_1_3
+constraint_13:~_r_47_49 or ~_r_1_4_26_31_32_54
+constraint_15:~_r_47_48 or ~_r_1_4_26_31_32_55
+</constraints>
+</feature_model>
