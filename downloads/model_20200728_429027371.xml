@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jul 28, 2020 - 7:09 AM  -->
+<feature_model name="VisualizationWidget">
+<meta>
+<data name="description">A FM to configure a relevant widget given high-level visual insights</data>
+<data name="creator">Ivan Logre</data>
+<data name="address"></data>
+<data name="email">ivan.logre@kaizen-solutions.net</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">KSZ Lab, Kaizen Solutions</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VisualizationWidget(_r)
+	:m Insights(_r_1)
+		:o Relationship(_r_1_2)
+		:g (_r_1_3) [1,*] 
+			: Comparison(_r_1_3_4)
+			: Proportion(_r_1_3_5)
+			: Distribution(_r_1_3_6)
+			: Scalar(_r_1_3_7)
+		:o Range(_r_1_8)
+		:g (_r_1_9) [1,1] 
+			: Probability(_r_1_9_10)
+			: Hierarchy(_r_1_9_11)
+		:o Extremum(_r_1_12)
+		:g (_r_1_13) [1,*] 
+			: Part of a Whole(_r_1_13_14)
+			: Discrete(_r_1_13_15)
+			: Over Time(_r_1_13_16)
+			: Location(_r_1_13_17)
+			: Pattern(_r_1_13_18)
+			: Variation(_r_1_13_19)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
