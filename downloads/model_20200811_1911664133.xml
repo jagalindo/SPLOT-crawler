@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Aug 11, 2020 - 2:16 AM  -->
+<feature_model name="Votação Eletrônica">
+<meta>
+<data name="description">Modegalem de características para um sistema de votação em urna eletrônica</data>
+<data name="creator">Bruno Vieira</data>
+<data name="address"></data>
+<data name="email">brunoa15@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema de votacao(_r)
+	:m Tipo de votacao(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Presidente e senadores(_r_1_2_3)
+			: Prefeito e vereador(_r_1_2_4)
+			: Chefe de Departamento(_r_1_2_5)
+	:m Seguranca(_r_6)
+		:m Senha de inicio(_r_6_9)
+		:g (_r_6_10) [1,1] 
+			: Identidade(_r_6_10_11)
+			: CPF(_r_6_10_12)
+			: Titulo de eleitor(_r_6_10_13)
+	:o Peso do voto(_r_14)
+	:m Estatisticas finais(_r_15)
+		:m Numero de votos(_r_15_16)
+		:m Vencedores(_r_15_17)
+		:o Porcentagem de votos(_r_15_18)
+	:m Voto em branco(_r_19)
+	:o Voto nulo(_r_21)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_3 or _r_6_10_13
+constraint_6:~_r_1_2_5 or ~_r_21
+constraint_4:~_r_1 or _r_6_9
+constraint_5:~_r_1_2_5 or _r_14
+constraint_2:~_r_1_2_4 or _r_6_10_13
+constraint_3:~_r_1_2_5 or _r_6_10_11 or _r_6_10_12
+</constraints>
+</feature_model>

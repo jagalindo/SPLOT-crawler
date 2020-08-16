@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Aug 15, 2020 - 6:04 PM  -->
+<feature_model name="Electronic Urn">
+<meta>
+<data name="description">Eletronic urn for an election</data>
+<data name="creator">Rodrigo Moreira</data>
+<data name="address"></data>
+<data name="email">radro@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ElectronicUrn(_r)
+	:m Keyboard(_r_1)
+		:m NumericKeyboard(_r_1_6)
+		:m ConfirmButton(_r_1_7)
+		:m UndoButton(_r_1_8)
+		:o VoidButton(_r_1_9)
+	:m Screen(_r_2)
+	:m Statistics(_r_3)
+		:m VoteCounts(_r_3_10)
+			:m PerCandidate(_r_3_10_11)
+				:o ByVoterCategory(_r_3_10_11_12)
+			:m TotalVotes(_r_3_10_13)
+	:m Authentication(_r_4)
+		:m VoterControl(_r_4_14)
+			:g (_r_4_14_15) [1,1] 
+				: Citizen(_r_4_14_15_16)
+				: Faculty(_r_4_14_15_17)
+		:m ElectionControl(_r_4_22)
+			:m StartElection(_r_4_22_23)
+			:m EndElection(_r_4_22_24)
+	:m ElectionManagement(_r_5)
+		:m ManageElection(_r_5_18)
+			:m ManageCandidates(_r_5_18_20)
+				:g (_r_5_18_20_37) [1,1] 
+					: Federal(_r_5_18_20_37_38)
+						:m President(_r_5_18_20_37_38_41)
+						:m Senator(_r_5_18_20_37_38_42)
+					: Municipal(_r_5_18_20_37_39)
+						:m Mayor(_r_5_18_20_37_39_43)
+						:m CityCouncilor(_r_5_18_20_37_39_44)
+					: Department(_r_5_18_20_37_40)
+						:m DepartmentHead(_r_5_18_20_37_40_45)
+			:o ManageVoteWeight(_r_5_18_21)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

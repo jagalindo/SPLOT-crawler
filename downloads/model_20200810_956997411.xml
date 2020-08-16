@@ -1,0 +1,63 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 10, 2020 - 7:31 PM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Exercicio da criacao de uma Urna eletronica </data>
+<data name="creator">Pedro</data>
+<data name="address"></data>
+<data name="email">tfgahbbjmdqwfbabvd@awdrt.net</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Teclado(_r_5)
+		:m Tecla numerica(_r_5_6)
+		:m Tecla Confirma(_r_5_7)
+		:m Tecla branco(_r_5_8)
+		:m Tecla Corrige(_r_5_10)
+	:m Eleicao(_r_12)
+		:m Votar(_r_12_41)
+			:m Acumular votos(_r_12_41_42)
+			:m Votacao dos cargos(_r_12_41_43)
+				:g (_r_12_41_43_44) [1,*] 
+					: Presidente(_r_12_41_43_44_45)
+					: Senador(_r_12_41_43_44_46)
+					: Prefeito(_r_12_41_43_44_47)
+					: Vereador(_r_12_41_43_44_48)
+					: Chefe de departamento(_r_12_41_43_44_49)
+	:m Tela com informacoes(_r_13)
+		:m Foto do candidato (_r_13_16)
+		:m Dados do candidato(_r_13_17)
+		:m Instrucoes de uso(_r_13_19)
+	:m Administrador da eleicao(_r_14)
+		:m Finalizacao da eleicao(_r_14_26)
+			:m Apresentar estatisticas(_r_14_26_66)
+				:o Separar votos por tipo de eleitor(_r_14_26_66_69)
+		:m Inicializacao(_r_14_50)
+			:m Senha(_r_14_50_51)
+			:g (_r_14_50_52) [1,1] 
+				: TSE(_r_14_50_52_53)
+				: TRE(_r_14_50_52_54)
+				: Universidade(_r_14_50_52_55)
+	:m Identificacao do usuario(_r_20)
+		:m Voto ja realizado(_r_20_27)
+		:m Identificar usuario(_r_20_56)
+			:g (_r_20_56_58) [1,1] 
+				: Eleitor(_r_20_56_58_59)
+					:m Titulo de eleitor(_r_20_56_58_59_60)
+					:o Identificacao biometrica(_r_20_56_58_59_61)
+				: Funcionario da universidade(_r_20_56_58_62)
+					:g (_r_20_56_58_62_63) [1,*] 
+						: Identidade(_r_20_56_58_62_63_64)
+						: CPF(_r_20_56_58_62_63_65)
+			:m Identificar peso de voto do eleitor(_r_20_56_67)
+		:o Absteve da votacao(_r_20_70)
+</feature_tree>
+<constraints>
+constraint_3:_r_20_56_67 or _r_14_26_66_69
+</constraints>
+</feature_model>

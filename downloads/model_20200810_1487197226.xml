@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 10, 2020 - 7:14 PM  -->
+<feature_model name="Urna Eleitoral">
+<meta>
+<data name="description">Modelo de Features para Urna Eletronica</data>
+<data name="creator">André Heringer</data>
+<data name="address"></data>
+<data name="email">andregomesh@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Teclado(_r_1)
+		:m Teclado-Numerico(_r_1_11)
+		:m Tecla-Confirmar(_r_1_12)
+		:m Tecla-Branca(_r_1_13)
+		:m Tecla-Corrigir(_r_1_14)
+	:m Tela(_r_2)
+		:m Foto-do-Candidato(_r_2_15)
+		:m Instrucoes-de-Uso(_r_2_16)
+		:m Descricao-do-Candidato(_r_2_17)
+	:m Inicializa-urna(_r_3)
+		:m Iniciar-Urna-Com-Senha(_r_3_18)
+		:g (_r_3_35) [1,*] 
+			: inicializar com cadastr od TSE(_r_3_35_36)
+			: inicializar com cadastro TRE(_r_3_35_37)
+			: Inicializar como Professor ativo(_r_3_35_38)
+	:m Indentificacao-usuario(_r_5)
+		:o Identificacao-biometrica(_r_5_9)
+		:m Insercao-titulo-eleitoral(_r_5_10)
+		:o RG e CPF(_r_5_39)
+	:m Encerrar-Urna(_r_19)
+		:m Encerrar-urna-com-senha(_r_19_20)
+	:m eleicao(_r_21)
+		:m Cargos(_r_21_24)
+		:m Votar(_r_21_29)
+			:g (_r_21_29_30) [1,*] 
+				: Presidente(_r_21_29_30_31)
+				: Prefeito(_r_21_29_30_32)
+				: Vereador(_r_21_29_30_33)
+				: Senador(_r_21_29_30_34)
+		:m Selecionar peso do eleitor(_r_21_40)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

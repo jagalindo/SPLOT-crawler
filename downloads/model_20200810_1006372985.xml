@@ -1,0 +1,60 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 10, 2020 - 7:25 PM  -->
+<feature_model name="Urna_Eletronica">
+<meta>
+<data name="description">Modelo para eleicoes</data>
+<data name="creator">Raphael H Rangel</data>
+<data name="address"></data>
+<data name="email">raphaelrhr@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Inicializa(_r_1)
+		:g (_r_1_38) [1,*] 
+			: Administrador(_r_1_38_39)
+				:g (_r_1_38_39_42) [1,*] 
+					: TSE(_r_1_38_39_42_43)
+					: TRE(_r_1_38_39_42_44)
+					: Universidade(_r_1_38_39_42_45)
+				:m Senha(_r_1_38_39_46)
+			: Eleitor(_r_1_38_40)
+				:o Identificacao_Biometrica(_r_1_38_40_51)
+				:m Titulo_Eleitoral(_r_1_38_40_52)
+				:m Ja_Realizou_O_Voto(_r_1_38_40_64)
+			: Universidade(_r_1_38_53)
+				:g (_r_1_38_53_54) [1,*] 
+					: CPF(_r_1_38_53_54_55)
+					: Identidade(_r_1_38_53_54_56)
+	:m Tela(_r_2)
+		:m Foto_Do_Candidato(_r_2_3)
+		:m Informacoes_Do_Candidato(_r_2_4)
+		:o Tutorial(_r_2_15)
+	:m Teclado(_r_5)
+		:m Teclado_Numerico(_r_5_6)
+		:m Confirmar(_r_5_7)
+		:m Branco_Nulo(_r_5_8)
+		:m Corrigir(_r_5_9)
+	:m Eleicao(_r_16)
+		:g (_r_16_57) [1,*] 
+			: Pres_Sen(_r_16_57_58)
+				:m Presidente(_r_16_57_58_59)
+				:m Senador(_r_16_57_58_60)
+			: Vere_Pref(_r_16_57_61)
+				:m Vereador(_r_16_57_61_62)
+				:m Prefeito(_r_16_57_61_63)
+	:m Finaliza(_r_65)
+		:g (_r_65_67) [1,*] 
+			: TSE(_r_65_67_68)
+			: TRE(_r_65_67_69)
+			: Universidade(_r_65_67_70)
+		:m Senha(_r_65_72)
+		:m Estatisticas_Da_Eleicao(_r_65_75)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

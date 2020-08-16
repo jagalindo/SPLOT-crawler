@@ -1,0 +1,56 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Aug 11, 2020 - 12:32 AM  -->
+<feature_model name="UrnaEletronica">
+<meta>
+<data name="description">Modelo de características para uma aplicação de urna eletrônica</data>
+<data name="creator">Gustavo Pereira</data>
+<data name="address"></data>
+<data name="email">ghapereira@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r UrnaEletronica(_r)
+	:m AutenticacaoAdministradorEleicao(_r_2)
+		:m IniciarEleicao(_r_2_3)
+		:m FinalizarEleicao(_r_2_5)
+		:m CadastroAdministrador(_r_2_7)
+	:m VotacaoEleitor(_r_6)
+		:m IdentificacaoEleitor(_r_6_8)
+			:g (_r_6_8_20) [1,1] 
+				: TituloEleitor(_r_6_8_20_21)
+				: CPF ou RG(_r_6_8_20_24)
+		:o EleitorVotaUmaVez(_r_6_25)
+		:m TipoVoto(_r_6_26)
+			:o VotoValido(_r_6_26_27)
+			:o VotoNulo(_r_6_26_28)
+			:o VotoEmBranco(_r_6_26_29)
+		:m Candidatos(_r_6_30)
+			:o Presidente(_r_6_30_31)
+			:o Senador1(_r_6_30_32)
+			:o Senador2(_r_6_30_33)
+			:o Prefeito(_r_6_30_34)
+			:o Vereador(_r_6_30_35)
+			:o ChefeDepartamento(_r_6_30_36)
+		:m PesoVoto(_r_6_39)
+			:g (_r_6_39_40) [1,1] 
+				: PesoIgual(_r_6_39_40_41)
+				: PesoDiferente(_r_6_39_40_42)
+	:m ResultadosEleicao(_r_12)
+		:m ExibicaoEstatisticas(_r_12_13)
+			:g (_r_12_13_45) [1,*] 
+				: VotoDiscriminadoPorCategoriaEleitor(_r_12_13_45_46)
+				: ExibirVencedor(_r_12_13_45_47)
+				: ExibirDerrotados(_r_12_13_45_48)
+				: ExibirQuantidadeVotos(_r_12_13_45_49)
+		:o ResolucaoEmpates(_r_12_14)
+	:m InclusaoCandidato(_r_15)
+		:o ValidacaoCandidato(_r_15_16)
+</feature_tree>
+<constraints>
+constraint_3:_r_6_8_20_21 or _r_6_8_20_24
+</constraints>
+</feature_model>

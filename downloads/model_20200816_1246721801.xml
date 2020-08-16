@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Aug 16, 2020 - 8:40 PM  -->
+<feature_model name="Urna">
+<meta>
+<data name="description">Urna de votação</data>
+<data name="creator">Marcelo</data>
+<data name="address"></data>
+<data name="email">marcelolima381@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Ligar urna(_r_1)
+		:m Autenticacao(_r_1_3)
+	:m Desligar urna(_r_2)
+		:m Autenticacao(_r_2_4)
+	:m Iniciar votacao(_r_5)
+		:m Identificacao eleitor(_r_5_10)
+		:o Peso do voto(_r_5_11)
+		:m Votar(_r_5_12)
+			:g (_r_5_12_13) [1,1] 
+				: Numero do candidato(_r_5_12_13_14)
+				: Votar em branco(_r_5_12_13_15)
+			:g (_r_5_12_16) [1,1] 
+				: Corrigir voto(_r_5_12_16_17)
+				: Confirmar voto(_r_5_12_16_18)
+	:m Estatistica(_r_19)
+		:m Candidatos eleitos(_r_19_20)
+		:m Votos por candidato(_r_19_21)
+		:o Votos validos em porcentagem(_r_19_22)
+		:o Candidatos derrotados(_r_19_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

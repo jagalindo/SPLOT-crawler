@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Aug 11, 2020 - 6:05 PM  -->
+<feature_model name="Urna Eletrônica">
+<meta>
+<data name="description">Urma eletrônica para votações</data>
+<data name="creator">Rodrigo Moreira</data>
+<data name="address"></data>
+<data name="email">radro.rs@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ElectronicUrn(_r)
+	:m Keyboard(_r_1)
+	:m Screen(_r_2)
+	:m Statistics(_r_3)
+	:m Authentication(_r_4)
+		:m ElectionControl(_r_4_5)
+			:m ElectionStart(_r_4_5_6)
+			:m ElectionEnd(_r_4_5_7)
+		:m VoterControl(_r_4_8)
+			:g (_r_4_8_9) [1,1] 
+				: Citizen(_r_4_8_9_10)
+				: Faculty(_r_4_8_9_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

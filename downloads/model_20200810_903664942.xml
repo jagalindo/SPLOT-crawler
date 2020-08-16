@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 10, 2020 - 11:45 PM  -->
+<feature_model name="Urna eletrônica">
+<meta>
+<data name="description">Urna eletrônica com suporte a cargos públicos (políticos e universitários)</data>
+<data name="creator">Victor Guerra Veloso</data>
+<data name="address"></data>
+<data name="email">victorveloso@ufmg.dcc.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna eletronica(_r)
+	:m Autenticacao(_r_3)
+		:o inicio e termino eleicao(_r_3_20)
+			:g (_r_3_20_21) [1,*] 
+				: senha simples(_r_3_20_21_22)
+				: somente credenciado(_r_3_20_21_23)
+		:m eleitor(_r_3_24)
+			:g (_r_3_24_25) [1,*] 
+				: Titulo de eleitor(_r_3_24_25_26)
+				: Identidade(_r_3_24_25_27)
+				: CPF(_r_3_24_25_28)
+				: Tipo de cargo(_r_3_24_25_34)
+	:m Votos(_r_6)
+		:g (_r_6_7) [1,*] 
+			: Chefe de departamento(_r_6_7_8)
+			: Vereador(_r_6_7_9)
+			: Prefeito(_r_6_7_11)
+			: Presidente(_r_6_7_12)
+			: Senadores(_r_6_7_43)
+		:o Branco(_r_6_13)
+		:o Anular voto(_r_6_14)
+	:m Estatisticas(_r_29)
+		:g (_r_29_32) [1,*] 
+			: categorizar por cargo(_r_29_32_33)
+			: percentual de votos(_r_29_32_36)
+			: numero de votos(_r_29_32_37)
+	:o Voto obrigatorio(_r_35)
+	:o Peso de votos(_r_38)
+		:g (_r_38_41) [1,1] 
+			: com base em tipo de cargo(_r_38_41_42)
+</feature_tree>
+<constraints>
+constraint_4:~_r_29_32_33 or _r_3_24_25_34
+constraint_2:_r_3_24_25_34 or ~_r_38_41_42
+constraint_3:_r_3_24_25_26 or _r_3_24_25_34
+</constraints>
+</feature_model>

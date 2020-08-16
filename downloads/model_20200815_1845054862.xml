@@ -1,0 +1,64 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Aug 15, 2020 - 10:44 PM  -->
+<feature_model name="UrnaEletronica -Atividade7">
+<meta>
+<data name="description">Urna eletônica para atividade do curso</data>
+<data name="creator">Thiago Morais Araújo</data>
+<data name="address"></data>
+<data name="email">thimorais@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urnaEletronica(_r)
+	:m TelaUrna(_r_5)
+		:m fotoCandidato(_r_5_6)
+		:m nomeCandidato(_r_5_7)
+		:m numeroCandidato(_r_5_8)
+		:m instrucoes(_r_5_9)
+	:m TecladoUrna(_r_10)
+		:m tecladoNumerico(_r_10_11)
+		:m teclaBranco(_r_10_12)
+		:m teclaCorrige(_r_10_13)
+		:m teclaConfirma(_r_10_14)
+	:m iniciarSessaoEleitoral(_r_15)
+		:g (_r_15_16) [1,1] 
+			: credenciadoTSE(_r_15_16_17)
+			: credenciadoTRE(_r_15_16_18)
+			: senhaFuncionario(_r_15_16_19)
+	:m finalizarSessaoEleitoral(_r_20)
+		:g (_r_20_21) [1,1] 
+			: TSE-TRE(_r_20_21_22)
+				:g (_r_20_21_22_23) [1,1] 
+					: credenciadoTSE(_r_20_21_22_23_24)
+					: credenciadoTRE(_r_20_21_22_23_25)
+				:m exibirEstatisticas(_r_20_21_22_27)
+				:m exibirVencedor(_r_20_21_22_28)
+			: senhaFuncionario(_r_20_21_31)
+				:m exibirEstatisticaCategoria(_r_20_21_31_32)
+	:m iniciarSessaoVotacao(_r_33)
+		:g (_r_33_34) [1,1] 
+			: TSE-TRE(_r_33_34_35)
+				:m identificarUsuario(_r_33_34_35_36)
+					:m tituloEleitoral(_r_33_34_35_36_37)
+					:o biometria(_r_33_34_35_36_38)
+					:o RG(_r_33_34_35_36_39)
+					:o CPF(_r_33_34_35_36_40)
+				:g (_r_33_34_35_41) [1,1] 
+					: votacaoPresidenteSenadores(_r_33_34_35_41_42)
+					: votacaoPrefeitoVereadores(_r_33_34_35_41_43)
+			: senhaFuncionario(_r_33_34_45)
+				:m identificarUsuario(_r_33_34_45_46)
+					:m RGouCPF(_r_33_34_45_46_49)
+				:g (_r_33_34_45_50) [1,1] 
+					: professor(_r_33_34_45_50_51)
+						:m votoProfessorPeso2(_r_33_34_45_50_51_53)
+					: tecnicoAdministrativo(_r_33_34_45_50_52)
+						:m votoTecnicoPeso1(_r_33_34_45_50_52_54)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

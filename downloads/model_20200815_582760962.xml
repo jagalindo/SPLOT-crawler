@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Aug 15, 2020 - 3:54 AM  -->
+<feature_model name="urna_eletronica-Mateus">
+<meta>
+<data name="description">Sistema de votação para eleições departamentais, municipais, federais</data>
+<data name="creator">Mateus Catrinque</data>
+<data name="address"></data>
+<data name="email">mcatrinque@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m iniciar_sessao(_r_1)
+		:m senha_administrador(_r_1_2)
+	:m iniciar_votacao(_r_9)
+		:m id_eleitor(_r_9_13)
+		:o confirma_eleitor(_r_9_15)
+		:o peso_voto(_r_9_16)
+		:m voto_candidato_1(_r_9_17)
+			:g (_r_9_17_21) [1,1] 
+				: numero_candidato(_r_9_17_21_22)
+				: branco(_r_9_17_21_23)
+			:g (_r_9_17_33) [1,1] 
+				: corrige(_r_9_17_33_34)
+				: confirma_voto(_r_9_17_33_35)
+		:o voto_candidato_2(_r_9_26)
+			:g (_r_9_26_27) [1,1] 
+				: numero_candidato(_r_9_26_27_28)
+				: branco(_r_9_26_27_29)
+			:g (_r_9_26_30) [1,1] 
+				: corrige(_r_9_26_30_31)
+				: cofirma_voto(_r_9_26_30_32)
+		:o voto_candidato_3(_r_9_32)
+			:g (_r_9_32_33) [1,1] 
+				: numero_candidato(_r_9_32_33_34)
+				: branco(_r_9_32_33_35)
+			:g (_r_9_32_36) [1,1] 
+				: corrige(_r_9_32_36_37)
+				: confirma_voto(_r_9_32_36_38)
+	:m finalizar_sessao(_r_39)
+		:m senha_administrador(_r_39_40)
+	:m estatisticas(_r_42)
+		:m numero_votos_candidato(_r_42_44)
+		:o porcentagem_votos_validos(_r_42_45)
+		:m candidatos_eleitos(_r_42_46)
+		:o candidatos_derrotados(_r_42_47)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

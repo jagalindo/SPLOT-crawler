@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Aug 13, 2020 - 6:16 PM  -->
+<feature_model name="Election Ballot System">
+<meta>
+<data name="description">Feature model for Election Balloting systems</data>
+<data name="creator">Henrique Urban Pessoa</data>
+<data name="address"></data>
+<data name="email">henriqueup@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Ballot Election System(_r)
+	:o Add Moderator(_r_1)
+		:m Set Password(_r_1_5)
+		:g (_r_1_22) [1,1] 
+			: Set TSE credentials(_r_1_22_23)
+			: Set TRE credentials(_r_1_22_24)
+	:m Add Voter(_r_2)
+		:m Set Name(_r_2_3)
+		:m Set ID(_r_2_4)
+	:m Add Candidate(_r_8)
+		:m Set Name(_r_8_9)
+		:o Set Party(_r_8_10)
+		:o Is Active(_r_8_29)
+	:m Reset Election(_r_11)
+	:m Calculate Results(_r_12)
+		:m Show Winner(_r_12_27)
+		:o Show Statistical Report(_r_12_28)
+	:m Add Vote(_r_13)
+		:m Set Voter(_r_13_14)
+		:m Add Candidate(_r_13_24)
+			:o Is Blank(_r_13_24_25)
+		:o Set Weight(_r_13_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

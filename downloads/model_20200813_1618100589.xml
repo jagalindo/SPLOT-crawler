@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Aug 13, 2020 - 6:12 PM  -->
+<feature_model name="Urna Eletronica">
+<meta>
+<data name="description">Exercicio de Reutilizacao de Software</data>
+<data name="creator">Thiago Matos Mohallem</data>
+<data name="address"></data>
+<data name="email">thimohallem@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m TecladoNumerico(_r_1)
+	:m Visor(_r_2)
+		:o Foto do candidato(_r_2_16)
+		:o Nome do candidato(_r_2_17)
+		:o Mostrar dados do eleitor(_r_2_21)
+	:m Modelo(_r_3)
+	:m BotaoBranco(_r_4)
+	:m BotaoCorrige(_r_5)
+	:m BotaoConfirma(_r_6)
+	:m Seguranca(_r_7)
+		:m Senha para travar a urna(_r_7_9)
+		:m Senha para destravar a urna(_r_7_10)
+	:m Cadidatos(_r_8)
+	:m Tipo de voto(_r_11)
+		:g (_r_11_22) [1,*] 
+			: Voto nulo(_r_11_22_23)
+			: Voto branco(_r_11_22_24)
+			: Voto valido(_r_11_22_25)
+		:o Peso do Voto(_r_11_27)
+	:m Resultado(_r_12)
+		:m Estatisticas da votacao(_r_12_29)
+			:o Mostrar somente ganhadores(_r_12_29_30)
+			:o Mostrar ganhadores e perdedores(_r_12_29_31)
+	:m Dados do Eleitor(_r_13)
+		:o Informar CPF(_r_13_18)
+		:o Informar Identidade(_r_13_19)
+		:o Informar Titulo de Eleitor(_r_13_20)
+	:m Numero de Votos Necessarios(_r_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
