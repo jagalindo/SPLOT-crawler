@@ -1,0 +1,58 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 17, 2020 - 1:40 AM  -->
+<feature_model name="Sistema de Votação">
+<meta>
+<data name="description">Sistema para votação em eleições</data>
+<data name="creator">Romulo Nascimento</data>
+<data name="address"></data>
+<data name="email">romulonascimento@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Teclado Numerico(_r_1)
+	:m Tecla Confirmar(_r_2)
+	:m Tecla Corrigir(_r_3)
+	:o Tecla Voto em Branco(_r_4)
+	:m Tela(_r_5)
+	:m Votacao(_r_6)
+		:g (_r_6_8) [1,*] 
+			: Presidente(_r_6_8_9)
+			: Senadores(_r_6_8_10)
+			: Prefeito(_r_6_8_24)
+			: Vereador(_r_6_8_25)
+			: Chefe de Departamento(_r_6_8_26)
+		:m Inicializacao de Sessao(_r_6_11)
+		:m Finalizacao de Sessao(_r_6_12)
+		:m Configuracao(_r_6_13)
+			:m Perfis de Eleitores(_r_6_13_27)
+				:o Peso do Voto(_r_6_13_27_28)
+				:m Tipo de Identificacao(_r_6_13_27_35)
+					:g (_r_6_13_27_35_36) [1,*] 
+						: Titulo de Eleitor(_r_6_13_27_35_36_37)
+						: CPF(_r_6_13_27_35_36_38)
+						: RG(_r_6_13_27_35_36_39)
+				:o Obrigatoriedade(_r_6_13_27_40)
+			:m Administradores(_r_6_13_29)
+				:m Senha(_r_6_13_29_30)
+			:o Turnos(_r_6_13_31)
+				:m Configuracao de Turno(_r_6_13_31_34)
+		:m Resultados(_r_6_17)
+			:m Votos por Candidato(_r_6_17_18)
+				:m Valor absoluto(_r_6_17_18_19)
+				:m Valor percentual(_r_6_17_18_20)
+				:o Votos por perfil de eleitor(_r_6_17_18_41)
+			:m Classificacao(_r_6_17_21)
+				:m Mais votados(_r_6_17_21_22)
+					:o Por perfil de eleitor(_r_6_17_21_22_42)
+				:m Menos votados(_r_6_17_21_23)
+					:o Por perfil de eleitor(_r_6_17_21_23_43)
+	:o Voto Nulo(_r_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

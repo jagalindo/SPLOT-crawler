@@ -1,0 +1,60 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Aug 17, 2020 - 1:28 AM  -->
+<feature_model name="Urna - jh">
+<meta>
+<data name="description">modelo de urna eletronica</data>
+<data name="creator">joao henrique</data>
+<data name="address"></data>
+<data name="email">joaoh6.costa@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna(_r)
+	:m Inicializar urna(_r_1)
+		:m Senha(_r_1_3)
+			:g (_r_1_3_4) [1,1] 
+				: Credencial TSE(_r_1_3_4_5)
+				: Credencial TRE(_r_1_3_4_6)
+				: Credencial Heitoria Universidade(_r_1_3_4_7)
+	:m Votacao(_r_8)
+		:g (_r_8_9) [1,1] 
+			: 1 Presidente e 2 Senadores(_r_8_9_10)
+				:g (_r_8_9_10_11) [1,1] 
+					: Identificador do presidente(_r_8_9_10_11_12)
+					: Voto em branco(_r_8_9_10_11_13)
+					: Voto nulo(_r_8_9_10_11_14)
+					: Identificador do senador(_r_8_9_10_11_18)
+			: 1 Prefeito e 1 Vereador(_r_8_9_15)
+				:g (_r_8_9_15_16) [1,1] 
+					: Identificador  do prefeito(_r_8_9_15_16_17)
+					: Identificador do vereador(_r_8_9_15_16_19)
+					: Voto nulo(_r_8_9_15_16_20)
+					: Voto em branco(_r_8_9_15_16_21)
+			: Chefe de Departamento(_r_8_9_29)
+				:g (_r_8_9_29_30) [1,1] 
+					: Voto de professor - peso 2(_r_8_9_29_30_31)
+						:g (_r_8_9_29_30_31_33) [1,1] 
+							: Voto em branco(_r_8_9_29_30_31_33_34)
+							: Identificador do candidato(_r_8_9_29_30_31_33_35)
+					: Voto de tecnico administrativo(_r_8_9_29_30_32)
+						:g (_r_8_9_29_30_32_36) [1,1] 
+							: Voto em branco(_r_8_9_29_30_32_36_37)
+							: Identificador do candidato(_r_8_9_29_30_32_36_38)
+	:m Estatisticas(_r_22)
+		:g (_r_22_25) [1,*] 
+			: Numero de votos de cada candidato(_r_22_25_26)
+			: Porcentagem de cada candidato em relacao ao total de votos validos(_r_22_25_27)
+			: Candidatos eleitos(_r_22_25_28)
+	:m Tela da urna(_r_39)
+		:m foto do candidato(_r_39_42)
+		:m nome do candidato(_r_39_43)
+		:m numero do candidato(_r_39_44)
+		:m instrucoes(_r_39_45)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

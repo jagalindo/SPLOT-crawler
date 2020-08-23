@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Aug 19, 2020 - 11:31 PM  -->
+<feature_model name="Urna Eletronica UFMG">
+<meta>
+<data name="description">Features para a urna do exercício</data>
+<data name="creator">Ingrid Rosselis</data>
+<data name="address"></data>
+<data name="email">irscunha@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Bloqueio via senha(_r_1)
+	:m Desbloqueio via senha(_r_2)
+	:o Validacao pessoa credenciada(_r_3)
+	:m Validacao eleitor(_r_4)
+		:g (_r_4_15) [1,1] 
+			: Titulo eleitor(_r_4_15_16)
+			: CPF(_r_4_15_17)
+			: Identidade(_r_4_15_18)
+	:m Voto candidato(_r_9)
+		:g (_r_9_19) [1,1] 
+			: Presidente(_r_9_19_20)
+			: Senador(_r_9_19_21)
+			: Prefeito(_r_9_19_22)
+			: Vereador(_r_9_19_23)
+			: Chefe de Departamento(_r_9_19_24)
+	:m Voto em branco(_r_25)
+	:o Voto nulo(_r_28)
+	:m Computa voto(_r_29)
+		:g (_r_29_34) [1,1] 
+			: Voto candidato(_r_29_34_35)
+			: Voto em branco(_r_29_34_36)
+			: Voto nulo(_r_29_34_37)
+	:m Mostra estatisticas(_r_38)
+	:m Mostra candidatos eleitos(_r_39)
+	:m Mostra candidatos derrotados(_r_40)
+	:m Calcula votos(_r_41)
+		:g (_r_41_42) [1,1] 
+			: Votos com peso(_r_41_42_43)
+			: Votos sem peso(_r_41_42_44)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

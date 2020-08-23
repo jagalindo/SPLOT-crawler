@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Aug 19, 2020 - 1:22 AM  -->
+<feature_model name="VotacaoEletronica">
+<meta>
+<data name="description">VotacaoEletronica</data>
+<data name="creator">Eugenio</data>
+<data name="address"></data>
+<data name="email">eugeniors@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VotacaoEletronica(_r)
+	:m Teclado(_r_1)
+		:m Numeros0a9(_r_1_3)
+		:m Branco(_r_1_5)
+		:m Corrige(_r_1_7)
+		:m Confirma(_r_1_8)
+	:m Tela(_r_9)
+		:m Foto(_r_9_10)
+		:m Nome(_r_9_11)
+		:m Numero(_r_9_12)
+	:m Senha(_r_13)
+		:m SenhaInicializacaoVotacao(_r_13_14)
+		:m SenhaFinalizacaoVotacao(_r_13_15)
+	:m InformarGanhador(_r_21)
+		:g (_r_21_22) [1,1] 
+			: ConsiderarCandidatoComMaisVotos(_r_21_22_23)
+			: ConsiderarPesoVotos(_r_21_22_29)
+	:m DocumentoEleitor(_r_30)
+		:g (_r_30_31) [1,*] 
+			: RG(_r_30_31_32)
+			: CPF(_r_30_31_33)
+			: TituloEleitor(_r_30_31_34)
+	:m TipoVoto(_r_35)
+		:g (_r_35_36) [1,1] 
+			: Valido(_r_35_36_37)
+			: Branco(_r_35_36_38)
+			: Nulo(_r_35_36_40)
+	:o PorcentagemRelacaoTotalVotosValidos(_r_41)
+	:m TipoCandidato(_r_42)
+		:o Prefeito(_r_42_43)
+		:o Vereador(_r_42_44)
+		:o Presidente(_r_42_45)
+		:o Senador(_r_42_46)
+		:o ChefeDepartamento(_r_42_47)
+</feature_tree>
+<constraints>
+constraint_2:_r_35_36_37 or _r_35_36_38 or _r_35_36_40
+</constraints>
+</feature_model>

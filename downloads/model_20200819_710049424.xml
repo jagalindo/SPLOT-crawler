@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Aug 19, 2020 - 3:05 AM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Urna eletronica para votação federal, municipal e de departamento</data>
+<data name="creator">Mateus Lopes</data>
+<data name="address"></data>
+<data name="email">mateusfellipe2302@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna eletronica(_r)
+	:m Autenticacao(_r_1)
+		:m Eleitor(_r_1_2)
+			:g (_r_1_2_10) [1,*] 
+				: Titulo de eleitor(_r_1_2_10_11)
+				: Identidade(_r_1_2_10_12)
+				: CPF(_r_1_2_10_13)
+				: Cargo(_r_1_2_10_14)
+		:m Inicio e Termino(_r_1_8)
+			:g (_r_1_8_15) [1,1] 
+				: Feature-16(_r_1_8_15_16)
+				: Senha(_r_1_8_15_19)
+		:m Votacao(_r_1_20)
+			:m Branco(_r_1_20_38)
+			:o Nulo(_r_1_20_39)
+			:m Tipo de eleicao(_r_1_20_48)
+				:g (_r_1_20_48_49) [1,1] 
+					: Federal(_r_1_20_48_49_50)
+						:g (_r_1_20_48_49_50_53) [1,*] 
+							: Presidente(_r_1_20_48_49_50_53_54)
+							: Senador(_r_1_20_48_49_50_53_55)
+					: Municipal(_r_1_20_48_49_51)
+						:g (_r_1_20_48_49_51_58) [1,*] 
+							: Prefeito(_r_1_20_48_49_51_58_59)
+							: Vereador(_r_1_20_48_49_51_58_60)
+					: Departamento(_r_1_20_48_49_52)
+						:g (_r_1_20_48_49_52_61) [1,1] 
+							: Chefe(_r_1_20_48_49_52_61_62)
+			:o Peso(_r_1_20_63)
+				:g (_r_1_20_63_64) [1,1] 
+					: Cargo(_r_1_20_63_64_65)
+	:m Estatisticas(_r_66)
+		:g (_r_66_67) [1,*] 
+			: numero de votos por candidato(_r_66_67_68)
+			: numero de votos por candidato por categoria de funcionario(_r_66_67_69)
+			: Percentagens de votos(_r_66_67_70)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
