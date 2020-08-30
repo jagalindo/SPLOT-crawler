@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Aug 29, 2020 - 9:31 PM  -->
+<feature_model name="Reprova">
+<meta>
+<data name="description">Trabalho reutilização</data>
+<data name="creator">Esthefanie Lanza</data>
+<data name="address"></data>
+<data name="email">esthefanielanza@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r reprova(_r)
+	:m adicionar questao(_r_1)
+		:m adicionar um tema(_r_1_2)
+		:m adicionar um enunciado(_r_1_3)
+		:m adicionar imagem(_r_1_4)
+		:m adicionar restricao de acesso(_r_1_6)
+		:o adicionar aproveitamento(_r_1_8)
+	:m gerenciar questao(_r_9)
+		:m registrar uso(_r_9_10)
+			:m registrar semestre(_r_9_10_11)
+			:m registrar turma(_r_9_10_12)
+			:m registrar atividade(_r_9_10_13)
+		:m registrar aproveitamento(_r_9_14)
+			:o calcular dificuldade(_r_9_14_15)
+	:m pesquisar questoes(_r_16)
+		:m pesquisar por tema(_r_16_17)
+		:m pesquisar por aproveitamento(_r_16_18)
+		:m pesquisar por enunciado(_r_16_19)
+		:o pesquisar por tempo(_r_16_22)
+	:m gerenciar controle de acesso(_r_21)
+		:o login(_r_21_24)
+	:m visualizar questao(_r_25)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
