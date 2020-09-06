@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Sep 2, 2020 - 12:27 AM  -->
+<feature_model name="Reprova">
+<meta>
+<data name="description">Trabalho Reuso de Software 2020/1</data>
+<data name="creator">Ingrid Rosselis e Gabriel Pires</data>
+<data name="address"></data>
+<data name="email">irscunha@dcc.ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Controle de Questoes de Provas(_r)
+	:m Questao(_r_1)
+		:m Adicionar questao(_r_1_4)
+			:m Adicionar tema(_r_1_4_5)
+			:m Adicionar privacidade(_r_1_4_7)
+			:m Adicionar enunciado(_r_1_4_24)
+		:m Utilizar questao(_r_1_11)
+			:m Registrar semestre(_r_1_11_12)
+			:m Registrar turma(_r_1_11_13)
+			:m Registrar atividade(_r_1_11_14)
+			:m Registrar aproveitamento(_r_1_11_15)
+				:m Categorizar dificuldade em 3 niveis(_r_1_11_15_32)
+		:m Visualizar questao(_r_1_20)
+	:m Professor(_r_2)
+		:m Cadastrar questoes(_r_2_10)
+		:m Pesquisar questoes(_r_2_21)
+			:m Emitir relatorios por tema(_r_2_21_28)
+	:m Aluno(_r_3)
+		:m Pesquisar questoes publicas(_r_3_22)
+			:m Emitir relatorios por tema(_r_3_22_29)
+	:m Controle de acesso via login(_r_36)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

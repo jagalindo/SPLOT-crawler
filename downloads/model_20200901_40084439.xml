@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 1, 2020 - 11:01 PM  -->
+<feature_model name="gerenciador_questoes">
+<meta>
+<data name="description">Sistema de gerenciamento de questões de prova</data>
+<data name="creator">Mateus Catrinque</data>
+<data name="address"></data>
+<data name="email">mcatrinque@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r gerenciador_questoes(_r)
+	:m gerenciar_usuario(_r_44)
+		:m associar_disciplinas(_r_44_50)
+		:m vincular_cargo(_r_44_51)
+	:m gerenciar_disciplina(_r_45)
+		:m associar_temas(_r_45_52)
+	:m emitir_relatorio(_r_46)
+		:m selecionar_tema(_r_46_54)
+	:o gerar_prova(_r_47)
+		:m selecionar_questoes(_r_47_55)
+		:m definir_dificuldade(_r_47_56)
+	:m gerenciar_questao(_r_48)
+		:m cadastrar(_r_48_57)
+		:m associar_temas(_r_48_59)
+		:m definir_acesso(_r_48_60)
+		:m registrar_usos(_r_48_61)
+			:m registrar_semestre(_r_48_61_62)
+			:m registrar_turma(_r_48_61_63)
+			:m registrar_atividade(_r_48_61_64)
+			:m registrar_aproveitamento(_r_48_61_67)
+		:o definir_dificuldade(_r_48_65)
+	:m pesquisar_questao(_r_49)
+	:m cadastrar_temas(_r_53)
+	:o gerar_lista_exercicios(_r_68)
+		:m selecionar_questoes(_r_68_69)
+		:m definir_dificuldade(_r_68_70)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 1, 2020 - 8:47 PM  -->
+<feature_model name="Reuse TW - Reprova">
+<meta>
+<data name="description">Um trabalho de universidade para professores gerenciarem questões de prova</data>
+<data name="creator">Victor Guerra Veloso</data>
+<data name="address"></data>
+<data name="email">victorgvbh@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Reprova(_r)
+	:m Grades(_r_4)
+		:o Import grades from file(_r_4_6)
+			:m Supported formats(_r_4_6_10)
+				:g (_r_4_6_10_11) [1,*] 
+					: JSON(_r_4_6_10_11_12)
+					: CSV(_r_4_6_10_11_13)
+					: XML(_r_4_6_10_11_14)
+		:o Grade storage granularity(_r_4_15)
+			:g (_r_4_15_16) [1,1] 
+				: Per student(_r_4_15_16_17)
+				: Per semester(_r_4_15_16_18)
+	:m Questions(_r_5)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
