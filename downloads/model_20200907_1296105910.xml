@@ -1,0 +1,63 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 7, 2020 - 4:48 PM  -->
+<feature_model name="LPS Robot Industrial Arduino">
+<meta>
+<data name="description">Ejemplo de la LPS propuesta</data>
+<data name="creator">Andres Felipe Solis</data>
+<data name="address"></data>
+<data name="email">afsolis@unicauca.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad del Cauca</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r robot(_r)
+	:m Software(_r_2)
+		:m Cinematicas(_r_2_11)
+			:g (_r_2_11_71) [1,1] 
+				: Inversa(_r_2_11_71_72)
+				: Control(_r_2_11_71_73)
+		:o GUI(_r_2_13)
+			:g (_r_2_13_74) [1,1] 
+				: Pantalla LED(_r_2_13_74_75)
+				: Pantalla LCD(_r_2_13_74_77)
+		:o Multitarea(_r_2_14)
+	:m Hardware(_r_3)
+		:m Grados de Libertad(_r_3_4)
+			:g (_r_3_4_30) [1,1] 
+				: Cinco GL(_r_3_4_30_31)
+				: Seis GL(_r_3_4_30_32)
+				: Cuatro GL(_r_3_4_30_33)
+		:m Sensores(_r_3_5)
+			:g (_r_3_5_39) [1,1] 
+				: Ultrasonido(_r_3_5_39_40)
+				: Finales de Carrera(_r_3_5_39_41)
+				: Colores(_r_3_5_39_42)
+				: Otros(_r_3_5_39_43)
+				: PIR(_r_3_5_39_44)
+		:m Actuadores(_r_3_6)
+			:g (_r_3_6_50) [1,1] 
+				: Motores(_r_3_6_50_51)
+				: Servomotores(_r_3_6_50_52)
+				: Motores Paso a Paso(_r_3_6_50_53)
+		:m Efectores(_r_3_7)
+			:g (_r_3_7_54) [1,1] 
+				: Pinza(_r_3_7_54_55)
+				: Magnetismo(_r_3_7_54_57)
+				: Otro(_r_3_7_54_58)
+		:o Botonera(_r_3_8)
+			:g (_r_3_8_59) [1,1] 
+				: Config SSP(_r_3_8_59_60)
+				: Config SS(_r_3_8_59_61)
+		:o Control Energia(_r_3_9)
+			:g (_r_3_9_64) [1,1] 
+				: config VC(_r_3_9_64_65)
+				: config C(_r_3_9_64_66)
+				: config V(_r_3_9_64_67)
+</feature_tree>
+<constraints>
+constraint_1:~_r_3_9_64_65 or ~_r_3_9_64_66
+</constraints>
+</feature_model>

@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Sep 9, 2020 - 12:09 PM  -->
+<feature_model name="Mobil Bundle">
+<meta>
+<data name="description">Configure a mobile package</data>
+<data name="creator">Florian</data>
+<data name="address"></data>
+<data name="email">flo@subsense.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Florian</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Bundle(_r)
+	:m Channel(_r_10)
+		:g (_r_10_11) [1,1] 
+			: Online(_r_10_11_12)
+			: POS(_r_10_11_13)
+			: SL(_r_10_11_14)
+	:m Process(_r_15)
+		:g (_r_15_16) [1,1] 
+			: Acquisition(_r_15_16_17)
+			: Retention(_r_15_16_18)
+			: Tariff change(_r_15_16_19)
+	:m Tariff Plan(_r_20)
+		:g (_r_20_21) [1,1] 
+			: Tariff Plan S(_r_20_21_22)
+			: Tariff Plan M(_r_20_21_23)
+			: Tariff Plan L(_r_20_21_24)
+	:m Handset(_r_25)
+		:g (_r_25_28) [1,1] 
+			: iPhone 11(_r_25_28_29)
+			: Samsung Galaxy(_r_25_28_30)
+			: Huawei P40(_r_25_28_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
