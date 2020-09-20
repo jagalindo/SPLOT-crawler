@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Sep 19, 2020 - 7:47 PM  -->
+<feature_model name="Kindle">
+<meta>
+<data name="description">Kindle Fire HD</data>
+<data name="creator">US</data>
+<data name="address"></data>
+<data name="email">us@us.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">us</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Kindle(_r)
+	:m Screen(_r_1)
+	:m Media(_r_2)
+		:g (_r_2_12) [1,1] 
+			: Audio(_r_2_12_13)
+			: GPUVideo(_r_2_12_14)
+	:m Connectivity(_r_3)
+		:g (_r_3_15) [1,*] 
+			: 4G(_r_3_15_16)
+			: HDMI(_r_3_15_17)
+			: WIFI(_r_3_15_18)
+	:m OnlineService(_r_4)
+	:m Battery(_r_5)
+	:o Camera(_r_7)
+	:m Price(_r_8)
+	:m Storage(_r_9)
+		:g (_r_9_20) [1,1] 
+			: 16GB(_r_9_20_21)
+			: 32GB(_r_9_20_22)
+			: 64GB(_r_9_20_23)
+	:m Dimension(_r_10)
+	:m Reader(_r_11)
+	:m CPUOSRAMInterface(_r_19)
+</feature_tree>
+<constraints>
+constraint_1:~_r_7 or _r_2_12_14
+</constraints>
+</feature_model>
