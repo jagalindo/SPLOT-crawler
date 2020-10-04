@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 2, 2020 - 9:38 AM  -->
+<feature_model name="NEMoMobilityFeatureModel">
+<meta>
+<data name="description">Feature Diagram</data>
+<data name="creator">Behailu G.</data>
+<data name="address"></data>
+<data name="email">behailu.getachew@mu.edu.et</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">MU, EiT-M, School of Computing</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r NEMoMobilityFeatureModel(_r)
+	:g (_r_40) [1,*] 
+		: CustomerAPI(_r_40_41)
+			:m read(_r_40_41_42)
+		: TripSearchAPI(_r_40_43)
+			:m search(_r_40_43_45)
+				:m oLocation(_r_40_43_45_49)
+				:m dLocation(_r_40_43_45_50)
+				:m dTime(_r_40_43_45_51)
+				:m isArrive(_r_40_43_45_53)
+		: FindRouteAPI(_r_40_46)
+			:m details(_r_40_46_47)
+				:m route(_r_40_46_47_48)
+		: LoginAPI(_r_40_54)
+			:m userName(_r_40_54_55)
+			:m passWord(_r_40_54_56)
+</feature_tree>
+<constraints>
+constraint_6:_r or _r_40_54 or _r_40_54_55 or _r_40_54_56
+constraint_4:_r or _r_40_43 or _r_40_43_45 or _r_40_43_45_49 or _r_40_43_45_50 or _r_40_43_45_51 or _r_40_43_45_53 or _r_40_54 or _r_40_54_55 or _r_40_54_56
+constraint_5:_r or _r_40_46 or _r_40_46_47 or _r_40_46_47_48 or _r_40_54 or _r_40_54_55 or _r_40_54_56
+constraint_3:_r or _r_40_41 or _r_40_41_42 or _r_40_54 or _r_40_54_55 or _r_40_54_56
+</constraints>
+</feature_model>
