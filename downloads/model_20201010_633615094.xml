@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Oct 10, 2020 - 4:01 PM  -->
+<feature_model name="Relatorio">
+<meta>
+<data name="description">partes de um relatorio</data>
+<data name="creator">Pietrobon</data>
+<data name="address"></data>
+<data name="email">capietro@pucminas.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">puc</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Relatorio(_r)
+	:m Cabecalho(_r_1)
+		:g (_r_1_8) [1,*] 
+			: texto(_r_1_8_9)
+			: Logo(_r_1_8_10)
+			: Logos2(_r_1_8_14)
+	:m Corpo(_r_2)
+		:g (_r_2_11) [1,1] 
+			: Tabela(_r_2_11_12)
+			: Piechart(_r_2_11_13)
+	:m Rodape(_r_3)
+		:g (_r_3_4) [1,*] 
+			: numeroPagina(_r_3_4_5)
+			: data(_r_3_4_6)
+			: nome criador(_r_3_4_7)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

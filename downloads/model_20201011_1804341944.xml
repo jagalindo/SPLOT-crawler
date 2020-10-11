@@ -1,0 +1,85 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 11, 2020 - 9:57 AM  -->
+<feature_model name="Komponente_Fähigkeiten">
+<meta>
+<data name="description">MA</data>
+<data name="creator">Jungblut</data>
+<data name="address"></data>
+<data name="email">Jungblut.moritz@web.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UPB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Komponente- Methoden(_r)
+	:g (_r_1) [1,*] 
+		: Extrakt(_r_1_2)
+			:g (_r_1_2_10) [1,*] 
+				: structured(_r_1_2_10_11)
+				: unstructured(_r_1_2_10_12)
+				: low(_r_1_2_10_13)
+				: high(_r_1_2_10_14)
+				: raw(_r_1_2_10_15)
+				: analyzed(_r_1_2_10_16)
+				: batch(_r_1_2_10_17)
+				: realtime(_r_1_2_10_18)
+				: streaming(_r_1_2_10_19)
+		: Transfer(_r_1_3)
+			:g (_r_1_3_20) [1,*] 
+				: structured(_r_1_3_20_21)
+				: unstructured(_r_1_3_20_22)
+				: low(_r_1_3_20_23)
+				: high(_r_1_3_20_24)
+				: raw(_r_1_3_20_27)
+				: analyzed(_r_1_3_20_28)
+				: batch(_r_1_3_20_29)
+				: realtime(_r_1_3_20_30)
+				: streaming(_r_1_3_20_31)
+		: Load(_r_1_4)
+			:g (_r_1_4_32) [1,*] 
+				: structured(_r_1_4_32_33)
+				: unstructured(_r_1_4_32_34)
+				: low(_r_1_4_32_35)
+				: high(_r_1_4_32_36)
+				: raw(_r_1_4_32_37)
+				: analyzed(_r_1_4_32_38)
+				: batch(_r_1_4_32_39)
+				: realtime(_r_1_4_32_40)
+				: streaming(_r_1_4_32_41)
+		: Store(_r_1_5)
+			:g (_r_1_5_42) [1,*] 
+				: virtualization(_r_1_5_42_43)
+				: independent data Marts(_r_1_5_42_44)
+				: traditional DWH(_r_1_5_42_45)
+				: distributed(_r_1_5_42_46)
+				: Big Data DWH(_r_1_5_42_49)
+				: Data Lake(_r_1_5_42_50)
+		: Analyse(_r_1_6)
+			:g (_r_1_6_53) [1,*] 
+				: metric computation(_r_1_6_53_54)
+				: statistic(_r_1_6_53_55)
+				: text mining(_r_1_6_53_56)
+				: data mining(_r_1_6_53_57)
+				: geospatial(_r_1_6_53_58)
+				: timeseries(_r_1_6_53_59)
+				: approximation(_r_1_6_53_60)
+				: ranking(_r_1_6_53_61)
+				: simulation(_r_1_6_53_62)
+				: querying(_r_1_6_53_63)
+				: R or Python Support(_r_1_6_53_64)
+		: Visualize(_r_1_7)
+			:g (_r_1_7_67) [1,*] 
+				: charts(_r_1_7_67_68)
+				: table(_r_1_7_67_69)
+				: dashboard(_r_1_7_67_70)
+				: reports(_r_1_7_67_71)
+				: self service(_r_1_7_67_72)
+				: mobile BI(_r_1_7_67_73)
+				: virtual reality (_r_1_7_67_74)
+				: geo based visualization(_r_1_7_67_75)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

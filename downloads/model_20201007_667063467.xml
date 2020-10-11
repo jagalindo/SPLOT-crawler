@@ -1,0 +1,100 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 11, 2020 - 9:45 AM  -->
+<feature_model name="BIA-Komponente Feature Model">
+<meta>
+<data name="description">Darstellung von möglichen Fähigkeiten und Eigenschaften</data>
+<data name="creator">M.Jungblut</data>
+<data name="address"></data>
+<data name="email">Jungblut.moritz@web.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UPB</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r BIA-Komponente(_r)
+	:m Data(_r_1)
+		:m Velocity(_r_1_2)
+			:g (_r_1_2_3) [1,1] 
+				: Batch(_r_1_2_3_4)
+				: Streaming(_r_1_2_3_13)
+		:m Variety(_r_1_7)
+			:g (_r_1_7_9) [1,1] 
+				: Structured(_r_1_7_9_10)
+				: Semi-structured(_r_1_7_9_11)
+				: Structured(_r_1_7_9_12)
+		:m Processing(_r_1_14)
+			:g (_r_1_14_19) [1,1] 
+				: Raw(_r_1_14_19_20)
+				: Processed(_r_1_14_19_21)
+				: Analyzed(_r_1_14_19_22)
+		:o Security(_r_1_32)
+			:g (_r_1_32_33) [1,1] 
+				: Trusted(_r_1_32_33_34)
+				: Untrusted(_r_1_32_33_35)
+		:m Modality(_r_1_36)
+			:g (_r_1_36_41) [1,1] 
+				: Textual(_r_1_36_41_42)
+				: Audio(_r_1_36_41_43)
+				: Visuel(_r_1_36_41_44)
+	:m Information Management(_r_47)
+		:m Staging Layer(_r_47_53)
+			:m Data Acquisition(_r_47_53_56)
+			:m Data Load(_r_47_53_57)
+			:m Data Transfer(_r_47_53_59)
+		:o Access and Performance(_r_47_54)
+			:o Data Transformation(_r_47_54_60)
+			:o Data Quality and Uncertainity(_r_47_54_61)
+			:m Data Discovery and Search(_r_47_54_62)
+			:o Business Continuity and Recovery(_r_47_54_63)
+			:o Data Security and Privacy(_r_47_54_64)
+			:o Information Virtualization(_r_47_54_65)
+			:o Performance Management(_r_47_54_66)
+		:m Foundation Layer(_r_47_55)
+	:m Data Processing(_r_48)
+		:g (_r_48_70) [1,*] 
+			: Preprocessing(_r_48_70_71)
+				:o Compression(_r_48_70_71_78)
+			: Stream Processing(_r_48_70_72)
+				:o Metric Computation(_r_48_70_72_79)
+				:o Status Collection(_r_48_70_72_80)
+				:o Filtering(_r_48_70_72_81)
+				:o Tokenization(_r_48_70_72_82)
+				:o Annotation(_r_48_70_72_83)
+			: Batch Processing(_r_48_70_73)
+				:g (_r_48_70_73_84) [1,*] 
+					: Combining(_r_48_70_73_84_85)
+					: Cleaning(_r_48_70_73_84_86)
+					: Replication(_r_48_70_73_84_87)
+			: Information Extraction(_r_48_70_74)
+				:o Classification(_r_48_70_74_89)
+				:o Entitiy Recognition(_r_48_70_74_90)
+				:o Relationship Extraction(_r_48_70_74_91)
+				:o Structure Extraction(_r_48_70_74_92)
+				:o Basic Information Extraction(_r_48_70_74_93)
+			: Data Integration(_r_48_70_75)
+				:o Data Fusion(_r_48_70_75_94)
+				:o Entity Resolution(_r_48_70_75_95)
+				:o Schema Integration(_r_48_70_75_96)
+			: In Memory(_r_48_70_76)
+				:o High Speed Query Processing(_r_48_70_76_97)
+				:o Results Caching(_r_48_70_76_98)
+			: Data Ingestion(_r_48_70_77)
+	:m Data Analysis(_r_49)
+	:m Data Storage(_r_50)
+	:m Interface and Visualization(_r_52)
+	:m Legende(_r_65)
+		:m Mandatory(_r_65_66)
+		:o Optional(_r_65_67)
+		:g (_r_65_68) [1,*] 
+			: A OR(_r_65_68_69)
+			: B OR(_r_65_68_70)
+			: A AND B(_r_65_68_72)
+		:g (_r_65_76) [1,1] 
+			: A(_r_65_76_77)
+			: B(_r_65_76_78)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
