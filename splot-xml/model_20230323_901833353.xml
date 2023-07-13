@@ -1,0 +1,100 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 12:21 AM  -->
+<feature_model name="Urnas">
+<meta>
+<data name="description">features para urnas eletronicas para diferentes tipos de votacoes</data>
+<data name="creator">Roger Dornas Oliveira</data>
+<data name="address"></data>
+<data name="email">rogerdornas@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urnas(_r)
+	:m Eleicao Presidente e Senadores(_r_1)
+		:m Inicializar votacao(_r_1_4)
+			:m Inserir senha(_r_1_4_5)
+		:m Votar(_r_1_6)
+			:m Identificar com Titulo de Eleitor(_r_1_6_7)
+				:m Confirmar dados(_r_1_6_7_8)
+			:m Voto para Presidente(_r_1_6_9)
+				:g (_r_1_6_9_10) [1,1] 
+					: Candidato(_r_1_6_9_10_11)
+					: Branco(_r_1_6_9_10_12)
+					: Nulo(_r_1_6_9_10_13)
+			:m Voto para Senador 1(_r_1_6_14)
+				:g (_r_1_6_14_15) [1,1] 
+					: Candidato(_r_1_6_14_15_16)
+					: Branco(_r_1_6_14_15_17)
+					: Nulo(_r_1_6_14_15_18)
+			:m Voto para Senador 2(_r_1_6_19)
+			:g (_r_1_6_20) [1,1] 
+				: Candidato(_r_1_6_20_21)
+				: Branco(_r_1_6_20_22)
+				: Nulo(_r_1_6_20_23)
+		:m Finalizar Votacao(_r_1_24)
+			:m Inserir Senha(_r_1_24_25)
+		:m Estatisticas(_r_1_26)
+			:m Numero de votos de cada candidato(_r_1_26_27)
+			:m Porcentagem de votos de cada candidato(_r_1_26_28)
+		:m Resultado da eleicao(_r_1_29)
+			:m Mostrar candidato a presidente eleito(_r_1_29_31)
+			:m Mostrar candidatos a presidencia derrotados(_r_1_29_32)
+			:m Mostrar candidatos a senadores eleitos(_r_1_29_33)
+			:m Mostrar candidatos a senadores derrotados(_r_1_29_34)
+	:m Eleicao Prefeito e Vereador(_r_2)
+		:m Inicializar votacao(_r_2_35)
+			:m Inserir senha(_r_2_35_36)
+		:m Votar(_r_2_37)
+			:m Identificar com Titulo de Eleitor(_r_2_37_38)
+				:m Confirmar dados(_r_2_37_38_39)
+			:m Voto para Prefeito(_r_2_37_40)
+				:g (_r_2_37_40_43) [1,1] 
+					: Candidato(_r_2_37_40_43_44)
+					: Branco(_r_2_37_40_43_45)
+					: Nulo(_r_2_37_40_43_46)
+			:m Voto para Vereador(_r_2_37_47)
+				:g (_r_2_37_47_48) [1,1] 
+					: Candidato(_r_2_37_47_48_49)
+					: Branco(_r_2_37_47_48_50)
+					: Nulo(_r_2_37_47_48_51)
+		:m Finalizar votacao(_r_2_52)
+			:m Inserir senha(_r_2_52_53)
+		:m Estatisticas(_r_2_54)
+			:m Numero de votos de cada candidato(_r_2_54_55)
+			:m Porcentagem de votos de cada candidato(_r_2_54_56)
+		:m Resultado da eleicao(_r_2_57)
+			:m Mostrar candidato a Prefeito eleito(_r_2_57_58)
+			:m Mostrar candidatos a Prefeito derrotados(_r_2_57_59)
+			:m Mostrar candidato a Vereador eleito(_r_2_57_60)
+			:m Mostrar candidatos a Vereador derrotados(_r_2_57_61)
+	:m Eleicao de Chefe de Departamento(_r_3)
+		:m Inicializar votacao(_r_3_62)
+			:m Inserir senha(_r_3_62_63)
+		:o Candidatar(_r_3_64)
+		:o Votar(_r_3_65)
+			:m Identificar(_r_3_65_66)
+				:g (_r_3_65_66_67) [1,1] 
+					: Identidade(_r_3_65_66_67_68)
+					: CPF(_r_3_65_66_67_69)
+			:m Voto(_r_3_65_70)
+				:g (_r_3_65_70_71) [1,1] 
+					: Candidato(_r_3_65_70_71_72)
+					: Branco(_r_3_65_70_71_73)
+		:m Finalizar votacao(_r_3_74)
+			:m Inserir senha(_r_3_74_75)
+		:m Estatisticas(_r_3_76)
+			:m Numero de votos de professores para cada candidato(_r_3_76_77)
+			:m Numero de votos de tecnicos administrativos para cada candidato(_r_3_76_78)
+			:o Porcentagem de votos de professores para cada funcionario(_r_3_76_79)
+			:o Porcentagem de votos de tecnicos administrativos para cada funcionario(_r_3_76_80)
+		:m Resultado da eleicao(_r_3_81)
+			:m Mostrar candidato eleito(_r_3_81_82)
+			:o Mostrar candidatos derrotados(_r_3_81_83)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

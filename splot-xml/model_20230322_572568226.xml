@@ -1,0 +1,80 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:14 PM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Urna eletronica de reutilizacao de software</data>
+<data name="creator">Maria Luiza Leao Silva</data>
+<data name="address"></data>
+<data name="email">maria_luiza1598hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna eletronica(_r)
+	:m Credenciamento(_r_3)
+		:m Inicializar a votacao(_r_3_9)
+			:m Validacao do eleitor(_r_3_9_10)
+				:g (_r_3_9_10_21) [1,1] 
+					: Titulo de Eleitor(_r_3_9_10_21_22)
+						:m Confirmacao do Titulo de Eleitor(_r_3_9_10_21_22_23)
+							:m Recolher voto do eleitor(_r_3_9_10_21_22_23_26)
+								:o Votacao Presidente(_r_3_9_10_21_22_23_26_27)
+									:g (_r_3_9_10_21_22_23_26_27_65) [1,1] 
+										: Voto Branco(_r_3_9_10_21_22_23_26_27_65_66)
+										: Voto Nulo(_r_3_9_10_21_22_23_26_27_65_67)
+										: Voto Valido(_r_3_9_10_21_22_23_26_27_65_68)
+								:o Votacao Senador(_r_3_9_10_21_22_23_26_29)
+									:m Primeiro Senador(_r_3_9_10_21_22_23_26_29_30)
+										:g (_r_3_9_10_21_22_23_26_29_30_69) [1,1] 
+											: Voto Branco(_r_3_9_10_21_22_23_26_29_30_69_70)
+											: Voto Nulo(_r_3_9_10_21_22_23_26_29_30_69_71)
+											: Voto Valido(_r_3_9_10_21_22_23_26_29_30_69_72)
+									:m Segundo Senador(_r_3_9_10_21_22_23_26_29_31)
+										:g (_r_3_9_10_21_22_23_26_29_31_73) [1,1] 
+											: Voto Branco(_r_3_9_10_21_22_23_26_29_31_73_74)
+											: Voto Nulo(_r_3_9_10_21_22_23_26_29_31_73_75)
+											: Voto Valido(_r_3_9_10_21_22_23_26_29_31_73_76)
+								:o Votacao Prefeito(_r_3_9_10_21_22_23_26_32)
+									:g (_r_3_9_10_21_22_23_26_32_77) [1,1] 
+										: Voto Branco(_r_3_9_10_21_22_23_26_32_77_78)
+										: Voto Nulo(_r_3_9_10_21_22_23_26_32_77_79)
+										: Voto Valido(_r_3_9_10_21_22_23_26_32_77_80)
+								:o Votacao Vereador(_r_3_9_10_21_22_23_26_47)
+									:g (_r_3_9_10_21_22_23_26_47_81) [1,1] 
+										: Voto Branco(_r_3_9_10_21_22_23_26_47_81_82)
+										: Voto Nulo(_r_3_9_10_21_22_23_26_47_81_83)
+										: Voto Valido(_r_3_9_10_21_22_23_26_47_81_84)
+					: CPF(_r_3_9_10_21_24)
+						:m Confimacao do CPF(_r_3_9_10_21_24_25)
+							:m Recolher voto do eleitor(_r_3_9_10_21_24_25_33)
+								:m Votacao Chefe de Departamento(_r_3_9_10_21_24_25_33_54)
+									:g (_r_3_9_10_21_24_25_33_54_55) [1,1] 
+										: Voto Branco(_r_3_9_10_21_24_25_33_54_55_56)
+										: Voto Valido(_r_3_9_10_21_24_25_33_54_55_58)
+											:m Checar peso do voto(_r_3_9_10_21_24_25_33_54_55_58_59)
+					: Identidade(_r_3_9_10_21_51)
+						:m Confirmacao da Identidade(_r_3_9_10_21_51_52)
+							:m Recolher voto do eleitor(_r_3_9_10_21_51_52_53)
+								:m Votacao Chefe de Departamento(_r_3_9_10_21_51_52_53_60)
+									:g (_r_3_9_10_21_51_52_53_60_61) [1,1] 
+										: Voto Branco(_r_3_9_10_21_51_52_53_60_61_62)
+										: Voto Vallido(_r_3_9_10_21_51_52_53_60_61_63)
+											:m Checar peso do voto(_r_3_9_10_21_51_52_53_60_61_63_64)
+		:m Finalizar a votacao(_r_3_85)
+			:m Apresentar estatisticas(_r_3_85_86)
+				:g (_r_3_85_86_88) [1,*] 
+					: Apresentar porcentagem(_r_3_85_86_88_89)
+					: Apresentar numero de votos(_r_3_85_86_88_90)
+						:g (_r_3_85_86_88_90_91) [1,1] 
+							: Votos totais(_r_3_85_86_88_90_91_92)
+							: Votos separados por categoria de funcionarios(_r_3_85_86_88_90_91_93)
+		:m Obter resultado(_r_3_94)
+			:m Candidato eleito(_r_3_94_95)
+			:o Candidatos derrotados(_r_3_94_96)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

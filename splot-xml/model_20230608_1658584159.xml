@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 8, 2023 - 3:03 PM  -->
+<feature_model name="saude">
+<meta>
+<data name="description">saude</data>
+<data name="creator">saude</data>
+<data name="address"></data>
+<data name="email">saude</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">saude</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r saude(_r)
+	:m cadastro(_r_1)
+	:m login(_r_2)
+	:m agendar(_r_3)
+	:m adicionar(_r_4)
+		:g (_r_4_5) [1,*] 
+			: exercicio(_r_4_5_6)
+			: alimento(_r_4_5_7)
+			: vacina(_r_4_5_9)
+	:o recomendar(_r_10)
+		:g (_r_10_11) [1,*] 
+			: treino(_r_10_11_12)
+			: plano_nutricional(_r_10_11_13)
+			: vacina(_r_10_11_14)
+	:o montar_plano(_r_15)
+		:g (_r_15_16) [1,*] 
+			: nutricional(_r_15_16_17)
+			: exericio_fisico(_r_15_16_18)
+	:o historico(_r_19)
+		:g (_r_19_20) [1,*] 
+			: problemas_alimentares(_r_19_20_23)
+			: lesoes_osseas(_r_19_20_24)
+			: lesoes_musculares(_r_19_20_25)
+	:o grafico(_r_26)
+		:g (_r_26_27) [1,*] 
+			: frequencia_alimentar(_r_26_27_28)
+			: frequencia_de_treinos(_r_26_27_29)
+	:m preencher_formulario(_r_30)
+	:o book(_r_32)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

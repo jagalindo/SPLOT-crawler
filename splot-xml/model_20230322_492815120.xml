@@ -1,0 +1,65 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:16 PM  -->
+<feature_model name="exercicio 1 RS">
+<meta>
+<data name="description">exec 1 reutilização de software</data>
+<data name="creator">André Dutra</data>
+<data name="address"></data>
+<data name="email">cienciandre@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Inicializacao da Urna(_r_1)
+		:m Autenticacao por senha(_r_1_6)
+			:g (_r_1_6_7) [1,1] 
+				: Usuario credenciado TSE(_r_1_6_7_8)
+				: Usuario credenciado TRE(_r_1_6_7_9)
+				: Usuario sem credenciamento(_r_1_6_7_10)
+	:m Votacao(_r_18)
+		:m Identificacao do Eleitor(_r_18_19)
+			:g (_r_18_19_21) [1,1] 
+				: Id via Titulo de Eleitor(_r_18_19_21_22)
+				: id via CPF(_r_18_19_21_23)
+				: id via Identidade(_r_18_19_21_24)
+		:o Apresentacao do Nome do Eleitor(_r_18_20)
+		:m Primeiro Voto(_r_18_25)
+			:g (_r_18_25_29) [1,1] 
+				: Voto em Presidente(_r_18_25_29_30)
+				: Voto em Prefeito(_r_18_25_29_31)
+				: Voto em Chefe de Departamento(_r_18_25_29_32)
+					:m Pesagem do voto por cargo(_r_18_25_29_32_47)
+			:m Voto Branco(_r_18_25_34)
+			:o Voto Nulo(_r_18_25_35)
+			:o Abstencao(_r_18_25_38)
+		:o Segundo Voto(_r_18_27)
+			:g (_r_18_27_39) [1,1] 
+				: Voto em Senador(_r_18_27_39_40)
+				: Voto em Vereador(_r_18_27_39_41)
+			:m Voto Branco(_r_18_27_42)
+			:m Voto Nulo(_r_18_27_43)
+		:o Terceiro Voto(_r_18_28)
+			:m Voto em Senador(_r_18_28_44)
+			:m Voto Branco(_r_18_28_45)
+			:m Voto Nulo(_r_18_28_46)
+	:m Termino da Urna(_r_26)
+		:m Autenticacao por Senha(_r_26_48)
+			:g (_r_26_48_50) [1,1] 
+				: Usuario credenciado TSE(_r_26_48_50_51)
+				: Usuario Credenciado TRE(_r_26_48_50_52)
+				: Usuario sem credenciameno(_r_26_48_50_53)
+		:m Apresentacao de Estatisticas(_r_26_49)
+			:m Numero de votos de cada candidato(_r_26_49_55)
+				:o Discriminacao por categoria de funcionario(_r_26_49_55_56)
+			:o Porcentagem de votos de cada candidato(_r_26_49_57)
+			:m Candidatos eleitos(_r_26_49_58)
+				:o Considerar peso dos votos(_r_26_49_58_61)
+			:o Candidatos derrotados(_r_26_49_60)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

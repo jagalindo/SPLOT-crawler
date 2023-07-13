@@ -1,0 +1,207 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				optional
+					_r_1_2 
+				optional
+					_r_1_4 
+				optional
+					_r_1_5 
+				optional
+					_r_1_19 
+		mandatory
+			_r_6 
+				optional
+					_r_6_7 
+				optional
+					_r_6_8 
+		mandatory
+			_r_9 
+				optional
+					_r_9_10 
+				optional
+					_r_9_11 
+				optional
+					_r_9_12 
+				optional
+					_r_9_13 
+				optional
+					_r_9_14 
+		mandatory
+			_r_20 
+				optional
+					_r_20_21 
+						optional
+							_r_20_21_34 
+						optional
+							_r_20_21_36 
+						optional
+							_r_20_21_37 
+						optional
+							_r_20_21_38 
+						optional
+							_r_20_21_39 
+						mandatory
+							_r_20_21_84 
+						optional
+							_r_20_21_85 
+						optional
+							_r_20_21_86 
+						optional
+							_r_20_21_87 
+						optional
+							_r_20_21_88 
+						optional
+							_r_20_21_89 
+						optional
+							_r_20_21_90 
+						optional
+							_r_20_21_91 
+						optional
+							_r_20_21_93 
+						optional
+							_r_20_21_94 
+				optional
+					_r_20_22 
+						optional
+							_r_20_22_40 
+						optional
+							_r_20_22_41 
+						optional
+							_r_20_22_43 
+						optional
+							_r_20_22_61 
+						optional
+							_r_20_22_92 
+		mandatory
+			_r_28 
+				mandatory
+					_r_28_29 
+						alternative
+							_r_28_29_30_31 
+							_r_28_29_30_32 
+							_r_28_29_30_33 
+		mandatory
+			_r_44 
+				optional
+					_r_44_45 
+				optional
+					_r_44_46 
+				optional
+					_r_44_47 
+		mandatory
+			_r_48 
+				optional
+					_r_48_49 
+				optional
+					_r_48_50 
+				optional
+					_r_48_51 
+		optional
+			_r_57 
+				optional
+					_r_57_58 
+				optional
+					_r_57_59 
+				optional
+					_r_57_60 
+		mandatory
+			_r_49 
+				or
+					_r_49_50_51 
+					_r_49_50_52 
+					_r_49_50_53 
+					_r_49_50_54 
+					_r_49_50_55 
+					_r_49_50_56 
+					_r_49_50_57 
+					_r_49_50_58 
+					_r_49_50_59 
+					_r_49_50_60 
+					_r_49_50_61 
+					_r_49_50_62 
+					_r_49_50_63 
+					_r_49_50_64 
+					_r_49_50_65 
+					_r_49_50_66 
+					_r_49_50_67 
+					_r_49_50_68 
+					_r_49_50_69 
+					_r_49_50_70 
+					_r_49_50_71 
+					_r_49_50_72 
+					_r_49_50_73 
+					_r_49_50_74 
+					_r_49_50_75 
+					_r_49_50_76 
+					_r_49_50_77 
+					_r_49_50_78 
+		mandatory
+			_r_79 
+				optional
+					_r_79_80 
+				optional
+					_r_79_81 
+		optional
+			_r_83 
+constraints
+	_r_49_50_66 requires _r_20_21_85
+	_r_49_50_67 requires _r_20_21_85
+	_r_6 requires _r_49_50_68
+	_r_6 requires _r_49_50_69
+	_r_57 requires _r_20_22_61
+	_r_20_22_61 requires _r_83
+	_r_9_13 requires _r_49_50_72
+	_r_20_22 requires _r_48
+	_r_9_13 requires _r_49_50_71
+	_r_6 requires _r_44
+	_r_9_13 requires _r_49_50_70
+	_r_20_22 requires _r_20_21_38
+	_r_20_22 requires _r_20_21_37
+	_r_9_13 requires _r_49_50_68
+	_r_9 requires _r_20_22_41
+	_r_28_29 requires _r_20_21_87
+	_r_20_22 requires _r_20_21_39
+	_r_28_29 requires _r_20_21_86
+	_r_49_50_78 requires _r_20_21_94
+	_r_20_22_41 requires _r_49_50_70
+	_r_20_22_41 requires _r_49_50_72
+	_r_20_22_41 requires _r_49_50_71
+	_r_49_50_74 requires _r_20_21_93
+	_r_49_50_73 requires _r_20_21_93
+	_r_49_50_76 requires _r_20_21_85
+	_r_49_50_75 requires _r_20_21_85
+	_r_20_22_61 requires _r_28
+	_r_20_22_61 requires _r_49_50_62
+	_r_49_50_61 requires _r_20_21_91
+	_r_20_22 requires _r_20_21_91
+	_r_49_50_63 requires _r_20_22_92
+	_r_28 requires _r_20_21_36
+	_r_1 requires _r_20_22_61
+	_r_20_22_61 requires _r_79
+	_r_49_50_65 requires _r_20_22_92
+	_r_49_50_64 requires _r_20_22_92
+	_r_83 requires _r_20_22_92
+	_r_79 requires _r_20_22_92
+	_r_57 requires _r_20_22_92
+	_r_28 requires _r_20_21_34
+	_r_1 requires _r_20_22_92
+	_r_49_50_56 requires _r_20_21_89
+	_r_1 requires _r_20_21_89
+	_r_49_50_53 requires _r_20_21_86
+	_r_20 requires _r_49_50_52
+	_r_49_50_55 requires _r_20_21_88
+	_r_20_21_34 requires _r_49_50_54
+	_r_83 requires _r_20_21_90
+	_r_20_21_37 requires _r_49_50_58
+	_r_20_21_37 requires _r_49_50_59
+	_r_20_21_38 requires _r_49_50_60
+	_r_49_50_57 requires _r_20_21_90
+	_r_49_50_77 requires _r_20_21_94
+	_r_20_22_41 requires _r_49_50_76
+	_r_20_22_61 requires _r_49_50_76
+	_r_20_22_61 requires _r_79
+	_r_20_21_37 requires _r_49_50_51
+	_r_6 requires _r_20_21_85
+	_r_20_22 requires _r_57

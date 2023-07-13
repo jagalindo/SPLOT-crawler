@@ -1,0 +1,46 @@
+features
+	kwic 
+		mandatory
+			input_output 
+				or
+					file 
+					console 
+		mandatory
+			circular_shift 
+				mandatory
+					shift_data 
+						alternative
+							implicit 
+							explicit 
+				optional
+					compression 
+						mandatory
+							shift_processing 
+						alternative
+							each_line 
+							all_lines 
+						optional
+							noise_words 
+		mandatory
+			alpha_sort 
+				mandatory
+					order 
+						alternative
+							descendant 
+							ascendant 
+				mandatory
+					case_sensitivity 
+						alternative
+							sensitive 
+							insensitive 
+		mandatory
+			arch_style 
+				alternative
+					shared_data 
+					adt 
+					implicit_invocation 
+					pipe_and_filter 
+constraints
+	compression requires explicit
+	pipe_and_filter requires all_lines
+	pipe_and_filter requires explicit

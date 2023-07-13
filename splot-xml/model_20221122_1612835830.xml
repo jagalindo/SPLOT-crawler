@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 22, 2022 - 8:16 PM  -->
+<feature_model name="SFC-VAS">
+<meta>
+<data name="description">ejemplo de SFC-VAS</data>
+<data name="creator">Samuel Sepúlveda</data>
+<data name="address">AVDA. FRANCISCO SALAZAR 01145</data>
+<data name="email">samuel.sepulveda@ufrontera.cl</data>
+<data name="phone">+56452744219</data>
+<data name="website"></data>
+<data name="organization">Universidad de La Frontera</data>
+<data name="department"></data>
+<data name="date">22-11-2022</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SFC-VAS(_r)
+	:m Hull(_r_1)
+		:g (_r_1_2) [1,1] 
+			: dynamic mission(_r_1_2_3)
+			: Medium size(_r_1_2_4)
+			: Light mission(_r_1_2_5)
+	:o Vision system camera(_r_6)
+		:g (_r_6_7) [1,*] 
+			: Frontal camera(_r_6_7_8)
+			: Lower camera 01(_r_6_7_9)
+			: Lower camera 02(_r_6_7_10)
+			: Stereoscopic view(_r_6_7_11)
+	:m Communication system(_r_12)
+		:g (_r_12_13) [1,*] 
+			: Wifi antenna(_r_12_13_14)
+			: BT connection(_r_12_13_15)
+	:m Manouvering system rudder(_r_16)
+		:g (_r_16_17) [1,1] 
+			: Fixed-rudder(_r_16_17_18)
+			: Linked X-rudder(_r_16_17_20)
+			: Cross-rudder(_r_16_17_22)
+	:m Propulsion(_r_23)
+		:g (_r_23_24) [1,*] 
+			: Central(_r_23_24_25)
+			: Double(_r_23_24_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

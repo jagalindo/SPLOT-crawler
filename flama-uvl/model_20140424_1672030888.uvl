@@ -1,0 +1,111 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				mandatory
+					_r_1_7 
+						alternative
+							_r_1_7_9_10 
+							_r_1_7_9_11 
+							_r_1_7_9_12 
+				optional
+					_r_1_8 
+						alternative
+							_r_1_8_13_14 
+							_r_1_8_13_15 
+							_r_1_8_13_16 
+		mandatory
+			_r_2 
+				optional
+					_r_2_17 
+						alternative
+							_r_2_17_29_30 
+							_r_2_17_29_31 
+				optional
+					_r_2_18 
+						alternative
+							_r_2_18_32_33 
+							_r_2_18_32_34 
+				optional
+					_r_2_19 
+						alternative
+							_r_2_19_35_36 
+							_r_2_19_35_37 
+							_r_2_19_35_38 
+							_r_2_19_35_39 
+				optional
+					_r_2_20 
+						alternative
+							_r_2_20_40_41 
+							_r_2_20_40_42 
+							_r_2_20_40_43 
+				optional
+					_r_2_21 
+						alternative
+							_r_2_21_44_45 
+							_r_2_21_44_46 
+				optional
+					_r_2_23 
+						alternative
+							_r_2_23_47_48 
+							_r_2_23_47_49 
+							_r_2_23_47_50 
+							_r_2_23_47_51 
+							_r_2_23_47_52 
+							_r_2_23_47_53 
+							_r_2_23_47_54 
+							_r_2_23_47_55 
+				optional
+					_r_2_24 
+				optional
+					_r_2_25 
+						alternative
+							_r_2_25_56_57 
+							_r_2_25_56_58 
+				optional
+					_r_2_26 
+				optional
+					_r_2_71 
+						alternative
+							_r_2_71_75_76 
+							_r_2_71_75_77 
+							_r_2_71_75_78 
+				optional
+					_r_2_72 
+						alternative
+							_r_2_72_79_80 
+							_r_2_72_79_81 
+				optional
+					_r_2_73 
+						alternative
+							_r_2_73_82_83 
+							_r_2_73_82_84 
+				optional
+					_r_2_74 
+						alternative
+							_r_2_74_85_86 
+							_r_2_74_85_87 
+		optional
+			_r_3 
+				alternative
+					_r_3_59_60 
+					_r_3_59_61 
+					_r_3_59_62 
+					_r_3_59_67 
+					_r_3_59_68 
+					_r_3_59_69 
+					_r_3_59_70 
+		optional
+			_r_4 
+constraints
+	_r_1_7_9_10 requires _r_3_59_70
+	_r_1_7_9_10 requires _r_2_72
+	_r_1_7_9_10 requires _r_2_71
+	_r_1_7_9_10 requires _r_2_73
+	_r_1_7_9_10 requires _r_3_59_68
+	_r_1_7_9_10 requires _r_2_74
+	_r_1_7_9_10 requires _r_3_59_69
+	_r_1_7_9_12 requires _r_2_23_47_48
+	_r_1_7_9_10 requires _r_3_59_67
+	_r_4 requires _r_1_7_9_12
+	_r_4 requires _r_1_7_9_12

@@ -1,0 +1,42 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:48 PM  -->
+<feature_model name="Software_Reutilization_Ballots">
+<meta>
+<data name="description">Ballot feature modelling</data>
+<data name="creator">Pimbolino</data>
+<data name="address"></data>
+<data name="email">mmra@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Votacao(_r)
+	:m Inicializacao(_r_1)
+		:m Abrir Urna(_r_1_2)
+		:m Fechar Urna(_r_1_3)
+			:m Apresentar Estatisticas(_r_1_3_4)
+			:m Mostrar Candidatos(_r_1_3_6)
+			:o Mostrar Derrotados(_r_1_3_13)
+	:m Usuario digita dados(_r_14)
+		:g (_r_14_17) [1,*] 
+			: Tipos de votacao(_r_14_17_18)
+				:g (_r_14_17_18_20) [1,*] 
+					: Votacao com Nulo(_r_14_17_18_20_21)
+						:g (_r_14_17_18_20_21_22) [1,*] 
+							: Nulo(_r_14_17_18_20_21_22_23)
+							: Branco(_r_14_17_18_20_21_22_24)
+							: Votar_candidato(_r_14_17_18_20_21_22_25)
+					: Votacao sem Nulo(_r_14_17_18_20_26)
+						:g (_r_14_17_18_20_26_27) [1,*] 
+							: Branco(_r_14_17_18_20_26_27_28)
+							: Votar_candidato(_r_14_17_18_20_26_27_29)
+	:m Registro(_r_31)
+		:m Cadastrar Candidato(_r_31_34)
+			:o Validar Dados(_r_31_34_35)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

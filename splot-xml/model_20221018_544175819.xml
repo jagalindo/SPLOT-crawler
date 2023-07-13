@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 18, 2022 - 10:58 PM  -->
+<feature_model name="Veterinaria">
+<meta>
+<data name="description">Diagrama de caracteristicas veterinaria</data>
+<data name="creator">Grupo tesis</data>
+<data name="address"></data>
+<data name="email">jdcastro4@espe.edu.ec</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">tesis</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SGCV(_r)
+	:m Triaje(_r_1)
+		:m Consulta(_r_1_9)
+			:m Revision(_r_1_9_13)
+				:g (_r_1_9_13_16) [1,*] 
+					: Vacunacion(_r_1_9_13_16_17)
+					: Rehabilitacion(_r_1_9_13_16_18)
+					: Desparacitacion(_r_1_9_13_16_19)
+					: Agendamiento salud(_r_1_9_13_16_20)
+			:m Curacion(_r_1_9_14)
+			:o Lab(_r_1_9_15)
+				:m Toma de muestras(_r_1_9_15_21)
+				:o Analisis(_r_1_9_15_22)
+		:o Emergencia(_r_1_10)
+			:o Sala de observacion(_r_1_10_23)
+			:g (_r_1_10_24) [1,*] 
+				: Cirujia(_r_1_10_24_25)
+				: Eutanasia (_r_1_10_24_26)
+				: General(_r_1_10_24_27)
+				: Hospitalizacion(_r_1_10_24_28)
+		:m Agendamiento estetico(_r_1_12)
+			:o Hospedaje(_r_1_12_29)
+			:m Spa(_r_1_12_30)
+				:g (_r_1_12_30_31) [1,*] 
+					: Banio(_r_1_12_30_31_32)
+					: Corte de pelo(_r_1_12_30_31_33)
+					: Corte de unias(_r_1_12_30_31_34)
+	:m Tienda(_r_2)
+		:g (_r_2_3) [1,*] 
+			: PetShop(_r_2_3_4)
+				:g (_r_2_3_4_6) [1,*] 
+					: Accesorios(_r_2_3_4_6_7)
+					: Alimentacion(_r_2_3_4_6_8)
+			: Farmacia(_r_2_3_5)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_9 or _r_1_9_15
+constraint_4:_r_1_10_24_27 or _r_1_10_24_28
+constraint_2:_r_1_9_15 or _r_1_10_23
+constraint_3:_r_1_10_24_25 or _r_1_10_24_28
+</constraints>
+</feature_model>

@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 15, 2023 - 9:00 AM  -->
+<feature_model name="GPS">
+<meta>
+<data name="description">GPS</data>
+<data name="creator">Siti Hawa</data>
+<data name="address"></data>
+<data name="email">hawashareef@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTHM</data>
+<data name="department">FSKTM</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r GPS(_r)
+	:m Routing(_r_1)
+		:g (_r_1_5) [1,*] 
+			: 3D Map(_r_1_5_6)
+			: Auto-rerouting(_r_1_5_7)
+	:o Traffic Avoiding(_r_2)
+	:o Radio(_r_3)
+		:g (_r_3_8) [1,*] 
+			: AM(_r_3_8_9)
+			: FM(_r_3_8_10)
+			: Digital(_r_3_8_11)
+	:m Interface(_r_4)
+		:o Keyboard(_r_4_12)
+		:m Screen(_r_4_13)
+			:g (_r_4_13_14) [1,1] 
+				: Touch(_r_4_13_14_15)
+				: LCD(_r_4_13_14_16)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

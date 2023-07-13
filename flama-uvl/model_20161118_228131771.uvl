@@ -1,0 +1,146 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				mandatory
+					_r_1_5 
+				mandatory
+					_r_1_6 
+				mandatory
+					_r_1_7 
+				mandatory
+					_r_1_8 
+				mandatory
+					_r_1_10 
+				mandatory
+					_r_1_11 
+				mandatory
+					_r_1_12 
+				mandatory
+					_r_1_13 
+				mandatory
+					_r_1_14 
+				mandatory
+					_r_1_15 
+				mandatory
+					_r_1_16 
+		mandatory
+			_r_2 
+				mandatory
+					_r_2_18 
+				mandatory
+					_r_2_19 
+				mandatory
+					_r_2_20 
+				mandatory
+					_r_2_21 
+				mandatory
+					_r_2_22 
+				mandatory
+					_r_2_23 
+		mandatory
+			_r_3 
+				mandatory
+					_r_3_24 
+				mandatory
+					_r_3_25 
+				mandatory
+					_r_3_26 
+				mandatory
+					_r_3_27 
+				mandatory
+					_r_3_28 
+				mandatory
+					_r_3_29 
+				mandatory
+					_r_3_30 
+				mandatory
+					_r_3_31 
+				mandatory
+					_r_3_32 
+				mandatory
+					_r_3_33 
+				mandatory
+					_r_3_34 
+				mandatory
+					_r_3_35 
+				mandatory
+					_r_3_36 
+				mandatory
+					_r_3_37 
+		mandatory
+			_r_4 
+				mandatory
+					_r_4_38 
+				mandatory
+					_r_4_39 
+				mandatory
+					_r_4_40 
+				mandatory
+					_r_4_41 
+				mandatory
+					_r_4_42 
+				mandatory
+					_r_4_43 
+				mandatory
+					_r_4_44 
+				mandatory
+					_r_4_45 
+				mandatory
+					_r_4_46 
+				mandatory
+					_r_4_47 
+				mandatory
+					_r_4_48 
+				mandatory
+					_r_4_49 
+				mandatory
+					_r_4_50 
+				mandatory
+					_r_4_51 
+				mandatory
+					_r_4_53 
+				mandatory
+					_r_4_54 
+				mandatory
+					_r_4_55 
+				mandatory
+					_r_4_56 
+				mandatory
+					_r_4_57 
+				mandatory
+					_r_4_58 
+				mandatory
+					_r_4_59 
+				mandatory
+					_r_4_60 
+				mandatory
+					_r_4_61 
+				mandatory
+					_r_4_62 
+				mandatory
+					_r_4_63 
+				mandatory
+					_r_4_64 
+				mandatory
+					_r_4_65 
+				mandatory
+					_r_4_66 
+				mandatory
+					_r_4_67 
+				mandatory
+					_r_4_68 
+constraints
+	_r_2_23 requires _r_4_38
+	_r_2_19 excludes _r_4_59
+	_r_2_20 requires _r_4_59
+	_r_2_21 requires _r_4_54
+	_r_2_19 requires _r_4_64
+	_r_2_22 requires _r_4_48
+	_r_2_18 requires _r_4_68
+	_r_2_18 requires _r_4_68
+	_r_2_23 requires _r_4_38
+	_r_2_18 excludes _r_4_64
+	_r_2_21 excludes _r_4_48
+	_r_2_20 excludes _r_4_54
+	_r_2_22 requires _r_4_43

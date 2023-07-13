@@ -1,0 +1,42 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 2:25 AM  -->
+<feature_model name="Modelo de Votacao Eletronica">
+<meta>
+<data name="description">Reutilização de Software</data>
+<data name="creator">Asafe Medeiros</data>
+<data name="address"></data>
+<data name="email">asafecgm1@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Votacao na Urna Eletronica(_r)
+	:m Gerenciar Periodo Vatacao(_r_4)
+		:m Periodo Eleitoral Aberto(_r_4_5)
+			:m Votar(_r_4_5_26)
+				:m Pesquisar eleitor(_r_4_5_26_27)
+					:g (_r_4_5_26_27_28) [1,1] 
+						: Pesquisar por titulo(_r_4_5_26_27_28_29)
+						: Pesquisar por identidade ou CPF(_r_4_5_26_27_28_31)
+				:m Confirmar eleitor(_r_4_5_26_32)
+				:m Realizar o voto(_r_4_5_26_42)
+					:m Votar em candidato(_r_4_5_26_42_25)
+					:o Votar nulo(_r_4_5_26_42_26)
+					:o Votar branco(_r_4_5_26_42_27)
+		:m Terminar votacao(_r_4_6)
+			:m Mostrar Estatisticas(_r_4_6_11)
+			:m Mostrar Eleitos(_r_4_6_12)
+			:o Mostrar Derrotados(_r_4_6_13)
+	:m Cadastrar cargos da eleicao(_r_7)
+		:o Cadastrar restricao do cargo(_r_7_37)
+	:m Gerenciar candidatos(_r_8)
+		:o Validar candidatura(_r_8_9)
+		:m Cadastrar candidato(_r_8_40)
+	:o Cadastrar peso de cada tipo de eleitor(_r_22)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

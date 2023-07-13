@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 1, 2022 - 10:06 AM  -->
+<feature_model name="HM">
+<meta>
+<data name="description">Mounting of hardware modules</data>
+<data name="creator">xyz</data>
+<data name="address"></data>
+<data name="email">konstantin.kundegraber@student.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU Graz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Hardware Rack(_r)
+	:m Slot A(_r_2)
+		:g (_r_2_88) [1,1] 
+			: AM1(_r_2_88_89)
+			: AM21(_r_2_88_90)
+			: AM3(_r_2_88_93)
+	:m Slot B(_r_3)
+		:g (_r_3_94) [1,1] 
+			: BM1(_r_3_94_97)
+			: BM21(_r_3_94_98)
+			: BM22(_r_3_94_100)
+			: BM3(_r_3_94_101)
+	:m Slot C(_r_5)
+		:g (_r_5_102) [1,1] 
+			: CM1(_r_5_102_103)
+			: CM21(_r_5_102_104)
+			: CM22(_r_5_102_105)
+			: CM3(_r_5_102_106)
+	:m Slot D(_r_6)
+		:g (_r_6_107) [1,1] 
+			: DM1(_r_6_107_108)
+			: DM22(_r_6_107_110)
+			: DM3(_r_6_107_111)
+</feature_tree>
+<constraints>
+constraint_39:_r_3_94_98 or ~_r_5_102_105
+constraint_58:~_r_5_102_106 or ~_r_6_107_111
+constraint_57:~_r_3_94_101 or ~_r_6_107_111
+constraint_56:~_r_3_94_101 or ~_r_5_102_106
+constraint_38:_r_2_88_90 or ~_r_3_94_100
+constraint_47:~_r_2_88_89 or ~_r_5_102_103
+constraint_55:~_r_2_88_93 or ~_r_6_107_111
+constraint_37:~_r_5_102_104 or _r_6_107_110
+constraint_46:~_r_2_88_89 or ~_r_3_94_97
+constraint_54:~_r_2_88_93 or ~_r_5_102_106
+constraint_36:~_r_3_94_98 or _r_5_102_105
+constraint_49:~_r_3_94_97 or ~_r_5_102_103
+constraint_53:~_r_2_88_93 or ~_r_3_94_101
+constraint_35:~_r_2_88_90 or _r_3_94_100
+constraint_48:~_r_2_88_89 or ~_r_6_107_108
+constraint_40:_r_5_102_104 or ~_r_6_107_110
+constraint_41:~_r_2_88_90 or ~_r_5_102_104
+constraint_51:~_r_3_94_97 or ~_r_6_107_108
+constraint_52:~_r_5_102_103 or ~_r_6_107_108
+</constraints>
+</feature_model>

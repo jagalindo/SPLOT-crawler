@@ -1,0 +1,38 @@
+features
+	_r 
+		mandatory
+			_r_35_36 
+				optional
+					_r_35_36_39 
+				optional
+					_r_35_36_43 
+		mandatory
+			_r_44 
+		optional
+			_r_45 
+		optional
+			_r_46 
+		optional
+			_r_47 
+		mandatory
+			_r_48 
+				mandatory
+					_r_48_49 
+				mandatory
+					_r_48_51 
+		optional
+			_r_52 
+				mandatory
+					_r_52_54 
+				mandatory
+					_r_52_55 
+		optional
+			_r_56 
+				mandatory
+					_r_56_57 
+				mandatory
+					_r_56_58 
+constraints
+	_r_48 requires _r_56
+	_r_48 requires _r_52
+	_r_35_36_39 requires _r_45

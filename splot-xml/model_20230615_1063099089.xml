@@ -1,0 +1,67 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 15, 2023 - 6:36 AM  -->
+<feature_model name="IoT Based FMIS">
+<meta>
+<data name="description">FMIS</data>
+<data name="creator">Siti Hawa</data>
+<data name="address"></data>
+<data name="email">hawashareef@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTHM</data>
+<data name="department">FSKTM</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r IoT Based FMIS(_r)
+	:m Data Acquisition(_r_2)
+		:m IoT Data Acquisition(_r_2_7)
+			:g (_r_2_7_33) [1,1] 
+				: MQTT(_r_2_7_33_34)
+				: XMPP(_r_2_7_33_35)
+				: AMQP(_r_2_7_33_36)
+				: DDS(_r_2_7_33_37)
+				: CoAP(_r_2_7_33_38)
+		:o Conventional Data Acquisition(_r_2_8)
+			:g (_r_2_8_39) [1,1] 
+				: ISOBUS(_r_2_8_39_40)
+				: CAN(_r_2_8_39_41)
+	:m Data Processing(_r_3)
+		:g (_r_3_15) [1,1] 
+			: Image or Video Processing(_r_3_15_16)
+			: Data Mining(_r_3_15_19)
+			: Decission Support(_r_3_15_20)
+			: Data Logging(_r_3_15_21)
+	:m Data Visualization(_r_4)
+		:g (_r_4_22) [1,1] 
+			: Monitoring(_r_4_22_23)
+				:g (_r_4_22_23_42) [1,1] 
+					: Yield Monitoring(_r_4_22_23_42_43)
+					: Environment Monitoring(_r_4_22_23_42_44)
+			: Mapping(_r_4_22_24)
+				:g (_r_4_22_24_45) [1,1] 
+					: Yield Mapping(_r_4_22_24_45_46)
+					: Soil Type Mapping(_r_4_22_24_45_47)
+					: Light Mapping(_r_4_22_24_45_48)
+	:m System Management(_r_5)
+		:g (_r_5_25) [1,1] 
+			: Sensor Control(_r_5_25_26)
+				:g (_r_5_25_26_49) [1,1] 
+					: Soil Sensing(_r_5_25_26_49_50)
+					: Light Sensing(_r_5_25_26_49_51)
+					: Weather Sensing(_r_5_25_26_49_52)
+					: Water Sensing(_r_5_25_26_49_53)
+			: Actuator Control(_r_5_25_27)
+			: System Control(_r_5_25_28)
+				:g (_r_5_25_28_54) [1,1] 
+					: Vehicle Control(_r_5_25_28_54_55)
+					: UAV or DRONE Control(_r_5_25_28_54_56)
+	:o External Services(_r_9)
+		:g (_r_9_29) [1,1] 
+			: Weather Forecast(_r_9_29_30)
+			: Finance Services(_r_9_29_31)
+			: Other Systems(_r_9_29_32)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

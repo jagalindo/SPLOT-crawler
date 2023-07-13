@@ -1,0 +1,170 @@
+features
+	_r0 
+		optional
+			_r1 
+		mandatory
+			_r2 
+				mandatory
+					_r3 
+						optional
+							_r4 
+						optional
+							_r5 
+						optional
+							_r6 
+						optional
+							_r7 
+						mandatory
+							_r8 
+		optional
+			_r9 
+		optional
+			_r10 
+		optional
+			_r11 
+		mandatory
+			_r12 
+				mandatory
+					_r13 
+						optional
+							_r14 
+						optional
+							_r15 
+						mandatory
+							_r16 
+				optional
+					_r17 
+						optional
+							_r18 
+								alternative
+									_r19 
+									_r20 
+						mandatory
+							_r21 
+								optional
+									_r22 
+								optional
+									_r23 
+		optional
+			_r24 
+		mandatory
+			_r25 
+				mandatory
+					_r26 
+						optional
+							_r27 
+						mandatory
+							_r28 
+						mandatory
+							_r29 
+				mandatory
+					_r30 
+						optional
+							_r31 
+						optional
+							_r32 
+						mandatory
+							_r33 
+				mandatory
+					_r34 
+						optional
+							_r35 
+						optional
+							_r36 
+						optional
+							_r37 
+						optional
+							_r38 
+						mandatory
+							_r39 
+						optional
+							_r40 
+						optional
+							_r41 
+						optional
+							_r42 
+						optional
+							_r43 
+				mandatory
+					_r44 
+						optional
+							_r45 
+								optional
+									_r46 
+								optional
+									_r47 
+								optional
+									_r48 
+								optional
+									_r49 
+								optional
+									_r50 
+								optional
+									_r51 
+								optional
+									_r45_63 
+						optional
+							_r52 
+						optional
+							_r53 
+						optional
+							_r54 
+								alternative
+									_r55 
+									_r56 
+									_r57 
+						mandatory
+							_r58 
+						optional
+							_r59 
+						optional
+							_r60 
+						mandatory
+							_r61 
+constraints
+	_r37 requires _r5
+	_r59 requires _r32
+	_r10 requires _r25
+	_r40 requires _r5
+	_r35 requires _r8
+	_r40 requires _r11
+	_r39 requires _r8
+	_r1 requires _r11
+	_r36 requires _r7
+	_r9 requires _r25
+	_r38 requires _r11
+	_r58 requires _r8
+	_r1 requires _r52
+	_r41 requires _r6
+	_r10 requires _r45_63
+	_r45 requires _r5
+	_r60 requires _r8
+	_r10 requires _r52
+	_r15 requires _r23
+	_r61 requires _r8
+	_r1 requires _r25
+	_r54 requires _r5
+	_r9 requires _r38
+	_r35 requires _r11
+	_r25 requires _r12
+	_r42 requires _r4
+	_r38 requires _r5
+	_r32 requires _r8
+	_r15 requires _r54
+	_r24 requires _r25
+	_r23 requires _r15
+	_r9 requires _r10
+	_r25 requires _r2
+	_r54 requires _r15
+	_r43 requires _r11
+	_r43 requires _r8
+	_r53 requires _r6
+	_r37 requires _r11
+	_r10 requires _r11
+	_r59 requires _r8
+	_r54 requires _r23
+	_r33 requires _r8
+	_r36 requires _r11
+	_r31 requires _r4
+	_r52 requires _r5
+	_r23 requires _r54

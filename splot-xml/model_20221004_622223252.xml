@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 4, 2022 - 4:58 AM  -->
+<feature_model name="Veterinarias">
+<meta>
+<data name="description">gestion de veterinarias</data>
+<data name="creator">Julio</data>
+<data name="address"></data>
+<data name="email">julito.1998@hotmail.es</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">tesis</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Veterinaria(_r)
+	:m Consultorio(_r_8)
+		:m Vacunacion(_r_8_19)
+		:m General(_r_8_20)
+		:o Especialidades(_r_8_21)
+		:o Emergencia(_r_8_22)
+	:m Tienda(_r_9)
+		:m Alimentacion(_r_9_27)
+		:o Accesorios(_r_9_31)
+	:m Farmacia(_r_11)
+		:m Medicamentos(_r_11_34)
+		:o Insumos(_r_11_35)
+	:o Hospitalizacion(_r_12)
+		:m General(_r_12_16)
+		:o Emergencia(_r_12_17)
+			:m Ambulancia(_r_12_17_40)
+		:o Cirugia(_r_12_18)
+	:o Laboratorio(_r_14)
+		:o Imagenes(_r_14_36)
+		:o Clinico(_r_14_37)
+	:o Spa(_r_15)
+		:m Estetica(_r_15_38)
+			:m Banio(_r_15_38_42)
+			:o Peluqueria(_r_15_38_43)
+			:o Pedicure(_r_15_38_44)
+		:o Hospedaje(_r_15_39)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

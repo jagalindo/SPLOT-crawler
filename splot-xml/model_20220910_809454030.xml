@@ -1,0 +1,75 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 12, 2022 - 4:38 AM  -->
+<feature_model name="FeedMashup">
+<meta>
+<data name="description">LPS para aplicaciones FeedMashup</data>
+<data name="creator">Héctor Reinaga</data>
+<data name="address">Valentín Alsina 815</data>
+<data name="email">hreinaga@yahoo.com.ar</data>
+<data name="phone">02966622688</data>
+<data name="website"></data>
+<data name="organization">UNPA-UARG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FeedMashup(_r)
+	:m InputIntegration(_r_1)
+		:o Input(_r_1_45)
+			:g (_r_1_45_57) [1,*] 
+				: TextInput(_r_1_45_57_58)
+				: Required(_r_1_45_57_59)
+					:g (_r_1_45_57_59_60) [1,1] 
+						: Feed(_r_1_45_57_59_60_61)
+						: Download(_r_1_45_57_59_60_62)
+						: Webhook(_r_1_45_57_59_60_63)
+						: Pipe(_r_1_45_57_59_60_64)
+		:o Integration(_r_1_46)
+			:g (_r_1_46_47) [1,1] 
+				: Dailymotion(_r_1_46_47_48)
+				: Mixcloud(_r_1_46_47_49)
+				: Periscope(_r_1_46_47_50)
+				: Reddit(_r_1_46_47_51)
+				: Speedrun(_r_1_46_47_52)
+				: SVTPlay(_r_1_46_47_53)
+				: Tweets(_r_1_46_47_54)
+				: Ustream(_r_1_46_47_55)
+				: Vimeo(_r_1_46_47_56)
+	:o Manipulate(_r_3)
+		:g (_r_3_6) [1,*] 
+			: Filter(_r_3_6_7)
+			: Replace(_r_3_6_23)
+			: Unique(_r_3_6_26)
+			: Truncate(_r_3_6_27)
+			: Sort(_r_3_6_28)
+			: Shorten(_r_3_6_29)
+	:o Control(_r_4)
+		:g (_r_4_30) [1,*] 
+			: Combine(_r_4_30_31)
+			: Duplicate(_r_4_30_32)
+			: MergeItems(_r_4_30_33)
+			: ForEach(_r_4_30_34)
+	:o Create(_r_5)
+		:g (_r_5_39) [1,*] 
+			: Extract(_r_5_39_40)
+			: Images(_r_5_39_41)
+			: Tables(_r_5_39_42)
+			: Insert(_r_5_39_43)
+			: BuildFeed(_r_5_39_44)
+</feature_tree>
+<constraints>
+constraint_17:_r_1_45_57_59_60_61 or _r_1_45_57_59_60_62 or ~_r_5_39_40
+constraint_18:_r_1_45_57_59 or ~_r_1_46
+constraint_19:~_r_1_45_57_58 or _r_1_45_57_59_60_64
+constraint_20:~_r_3 or ~_r_4 or _r_5
+constraint_11:~_r_3 or ~_r_4 or _r_5_39_40
+constraint_12:~_r_3 or _r_4_30_31 or ~_r_5
+constraint_26:_r_1_45_57_59_60_61 or _r_1_45_57_59_60_62 or ~_r_5_39_42
+constraint_13:~_r_3 or ~_r_4 or _r_5_39_42
+constraint_14:~_r_3 or ~_r_4 or _r_5_39_43
+constraint_24:~_r_3 or _r_4_30_34 or ~_r_5
+constraint_15:~_r_3 or ~_r_4 or _r_5_39_44
+constraint_16:~_r_3 or _r_4_30_33 or ~_r_5
+constraint_25:_r_1_45_57_59_60_61 or _r_1_45_57_59_60_62 or ~_r_5_39_41
+</constraints>
+</feature_model>

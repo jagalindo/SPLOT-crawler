@@ -1,0 +1,115 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Oct 26, 2022 - 7:08 AM  -->
+<feature_model name="RouteDetailsFeatureModel">
+<meta>
+<data name="description">Route details module describes the route id features based on the  data that  is routed from the route Finder plan.</data>
+<data name="creator">Behailu Getachew</data>
+<data name="address">Wolde</data>
+<data name="email">behailu.getachew@mu.edu.et</data>
+<data name="phone">+251913032406</data>
+<data name="website"></data>
+<data name="organization">MEKELLE UNIVERSITY</data>
+<data name="department">Software Engineering</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RouteDetailsFeatureModel(_r)
+	:m EndPoint(_r_1)
+		:m routeid(_r_1_2)
+			:m rstartlocid(_r_1_2_3)
+				:m rsInputLength(_r_1_2_3_10)
+					:g (_r_1_2_3_10_47) [1,*] 
+						: 0(_r_1_2_3_10_47_48)
+						: 36(_r_1_2_3_10_47_49)
+				:m rsLetter(_r_1_2_3_11)
+					:g (_r_1_2_3_11_50) [1,*] 
+						: true(_r_1_2_3_11_50_51)
+						: false(_r_1_2_3_11_50_52)
+				:m rsNumbers(_r_1_2_3_12)
+					:g (_r_1_2_3_12_55) [1,1] 
+						: true(_r_1_2_3_12_55_56)
+						: false(_r_1_2_3_12_55_57)
+				:m rsSpecial(_r_1_2_3_13)
+					:g (_r_1_2_3_13_58) [1,1] 
+						: true(_r_1_2_3_13_58_59)
+						: false(_r_1_2_3_13_58_60)
+			:m rendLocid(_r_1_2_4)
+				:m reInputLength(_r_1_2_4_14)
+					:g (_r_1_2_4_14_61) [1,*] 
+						: 0(_r_1_2_4_14_61_62)
+						: 36(_r_1_2_4_14_61_63)
+				:m reLetter(_r_1_2_4_15)
+					:g (_r_1_2_4_15_64) [1,1] 
+						: true(_r_1_2_4_15_64_65)
+						: false(_r_1_2_4_15_64_66)
+				:m reNumbers(_r_1_2_4_16)
+					:g (_r_1_2_4_16_67) [1,1] 
+						: true(_r_1_2_4_16_67_68)
+						: false(_r_1_2_4_16_67_69)
+				:m reSpecial(_r_1_2_4_17)
+					:g (_r_1_2_4_17_70) [1,1] 
+						: true(_r_1_2_4_17_70_71)
+						: false(_r_1_2_4_17_70_72)
+			:m rtimedate(_r_1_2_5)
+				:m rtInputLength(_r_1_2_5_18)
+					:g (_r_1_2_5_18_73) [1,*] 
+						: 0(_r_1_2_5_18_73_74)
+						: 25(_r_1_2_5_18_73_75)
+				:m rtLetter(_r_1_2_5_19)
+					:g (_r_1_2_5_19_76) [1,1] 
+						: true(_r_1_2_5_19_76_77)
+						: false(_r_1_2_5_19_76_78)
+				:m rtNumbers(_r_1_2_5_20)
+					:g (_r_1_2_5_20_79) [1,1] 
+						: true(_r_1_2_5_20_79_80)
+						: false(_r_1_2_5_20_79_81)
+				:m rtSpecial(_r_1_2_5_21)
+					:g (_r_1_2_5_21_82) [1,1] 
+						: true(_r_1_2_5_21_82_83)
+						: false(_r_1_2_5_21_82_84)
+			:m arrive(_r_1_2_6)
+				:g (_r_1_2_6_22) [1,1] 
+					: true(_r_1_2_6_22_23)
+					: false(_r_1_2_6_22_24)
+			:m mode(_r_1_2_7)
+				:m kind(_r_1_2_7_25)
+					:g (_r_1_2_7_25_26) [1,*] 
+						: walk(_r_1_2_7_25_26_27)
+						: bike(_r_1_2_7_25_26_28)
+						: bus(_r_1_2_7_25_26_29)
+						: train(_r_1_2_7_25_26_30)
+						: tram(_r_1_2_7_25_26_31)
+			:m routes(_r_1_2_8)
+				:m isRouteFound(_r_1_2_8_32)
+					:g (_r_1_2_8_32_33) [1,1] 
+						: true(_r_1_2_8_32_33_34)
+						: false(_r_1_2_8_32_33_35)
+			:m capability(_r_1_2_9)
+				:m modeTime(_r_1_2_9_36)
+					:m deptTime(_r_1_2_9_36_37)
+						:g (_r_1_2_9_36_37_39) [1,*] 
+							: ontime(_r_1_2_9_36_37_39_40)
+							: delay(_r_1_2_9_36_37_39_41)
+							: unknown(_r_1_2_9_36_37_39_42)
+					:m arrivalTime(_r_1_2_9_36_38)
+						:g (_r_1_2_9_36_38_43) [1,*] 
+							: ontime(_r_1_2_9_36_38_43_44)
+							: delay(_r_1_2_9_36_38_43_45)
+							: unknown(_r_1_2_9_36_38_43_46)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_2_3_10 or _r_1_2_3_11 or _r_1_2_3_12 or _r_1_2_3_13 or _r_1_2_3_10_47_48 or _r_1_2_3_11_50_52 or _r_1_2_3_12_55_57 or _r_1_2_3_13_58_60
+constraint_9:_r_1_2_6 or _r_1_2_6_22_23 or _r_1_2_7_25 or _r_1_2_7_25_26_28 or _r_1_2_8_32 or _r_1_2_8_32_33_34 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_40 or _r_1_2_9_36_38_43_44
+constraint_10:_r_1_2_6 or _r_1_2_6_22_23 or _r_1_2_7_25 or _r_1_2_7_25_26_27 or _r_1_2_8_32 or _r_1_2_8_32_33_34 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_40 or _r_1_2_9_36_38_43_44
+constraint_6:_r_1_2_4_14 or _r_1_2_4_15 or _r_1_2_4_16 or _r_1_2_4_17 or _r_1_2_4_14_61_63 or _r_1_2_4_15_64_65 or _r_1_2_4_16_67_68 or _r_1_2_4_17_70_71
+constraint_11:_r_1_2_6 or _r_1_2_6_22_23 or _r_1_2_7_25 or _r_1_2_7_25_26_29 or _r_1_2_8_32 or _r_1_2_8_32_33_34 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_40 or _r_1_2_9_36_38_43_44
+constraint_7:_r_1_2_5 or _r_1_2_5_18 or _r_1_2_5_19 or _r_1_2_5_20 or _r_1_2_5_21 or _r_1_2_5_18_73_75 or _r_1_2_5_19_76_77 or _r_1_2_5_20_79_80 or _r_1_2_5_21_82_83
+constraint_12:_r_1_2_6 or _r_1_2_6_22_23 or _r_1_2_7_25_26_30 or _r_1_2_8_32 or _r_1_2_8_32_33_34 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_40 or _r_1_2_9_36_38_43_44
+constraint_4:_r_1_2_6 or _r_1_2_6_22_24 or _r_1_2_8_32 or _r_1_2_8_32_33_35 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_42 or _r_1_2_9_36_38_43_46
+constraint_13:_r_1_2_6 or _r_1_2_6_22_23 or _r_1_2_7_25 or _r_1_2_7_25_26_31 or _r_1_2_8_32 or _r_1_2_8_32_33_34 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_40 or _r_1_2_9_36_38_43_44
+constraint_5:_r_1_2_3_10 or _r_1_2_3_11 or _r_1_2_3_12 or _r_1_2_3_13 or _r_1_2_3_10_47_49 or _r_1_2_3_11_50_51 or _r_1_2_3_12_55_56 or _r_1_2_3_13_58_59
+constraint_15:_r_1_2_6 or _r_1_2_6_22_24 or _r_1_2_7_25 or _r_1_2_7_25_26_27 or _r_1_2_7_25_26_28 or _r_1_2_7_25_26_29 or _r_1_2_7_25_26_30 or _r_1_2_7_25_26_31 or _r_1_2_8_32 or _r_1_2_8_32_33_35 or _r_1_2_9_36_37 or _r_1_2_9_36_38 or _r_1_2_9_36_37_39_41 or _r_1_2_9_36_37_39_42 or _r_1_2_9_36_38_43_45 or _r_1_2_9_36_38_43_46
+constraint_2:_r_1_2_4_14 or _r_1_2_4_15 or _r_1_2_4_16 or _r_1_2_4_17 or _r_1_2_4_14_61_62 or _r_1_2_4_15_64_66 or _r_1_2_4_16_67_69 or _r_1_2_4_17_70_72
+constraint_3:_r_1_2_5_18 or _r_1_2_5_19 or _r_1_2_5_20 or _r_1_2_5_21 or _r_1_2_5_18_73_74 or _r_1_2_5_19_76_78 or _r_1_2_5_20_79_81 or _r_1_2_5_21_82_84
+</constraints>
+</feature_model>

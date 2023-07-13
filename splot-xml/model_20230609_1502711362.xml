@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jun 9, 2023 - 2:22 AM  -->
+<feature_model name="Mercado-Online">
+<meta>
+<data name="description">Sistema de mercado online que irá funcionar com compras e vendas</data>
+<data name="creator">Gabriel</data>
+<data name="address"></data>
+<data name="email">gabriel22120050@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Gabriel´s</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mercado-Online(_r)
+	:m Autenticacao de usuario(_r_1)
+		:m Controle do Acesso de Administrador(_r_1_9)
+		:m Gerenciamento de Conta(_r_1_10)
+			:o Lista de desejos(_r_1_10_11)
+			:g (_r_1_10_17) [1,*] 
+				: Historico de navegacao(_r_1_10_17_18)
+	:o Recomendacoes personalizadas(_r_4)
+	:m Cupons e descontos(_r_13)
+	:o Gerenciamento de cupons(_r_15)
+	:m Compra e Entrega(_r_19)
+		:m Multiplos Metodos de Pagamento(_r_19_20)
+		:m Gerenciamento de Devolucoes(_r_19_21)
+		:m Relatorios e Analises(_r_19_26)
+		:o Opcoes de Envio(_r_19_27)
+			:g (_r_19_27_29) [1,1] 
+				: Opcoes de Frete(_r_19_27_29_30)
+		:m Carrinho(_r_19_39)
+		:m Rastreamento de Pedidos(_r_19_42)
+	:o Avaliacoes e Comentarios(_r_31)
+	:o Gerenciamento de Avaliacoes e Comentarios(_r_33)
+	:o Compartilhamento em Redes Sociais(_r_34)
+	:o Suporte Multilingue(_r_36)
+	:o Recursos de Upselling e Cross-selling(_r_41)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

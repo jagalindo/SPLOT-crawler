@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 2, 2022 - 1:40 PM  -->
+<feature_model name="example 6">
+<meta>
+<data name="description">Mounting of hardware modules</data>
+<data name="creator">Brunner, Potthast</data>
+<data name="address"></data>
+<data name="email">gregor.potthast@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU Graz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Hardware rack(_r)
+	:m Slot A(_r_2)
+		:g (_r_2_6) [1,1] 
+			: Module 1(_r_2_6_7)
+			: Module 2(_r_2_6_10)
+			: Module 3(_r_2_6_11)
+	:m Slot B(_r_3)
+		:g (_r_3_12) [1,1] 
+			: Module 1(_r_3_12_13)
+			: Module 2(_r_3_12_14)
+			: Module 3(_r_3_12_15)
+	:m Slot C(_r_4)
+		:g (_r_4_17) [1,1] 
+			: Module 1(_r_4_17_18)
+			: Module 2(_r_4_17_19)
+			: Module 3(_r_4_17_20)
+	:m Slot D(_r_5)
+		:g (_r_5_21) [1,1] 
+			: Module 1(_r_5_21_22)
+			: Module 2(_r_5_21_26)
+			: Module 3(_r_5_21_27)
+</feature_tree>
+<constraints>
+constraint_17:~_r_3 or ~_r_4 or ~_r_3_12_15 or ~_r_4_17_20
+constraint_18:~_r_3 or ~_r_5 or ~_r_3_12_15 or ~_r_5_21_27
+constraint_19:~_r_4 or ~_r_5 or ~_r_4_17_20 or ~_r_5_21_27
+constraint_9:~_r_2 or ~_r_4 or ~_r_2_6_7 or ~_r_4_17_18
+constraint_10:~_r_2 or ~_r_5 or ~_r_2_6_7 or ~_r_5_21_22
+constraint_6:~_r_2 or ~_r_3 or ~_r_2_6_7 or ~_r_3_12_13
+constraint_11:~_r_3 or ~_r_4 or ~_r_3_12_13 or ~_r_4_17_18
+constraint_12:~_r_3 or ~_r_5 or ~_r_3_12_13 or ~_r_5_21_22
+constraint_4:~_r_3 or _r_4 or ~_r_3_12_14 or _r_4_17_19
+constraint_13:~_r_4 or ~_r_5 or ~_r_4_17_18 or ~_r_5_21_22
+constraint_5:~_r_4 or _r_5 or ~_r_4_17_19 or _r_5_21_26
+constraint_14:~_r_2 or ~_r_3 or ~_r_2_6_11 or ~_r_3_12_15
+constraint_15:~_r_2 or ~_r_4 or ~_r_2_6_11 or ~_r_4_17_20
+constraint_3:~_r_2 or _r_3 or ~_r_2_6_10 or _r_3_12_14
+constraint_16:~_r_2 or ~_r_5 or ~_r_2_6_11 or ~_r_5_21_27
+</constraints>
+</feature_model>

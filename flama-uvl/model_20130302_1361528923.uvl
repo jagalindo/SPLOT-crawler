@@ -1,0 +1,22 @@
+features
+	_r 
+		optional
+			_r_1 
+		optional
+			_r_2 
+				alternative
+					_r_2_18_19 
+					_r_2_18_20 
+					_r_2_18_21 
+		optional
+			_r_27 
+		optional
+			_r_28 
+		optional
+			_r_29 
+		optional
+			_r_31 
+constraints
+	_r_27 requires _r_28
+	_r_28 requires _r_29
+	_r_2_18_21 requires _r_27

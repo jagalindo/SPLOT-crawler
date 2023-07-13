@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:26 PM  -->
+<feature_model name="Urna - Thales">
+<meta>
+<data name="description">exercício</data>
+<data name="creator">Thales</data>
+<data name="address"></data>
+<data name="email">thaleshrqsilva@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Verificacao de Senha(_r_1)
+	:g (_r_3) [1,1] 
+		: Eleicao do TSE ou TRE(_r_3_5)
+			:m Verificar titulo de eleitor(_r_3_5_12)
+			:g (_r_3_5_27) [1,*] 
+				: Presidente(_r_3_5_27_28)
+				: Senador(_r_3_5_27_29)
+				: Prefeito(_r_3_5_27_30)
+				: Vereador(_r_3_5_27_31)
+		: Eleicao do Departamento(_r_3_6)
+			:m Verificar CPF ou identidade do eleitor(_r_3_6_7)
+			:m Votar para chefe de departamento(_r_3_6_8)
+	:g (_r_32) [1,*] 
+		: Votar em branco(_r_32_33)
+		: Votar nulo(_r_32_34)
+	:m Cadastrar candidatos(_r_35)
+	:m Mostrar vencedores(_r_39)
+	:m Calcular total e porcentagem de votos(_r_40)
+	:o Calcular peso dos votos(_r_41)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

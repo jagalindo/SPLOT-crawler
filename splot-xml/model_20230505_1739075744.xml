@@ -1,0 +1,64 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 10, 2023 - 8:59 AM  -->
+<feature_model name="SLD-Spec">
+<meta>
+<data name="description">Specification of the sorting module of the Fischertechnik factory</data>
+<data name="creator">A. Beugnard</data>
+<data name="address"></data>
+<data name="email">antoine.beugnard@imt-atlantique.fr</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">IMT Atlantique</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SLD-Spec(_r)
+	:m Sort Introduction(_r_1)
+		:m sortModule(_r_1_2)
+			:m sort(_r_1_2_7)
+			:o Extend-1-1(_r_1_2_19)
+				:o maxPowerDemand(_r_1_2_19_20)
+				:m powerDemand(_r_1_2_19_21)
+					:o value(_r_1_2_19_21_22)
+					:m limit(_r_1_2_19_21_31)
+				:o minPowerDemand(_r_1_2_19_32)
+			:o Extend-1-3(_r_1_2_48)
+				:m mininputInterval(_r_1_2_48_50)
+				:m noMoreInput(_r_1_2_48_52)
+		:m powerSupplyModule(_r_1_3)
+			:o minVoltage(_r_1_3_33)
+			:o maxVoltage(_r_1_3_34)
+			:m voltage(_r_1_3_35)
+				:o value(_r_1_3_35_36)
+				:m range(_r_1_3_35_37)
+			:m suppliedPower(_r_1_3_39)
+				:o value(_r_1_3_39_40)
+				:m meetDemand(_r_1_3_39_41)
+			:o extend-1-1(_r_1_3_42)
+		:m diskSupplier(_r_1_4)
+			:o Extend-1-3(_r_1_4_49)
+		:m diskConsumer(_r_1_5)
+		:m Disk(_r_1_6)
+			:o Extend-1-2(_r_1_6_43)
+				:m shape(_r_1_6_43_44)
+				:m weight(_r_1_6_43_45)
+				:m colour(_r_1_6_43_46)
+		:o Extend-1(_r_1_8)
+			:m Sort Reference(_r_1_8_9)
+				:m powerSupply(_r_1_8_9_10)
+					:o Extend-1-1(_r_1_8_9_10_24)
+				:m diskSupply(_r_1_8_9_11)
+					:o Extend-1-3(_r_1_8_9_11_47)
+				:m diskConsumption(_r_1_8_9_12)
+				:m EDisk(_r_1_8_9_13)
+					:m disk(_r_1_8_9_13_16)
+					:m never(_r_1_8_9_13_18)
+				:m Colour(_r_1_8_9_15)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_8 or ~_r_1_2_19
+constraint_4:_r_1_8 or ~_r_1_4_49
+constraint_3:_r_1_8 or ~_r_1_6_43
+</constraints>
+</feature_model>

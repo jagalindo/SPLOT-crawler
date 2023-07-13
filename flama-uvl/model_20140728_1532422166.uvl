@@ -1,0 +1,61 @@
+features
+	DelayBlock 
+		mandatory
+			v_output 
+		mandatory
+			u_input 
+		optional
+			rootFeature 
+				optional
+					variable_delay 
+						mandatory
+							d_input 
+				optional
+					resettable 
+						mandatory
+							res_input 
+				optional
+					external_init_value 
+						mandatory
+							ic_input 
+				optional
+					enable_via_input 
+						mandatory
+							e_input 
+		optional
+			d_parameter 
+		optional
+			ic_parameter 
+		mandatory
+			semantics 
+				alternative
+					sem 
+					sem_reset 
+					sem_enable 
+					sem_reset_enable 
+					sem_variable_delay 
+					sem_reset_variable_delay 
+					sem_reset_enable_variable_delay 
+		mandatory
+			DelayBlock_23 
+constraints
+	sem_reset_variable_delay requires resettable
+	sem_reset requires resettable
+	sem_reset_variable_delay excludes enable_via_input
+	sem_enable excludes resettable
+	sem_reset_enable_variable_delay requires variable_delay
+	sem_reset_enable_variable_delay requires resettable
+	sem_reset excludes enable_via_input
+	sem excludes resettable
+	sem requires d_parameter
+	sem_enable requires enable_via_input
+	sem excludes enable_via_input
+	sem_reset_enable requires enable_via_input
+	sem_reset_enable requires resettable
+	sem_variable_delay requires variable_delay
+	sem_variable_delay excludes resettable
+	sem_variable_delay excludes enable_via_input
+	sem_reset_enable_variable_delay requires enable_via_input
+	sem_reset_variable_delay requires variable_delay
+	ic_parameter excludes external_init_value
+	d_parameter excludes variable_delay

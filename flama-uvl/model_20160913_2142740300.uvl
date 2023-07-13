@@ -1,0 +1,96 @@
+features
+	Taller1Computadores 
+		mandatory
+			Tipo 
+				alternative
+					Mesa 
+					Portatil 
+					Servidor 
+		mandatory
+			Marca 
+				alternative
+					Dell 
+					Toshiba 
+					Lenovo 
+					Apple 
+					Clon 
+		mandatory
+			CPU 
+				mandatory
+					RAM 
+						alternative
+							M4GB 
+							M8GB 
+							M16GB 
+							M32GB 
+							M64GB 
+				mandatory
+					Procesador 
+						alternative
+							Intel 
+							AMD 
+				mandatory
+					DiscoDuro 
+						alternative
+							A500GB 
+							A1TB 
+							A2TB 
+							A5TB 
+							A10TB 
+				optional
+					TarjetaGrafica 
+						alternative
+							NVIDIA 
+							ATI 
+		optional
+			Pantalla 
+				optional
+					Tecnologia 
+						or
+							T3D 
+							T4K 
+				mandatory
+					Tamanio 
+						optional
+							P14 
+						optional
+							P17 
+						optional
+							P24 
+		optional
+			PlantaPoder 
+		mandatory
+			SO 
+				alternative
+					ServidorSO 
+						alternative
+							WindowsServer 
+							RedHat 
+							OSXServer 
+					PersonalSO 
+						alternative
+							Windows10 
+							Fedora 
+							OSXYosemite 
+constraints
+	Lenovo excludes OSXServer
+	Mesa requires M16GB
+	Clon excludes OSXYosemite
+	Portatil requires M16GB
+	Clon excludes OSXServer
+	Servidor requires ServidorSO
+	Mesa requires PersonalSO
+	Portatil excludes T4K
+	Portatil excludes T3D
+	Mesa requires A2TB
+	Portatil requires A2TB
+	Portatil requires PersonalSO
+	Dell excludes OSXYosemite
+	Servidor requires A10TB
+	Dell excludes OSXServer
+	Toshiba excludes OSXYosemite
+	Toshiba excludes OSXServer
+	Servidor requires M64GB
+	Lenovo excludes OSXYosemite
+	Clon excludes Portatil
+	Portatil requires Pantalla

@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:02 PM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Uma urna para ate 3 candidatos</data>
+<data name="creator">Pedro Luis Costa Mucci</data>
+<data name="address"></data>
+<data name="email">pedroluismucci@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department">DCC</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Basicos da urna(_r_1)
+		:m Iniciar e finalizar com senha(_r_1_3)
+		:m Receber identificacao(_r_1_4)
+			:o Receber peso de voto(_r_1_4_14)
+			:m Confirmar identidade(_r_1_4_15)
+			:g (_r_1_4_16) [1,1] 
+				: Titulo de eleitor(_r_1_4_16_17)
+				: CPF(_r_1_4_16_18)
+				: Identidade(_r_1_4_16_19)
+			:m Confirmar voto unico(_r_1_4_23)
+		:m Receber voto(_r_1_5)
+			:m Branco(_r_1_5_7)
+			:m Nulo(_r_1_5_8)
+			:m Voto valido(_r_1_5_9)
+				:g (_r_1_5_9_10) [1,1] 
+					: Um candidato(_r_1_5_9_10_11)
+					: Dois candidatos(_r_1_5_9_10_12)
+					: Tres candidatos(_r_1_5_9_10_13)
+		:m Mostrar estatisticas(_r_1_6)
+			:o Calcular peso de voto(_r_1_6_20)
+			:m Mostrar candidato vencedor(_r_1_6_21)
+</feature_tree>
+<constraints>
+constraint_1:_r
+constraint_3:_r or _r_1 or _r_1_4 or _r_1_4_14 or _r_1_4_15 or _r_1_4_16_17 or _r_1_4_16_18 or _r_1_4_16_19
+</constraints>
+</feature_model>

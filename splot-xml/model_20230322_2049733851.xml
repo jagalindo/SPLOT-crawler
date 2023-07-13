@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:40 PM  -->
+<feature_model name="Modelo de Urna Eletrônica">
+<meta>
+<data name="description">Feature Model para Urna Eletrônica</data>
+<data name="creator">Matheus Prado</data>
+<data name="address"></data>
+<data name="email">matheus-pm@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Inicializacao da urna(_r_1)
+		:m Senha(_r_1_2)
+	:m Termino da votacao(_r_6)
+		:m Senha(_r_6_7)
+		:m Apresentar estatisticas(_r_6_39)
+			:m Mostrar votos de candidatos(_r_6_39_40)
+			:m Mostrar eleitos(_r_6_39_41)
+			:o Mostrar derrotados(_r_6_39_42)
+	:m Credencial para voto(_r_8)
+		:g (_r_8_18) [1,1] 
+			: Voto em Presidente e Senador(_r_8_18_19)
+				:m Titulo de eleitor(_r_8_18_19_22)
+			: Voto em Prefeito e Vereador(_r_8_18_20)
+				:m Titulo de eleitor(_r_8_18_20_23)
+			: Voto em Chefe de Departamento(_r_8_18_21)
+				:g (_r_8_18_21_25) [1,*] 
+					: Identidade(_r_8_18_21_25_26)
+					: CPF(_r_8_18_21_25_27)
+	:m Voto(_r_28)
+		:m Dados do voto(_r_28_30)
+			:m Candidato(_r_28_30_35)
+			:m Branco(_r_28_30_36)
+			:o Nulo(_r_28_30_37)
+		:m Abstencao(_r_28_38)
+		:o Peso do voto(_r_28_43)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 10:26 PM  -->
+<feature_model name="SR Eleicao">
+<meta>
+<data name="description">SR Eleicao</data>
+<data name="creator">Jorge Ferreira</data>
+<data name="address"></data>
+<data name="email">jhfer@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eleicao(_r)
+	:m Registro(_r_1)
+		:m Controle de energia(_r_1_5)
+			:m Verificar autoridade(_r_1_5_17)
+		:m Validacao Eleitor(_r_1_6)
+			:m Confirmar identificacao(_r_1_6_18)
+			:o Adicionar peso(_r_1_6_19)
+		:m Cadastrar Eleitor(_r_1_7)
+	:m Votacao(_r_2)
+		:m Escolher candidato(_r_2_8)
+			:m Votar(_r_2_8_20)
+				:g (_r_2_8_20_29) [1,*] 
+					: Voto valido(_r_2_8_20_29_32)
+					: Voto em branco(_r_2_8_20_29_33)
+					: Voto nulo(_r_2_8_20_29_34)
+			:m Corrigir voto(_r_2_8_22)
+			:m Confirmar voto(_r_2_8_23)
+		:m Cadastrar candidato(_r_2_9)
+			:m Inserir nome(_r_2_9_25)
+			:m Inserir numero(_r_2_9_26)
+			:o Validar candidato(_r_2_9_36)
+	:m Estatistica(_r_3)
+		:m Numero de votos(_r_3_11)
+		:m Porcentagem de votos(_r_3_12)
+		:m Resultado(_r_3_13)
+			:m Eleitos(_r_3_13_14)
+			:o Derrotados(_r_3_13_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

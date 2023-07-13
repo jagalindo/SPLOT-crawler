@@ -1,0 +1,58 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Oct 29, 2022 - 4:05 PM  -->
+<feature_model name="Hardware Rack">
+<meta>
+<data name="description">Hardware Rack</data>
+<data name="creator">Me</data>
+<data name="address"> </data>
+<data name="email">bernhardsuppanz30@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uni</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Hardware Rack(_r)
+	:m Slot-A(_r_2)
+		:g (_r_2_7) [1,1] 
+			: Module-A1(_r_2_7_8)
+			: Module-A2(_r_2_7_9)
+			: Module-A3(_r_2_7_10)
+	:m Slot-B(_r_3)
+		:g (_r_3_11) [1,1] 
+			: Module-B1(_r_3_11_12)
+			: Module-B2(_r_3_11_13)
+			: Module-B3(_r_3_11_14)
+	:m Slot-C(_r_4)
+		:g (_r_4_15) [1,1] 
+			: Module-C1(_r_4_15_16)
+			: Module-C2(_r_4_15_17)
+			: Module-C3(_r_4_15_18)
+	:m Slot-D(_r_5)
+		:g (_r_5_19) [1,1] 
+			: Module-D1(_r_5_19_20)
+			: Module-D3(_r_5_19_21)
+			: Module-D2(_r_5_19_22)
+</feature_tree>
+<constraints>
+constraint_43:~_r_3_11_12 or ~_r_4_15_16
+constraint_42:~_r_2_7_8 or ~_r_5_19_20
+constraint_58:~_r_4_15_18 or ~_r_5_19_21
+constraint_45:~_r_4_15_16 or ~_r_5_19_20
+constraint_57:~_r_3_11_14 or ~_r_5_19_21
+constraint_44:~_r_3_11_12 or ~_r_5_19_20
+constraint_56:~_r_3_11_14 or ~_r_4_15_18
+constraint_47:~_r_2_7_9 or ~_r_4_15_17
+constraint_55:~_r_2_7_10 or ~_r_5_19_21
+constraint_46:~_r_2_7_9 or _r_3_11_13
+constraint_54:~_r_2_7_10 or ~_r_4_15_18
+constraint_49:_r_4_15_17 or ~_r_5_19_22
+constraint_53:~_r_2_7_10 or ~_r_3_11_14
+constraint_48:~_r_2_7_9 or ~_r_5_19_22
+constraint_40:~_r_2_7_8 or ~_r_3_11_12
+constraint_41:~_r_2_7_8 or ~_r_4_15_16
+constraint_51:_r_2_7_9 or ~_r_3_11_13 or _r_4_15_17
+constraint_52:_r_3_11_13 or ~_r_4_15_17 or _r_5_19_22
+</constraints>
+</feature_model>

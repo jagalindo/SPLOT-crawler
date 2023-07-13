@@ -1,0 +1,22 @@
+features
+	_r 
+		mandatory
+			_r_1 
+		alternative
+			_r_19_23 
+				mandatory
+					_r_19_23_26 
+				optional
+					_r_19_23_27 
+			_r_19_33 
+				mandatory
+					_r_19_33_34 
+				mandatory
+					_r_19_33_35 
+				mandatory
+					_r_19_33_36 
+			_r_19_37 
+constraints
+	_r_1 requires _r_19_33_34
+	_r_1 requires _r_19_33_36
+	_r_19_33_34 requires _r_19_33_35

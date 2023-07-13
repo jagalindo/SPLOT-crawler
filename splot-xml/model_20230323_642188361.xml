@@ -1,0 +1,44 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 2:25 AM  -->
+<feature_model name="Modelo de Votacao na Urna Eletronica">
+<meta>
+<data name="description">Reutilização de Software</data>
+<data name="creator">Helio Victor Flexa dos Santos</data>
+<data name="address"></data>
+<data name="email">heliovictor05@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Votacao na Urna Eletronica(_r)
+	:m Gerenciar Periodo Eleitoral(_r_1)
+		:m Periodo Eleitoral Aberto(_r_1_6)
+			:m Votar(_r_1_6_8)
+				:m Pesquisar eleitor(_r_1_6_8_9)
+					:g (_r_1_6_8_9_13) [1,1] 
+						: Pesquisar por titulo(_r_1_6_8_9_13_14)
+						: Pesquisar por identidade ou CPF(_r_1_6_8_9_13_15)
+				:m Confirmar eleitor(_r_1_6_8_10)
+				:m Realizar o voto(_r_1_6_8_12)
+					:g (_r_1_6_8_12_16) [1,*] 
+						: Votar no candidato(_r_1_6_8_12_16_17)
+						: Votar em branco(_r_1_6_8_12_16_18)
+						: Votar nulo(_r_1_6_8_12_16_19)
+						: Se abster(_r_1_6_8_12_16_20)
+		:m Periodo Eleitoral Finalizado(_r_1_7)
+			:m Mostrar estatisticas(_r_1_7_21)
+			:m Mostrar eleitos(_r_1_7_22)
+			:o Mostrar derrotados(_r_1_7_23)
+	:m Cadastrar cargos da eleicao(_r_2)
+		:o Cadastrar restricao de cargo(_r_2_24)
+	:m Gerenciar candidatos(_r_3)
+		:m Cadastrar candidato(_r_3_25)
+		:o Validar candidatura(_r_3_26)
+	:o Cadastrar peso de cada tipo de eleitor(_r_27)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

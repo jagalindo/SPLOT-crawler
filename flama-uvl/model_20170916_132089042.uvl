@@ -1,0 +1,98 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				or
+					_r_1_42_43 
+					_r_1_42_44 
+					_r_1_42_45 
+		mandatory
+			_r_2 
+				alternative
+					_r_2_36_37 
+					_r_2_36_38 
+					_r_2_36_39 
+					_r_2_36_40 
+					_r_2_36_41 
+		mandatory
+			_r_13 
+				or
+					_r_13_16_17 
+						alternative
+							_r_13_16_17_46_47 
+							_r_13_16_17_46_48 
+							_r_13_16_17_46_49 
+					_r_13_16_18 
+						alternative
+							_r_13_16_18_50_51 
+							_r_13_16_18_50_52 
+							_r_13_16_18_50_53 
+		mandatory
+			_r_27 
+				mandatory
+					_r_27_29 
+						or
+							_r_27_29_56_57 
+							_r_27_29_56_58 
+							_r_27_29_56_59 
+							_r_27_29_56_60 
+							_r_27_29_56_61 
+				mandatory
+					_r_27_30 
+						alternative
+							_r_27_30_68_69 
+							_r_27_30_68_70 
+				mandatory
+					_r_27_31 
+						or
+							_r_27_31_62_63 
+							_r_27_31_62_64 
+							_r_27_31_62_65 
+							_r_27_31_62_66 
+							_r_27_31_62_67 
+				optional
+					_r_27_33 
+						alternative
+							_r_27_33_71_72 
+							_r_27_33_71_73 
+		optional
+			_r_74 
+				mandatory
+					_r_74_76 
+						optional
+							_r_74_76_85 
+						optional
+							_r_74_76_86 
+				mandatory
+					_r_74_77 
+						alternative
+							_r_74_77_81_82 
+							_r_74_77_81_83 
+							_r_74_77_81_84 
+		optional
+			_r_75 
+constraints
+	_r_2_36_40 requires _r_13_16_18_50_52
+	_r_1_42_43 requires _r_27_31_62_64
+	_r_13_16_17 requires _r_27_29_56_60
+	_r_1_42_44 requires _r_27_29_56_58
+	_r_1_42_45 requires _r_27_31_62_67
+	_r_1_42_44 requires _r_27_29_56_57
+	_r_1_42_45 requires _r_27_29_56_61
+	_r_1_42_43 requires _r_27_31_62_65
+	_r_1_42_43 requires _r_27_29_56_59
+	_r_1_42_43 requires _r_27_29_56_58
+	_r_1_42_43 requires _r_27_29_56_57
+	_r_1_42_44 requires _r_27_29_56_59
+	_r_1_42_44 requires _r_27_31_62_65
+	_r_1_42_43 requires _r_27_31_62_63
+	_r_2_36_40 requires _r_13_16_17_46_49
+	_r_1_42_45 requires _r_27_31_62_66
+	_r_1_42_44 requires _r_74
+	_r_2_36_41 excludes _r_1_42_44
+	_r_1_42_44 requires _r_27_31_62_63
+	_r_1_42_44 requires _r_27_31_62_64
+	_r_13_16_17 excludes _r_1_42_44
+	_r_1_42_44 excludes _r_74_76_85
+	_r_13_16_17 excludes _r_1_42_43
+	_r_1_42_44 excludes _r_74_76_86

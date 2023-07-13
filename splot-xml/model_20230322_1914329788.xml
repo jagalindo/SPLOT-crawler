@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:12 PM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Modelo para urna eletronica</data>
+<data name="creator">Samuel</data>
+<data name="address"></data>
+<data name="email">samuelwillianalmeida@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna eletronica(_r)
+	:m Configuracao da votacao(_r_1)
+		:m Candidatos(_r_1_6)
+			:m Criar(_r_1_6_8)
+			:m Editar(_r_1_6_9)
+			:m Deletar(_r_1_6_10)
+		:m Gerenciar votacao(_r_1_37)
+			:m Autorizacao por senha(_r_1_37_38)
+			:m Iniciar votacao(_r_1_37_39)
+			:m Finalizar votacao(_r_1_37_40)
+		:m Definir quantidade de cargos(_r_1_76)
+	:m Votacao(_r_20)
+		:m Voto(_r_20_27)
+			:m Votar em candidato(_r_20_27_28)
+			:g (_r_20_27_72) [1,*] 
+				: Votar em branco(_r_20_27_72_73)
+				: Votar nulo(_r_20_27_72_74)
+				: Abster(_r_20_27_72_75)
+		:m Identificar eleitor(_r_20_32)
+			:m Mostrar dados do eleitor(_r_20_32_41)
+			:g (_r_20_32_68) [1,*] 
+				: Informar CPF(_r_20_32_68_69)
+				: Informar identidade(_r_20_32_68_70)
+				: Informar titulo de eleitor(_r_20_32_68_71)
+	:m Contagem de votos(_r_42)
+		:m Mostrar candidatos eleitos(_r_42_45)
+		:m Mostrar estatisticas dos votos(_r_42_46)
+		:o Considerar diferentes pesos de votos(_r_42_47)
+	:m Cargos(_r_48)
+		:g (_r_48_62) [1,*] 
+			: Chefe de departamento(_r_48_62_63)
+			: Prefeito(_r_48_62_64)
+			: Vereador(_r_48_62_65)
+			: Presidente(_r_48_62_66)
+			: Senador(_r_48_62_67)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

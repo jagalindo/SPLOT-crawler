@@ -1,0 +1,33 @@
+features
+	monitor_engine_system 
+		mandatory
+			engine_performance 
+				mandatory
+					temperatures 
+						optional
+							colant 
+						mandatory
+							oil 
+						mandatory
+							engine 
+						mandatory
+							transmission 
+				mandatory
+					rpm 
+				mandatory
+					exhaust_level_temp 
+		mandatory
+			fuel_consumption 
+				mandatory
+					measures 
+						alternative
+							l_km 
+							gallon_mile 
+				mandatory
+					methods 
+						or
+							distance 
+							type_of_driving 
+							drive 
+constraints
+	drive requires rpm

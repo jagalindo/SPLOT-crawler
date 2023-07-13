@@ -1,0 +1,29 @@
+features
+	_r 
+		or
+			_r_1_2 
+			_r_1_5 
+			_r_1_6 
+		optional
+			_r_7 
+		optional
+			_r_8 
+				or
+					_r_8_11_12 
+					_r_8_11_13 
+					_r_8_11_14 
+		optional
+			_r_9 
+		optional
+			_r_10 
+		mandatory
+			_r_11 
+		optional
+			_r_12 
+		optional
+			_r_15 
+constraints
+	_r_1_2 requires _r_7
+	_r_8_11_13 requires _r_15
+	_r_1_5 requires _r_7
+	_r_8_11_12 requires _r_15

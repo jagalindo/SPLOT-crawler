@@ -1,0 +1,108 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 10:36 PM  -->
+<feature_model name="Urna Eletrônica">
+<meta>
+<data name="description">Sistema de votação eletrônica para diversos meios.</data>
+<data name="creator">Arthur Pereira Carvalho</data>
+<data name="address"></data>
+<data name="email">arthurpc18@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Tela(_r_4)
+		:m Foto(_r_4_6)
+			:g (_r_4_6_52) [1,*] 
+				: no photo(_r_4_6_52_53)
+				: Candidato(_r_4_6_52_54)
+					:g (_r_4_6_52_54_114) [1,*] 
+						: Presidente(_r_4_6_52_54_114_115)
+						: Senador 1(_r_4_6_52_54_114_116)
+						: Senador 2(_r_4_6_52_54_114_117)
+						: Prefeito(_r_4_6_52_54_114_118)
+						: Vereador(_r_4_6_52_54_114_119)
+						: Chefe de departamento(_r_4_6_52_54_114_120)
+				: Eleitor(_r_4_6_52_55)
+		:m Nome(_r_4_7)
+			:g (_r_4_7_56) [1,*] 
+				: Candidato(_r_4_7_56_57)
+					:g (_r_4_7_56_57_121) [1,*] 
+						: Presidente(_r_4_7_56_57_121_122)
+						: Senador 1(_r_4_7_56_57_121_123)
+						: Senador 2(_r_4_7_56_57_121_124)
+						: Prefeito(_r_4_7_56_57_121_125)
+						: Vereador(_r_4_7_56_57_121_126)
+						: Chefe de departamento(_r_4_7_56_57_121_127)
+				: Eleitor(_r_4_7_56_58)
+				: no name(_r_4_7_56_59)
+		:m Numero(_r_4_8)
+			:g (_r_4_8_60) [1,*] 
+				: Titulo(_r_4_8_60_61)
+				: Voto(_r_4_8_60_66)
+					:g (_r_4_8_60_66_129) [1,*] 
+						: Presidente(_r_4_8_60_66_129_130)
+						: Senador 1(_r_4_8_60_66_129_131)
+						: Senador 2(_r_4_8_60_66_129_132)
+						: Prefeito(_r_4_8_60_66_129_133)
+						: Vereador(_r_4_8_60_66_129_134)
+						: Chefe de departamento(_r_4_8_60_66_129_135)
+				: no number(_r_4_8_60_67)
+				: Senha(_r_4_8_60_68)
+				: Estatistica(_r_4_8_60_108)
+				: Senha 2(_r_4_8_60_128)
+	:m Teclas numericas(_r_5)
+		:o Senha(_r_5_9)
+			:g (_r_5_9_69) [1,1] 
+				: Confirma(_r_5_9_69_70)
+				: Corrige(_r_5_9_69_71)
+				: Brnaco(_r_5_9_69_72)
+		:o Titulo(_r_5_10)
+			:g (_r_5_10_73) [1,1] 
+				: Confirma(_r_5_10_73_74)
+				: Corrige(_r_5_10_73_75)
+				: Branco(_r_5_10_73_80)
+		:o Voto(_r_5_11)
+			:g (_r_5_11_76) [1,*] 
+				: Presidente(_r_5_11_76_77)
+					:g (_r_5_11_76_77_84) [1,1] 
+						: Confirma(_r_5_11_76_77_84_85)
+						: Corrige(_r_5_11_76_77_84_86)
+						: Branco(_r_5_11_76_77_84_87)
+				: Senador 1(_r_5_11_76_78)
+					:g (_r_5_11_76_78_88) [1,1] 
+						: Confirma(_r_5_11_76_78_88_89)
+						: Corrige(_r_5_11_76_78_88_90)
+						: Branco(_r_5_11_76_78_88_91)
+				: Senador 2(_r_5_11_76_79)
+					:g (_r_5_11_76_79_92) [1,1] 
+						: Confirma(_r_5_11_76_79_92_93)
+						: Corrige(_r_5_11_76_79_92_94)
+						: Branco(_r_5_11_76_79_92_95)
+				: Vereador(_r_5_11_76_81)
+					:g (_r_5_11_76_81_96) [1,1] 
+						: Corfirma(_r_5_11_76_81_96_97)
+						: Corrige(_r_5_11_76_81_96_98)
+						: Branco(_r_5_11_76_81_96_99)
+				: Prefeito(_r_5_11_76_82)
+					:g (_r_5_11_76_82_100) [1,1] 
+						: Confirma(_r_5_11_76_82_100_101)
+						: Corrige(_r_5_11_76_82_100_102)
+						: Branco(_r_5_11_76_82_100_103)
+				: Chefe de departamento (_r_5_11_76_83)
+					:g (_r_5_11_76_83_104) [1,1] 
+						: Confirma(_r_5_11_76_83_104_105)
+						: Corrige(_r_5_11_76_83_104_106)
+						: Branco(_r_5_11_76_83_104_107)
+		:o Senha 2(_r_5_109)
+			:g (_r_5_109_110) [1,1] 
+				: Confirma(_r_5_109_110_111)
+				: Corrige(_r_5_109_110_112)
+				: Branco(_r_5_109_110_113)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

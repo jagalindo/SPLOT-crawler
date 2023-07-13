@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Dec 29, 2022 - 10:12 AM  -->
+<feature_model name="ClubWebsite">
+<meta>
+<data name="description">Define the scope of a sportclub</data>
+<data name="creator">g.choukri</data>
+<data name="address"></data>
+<data name="email">cgphoenix640@gmail;</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">N.A</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r TSKClub(_r)
+	:m Member(_r_1)
+		:m Profil(_r_1_40)
+		:m Status(_r_1_41)
+	:o Calendar(_r_2)
+		:m Event(_r_2_13)
+			:g (_r_2_13_14) [1,*] 
+				: Stage(_r_2_13_14_15)
+				: Competition(_r_2_13_14_16)
+				: Grade(_r_2_13_14_17)
+	:m News(_r_3)
+		:g (_r_3_18) [1,*] 
+			: Thread(_r_3_18_19)
+			: Mail(_r_3_18_20)
+	:m Management(_r_25)
+	:o Media(_r_44)
+		:g (_r_44_45) [1,*] 
+			: Photo(_r_44_45_46)
+			: Video(_r_44_45_47)
+			: Document(_r_44_45_48)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 2:45 AM  -->
+<feature_model name="Atividade 1 - Tainan">
+<meta>
+<data name="description">atividade 1 de reutirlização de software</data>
+<data name="creator">Tainan Albuquerque</data>
+<data name="address"></data>
+<data name="email">tainanalbuquerque1@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Atividade 1 - Tainan(_r)
+	:m senhaInicioFim(_r_4)
+		:m inicializar(_r_4_39)
+		:m finalizar(_r_4_40)
+	:m tipoEleicao(_r_7)
+		:g (_r_7_8) [1,1] 
+			: presidenteSenador(_r_7_8_9)
+			: prefeitoVereador(_r_7_8_10)
+			: chefeDepartamento(_r_7_8_11)
+	:m contagemVotos(_r_12)
+		:m listarVencedor(_r_12_41)
+		:m numeroVotos(_r_12_42)
+			:g (_r_12_42_53) [1,*] 
+				: peso2(_r_12_42_53_54)
+				: peso1(_r_12_42_53_56)
+			:m total(_r_12_42_57)
+			:m brancos(_r_12_42_58)
+			:o nulos(_r_12_42_59)
+		:m porcentagemVotosValidos(_r_12_43)
+		:m listarPerdedores(_r_12_44)
+	:m tipoLeituraEleitor(_r_15)
+		:g (_r_15_17) [1,1] 
+			: tituloEleitor(_r_15_17_18)
+			: cpfRg(_r_15_17_19)
+				:m cpf(_r_15_17_19_28)
+				:m rg(_r_15_17_19_29)
+		:m buscarNome(_r_15_32)
+	:m tipoCandidato(_r_14)
+		:g (_r_14_15) [1,*] 
+			: prefeito(_r_14_15_16)
+			: vereador(_r_14_15_18)
+			: presidente(_r_14_15_19)
+			: primeiroSenador(_r_14_15_20)
+			: segundoSenador(_r_14_15_21)
+			: chefeDepartamento(_r_14_15_22)
+	:m tipoEleitor(_r_23)
+		:g (_r_23_28) [1,1] 
+			: eleitorCivil(_r_23_28_29)
+				:m peso(_r_23_28_29_33)
+					:m 1(_r_23_28_29_33_35)
+			: eleitorAcademico(_r_23_28_30)
+				:m professorAtivo(_r_23_28_30_31)
+					:m peso(_r_23_28_30_31_34)
+						:m 2(_r_23_28_30_31_34_36)
+				:m tecnicoAdministrativo(_r_23_28_30_32)
+					:m peso(_r_23_28_30_32_37)
+						:m 1(_r_23_28_30_32_37_38)
+	:m tipoVoto(_r_47)
+		:g (_r_47_48) [1,*] 
+			: emCandidato(_r_47_48_49)
+			: branco(_r_47_48_50)
+			: nulo(_r_47_48_51)
+</feature_tree>
+<constraints>
+constraint_1:_r_4 or _r_7 or _r_12 or _r_15_32 or _r_15 or _r or _r_14 or _r_23 or _r_4_39 or _r_4_40 or _r_12_41 or _r_12_42 or _r_12_43 or _r_47 or _r_47_48_49 or _r_47_48_50 or _r_12_42_53_56 or _r_12_42_57 or _r_12_42_58 or _r_12_42_59
+</constraints>
+</feature_model>

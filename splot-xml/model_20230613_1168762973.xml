@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jun 13, 2023 - 9:33 PM  -->
+<feature_model name="test">
+<meta>
+<data name="description">test model for master thesis</data>
+<data name="creator">timo </data>
+<data name="address"></data>
+<data name="email">heiden.timo@scheidt-bachmann.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Scheidt</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ST50(_r)
+	:m Market(_r_1)
+		:g (_r_1_2) [1,1] 
+			: UK(_r_1_2_3)
+			: Europe(_r_1_2_4)
+			: USA(_r_1_2_5)
+			: Canada(_r_1_2_6)
+	:m Coin System(_r_7)
+		:g (_r_7_11) [1,1] 
+			: No Coin System(_r_7_11_12)
+			: Chinatec UK(_r_7_11_13)
+	:m Currency(_r_8)
+		:g (_r_8_9) [1,1] 
+			: GBP(_r_8_9_10)
+</feature_tree>
+<constraints>
+constraint_2:_r_1_2_3 or _r_8_9_10 or _r_7_11_13
+</constraints>
+</feature_model>

@@ -1,0 +1,40 @@
+features
+	_r0 
+		mandatory
+			_r18 
+				alternative
+					_r19 
+					_r20 
+					_r21 
+					_r22 
+		mandatory
+			_r23 
+				alternative
+					_r24 
+					_r25 
+					_r26 
+					_r27 
+		mandatory
+			_r28 
+				alternative
+					_r29 
+					_r30 
+					_r31 
+		mandatory
+			_r37 
+				alternative
+					_r37_51_52 
+					_r37_51_53 
+					_r37_51_54 
+					_r37_51_55 
+					_r37_51_56 
+					_r37_51_57 
+					_r37_51_59 
+					_r37_51_60 
+					_r37_51_61 
+					_r37_51_62 
+constraints
+	_r22 requires _r37_51_62
+	_r20 requires _r37_51_55
+	_r21 requires _r37_51_62
+	_r19 requires _r37_51_55

@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:43 PM  -->
+<feature_model name="Modelo de Votacao Eletronica">
+<meta>
+<data name="description">Funcionalidades Basicas de uma Urna Eletronica</data>
+<data name="creator">Letícia Alves</data>
+<data name="address"></data>
+<data name="email">leti.ufmg@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Votacao_Eletronica(_r)
+	:m Gerenciar_Periodo_Votacao(_r_4)
+		:m Inicializar_Urna(_r_4_5)
+		:m Terminar_Votacao(_r_4_6)
+			:m Mostrar_Estatisticas(_r_4_6_11)
+			:m Mostrar_Eleitos(_r_4_6_12)
+			:o Mostrar_Derrotados(_r_4_6_13)
+	:m Cadastrar_Cargos_Candidatura(_r_7)
+	:m Cadastrar_Candidatos(_r_8)
+		:o Validar_Candidatura(_r_8_9)
+	:g (_r_27) [1,*] 
+		: Votar(_r_27_28)
+			:m Iniciar_Votacao(_r_27_28_30)
+				:g (_r_27_28_30_22) [1,*] 
+					: Votar_Em_Candidato(_r_27_28_30_22_23)
+					: Votar_Branco(_r_27_28_30_22_24)
+					: Votar_Nulo(_r_27_28_30_22_25)
+		: Abster(_r_27_29)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

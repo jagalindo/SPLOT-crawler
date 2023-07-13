@@ -1,0 +1,89 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Apr 26, 2023 - 2:13 PM  -->
+<feature_model name="Eleição de presidente, deputados e vereador">
+<meta>
+<data name="description">Eleição de presidente, deputados e vereador</data>
+<data name="creator">Catarina Enya</data>
+<data name="address"></data>
+<data name="email">catarina.edp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m Digitar senha de inicio da eleicao(_r_7)
+		:m Digitar numero do titulo de eleitor(_r_7_9)
+			:m Exibir dados do eleitor(_r_7_9_10)
+				:m Confirmar dados do eleitor(_r_7_9_10_11)
+					:m Votar para presidente(_r_7_9_10_11_12)
+						:g (_r_7_9_10_11_12_42) [1,1] 
+							: Votacao em primeiro turno(_r_7_9_10_11_12_42_43)
+								:g (_r_7_9_10_11_12_42_43_45) [1,1] 
+									: Votar em branco(_r_7_9_10_11_12_42_43_45_46)
+										:m Confirmar voto(_r_7_9_10_11_12_42_43_45_46_49)
+									: Votar nulo(_r_7_9_10_11_12_42_43_45_47)
+										:m Confirmar voto(_r_7_9_10_11_12_42_43_45_47_50)
+									: Votar em um candidato(_r_7_9_10_11_12_42_43_45_48)
+										:g (_r_7_9_10_11_12_42_43_45_48_59) [1,1] 
+											: Informar numero do candidato(_r_7_9_10_11_12_42_43_45_48_59_60)
+												:m Confirmar voto(_r_7_9_10_11_12_42_43_45_48_59_60_61)
+											: Selecionar um dos candidatos(_r_7_9_10_11_12_42_43_45_48_59_62)
+												:m Confirmar voto(_r_7_9_10_11_12_42_43_45_48_59_62_63)
+							: Votacao em segundo turno(_r_7_9_10_11_12_42_44)
+								:g (_r_7_9_10_11_12_42_44_52) [1,1] 
+									: Votar em branco(_r_7_9_10_11_12_42_44_52_53)
+										:m Confirmar voto(_r_7_9_10_11_12_42_44_52_53_56)
+									: Votar nulo(_r_7_9_10_11_12_42_44_52_54)
+										:m Confirmar voto(_r_7_9_10_11_12_42_44_52_54_57)
+									: Votar em um candidato(_r_7_9_10_11_12_42_44_52_55)
+										:g (_r_7_9_10_11_12_42_44_52_55_64) [1,1] 
+											: Informar numero do candidato(_r_7_9_10_11_12_42_44_52_55_64_65)
+												:m Confirmar voto(_r_7_9_10_11_12_42_44_52_55_64_65_67)
+											: Selecionar um dos candidatos(_r_7_9_10_11_12_42_44_52_55_64_66)
+												:m Confirmar voto(_r_7_9_10_11_12_42_44_52_55_64_66_68)
+					:m Votar para deputado federal(_r_7_9_10_11_14)
+						:g (_r_7_9_10_11_14_25) [1,1] 
+							: Votar em branco(_r_7_9_10_11_14_25_26)
+								:m Confirmar voto(_r_7_9_10_11_14_25_26_29)
+							: Votar nulo(_r_7_9_10_11_14_25_27)
+								:m Confirmar voto(_r_7_9_10_11_14_25_27_30)
+							: Votar em um candidato(_r_7_9_10_11_14_25_28)
+								:g (_r_7_9_10_11_14_25_28_69) [1,1] 
+									: Informar numero do candidato(_r_7_9_10_11_14_25_28_69_70)
+										:m Confirmar voto(_r_7_9_10_11_14_25_28_69_70_72)
+									: Selecionar um dos candidatos(_r_7_9_10_11_14_25_28_69_84)
+										:m Confirmar voto(_r_7_9_10_11_14_25_28_69_84_85)
+					:m Votar para deputado estadual(_r_7_9_10_11_15)
+						:g (_r_7_9_10_11_15_32) [1,1] 
+							: Votar em branco(_r_7_9_10_11_15_32_33)
+								:m Confirmar voto(_r_7_9_10_11_15_32_33_36)
+							: Votar nulo(_r_7_9_10_11_15_32_34)
+								:m Confirmar voto(_r_7_9_10_11_15_32_34_37)
+							: Votar em um candidato(_r_7_9_10_11_15_32_35)
+								:g (_r_7_9_10_11_15_32_35_74) [1,1] 
+									: Informar numero do candidato(_r_7_9_10_11_15_32_35_74_75)
+										:m Confirmar voto(_r_7_9_10_11_15_32_35_74_75_77)
+									: Selecionar um dos candidatos(_r_7_9_10_11_15_32_35_74_76)
+										:m Confirmar voto(_r_7_9_10_11_15_32_35_74_76_78)
+					:m Votar para vereador(_r_7_9_10_11_30)
+						:g (_r_7_9_10_11_30_34) [1,1] 
+							: Votar em branco(_r_7_9_10_11_30_34_35)
+								:m Confirmar voto(_r_7_9_10_11_30_34_35_38)
+							: Votar nulo(_r_7_9_10_11_30_34_36)
+								:m Confirmar voto(_r_7_9_10_11_30_34_36_40)
+							: Votar em um candidato(_r_7_9_10_11_30_34_37)
+								:g (_r_7_9_10_11_30_34_37_79) [1,1] 
+									: Informar numero do candidato(_r_7_9_10_11_30_34_37_79_80)
+										:m Confirmar voto(_r_7_9_10_11_30_34_37_79_80_82)
+									: Selecionar um dos candidatos(_r_7_9_10_11_30_34_37_79_81)
+										:m Confirmar voto(_r_7_9_10_11_30_34_37_79_81_83)
+	:m Digitar senha de termino da eleicao(_r_8)
+		:m Exibir estatisticas da eleicao(_r_8_39)
+			:m Exibir resultado da eleicao(_r_8_39_40)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

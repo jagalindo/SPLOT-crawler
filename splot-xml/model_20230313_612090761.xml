@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Mar 14, 2023 - 2:07 AM  -->
+<feature_model name="Graphics Editor">
+<meta>
+<data name="description">se assignment</data>
+<data name="creator">Delphi</data>
+<data name="address">1551 Lycee Place</data>
+<data name="email">delphi98delphi@gmail.com</data>
+<data name="phone">3435585945</data>
+<data name="website"></data>
+<data name="organization">Accenture Solutions Pvt Ltd</data>
+<data name="department">Accenture Solutions Pvt Ltd</data>
+<data name="date"></data>
+<data name="reference">No</data>
+</meta>
+<feature_tree>
+:r Graphics Editor(_r)
+	:o Export Filter(_r_1)
+		:g (_r_1_6) [1,*] 
+			: SVG(_r_1_6_7)
+			: PNG(_r_1_6_15)
+	:m Draw(_r_2)
+	:m Selection(_r_3)
+		:g (_r_3_16) [1,*] 
+			: ByVoice(_r_3_16_17)
+			: Rectangular(_r_3_16_18)
+			: ByColor(_r_3_16_19)
+	:o Color Palette(_r_4)
+	:m Rendering(_r_5)
+		:g (_r_5_20) [1,1] 
+			: BlackWhite(_r_5_20_21)
+			: Color(_r_5_20_22)
+</feature_tree>
+<constraints>
+constraint_8:~_r_4 or ~_r_5_20_21
+constraint_10:~_r_3_16_19 or _r_4
+constraint_9:_r_4 or ~_r_5_20_22
+constraint_6:_r_3_16_17 or _r_5_20_22
+constraint_7:_r_3_16_17 or _r_5_20_21
+</constraints>
+</feature_model>

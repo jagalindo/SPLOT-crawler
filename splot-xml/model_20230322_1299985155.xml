@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:16 PM  -->
+<feature_model name="Exec1_ArthurBonifacio_RS">
+<meta>
+<data name="description">Exercicio 1 de Reutilizacao de Software - Arthur Bonifacio</data>
+<data name="creator">Arthur Bonifacio</data>
+<data name="address"></data>
+<data name="email">arthur.brito1999@outlook.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC - UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Senha(_r_16)
+		:m Iniciar votacao(_r_16_17)
+		:m Encerrar votacao(_r_16_18)
+	:m Identificacao(_r_20)
+		:o Nome do candidato(_r_20_27)
+	:g (_r_21) [1,1] 
+		: Titulo(_r_21_22)
+		: Identidade(_r_21_23)
+		: CPF(_r_21_24)
+	:m Votacao(_r_30)
+		:o Primeiro voto(_r_30_31)
+		:g (_r_30_39) [1,1] 
+			: Presidente(_r_30_39_40)
+			: Prefeito(_r_30_39_46)
+			: Chefe de departamento(_r_30_39_47)
+				:m Duplicar voto de professor(_r_30_39_47_50)
+			: Branco(_r_30_39_55)
+			: Nulo(_r_30_39_56)
+		:o Segundo voto(_r_30_43)
+		:g (_r_30_44) [1,1] 
+			: Senador(_r_30_44_45)
+			: Vereador(_r_30_44_51)
+			: Branco(_r_30_44_57)
+			: Nulo(_r_30_44_58)
+		:o Terceiro voto(_r_30_49)
+		:g (_r_30_52) [1,1] 
+			: Senador(_r_30_52_53)
+			: Branco(_r_30_52_59)
+			: Nulo(_r_30_52_60)
+		:o Abstencao(_r_30_54)
+	:m Resultados(_r_34)
+		:m Candidato eleito(_r_34_38)
+		:m Quantidade de votos(_r_34_61)
+		:m Porcentagem em relacao ao total(_r_34_63)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

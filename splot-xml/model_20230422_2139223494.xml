@@ -1,0 +1,59 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Apr 22, 2023 - 5:51 PM  -->
+<feature_model name="Final_Project_Software_Reuse">
+<meta>
+<data name="description">....</data>
+<data name="creator">Grupo_2</data>
+<data name="address"></data>
+<data name="email">mmra@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna(_r)
+	:m Gerenciar_Urna(_r_7)
+		:m Abrir_votacao(_r_7_8)
+		:m Terminar_votacao(_r_7_9)
+	:m Eleicao(_r_17)
+		:m Exibicao(_r_17_18)
+			:m Exibir_Eleitos(_r_17_18_20)
+			:m Exibir_Votos_Nominais(_r_17_18_21)
+			:o Exibir_Derrotados(_r_17_18_22)
+			:o Mostrar_Raking(_r_17_18_23)
+			:o Estatisticas_Dinamicas(_r_17_18_60)
+		:g (_r_17_25) [1,1] 
+			: Eleicao_Federal(_r_17_25_26)
+			: Eleicao_Municipal(_r_17_25_27)
+			: Eleicao_Universidade(_r_17_25_28)
+			: Eleicao_TV_Show(_r_17_25_37)
+		:o Segundo_Turno(_r_17_30)
+		:m Eleitor(_r_17_31)
+			:g (_r_17_31_32) [1,*] 
+				: Identificacao_RG(_r_17_31_32_33)
+				: Identificacao_CPF(_r_17_31_32_34)
+				: Identificacao_ID(_r_17_31_32_35)
+				: Identificacao_TITULO(_r_17_31_32_36)
+		:m Votacao(_r_17_38)
+			:m Confirmar Voto(_r_17_38_39)
+			:m Corrigir_Voto(_r_17_38_40)
+			:o Votar_em_Branco(_r_17_38_41)
+			:o Votar_Nulo(_r_17_38_42)
+	:m Cadastro(_r_44)
+		:m Candidato(_r_44_49)
+			:g (_r_44_49_50) [1,*] 
+				: Presidente(_r_44_49_50_51)
+				: Senador(_r_44_49_50_52)
+				: Deputado_Federal(_r_44_49_50_53)
+				: Deputado_Estadual(_r_44_49_50_54)
+				: Vereador(_r_44_49_50_55)
+				: Prefeito(_r_44_49_50_56)
+				: Representate_Universitario(_r_44_49_50_57)
+				: Participante_Reality_Show(_r_44_49_50_58)
+		:o Eleitor(_r_44_59)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

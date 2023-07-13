@@ -1,0 +1,48 @@
+features
+	_r 
+		mandatory
+			_r_2 
+				alternative
+					_r_2_88_89 
+					_r_2_88_90 
+					_r_2_88_93 
+		mandatory
+			_r_3 
+				alternative
+					_r_3_94_97 
+					_r_3_94_98 
+					_r_3_94_100 
+					_r_3_94_101 
+		mandatory
+			_r_5 
+				alternative
+					_r_5_102_103 
+					_r_5_102_104 
+					_r_5_102_105 
+					_r_5_102_106 
+		mandatory
+			_r_6 
+				alternative
+					_r_6_107_108 
+					_r_6_107_110 
+					_r_6_107_111 
+constraints
+	_r_3_94_98 requires _r_5_102_105
+	_r_5_102_106 excludes _r_6_107_111
+	_r_3_94_101 excludes _r_6_107_111
+	_r_3_94_101 excludes _r_5_102_106
+	_r_2_88_90 requires _r_3_94_100
+	_r_2_88_89 excludes _r_5_102_103
+	_r_2_88_93 excludes _r_6_107_111
+	_r_5_102_104 requires _r_6_107_110
+	_r_2_88_89 excludes _r_3_94_97
+	_r_2_88_93 excludes _r_5_102_106
+	_r_3_94_98 requires _r_5_102_105
+	_r_3_94_97 excludes _r_5_102_103
+	_r_2_88_93 excludes _r_3_94_101
+	_r_2_88_90 requires _r_3_94_100
+	_r_2_88_89 excludes _r_6_107_108
+	_r_5_102_104 requires _r_6_107_110
+	_r_2_88_90 excludes _r_5_102_104
+	_r_3_94_97 excludes _r_6_107_108
+	_r_5_102_103 excludes _r_6_107_108

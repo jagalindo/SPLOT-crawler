@@ -1,0 +1,27 @@
+features
+	vof 
+		optional
+			undefined_on_paper 
+		mandatory
+			follow_me 
+				optional
+					_undefined_on_paper 
+				mandatory
+					user_localize 
+						mandatory
+							user_pos_method 
+								alternative
+									access_point 
+									rfid 
+				mandatory
+					logon 
+						optional
+							__undefined_on_paper 
+		optional
+			virtual_printer 
+				mandatory
+					printer_register 
+				mandatory
+					file_upload 
+				optional
+					file_converter 

@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 9:04 PM  -->
+<feature_model name="Eleição de um chefe de departamento">
+<meta>
+<data name="description">Eleição de um chefe de departamento</data>
+<data name="creator">Catarina Enya</data>
+<data name="address"></data>
+<data name="email">catarina.edp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m Digitar senha de inicio da eleicao(_r_1)
+		:m Informar codigo de identificacao do funcionario(_r_1_5)
+			:g (_r_1_5_6) [1,1] 
+				: Informar numero da identidade(_r_1_5_6_7)
+				: Informar numero do CPF(_r_1_5_6_8)
+			:m Iniciar votacao do funcionario(_r_1_5_14)
+				:g (_r_1_5_14_15) [1,1] 
+					: Abstencao de voto(_r_1_5_14_15_16)
+					: Votar para chefe de departamento(_r_1_5_14_15_18)
+						:g (_r_1_5_14_15_18_19) [1,1] 
+							: Votar em branco(_r_1_5_14_15_18_19_20)
+								:m Confirmar voto(_r_1_5_14_15_18_19_20_22)
+							: Votar em um candidato(_r_1_5_14_15_18_19_21)
+								:m Confirmar voto(_r_1_5_14_15_18_19_21_23)
+	:m Digitar senha de termino da eleicao(_r_2)
+		:m Exibir estatisticas da eleicao(_r_2_3)
+			:m Exibir resultado da eleicao(_r_2_3_24)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,69 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 14, 2022 - 4:01 AM  -->
+<feature_model name="veterinaria">
+<meta>
+<data name="description">veterinaria</data>
+<data name="creator">Julio</data>
+<data name="address"></data>
+<data name="email">julito.1998@hotmail.es</data>
+<data name="phone">+593998857876</data>
+<data name="website"></data>
+<data name="organization">vet</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Veterinaria(_r)
+	:m Salud(_r_1)
+		:m Consultorio(_r_1_4)
+			:m ECOP(_r_1_4_6)
+				:o Examenes complementarios(_r_1_4_6_7)
+					:m Imageneologia(_r_1_4_6_7_9)
+						:g (_r_1_4_6_7_9_13) [1,*] 
+							: Rayos X(_r_1_4_6_7_9_13_14)
+							: Ecografia(_r_1_4_6_7_9_13_15)
+					:m Laboratorio(_r_1_4_6_7_10)
+						:g (_r_1_4_6_7_10_16) [1,*] 
+							: Urianalisis(_r_1_4_6_7_10_16_17)
+							: Hemogramas(_r_1_4_6_7_10_16_18)
+							: Bioquimicas(_r_1_4_6_7_10_16_19)
+				:m Consulta(_r_1_4_6_8)
+					:m Revision(_r_1_4_6_8_20)
+						:m Vacunacion(_r_1_4_6_8_20_22)
+						:m Desparacitacion(_r_1_4_6_8_20_23)
+						:o Especialidades(_r_1_4_6_8_20_24)
+							:g (_r_1_4_6_8_20_24_25) [1,*] 
+								: Rehabilitacion(_r_1_4_6_8_20_24_25_26)
+								: Tratamientos(_r_1_4_6_8_20_24_25_27)
+									:g (_r_1_4_6_8_20_24_25_27_28) [1,*] 
+										: Terapeutico(_r_1_4_6_8_20_24_25_27_28_29)
+										: Quirurgico(_r_1_4_6_8_20_24_25_27_28_30)
+					:m Diagnostico(_r_1_4_6_8_21)
+		:o Emergencia(_r_1_5)
+			:m Eutanacia(_r_1_5_31)
+			:m Estabilizacion(_r_1_5_32)
+				:m Observacion 24h(_r_1_5_32_33)
+					:m Hospitalizacion(_r_1_5_32_33_34)
+					:m Cirugia(_r_1_5_32_33_35)
+	:m Petgrooming(_r_2)
+		:m Spa(_r_2_36)
+			:g (_r_2_36_39) [1,*] 
+				: Banio(_r_2_36_39_40)
+				: Corte unias(_r_2_36_39_41)
+				: Corte pelo(_r_2_36_39_42)
+		:o Hospedaje(_r_2_38)
+	:o Catalogo de productos(_r_3)
+		:g (_r_3_43) [1,*] 
+			: PetShop(_r_3_43_44)
+				:g (_r_3_43_44_46) [1,*] 
+					: Accesorios(_r_3_43_44_46_47)
+					: Alimentacion(_r_3_43_44_46_48)
+			: Farmacia(_r_3_43_45)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_4_6_7 or ~_r_1_4_6_8_20_24
+constraint_4:~_r_1_4_6_8_20_24_25_27_28_30 or _r_1_5_32_33_35
+constraint_2:_r_1_4_6_8_20_24 or ~_r_1_5_32_33
+constraint_3:~_r_1_4_6_8_20_24_25_27_28_29 or _r_1_5_32_33_34
+</constraints>
+</feature_model>

@@ -1,0 +1,88 @@
+features
+	_r 
+		mandatory
+			_r_11 
+				alternative
+					_r_11_12_13 
+					_r_11_12_14 
+					_r_11_12_15 
+		mandatory
+			_r_16 
+				alternative
+					_r_16_17_18 
+					_r_16_17_19 
+					_r_16_17_20 
+		optional
+			_r_21 
+		mandatory
+			_r_22 
+				alternative
+					_r_22_23_24 
+					_r_22_23_26 
+					_r_22_23_27 
+					_r_22_23_28 
+					_r_22_23_29 
+		mandatory
+			_r_17 
+				or
+					_r_17_18_19 
+					_r_17_18_20 
+					_r_17_18_22 
+		mandatory
+			_r_31 
+				alternative
+					_r_31_34_35 
+					_r_31_34_36 
+		mandatory
+			_r_30 
+				mandatory
+					_r_30_31 
+						alternative
+							_r_30_31_32_33 
+							_r_30_31_32_34 
+						mandatory
+							_r_30_31_35 
+								alternative
+									_r_30_31_35_36_37 
+									_r_30_31_35_36_38 
+									_r_30_31_35_36_39 
+									_r_30_31_35_36_40 
+									_r_30_31_35_36_42 
+				mandatory
+					_r_30_43 
+						alternative
+							_r_30_43_44_45 
+							_r_30_43_44_46 
+							_r_30_43_44_47 
+				optional
+					_r_30_49 
+						mandatory
+							_r_30_49_50_51 
+constraints
+	_r_21 requires _r_30_49
+	_r_30_31_32_34 excludes _r_30_49_50_51
+	_r_22_23_24 excludes _r_31_34_36
+	_r_22_23_26 excludes _r_31_34_36
+	_r_30_31_32_33 excludes _r_30_43_44_46
+	_r_22_23_28 excludes _r_31_34_35
+	_r_21 requires _r_30_49
+	_r_16_17_18 requires _r_30_31_35_36_38
+	_r_11_12_15 requires _r_17_18_20
+	_r_16_17_20 requires _r_30_31_35_36_40
+	_r_21 requires _r_17_18_22
+	_r_11_12_15 excludes _r_16_17_19
+	_r_22_23_29 excludes _r_31_34_35
+	_r_30_31_32_34 requires _r_30_31_35_36_38
+	_r_11_12_13 requires _r_17_18_19
+	_r_16_17_20 requires _r_30_31_35_36_42
+	_r_16_17_18 requires _r_30_31_35_36_37
+	_r_11_12_13 requires _r_16_17_18
+	_r_30_31_32_34 excludes _r_30_43_44_45
+	_r_30_31_32_33 requires _r_30_31_35_36_37
+	_r_11_12_14 excludes _r_16_17_20
+	_r_30_31_32_34 requires _r_30_31_35_36_40
+	_r_30_31_32_33 requires _r_30_31_35_36_39
+	_r_11_12_15 excludes _r_21
+	_r_30_31_32_34 requires _r_30_31_35_36_42
+	_r_16_17_19 requires _r_30_31_35_36_39
+	_r_11_12_14 requires _r_21

@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:46 PM  -->
+<feature_model name="Sistema Eleitoral (DCC UFMG)">
+<meta>
+<data name="description">Sistema utilizado na disciplina de reutilizacao de codigo do DCC.</data>
+<data name="creator">Jose Walter de Lima Mota</data>
+<data name="address"></data>
+<data name="email">jwl.mota@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG DCC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema Eleitoral(_r)
+	:m Seguranca(_r_1)
+		:m Senha Inicio(_r_1_5)
+		:m Senha Fim(_r_1_6)
+	:m Identificacao(_r_2)
+		:m Documento(_r_2_11)
+			:g (_r_2_11_14) [1,1] 
+				: Titulo de Eleitor(_r_2_11_14_15)
+				: RG(_r_2_11_14_16)
+				: CPF(_r_2_11_14_17)
+		:o Confirmacao(_r_2_12)
+			:g (_r_2_12_18) [1,1] 
+				: Documento Correto(_r_2_12_18_19)
+				: Corrigir Documento(_r_2_12_18_20)
+		:o Cargo(_r_2_21)
+			:g (_r_2_21_22) [1,1] 
+				: Professor(_r_2_21_22_23)
+				: Tecnico Adm(_r_2_21_22_24)
+	:m Votacao(_r_3)
+		:o Federal(_r_3_28)
+			:m Presidente(_r_3_28_33)
+				:g (_r_3_28_33_34) [1,1] 
+					: Numero Candidato(_r_3_28_33_34_35)
+					: Branco(_r_3_28_33_34_36)
+					: Nulo(_r_3_28_33_34_37)
+			:m Senador 1(_r_3_28_38)
+				:g (_r_3_28_38_39) [1,1] 
+					: Numero Candidato(_r_3_28_38_39_40)
+					: Branco(_r_3_28_38_39_41)
+					: Nulo(_r_3_28_38_39_42)
+			:m Senador 2(_r_3_28_43)
+				:g (_r_3_28_43_44) [1,1] 
+					: Numero Candidato(_r_3_28_43_44_45)
+					: Branco(_r_3_28_43_44_46)
+					: Nulo(_r_3_28_43_44_47)
+		:o Municipal(_r_3_29)
+			:m Prefeito(_r_3_29_48)
+				:g (_r_3_29_48_49) [1,1] 
+					: Numero Candidato(_r_3_29_48_49_50)
+					: Branco(_r_3_29_48_49_51)
+					: Nulo(_r_3_29_48_49_52)
+			:m Vereador(_r_3_29_53)
+				:g (_r_3_29_53_54) [1,1] 
+					: Numero Candidato(_r_3_29_53_54_55)
+					: Branco(_r_3_29_53_54_56)
+					: Nulo(_r_3_29_53_54_57)
+		:o Universidade(_r_3_30)
+			:g (_r_3_30_59) [1,1] 
+				: Numero Candidato(_r_3_30_59_60)
+				: Branco(_r_3_30_59_61)
+				: Abstencao(_r_3_30_59_62)
+	:m Relatorio(_r_4)
+		:g (_r_4_25) [1,1] 
+			: Politicos(_r_4_25_26)
+			: Chefe de Departamento(_r_4_25_27)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_12 or ~_r_2_11_14_15
+constraint_4:~_r_2_11_14_15 or ~_r_4_25_27
+constraint_2:~_r_2_11_14_15 or ~_r_2_21
+constraint_3:_r_2_11_14_15 or ~_r_4_25_26
+</constraints>
+</feature_model>

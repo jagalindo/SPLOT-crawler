@@ -1,0 +1,67 @@
+features
+	CDODConsistency 
+		mandatory
+			ODSemantics 
+				mandatory
+					EmptyOMOD 
+						alternative
+							EmptyOMValidInstanceOD 
+							EmptyOMInvalidOD 
+				mandatory
+					CompletenessOD 
+						mandatory
+							ObjectsOD 
+								alternative
+									AllObjectsShownOD 
+									AllowObjectsOmittedOD 
+						mandatory
+							LinksOD 
+								alternative
+									AllLinksShownOD 
+									AllowLinksOmittedOD 
+						mandatory
+							AttributesOD 
+								alternative
+									AllAttributesShownOD 
+									AllowAttributesOmittedOD 
+						mandatory
+							TypesOD 
+								alternative
+									AllTypesShownOD 
+									AllowTypesOmittedOD 
+				mandatory
+					ObjectTypingOD 
+						alternative
+							StrictOD 
+							NonStrictOD 
+		mandatory
+			CDSemantics 
+				mandatory
+					EmptyOMCD 
+						alternative
+							EmptyOMValidInstanceCD 
+							EmptyOMInvalidCD 
+				mandatory
+					CompletenessCD 
+						mandatory
+							AttributesCD 
+								alternative
+									AllAttributesShownCD 
+									AllowAttributesOmittedCD 
+						mandatory
+							ClassesCD 
+								alternative
+									AllClassesShownCD 
+									AllowClassesOmittedCD 
+				mandatory
+					CDSemantics_33 
+						alternative
+							CDSemantics_33_34_35 
+							CDSemantics_33_34_36 
+							CDSemantics_33_34_37 
+							CDSemantics_33_34_39 
+constraints
+	AllowObjectsOmittedOD requires AllowLinksOmittedOD
+	AllowClassesOmittedCD excludes AllowTypesOmittedOD
+	EmptyOMValidInstanceOD requires EmptyOMValidInstanceCD
+	EmptyOMValidInstanceCD requires EmptyOMValidInstanceOD

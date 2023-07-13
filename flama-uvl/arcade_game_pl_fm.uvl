@@ -1,0 +1,129 @@
+features
+	Arcade_Game 
+		mandatory
+			Use_Cases 
+				optional
+					check_previous_best_score 
+				optional
+					save_score 
+				mandatory
+					Save_Game 
+				mandatory
+					Exit_Game 
+				mandatory
+					Install_Game 
+				mandatory
+					Uninstall_Game 
+				mandatory
+					List_Game 
+				mandatory
+					Play_Game 
+						or
+							play_brickles 
+							play_pong 
+							play_bowling 
+						mandatory
+							Initialization 
+								mandatory
+									Animation_Loop 
+		mandatory
+			Class_Diagram 
+				mandatory
+					game_sprite 
+						optional
+							sprite_pair 
+						mandatory
+							Rectangle 
+								mandatory
+									Size 
+								mandatory
+									Point 
+						or
+							Movable_Sprite 
+								mandatory
+									Velocity 
+								or
+									Paddle 
+										or
+											top_paddle_pong 
+											bottom_paddle_pong 
+									puck_core_assets 
+									ball_bowling 
+									pin_bowling 
+							Stationary_Sprite 
+								optional
+									Wall 
+										or
+											left_wall_pong 
+											right_wall_pong 
+											left_brickles 
+											right_brickles 
+								or
+									brick_brickles 
+									brick_pile_brickles 
+									ceiling_brickles 
+									floor_brickles 
+									lane_bowling 
+									gutter_bowling 
+									edge_bowling 
+									alley_bowling 
+									rack_pins_bowling 
+									score_board_pong 
+									floor_pong 
+									ceiling_pong 
+									dividing_line_pong 
+				optional
+					puck_supply_brickles 
+				mandatory
+					Board 
+						or
+							board_pong 
+							board_brickles 
+							board_bowling 
+				mandatory
+					Menu 
+						or
+							menu_pong 
+							menu_brickles 
+							menu_bowling 
+				mandatory
+					Game_Menu 
+						or
+							pong_game_menu 
+							brickles_game_menu 
+							bowling_game_menu 
+constraints
+	play_brickles requires menu_brickles
+	play_brickles requires menu_brickles
+	play_pong requires menu_pong
+	play_pong requires menu_pong
+	play_bowling requires menu_bowling
+	play_bowling requires menu_bowling
+	top_paddle_pong requires menu_pong
+	bottom_paddle_pong requires menu_pong
+	left_wall_pong requires menu_pong
+	right_wall_pong requires menu_pong
+	score_board_pong requires menu_pong
+	floor_pong requires menu_pong
+	ceiling_pong requires menu_pong
+	dividing_line_pong requires menu_pong
+	board_pong requires menu_pong
+	pong_game_menu requires menu_pong
+	board_bowling requires menu_bowling
+	ball_bowling requires menu_bowling
+	pin_bowling requires menu_bowling
+	lane_bowling requires menu_bowling
+	gutter_bowling requires menu_bowling
+	edge_bowling requires menu_bowling
+	alley_bowling requires menu_bowling
+	rack_pins_bowling requires menu_bowling
+	bowling_game_menu requires menu_bowling
+	brickles_game_menu requires menu_brickles
+	board_brickles requires menu_brickles
+	left_brickles requires menu_brickles
+	right_brickles requires menu_brickles
+	brick_pile_brickles requires menu_brickles
+	brick_brickles requires menu_brickles
+	ceiling_brickles requires menu_brickles
+	floor_brickles requires menu_brickles
+	puck_supply_brickles requires menu_brickles

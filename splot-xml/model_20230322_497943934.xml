@@ -1,0 +1,67 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 11:19 PM  -->
+<feature_model name="urna eletronica - gabriela miserani">
+<meta>
+<data name="description">urna eletronica - reutilizacao de software</data>
+<data name="creator">gabriela moraes miserani de freitas</data>
+<data name="address"></data>
+<data name="email">gabrielamiserani@uol.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m criacao da senha(_r_4)
+		:m Inicializacao da urna(_r_4_6)
+			:m votacao(_r_4_6_8)
+				:o vaalidacao do titulo(_r_4_6_8_9)
+					:m confirmacao dados(_r_4_6_8_9_11)
+						:m inicializacao da votacao do eleitor(_r_4_6_8_9_11_13)
+							:o votacao presidente(_r_4_6_8_9_11_13_14)
+								:g (_r_4_6_8_9_11_13_14_31) [1,1] 
+									: candidato(_r_4_6_8_9_11_13_14_31_32)
+									: branco(_r_4_6_8_9_11_13_14_31_33)
+									: nulo(_r_4_6_8_9_11_13_14_31_34)
+							:o votacao senador(_r_4_6_8_9_11_13_15)
+								:g (_r_4_6_8_9_11_13_15_35) [1,1] 
+									: candidato 1(_r_4_6_8_9_11_13_15_35_36)
+									: branco(_r_4_6_8_9_11_13_15_35_37)
+									: nulo(_r_4_6_8_9_11_13_15_35_38)
+								:g (_r_4_6_8_9_11_13_15_43) [1,1] 
+									: candidato 2(_r_4_6_8_9_11_13_15_43_44)
+									: nulo(_r_4_6_8_9_11_13_15_43_45)
+									: branco(_r_4_6_8_9_11_13_15_43_46)
+							:o votacao Prefeito(_r_4_6_8_9_11_13_47)
+								:g (_r_4_6_8_9_11_13_47_48) [1,1] 
+									: candidato(_r_4_6_8_9_11_13_47_48_49)
+									: branco(_r_4_6_8_9_11_13_47_48_50)
+									: nulo(_r_4_6_8_9_11_13_47_48_51)
+							:o votacao vereador(_r_4_6_8_9_11_13_52)
+								:g (_r_4_6_8_9_11_13_52_53) [1,1] 
+									: candidado(_r_4_6_8_9_11_13_52_53_54)
+									: branco(_r_4_6_8_9_11_13_52_53_55)
+									: nulo(_r_4_6_8_9_11_13_52_53_56)
+				:o validacao CPF-ID(_r_4_6_8_26)
+					:g (_r_4_6_8_26_27) [1,1] 
+						: identidade(_r_4_6_8_26_27_28)
+						: CPF(_r_4_6_8_26_27_29)
+					:m inicializacao da votacao do funcionario(_r_4_6_8_26_58)
+						:g (_r_4_6_8_26_58_59) [1,1] 
+							: candidato(_r_4_6_8_26_58_59_60)
+								:m checar o peso e categoria do voto(_r_4_6_8_26_58_59_60_63)
+							: branco(_r_4_6_8_26_58_59_61)
+		:m termino da votacao(_r_4_64)
+			:m apresentar estatisticas(_r_4_64_65)
+				:o numero de votos de cada candidato(_r_4_64_65_66)
+				:g (_r_4_64_65_74) [1,1] 
+					: apresentar percentagem em relacao ao total de votos validos(_r_4_64_65_74_75)
+					: numero de votos por categoria de funcionarios(_r_4_64_65_74_76)
+			:m apresentar ganhadores(_r_4_64_77)
+			:o apresentar derrotados(_r_4_64_78)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

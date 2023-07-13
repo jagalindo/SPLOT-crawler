@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 8:05 PM  -->
+<feature_model name="Eleição de um presidente e dois senadores">
+<meta>
+<data name="description">Eleição de um presidente e dois senadores</data>
+<data name="creator">Catarina Enya</data>
+<data name="address"></data>
+<data name="email">catarina.edp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m Digitar senha de inicio da eleicao(_r_7)
+		:m Digitar numero do titulo de eleitor(_r_7_9)
+			:m Exibir dados do eleitor(_r_7_9_10)
+				:m Confirmar dados do eleitor(_r_7_9_10_11)
+					:m Votar para presidente(_r_7_9_10_11_12)
+						:g (_r_7_9_10_11_12_16) [1,1] 
+							: Votar em branco(_r_7_9_10_11_12_16_17)
+								:m Confimar voto(_r_7_9_10_11_12_16_17_20)
+							: Votar nulo(_r_7_9_10_11_12_16_18)
+								:m Confimar voto(_r_7_9_10_11_12_16_18_21)
+							: Votar em um candidato(_r_7_9_10_11_12_16_19)
+								:m Confimar voto(_r_7_9_10_11_12_16_19_22)
+					:m Votar para senador 1(_r_7_9_10_11_14)
+						:g (_r_7_9_10_11_14_25) [1,1] 
+							: Votar em branco(_r_7_9_10_11_14_25_26)
+								:m Confirmar voto(_r_7_9_10_11_14_25_26_29)
+							: Votar nulo(_r_7_9_10_11_14_25_27)
+								:m Confirmar voto(_r_7_9_10_11_14_25_27_30)
+							: Votar em um candidato(_r_7_9_10_11_14_25_28)
+								:m Confirmar voto(_r_7_9_10_11_14_25_28_31)
+					:m Votar para senador 2(_r_7_9_10_11_15)
+						:g (_r_7_9_10_11_15_32) [1,1] 
+							: Votar em branco(_r_7_9_10_11_15_32_33)
+								:m Confirmar voto(_r_7_9_10_11_15_32_33_36)
+							: Votar nulo(_r_7_9_10_11_15_32_34)
+								:m Confirmar voto(_r_7_9_10_11_15_32_34_37)
+							: Votar em um candidato(_r_7_9_10_11_15_32_35)
+								:m Confirmar voto(_r_7_9_10_11_15_32_35_38)
+	:m Digitar senha de termino da eleicao(_r_8)
+		:m Exibir estatisticas da eleicao(_r_8_39)
+			:m Exibir resultado da eleicao(_r_8_39_40)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

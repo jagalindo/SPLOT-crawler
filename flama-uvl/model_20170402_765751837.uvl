@@ -1,0 +1,672 @@
+features
+	_r0 
+		optional
+			_r1 
+				mandatory
+					_r2 
+						or
+							_r3 
+							_r4 
+						optional
+							_r5 
+								or
+									_r6 
+										optional
+											_r7 
+										mandatory
+											_r8 
+												alternative
+													_r9 
+													_r10 
+										mandatory
+											_r11 
+												alternative
+													_r12 
+													_r13 
+													_r14 
+										optional
+											_r15 
+										optional
+											_r16 
+									_r17 
+										mandatory
+											_r18 
+												alternative
+													_r19 
+													_r20 
+										optional
+											_r21 
+												optional
+													_r22 
+												optional
+													_r23 
+												optional
+													_r24 
+										optional
+											_r25 
+												optional
+													_r26 
+												optional
+													_r27 
+												optional
+													_r28 
+												mandatory
+													_r29 
+														alternative
+															_r30 
+															_r31 
+										mandatory
+											_r32 
+												mandatory
+													_r33 
+												optional
+													_r34 
+												optional
+													_r35 
+												optional
+													_r36 
+				mandatory
+					_r37 
+						optional
+							_r38 
+						mandatory
+							_r39 
+								alternative
+									_r40 
+									_r41 
+									_r42 
+									_r43 
+									_r44 
+									_r45 
+				optional
+					_r46 
+						or
+							_r47 
+							_r48 
+								mandatory
+									_r49 
+										mandatory
+											_r50 
+								mandatory
+									_r51 
+										mandatory
+											_r52 
+								mandatory
+									_r53 
+										mandatory
+											_r54 
+												alternative
+													_r55 
+													_r56 
+										optional
+											_r57 
+								mandatory
+									_r58 
+										alternative
+											_r59 
+											_r60 
+											_r61 
+											_r62 
+		optional
+			_r63 
+				or
+					_r64 
+						or
+							_r65 
+							_r66 
+					_r67 
+						mandatory
+							_r68 
+						mandatory
+							_r69 
+						optional
+							_r70 
+						mandatory
+							_r71 
+								alternative
+									_r72 
+									_r73 
+									_r74 
+									_r75 
+									_r76 
+									_r77 
+									_r78 
+									_r79 
+									_r80 
+									_r81 
+									_r82 
+									_r83 
+									_r84 
+									_r85 
+									_r86 
+									_r87 
+									_r88 
+									_r89 
+									_r90 
+									_r91 
+									_r92 
+									_r93 
+									_r94 
+									_r95 
+						optional
+							_r96 
+						optional
+							_r97 
+					_r98 
+						optional
+							_r99 
+								alternative
+									_r100 
+									_r101 
+									_r102 
+									_r103 
+						optional
+							_r104 
+								optional
+									_r105 
+								optional
+									_r106 
+					_r107 
+						mandatory
+							_r108 
+								alternative
+									_r109 
+									_r110 
+								optional
+									_r111 
+										or
+											_r112 
+											_r113 
+										optional
+											_r114 
+												alternative
+													_r115 
+													_r116 
+													_r117 
+										optional
+											_r118 
+												mandatory
+													_r119 
+														alternative
+															_r120 
+															_r121 
+															_r122 
+															_r123 
+															_r124 
+															_r125 
+												optional
+													_r126 
+												optional
+													_r127 
+														optional
+															_r128 
+														optional
+															_r129 
+														optional
+															_r130 
+										optional
+											_r131 
+						optional
+							_r132 
+				optional
+					_r133 
+						optional
+							_r134 
+						optional
+							_r135 
+		optional
+			_r136 
+				or
+					_r137 
+						optional
+							_r138 
+					_r139 
+						mandatory
+							_r140 
+								or
+									_r141 
+									_r142 
+									_r143 
+									_r144 
+									_r145 
+				optional
+					_r146 
+						mandatory
+							_r147 
+		optional
+			_r148 
+				optional
+					_r149 
+						alternative
+							_r150 
+							_r151 
+							_r152 
+							_r153 
+							_r154 
+							_r155 
+							_r156 
+							_r157 
+							_r158 
+				optional
+					_r159 
+						optional
+							_r160 
+						mandatory
+							_r161 
+								or
+									_r162 
+										optional
+											_r163 
+												optional
+													_r164 
+												optional
+													_r165 
+									_r166 
+										mandatory
+											_r167 
+												alternative
+													_r168 
+													_r169 
+										mandatory
+											_r170 
+												alternative
+													_r171 
+													_r172 
+										optional
+											_r173 
+									_r174 
+										optional
+											_r175 
+												alternative
+													_r176 
+													_r177 
+										optional
+											_r178 
+				optional
+					_r179 
+						optional
+							_r180 
+						optional
+							_r181 
+				optional
+					_r182 
+						optional
+							_r183 
+								mandatory
+									_r184 
+								mandatory
+									_r185 
+								mandatory
+									_r186 
+								mandatory
+									_r187 
+						optional
+							_r188 
+		optional
+			_r189 
+				mandatory
+					_r190 
+						optional
+							_r191 
+						mandatory
+							_r192 
+								or
+									_r193 
+										mandatory
+											_r194 
+												alternative
+													_r195 
+													_r196 
+										mandatory
+											_r197 
+												alternative
+													_r198 
+													_r199 
+										optional
+											_r200 
+									_r201 
+										optional
+											_r202 
+												alternative
+													_r203 
+													_r204 
+										optional
+											_r205 
+									_r206 
+										optional
+											_r207 
+												optional
+													_r208 
+												optional
+													_r209 
+				mandatory
+					_r210 
+						optional
+							_r211 
+						mandatory
+							_r212 
+						optional
+							_r213 
+						optional
+							_r214 
+						optional
+							_r215 
+								optional
+									_r216 
+										optional
+											_r217 
+										optional
+											_r218 
+										optional
+											_r219 
+										optional
+											_r220 
+												optional
+													_r221 
+												optional
+													_r222 
+														optional
+															_r223 
+														optional
+															_r224 
+														optional
+															_r225 
+												mandatory
+													_r226 
+														alternative
+															_r227 
+															_r228 
+														mandatory
+															_r229 
+																alternative
+																	_r230 
+																	_r231 
+																	_r232 
+																	_r233 
+																	_r234 
+														optional
+															_r235 
+												optional
+													_r236 
+														optional
+															_r237 
+														optional
+															_r238 
+								optional
+									_r239 
+										optional
+											_r240 
+										optional
+											_r241 
+								optional
+									_r242 
+										optional
+											_r243 
+										optional
+											_r244 
+				optional
+					_r245 
+						optional
+							_r246 
+				optional
+					_r247 
+						optional
+							_r248 
+				optional
+					_r249 
+						optional
+							_r250 
+						optional
+							_r251 
+								mandatory
+									_r252 
+										mandatory
+											_r253 
+												mandatory
+													_r254 
+														alternative
+															_r255 
+															_r256 
+												mandatory
+													_r257 
+														alternative
+															_r258 
+															_r259 
+										mandatory
+											_r260 
+												alternative
+													_r261 
+													_r262 
+								mandatory
+									_r263 
+						optional
+							_r264 
+		optional
+			_r265 
+				mandatory
+					_r266 
+						optional
+							_r267 
+						mandatory
+							_r268 
+								alternative
+									_r269 
+									_r270 
+									_r271 
+									_r272 
+						optional
+							_r273 
+				optional
+					_r274 
+						optional
+							_r275 
+						optional
+							_r276 
+		optional
+			_r277 
+				optional
+					_r278 
+						mandatory
+							_r279 
+						optional
+							_r280 
+				mandatory
+					_r281 
+				mandatory
+					_r282 
+						optional
+							_r283 
+						mandatory
+							_r284 
+								alternative
+									_r285 
+									_r286 
+									_r287 
+									_r288 
+									_r289 
+									_r290 
+				optional
+					_r291 
+						optional
+							_r292 
+				optional
+					_r293 
+						optional
+							_r294 
+						optional
+							_r295 
+		optional
+			_r296 
+		optional
+			_r297 
+		optional
+			_r298 
+		optional
+			_r299 
+		optional
+			_r300 
+		optional
+			_r301 
+		optional
+			_r302 
+		optional
+			_r303 
+		optional
+			_r304 
+		optional
+			_r305 
+		optional
+			_r306 
+		optional
+			_r307 
+		optional
+			_r308 
+		optional
+			_r309 
+		optional
+			_r310 
+		optional
+			_r311 
+		optional
+			_r312 
+		optional
+			_r313 
+		optional
+			_r314 
+		optional
+			_r315 
+		optional
+			_r316 
+		optional
+			_r317 
+		optional
+			_r318 
+		optional
+			_r319 
+		optional
+			_r320 
+		optional
+			_r321 
+		optional
+			_r322 
+		optional
+			_r323 
+		optional
+			_r324 
+		optional
+			_r325 
+		optional
+			_r326 
+		optional
+			_r327 
+		optional
+			_r328 
+constraints
+	_r14 requires _r302
+	_r282 requires _r319
+	_r191 requires _r324
+	_r303 requires _r205
+	_r297 requires _r197
+	_r293 requires _r296
+	_r291 requires _r308
+	_r263 requires _r317
+	_r318 requires _r281
+	_r169 requires _r313
+	_r324 requires _r191
+	_r259 requires _r301
+	_r315 requires _r190
+	_r299 requires _r200
+	_r302 requires _r258
+	_r301 requires _r262
+	_r281 requires _r318
+	_r327 requires _r193
+	_r170 requires _r297
+	_r276 requires _r310
+	_r295 requires _r310
+	_r172 requires _r302
+	_r311 requires _r224
+	_r13 requires _r301
+	_r190 requires _r315
+	_r46 requires _r296
+	_r249 requires _r296
+	_r192 requires _r325
+	_r262 requires _r301
+	_r173 requires _r299
+	_r97 requires _r320
+	_r135 requires _r310
+	_r187 requires _r317
+	_r218 requires _r311
+	_r326 requires _r222
+	_r298 requires _r16
+	_r294 requires _r322
+	_r210 requires _r318
+	_r247 requires _r308
+	_r202 requires _r300
+	_r205 requires _r303
+	_r222 requires _r326
+	_r37 requires _r319
+	_r325 requires _r192
+	_r320 requires _r280
+	_r309 requires _r221
+	_r165 requires _r312
+	_r208 requires _r311
+	_r248 requires _r316
+	_r206 requires _r326
+	_r310 requires _r295
+	_r308 requires _r291
+	_r280 requires _r320
+	_r199 requires _r301
+	_r182 requires _r296
+	_r164 requires _r311
+	_r312 requires _r225
+	_r292 requires _r316
+	_r35 requires _r298
+	_r198 requires _r302
+	_r181 requires _r316
+	_r146 requires _r296
+	_r47 requires _r310
+	_r284 requires _r321
+	_r196 requires _r314
+	_r219 requires _r312
+	_r321 requires _r39
+	_r215 requires _r306
+	_r147 requires _r310
+	_r171 requires _r301
+	_r220 requires _r306
+	_r314 requires _r196
+	_r306 requires _r220
+	_r200 requires _r299
+	_r225 requires _r312
+	_r274 requires _r296
+	_r166 requires _r327
+	_r179 requires _r308
+	_r16 requires _r298
+	_r161 requires _r325
+	_r133 requires _r296
+	_r264 requires _r310
+	_r224 requires _r311
+	_r193 requires _r327
+	_r296 requires _r293
+	_r106 requires _r312
+	_r258 requires _r302
+	_r300 requires _r202
+	_r195 requires _r313
+	_r216 requires _r326
+	_r175 requires _r300
+	_r188 requires _r310
+	_r140 requires _r322
+	_r322 requires _r294
+	_r105 requires _r311
+	_r316 requires _r181
+	_r317 requires _r187
+	_r319 requires _r37
+	_r178 requires _r303
+	_r197 requires _r297
+	_r168 requires _r314
+	_r160 requires _r324
+	_r313 requires _r195
+	_r159 requires _r315
+	_r162 requires _r326
+	_r39 requires _r321
+	_r221 requires _r309
+	_r209 requires _r312

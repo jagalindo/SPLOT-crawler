@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Dec 8, 2022 - 2:23 AM  -->
+<feature_model name="EMJshopping">
+<meta>
+<data name="description">Loja online</data>
+<data name="creator">Jonatha, Emanuel e Mauro</data>
+<data name="address"></data>
+<data name="email">jonathasantos11855@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EMJshopping(_r)
+	:m GUI(_r_1)
+	:g (_r_11) [1,*] 
+		: Catalogo(_r_11_12)
+			:g (_r_11_12_13) [1,1] 
+				: Filtro(_r_11_12_13_14)
+					:g (_r_11_12_13_14_38) [1,1] 
+						: Informatica(_r_11_12_13_14_38_39)
+						: Moda(_r_11_12_13_14_38_40)
+						: Mercado(_r_11_12_13_14_38_41)
+				: Recomendados(_r_11_12_13_16)
+		: Carrinho(_r_11_17)
+		: Buscar(_r_11_44)
+	:m Forma de pagamento(_r_18)
+		:g (_r_18_21) [1,1] 
+			: Boleto(_r_18_21_22)
+			: Pix ou a vista(_r_18_21_23)
+			: Cartao de credito(_r_18_21_24)
+				:g (_r_18_21_24_25) [1,1] 
+					: Visa(_r_18_21_24_25_26)
+					: Outras bandeiras(_r_18_21_24_25_27)
+	:m Plataforma(_r_28)
+		:g (_r_28_29) [1,*] 
+			: Mobile(_r_28_29_30)
+			: Web(_r_28_29_31)
+	:o Assinaturas(_r_34)
+		:g (_r_34_35) [1,1] 
+			: Vip(_r_34_35_36)
+			: Padrao(_r_34_35_37)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

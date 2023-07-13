@@ -1,0 +1,39 @@
+features
+	weather_station 
+		mandatory
+			measurements 
+				or
+					pressure 
+					temperature 
+					wind_speed 
+		mandatory
+			data_source 
+				alternative
+					internet 
+					demo 
+					external_services 
+		mandatory
+			output_format 
+				alternative
+					text 
+					web_server 
+					file 
+				mandatory
+					format 
+						alternative
+							xml 
+							html 
+							plain_text 
+				mandatory
+					language 
+						alternative
+							english 
+							german 
+		optional
+			alarm 
+				or
+					freeze_point 
+					storm_alert 
+constraints
+	freeze_point requires temperature
+	text excludes xml

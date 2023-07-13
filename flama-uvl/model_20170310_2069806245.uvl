@@ -1,0 +1,84 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				alternative
+					_r_1_6_7 
+					_r_1_6_8 
+					_r_1_6_9 
+					_r_1_6_10 
+					_r_1_6_11 
+		mandatory
+			_r_2 
+				alternative
+					_r_2_12_13 
+						alternative
+							_r_2_12_13_15_16 
+							_r_2_12_13_15_17 
+							_r_2_12_13_15_18 
+					_r_2_12_14 
+						alternative
+							_r_2_12_14_20_21 
+							_r_2_12_14_20_22 
+							_r_2_12_14_20_23 
+		mandatory
+			_r_3 
+				mandatory
+					_r_3_24 
+						alternative
+							_r_3_24_37_38 
+							_r_3_24_37_39 
+				mandatory
+					_r_3_25 
+						alternative
+							_r_3_25_40_41 
+							_r_3_25_40_42 
+							_r_3_25_40_43 
+							_r_3_25_40_44 
+							_r_3_25_40_45 
+				mandatory
+					_r_3_26 
+						alternative
+							_r_3_26_46_47 
+							_r_3_26_46_48 
+							_r_3_26_46_49 
+							_r_3_26_46_50 
+							_r_3_26_46_51 
+				optional
+					_r_3_27 
+						alternative
+							_r_3_27_34_35 
+							_r_3_27_34_36 
+		mandatory
+			_r_4 
+				alternative
+					_r_4_29_30 
+					_r_4_29_31 
+					_r_4_29_33 
+		optional
+			_r_5 
+				mandatory
+					_r_5_52 
+						or
+							_r_5_52_54_55 
+							_r_5_52_54_56 
+							_r_5_52_54_57 
+				mandatory
+					_r_5_53 
+						alternative
+							_r_5_53_58_59 
+							_r_5_53_58_60 
+							_r_5_53_58_61 
+		optional
+			_r_50 
+constraints
+	_r_4_29_30 excludes _r_5_52_54_57
+	_r_3_25_40_44 excludes _r_4_29_30
+	_r_3_26_46_50 excludes _r_4_29_31
+	_r_3_26_46_50 excludes _r_4_29_30
+	_r_2_12_14 requires _r_4_29_31
+	_r_2_12_14 requires _r_4_29_31
+	_r_3_25_40_44 excludes _r_4_29_31
+	_r_1_6_11 requires _r_4_29_30
+	_r_3_25_40_41 requires _r_4_29_33
+	_r_3_26_46_47 requires _r_4_29_33

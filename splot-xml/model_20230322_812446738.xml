@@ -1,0 +1,59 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:13 PM  -->
+<feature_model name="eleicoes">
+<meta>
+<data name="description">urna eletronica para diferentes categorias de eleição</data>
+<data name="creator">Raissa Miranda</data>
+<data name="address"></data>
+<data name="email">raissamm01@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m inicializacao(_r_5)
+		:m credenciamento(_r_5_6)
+			:m votacao(_r_5_6_7)
+				:o insere_documento(_r_5_6_7_9)
+					:o confere_dados(_r_5_6_7_9_11)
+						:m inicia_votacao(_r_5_6_7_9_11_12)
+							:o presidente(_r_5_6_7_9_11_12_13)
+								:g (_r_5_6_7_9_11_12_13_37) [1,1] 
+									: candidato(_r_5_6_7_9_11_12_13_37_38)
+									: branco(_r_5_6_7_9_11_12_13_37_39)
+									: nulo(_r_5_6_7_9_11_12_13_37_40)
+							:o senador(_r_5_6_7_9_11_12_15)
+								:g (_r_5_6_7_9_11_12_15_41) [1,1] 
+									: candidato(_r_5_6_7_9_11_12_15_41_42)
+									: branco(_r_5_6_7_9_11_12_15_41_43)
+									: nulo(_r_5_6_7_9_11_12_15_41_44)
+							:o prefeito(_r_5_6_7_9_11_12_16)
+								:g (_r_5_6_7_9_11_12_16_45) [1,1] 
+									: candidato(_r_5_6_7_9_11_12_16_45_46)
+									: branco(_r_5_6_7_9_11_12_16_45_47)
+									: nulo(_r_5_6_7_9_11_12_16_45_48)
+							:o vereador(_r_5_6_7_9_11_12_17)
+								:g (_r_5_6_7_9_11_12_17_49) [1,1] 
+									: candidato(_r_5_6_7_9_11_12_17_49_50)
+									: branco(_r_5_6_7_9_11_12_17_49_51)
+									: nulo(_r_5_6_7_9_11_12_17_49_52)
+					:o inicia_votacao_chefe(_r_5_6_7_9_36)
+						:g (_r_5_6_7_9_36_53) [1,1] 
+							: candidato(_r_5_6_7_9_36_53_54)
+							: branco(_r_5_6_7_9_36_53_55)
+					:m checa_categoria(_r_5_6_7_9_57)
+	:m termina_votacao(_r_58)
+		:m exibe_estatisticas(_r_58_59)
+			:m exibe_numero_de_votos(_r_58_59_62)
+				:g (_r_58_59_62_63) [1,1] 
+					: exibe_porcentagens(_r_58_59_62_63_64)
+					: exibe_candidatos_eleitos_derrotados(_r_58_59_62_63_65)
+					: exibe_votos_discriminados_por_categoria(_r_58_59_62_63_66)
+						:m exibe_candidato_eleito(_r_58_59_62_63_66_67)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

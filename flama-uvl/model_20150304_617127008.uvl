@@ -1,0 +1,123 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				optional
+					_r_1_2 
+						optional
+							_r_1_2_9 
+						optional
+							_r_1_2_10 
+						optional
+							_r_1_2_11 
+						optional
+							_r_1_2_12 
+						optional
+							_r_1_2_13 
+						optional
+							_r_1_2_14 
+						optional
+							_r_1_2_15 
+						optional
+							_r_1_2_16 
+						optional
+							_r_1_2_17 
+						mandatory
+							_r_1_2_18 
+						optional
+							_r_1_2_19 
+						optional
+							_r_1_2_20 
+						optional
+							_r_1_2_21 
+				mandatory
+					_r_1_3 
+						optional
+							_r_1_3_22 
+						optional
+							_r_1_3_23 
+						optional
+							_r_1_3_24 
+						optional
+							_r_1_3_25 
+				mandatory
+					_r_1_4 
+						optional
+							_r_1_4_26 
+						mandatory
+							_r_1_4_27 
+								alternative
+									_r_1_4_27_33_34 
+										optional
+											_r_1_4_27_33_34_36 
+										mandatory
+											_r_1_4_27_33_34_37 
+									_r_1_4_27_33_35 
+										mandatory
+											_r_1_4_27_33_35_38 
+												alternative
+													_r_1_4_27_33_35_38_40_41 
+													_r_1_4_27_33_35_38_40_42 
+										optional
+											_r_1_4_27_33_35_39 
+						optional
+							_r_1_4_28 
+						mandatory
+							_r_1_4_29 
+								optional
+									_r_1_4_29_43 
+								optional
+									_r_1_4_29_44 
+								optional
+									_r_1_4_29_46 
+						optional
+							_r_1_4_30 
+						optional
+							_r_1_4_31 
+						mandatory
+							_r_1_4_32 
+								optional
+									_r_1_4_32_47 
+								mandatory
+									_r_1_4_32_48 
+								optional
+									_r_1_4_32_49 
+				optional
+					_r_1_5 
+				mandatory
+					_r_1_6 
+						optional
+							_r_1_6_50 
+						optional
+							_r_1_6_51 
+								optional
+									_r_1_6_51_53 
+								optional
+									_r_1_6_51_54 
+								mandatory
+									_r_1_6_51_55 
+						optional
+							_r_1_6_52 
+				mandatory
+					_r_1_7 
+						optional
+							_r_1_7_57 
+						optional
+							_r_1_7_58 
+						optional
+							_r_1_7_59 
+				optional
+					_r_1_8 
+constraints
+	_r_1_6_51_54 requires _r_1_8
+	_r_1_4_32_49 requires _r_1_8
+	_r_1_6_50 requires _r_1_6_51_53
+	_r_1_6_50 requires _r_1_7_57
+	_r_1_7_57 requires _r_1_8
+	_r_1_4_29_43 requires _r_1_4_29_44
+	_r_1_6_51_55 requires _r_1_7_57
+	_r_1_7_57 requires _r_1_7_59
+	_r_1_6_50 requires _r_1_6_52
+	_r_1_6_51_55 requires _r_1_8
+	_r_1_6_51_55 requires _r_1_8
+	_r_1_3_22 requires _r_1_8

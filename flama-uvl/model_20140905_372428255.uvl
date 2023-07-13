@@ -1,0 +1,21 @@
+features
+	_r 
+		or
+			_r_1_2 
+				alternative
+					_r_1_2_20_21 
+						optional
+							_r_1_2_20_21_23 
+						mandatory
+							_r_1_2_20_21_24 
+					_r_1_2_20_22 
+			_r_1_5 
+			_r_1_9 
+		alternative
+			_r_15_16 
+				mandatory
+					_r_15_16_25 
+			_r_15_17 
+				mandatory
+					_r_15_17_26 
+			_r_15_18 

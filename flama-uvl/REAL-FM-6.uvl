@@ -1,0 +1,21 @@
+features
+	cellphone 
+		optional
+			wireless 
+				or
+					infrared 
+					bluetooth 
+		mandatory
+			accu_cell 
+				alternative
+					li_ion 
+					ni_mh 
+					ni_ca 
+		mandatory
+			display 
+				alternative
+					color 
+					monochrome 
+constraints
+	bluetooth requires li_ion
+	color excludes ni_ca

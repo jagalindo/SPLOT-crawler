@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 9, 2022 - 6:54 PM  -->
+<feature_model name="Phone">
+<meta>
+<data name="description">SEG3101 Tutorial 7</data>
+<data name="creator">C T</data>
+<data name="address"></data>
+<data name="email">carinatam6@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uOttawa</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Phone(_r)
+	:m Features(_r_1)
+		:g (_r_1_2) [1,*] 
+			: Game(_r_1_2_3)
+			: Call(_r_1_2_4)
+			: Alarm(_r_1_2_5)
+	:m Platform(_r_6)
+		:o JavaME(_r_6_7)
+		:m OS(_r_6_8)
+			:g (_r_6_8_9) [1,1] 
+				: iOS(_r_6_8_9_10)
+				: Android(_r_6_8_9_11)
+	:o Media(_r_12)
+		:o Camera(_r_12_13)
+		:o MP3(_r_12_14)
+		:o MP4(_r_12_15)
+</feature_tree>
+<constraints>
+constraint_1:~_r_12_14 or ~_r_12_15
+constraint_2:~_r_1_2_3 or _r_6_7
+</constraints>
+</feature_model>

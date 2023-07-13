@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 1:19 AM  -->
+<feature_model name="eleicao">
+<meta>
+<data name="description">eleicao prefeito e vereador</data>
+<data name="creator">maria</data>
+<data name="address"></data>
+<data name="email">maria78279812@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r eleicao(_r)
+	:m inicializacao(_r_1)
+		:m usar senha(_r_1_2)
+	:m votacao(_r_3)
+		:m validar eleitor(_r_3_4)
+			:g (_r_3_4_6) [1,1] 
+				: entrar com cpf(_r_3_4_6_7)
+				: entrar com numero de identidade(_r_3_4_6_8)
+		:m realizar voto(_r_3_13)
+			:g (_r_3_13_14) [1,1] 
+				: abster do voto(_r_3_13_14_15)
+				: votar em apenas um candidato a chefe(_r_3_13_14_16)
+				: votar em branco(_r_3_13_14_18)
+	:m termino(_r_19)
+		:m usar senha(_r_19_20)
+		:m apresentar dados(_r_19_21)
+			:m apresentar numero de votos para cada candidato discuminado por categoria de funcionario(_r_19_21_22)
+			:m apresentar candidato eleito(_r_19_21_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

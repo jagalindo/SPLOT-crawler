@@ -1,0 +1,27 @@
+features
+	_id_0 
+		optional
+			page_translation 
+		mandatory
+			_id_1 
+				mandatory
+					_id_2 
+				optional
+					_id_3 
+						alternative
+							_id_5 
+							_id_6 
+							svg 
+				optional
+					_id_7 
+		optional
+			search_by_language 
+				or
+					_id_9 
+					_id_10 
+					_id_11 
+		optional
+			page_preview 
+constraints
+	search_by_language requires page_translation
+	page_preview excludes svg

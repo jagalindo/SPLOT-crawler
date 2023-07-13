@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 29, 2023 - 7:22 PM  -->
+<feature_model name="eShop">
+<meta>
+<data name="description">eShop</data>
+<data name="creator">viplesh</data>
+<data name="address"></data>
+<data name="email">viplesh2022@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">amity</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r e-Shop(_r)
+	:m Catalog(_r_1)
+		:o Food(_r_1_14)
+			:g (_r_1_14_16) [1,*] 
+				: Breakfast(_r_1_14_16_17)
+				: Lunch(_r_1_14_16_18)
+				: Dinner(_r_1_14_16_19)
+		:o Desert(_r_1_15)
+			:g (_r_1_15_20) [1,*] 
+				: Ice Cream(_r_1_15_20_21)
+				: Sweet(_r_1_15_20_22)
+	:m Payment(_r_2)
+		:g (_r_2_5) [1,*] 
+			: Bank Transfer(_r_2_5_6)
+				:m Acknowledgement(_r_2_5_6_11)
+		:g (_r_2_7) [1,*] 
+			: Credit Card(_r_2_7_8)
+				:m Receipt(_r_2_7_8_12)
+		:g (_r_2_9) [1,*] 
+			: eCoins(_r_2_9_10)
+				:m Reedeem(_r_2_9_10_13)
+	:o Search(_r_3)
+	:m Security(_r_4)
+		:g (_r_4_11) [1,1] 
+			: High(_r_4_11_12)
+		:g (_r_4_13) [1,1] 
+			: Standard(_r_4_13_14)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_7_8 or _r_4_11_12
+constraint_2:_r_2_5_6 or _r_4_11_12
+</constraints>
+</feature_model>

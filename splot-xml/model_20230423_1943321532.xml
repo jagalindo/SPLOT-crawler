@@ -1,0 +1,47 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Apr 23, 2023 - 3:11 PM  -->
+<feature_model name="Trabalho Reuso">
+<meta>
+<data name="description">eleicao</data>
+<data name="creator">Thales</data>
+<data name="address"></data>
+<data name="email">thaleshrqsilva@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eleicao(_r)
+	:m Registro(_r_1)
+		:m Gerenciamento(_r_1_3)
+			:m Gerenciar eleicao(_r_1_3_7)
+				:m Finalizar(_r_1_3_7_8)
+				:m Iniciar(_r_1_3_7_9)
+			:m Estatisticas(_r_1_3_10)
+				:m Gerais(_r_1_3_10_11)
+				:m Resultados(_r_1_3_10_12)
+					:m Candidatos Eleitos(_r_1_3_10_12_13)
+					:o Candidatos Elegiveis(_r_1_3_10_12_14)
+				:o Por Partido(_r_1_3_10_15)
+		:m Eleitor(_r_1_4)
+			:m Confirmar acesso(_r_1_4_6)
+		:m Admin(_r_1_5)
+			:m Cadastrar Eleitor(_r_1_5_16)
+			:m Cadastrar Eleicao(_r_1_5_17)
+				:m Cadastrar Partido(_r_1_5_17_19)
+					:m Cadastrar Candidato(_r_1_5_17_19_20)
+				:m Cadastrar Cargo(_r_1_5_17_21)
+	:m Votacao(_r_2)
+		:m Votar(_r_2_22)
+			:g (_r_2_22_23) [1,*] 
+				: Valido(_r_2_22_23_24)
+				: Nulo(_r_2_22_23_25)
+				: Branco(_r_2_22_23_26)
+		:m Confirmar(_r_2_27)
+		:m Corrigir(_r_2_29)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

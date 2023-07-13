@@ -1,0 +1,138 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				alternative
+					_r_1_4_5 
+					_r_1_4_6 
+		mandatory
+			_r_7 
+				alternative
+					_r_7_13_14 
+					_r_7_13_15 
+					_r_7_13_16 
+					_r_7_13_17 
+		optional
+			_r_18 
+				alternative
+					_r_18_21_22 
+					_r_18_21_23 
+		mandatory
+			_r_24 
+				alternative
+					_r_24_25_26 
+					_r_24_25_27 
+		mandatory
+			_r_28 
+				alternative
+					_r_28_29_30 
+					_r_28_29_31 
+					_r_28_29_32 
+		optional
+			_r_33 
+				alternative
+					_r_33_34_35 
+					_r_33_34_36 
+		mandatory
+			_r_37 
+				alternative
+					_r_37_38_39 
+					_r_37_38_40 
+					_r_37_38_41 
+		mandatory
+			_r_42 
+				alternative
+					_r_42_43_44 
+					_r_42_43_45 
+		mandatory
+			_r_46 
+				alternative
+					_r_46_47_48 
+					_r_46_47_49 
+		mandatory
+			_r_50 
+				alternative
+					_r_50_51_52 
+					_r_50_51_53 
+		mandatory
+			_r_54 
+				mandatory
+					_r_54_57 
+				or
+					_r_54_58_59 
+					_r_54_58_60 
+		mandatory
+			_r_61 
+				alternative
+					_r_61_62_63 
+					_r_61_62_64 
+					_r_61_62_65 
+		mandatory
+			_r_66 
+				alternative
+					_r_66_67_68 
+					_r_66_67_69 
+					_r_66_67_70 
+					_r_66_67_71 
+		optional
+			_r_72 
+				alternative
+					_r_72_73_74 
+					_r_72_73_75 
+		mandatory
+			_r_76 
+				alternative
+					_r_76_77_78 
+					_r_76_77_79 
+					_r_76_77_80 
+		optional
+			_r_81 
+				alternative
+					_r_81_82_83 
+					_r_81_82_84 
+		optional
+			_r_85 
+		optional
+			_r_86 
+		optional
+			_r_90 
+				or
+					_r_90_91_92 
+					_r_90_91_93 
+					_r_90_91_94 
+		optional
+			_r_95 
+				or
+					_r_95_98_99 
+					_r_95_98_100 
+		mandatory
+			_r_101 
+				alternative
+					_r_101_102_103 
+					_r_101_102_104 
+		optional
+			_r_105 
+		optional
+			_r_106 
+constraints
+	_r_28_29_32 excludes _r_33_34_35
+	_r_37_38_39 excludes _r_85
+	_r_37_38_40 requires _r_90_91_94
+	_r_28_29_32 excludes _r_33_34_35
+	_r_54_58_60 requires _r_106
+	_r_7_13_14 excludes _r_18_21_22
+	_r_37_38_41 requires _r_66_67_71
+	_r_28_29_31 excludes _r_33_34_36
+	_r_1_4_6 requires _r_18_21_23
+	_r_28_29_30 excludes _r_33_34_36
+	_r_7_13_15 requires _r_18_21_22
+	_r_101_102_104 requires _r_105
+	_r_37_38_39 excludes _r_85
+	_r_28_29_30 excludes _r_33_34_35
+	_r_28_29_31 requires _r_33_34_35
+	_r_1_4_6 excludes _r_7_13_14
+	_r_28_29_32 requires _r_33_34_36
+	_r_1_4_6 excludes _r_7_13_15
+	_r_1_4_5 excludes _r_7_13_16
+	_r_28_29_31 excludes _r_33_34_36
+	_r_1_4_5 excludes _r_7_13_17

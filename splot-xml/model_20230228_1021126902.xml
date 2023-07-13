@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Feb 28, 2023 - 9:33 PM  -->
+<feature_model name="Gestor Aire Temuco AFE">
+<meta>
+<data name="description">borrador de FM para AFE de Oscar</data>
+<data name="creator">Samuel Sepúlveda</data>
+<data name="address"></data>
+<data name="email">samuel.sepulveda@ufrontera.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFRO</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r GestorAireTemuco(_r)
+	:m VisualizadorCalidadAire(_r_1)
+		:o VisualizadorRestriccionUsoLena(_r_1_3)
+	:m Turismo(_r_2)
+		:g (_r_2_6) [1,1] 
+			: AmbienteCerrado(_r_2_6_7)
+			: AmbienteAbierto(_r_2_6_8)
+	:o Deportes(_r_4)
+	:o Entretenimiento(_r_5)
+		:g (_r_5_9) [1,*] 
+			: EntrFamiliar(_r_5_9_10)
+			: EntrAdulto(_r_5_9_11)
+			: EntrTerceraEdad(_r_5_9_12)
+</feature_tree>
+<constraints>
+constraint_4:_r_4 or ~_r_2_6_8
+</constraints>
+</feature_model>

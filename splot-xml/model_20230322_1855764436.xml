@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:38 PM  -->
+<feature_model name="TainanExercicio1">
+<meta>
+<data name="description">exercicio 1 de reutilização de software</data>
+<data name="creator">Tainan A</data>
+<data name="address"></data>
+<data name="email">tainanalbuquerque1@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Atividade 1 - Tainan(_r)
+	:m senhaInicioFim(_r_4)
+	:m tipoEleicao(_r_7)
+		:g (_r_7_8) [1,1] 
+			: presidenteSenador(_r_7_8_9)
+			: prefeitoVereador(_r_7_8_10)
+			: chefeDepartamento(_r_7_8_11)
+	:m contagemVotos(_r_12)
+	:m tipoLeituraEleitor(_r_15)
+		:g (_r_15_17) [1,1] 
+			: tituloEleitor(_r_15_17_18)
+			: cpfRg(_r_15_17_19)
+				:m cpf(_r_15_17_19_28)
+				:m rg(_r_15_17_19_29)
+		:m buscarNome(_r_15_32)
+		:m tipoEleitor(_r_15_47)
+			:g (_r_15_47_51) [1,1] 
+				: eleitorAcademico(_r_15_47_51_52)
+					:m professor(_r_15_47_51_52_55)
+						:m peso2(_r_15_47_51_52_55_57)
+					:m tecnicoAdministrativo(_r_15_47_51_52_56)
+				: eleitorCivil(_r_15_47_51_53)
+	:m candidatos(_r_38)
+		:g (_r_38_39) [1,*] 
+			: presidente(_r_38_39_40)
+			: primeiroSenador(_r_38_39_41)
+			: segundoSenador(_r_38_39_42)
+			: prefeito(_r_38_39_43)
+			: vereador(_r_38_39_44)
+			: chefeDepartamento(_r_38_39_45)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

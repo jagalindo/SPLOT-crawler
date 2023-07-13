@@ -1,0 +1,27 @@
+features
+	_r 
+		or
+			_r_40_41 
+				mandatory
+					_r_40_41_42 
+			_r_40_43 
+				mandatory
+					_r_40_43_45 
+						mandatory
+							_r_40_43_45_49 
+						mandatory
+							_r_40_43_45_50 
+						mandatory
+							_r_40_43_45_51 
+						mandatory
+							_r_40_43_45_53 
+			_r_40_46 
+				mandatory
+					_r_40_46_47 
+						mandatory
+							_r_40_46_47_48 
+			_r_40_54 
+				mandatory
+					_r_40_54_55 
+				mandatory
+					_r_40_54_56 

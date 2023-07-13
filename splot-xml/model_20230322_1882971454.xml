@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 6:55 PM  -->
+<feature_model name="Urna_reut_software">
+<meta>
+<data name="description">urna para exercicio de reutilizacao</data>
+<data name="creator">Marcelo</data>
+<data name="address"></data>
+<data name="email">marceloslo@ufmg.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Ufmg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna_Eletronica(_r)
+	:m Votacao(_r_1)
+		:m Credenciacao do eleitor(_r_1_21)
+			:o Peso_do_voto(_r_1_21_27)
+			:m Validacao_de_credencial(_r_1_21_28)
+		:m Operacao de voto(_r_1_22)
+			:m Valido(_r_1_22_23)
+			:m Branco(_r_1_22_24)
+			:o Nulo(_r_1_22_25)
+		:o Abstencao(_r_1_29)
+		:o Multiplos Cargos(_r_1_30)
+	:m Inicializacao da eleicao(_r_6)
+		:m Senha(_r_6_7)
+	:m Termino da eleicao(_r_8)
+		:m Senha(_r_8_9)
+		:m Divulgacao de resultados(_r_8_10)
+			:g (_r_8_10_14) [1,*] 
+				: Numero de votos por candidato(_r_8_10_14_15)
+					:o Separacao por categoria(_r_8_10_14_15_19)
+				: Candidatos derrotados(_r_8_10_14_16)
+				: Porcentagens de votos por candidato(_r_8_10_14_18)
+			:m Candidatos eleitos(_r_8_10_17)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

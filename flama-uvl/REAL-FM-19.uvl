@@ -1,0 +1,66 @@
+features
+	graph 
+		mandatory
+			services 
+				mandatory
+					graph_manipulation 
+						mandatory
+							delete 
+						mandatory
+							select 
+								mandatory
+									selection_mode 
+										alternative
+											increment_selection 
+											non_increment_selection 
+						mandatory
+							add 
+								mandatory
+									entity_add 
+								mandatory
+									connector_add 
+						mandatory
+							move 
+								mandatory
+									moving_mode 
+										alternative
+											outline_moving 
+											content_moving 
+								optional
+									moving_constraint 
+										alternative
+											horizontal_constraint 
+											vertical_constraint 
+						optional
+							compose 
+						optional
+							layer_adjust 
+								mandatory
+									up_layer 
+								mandatory
+									down_layer 
+				optional
+					do_undo_redo 
+						mandatory
+							select_do_undo_redo 
+						mandatory
+							add_do_undo_redo 
+						mandatory
+							delete__do_undo_redo 
+						mandatory
+							move_do_undo_redo 
+						optional
+							compose_do_undo_redo 
+						optional
+							layer_adjust_do_undo_redo 
+				optional
+					zoom_inout 
+constraints
+	do_undo_redo requires graph_manipulation
+	zoom_inout requires graph_manipulation
+	compose excludes compose_do_undo_redo
+	compose_do_undo_redo requires compose
+	compose_do_undo_redo requires do_undo_redo
+	layer_adjust excludes layer_adjust_do_undo_redo
+	layer_adjust_do_undo_redo requires do_undo_redo
+	layer_adjust_do_undo_redo requires layer_adjust

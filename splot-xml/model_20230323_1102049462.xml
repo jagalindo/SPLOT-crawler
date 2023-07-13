@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Mar 23, 2023 - 12:45 AM  -->
+<feature_model name="Urna eletronica">
+<meta>
+<data name="description">Modelo de urna eletronica para controlar votações</data>
+<data name="creator">Gabriel Cerqueira</data>
+<data name="address"></data>
+<data name="email">gabcsilva97@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:o Finalizar Urna(_r_1)
+	:m Configuracao(_r_2)
+		:m Modo de identificacao de usuario(_r_2_3)
+		:m Possibilidades de votacao(_r_2_4)
+		:m Numero de votos de usuario(_r_2_5)
+		:m Definir candidatos votaveis(_r_2_6)
+		:m Definir peso de votacao(_r_2_7)
+	:m Iniciar sessao do usuario(_r_8)
+		:m Identificar usuario(_r_8_9)
+			:m Votacao(_r_8_9_10)
+		:m Finalizar sessao(_r_8_11)
+	:m Iniciar votacao(_r_12)
+		:m Encerrar votacao(_r_12_14)
+			:m Mostrar estatiscas(_r_12_14_15)
+				:o Mostrar estatisticas de quem ganhou e perdeu considerando os votos validos(_r_12_14_15_16)
+				:o Mostrar estatisticas de quem ganhou e perdeu considerando os votos validos por categoria de votante(_r_12_14_15_17)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

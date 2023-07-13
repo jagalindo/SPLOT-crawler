@@ -1,0 +1,17 @@
+features
+	_r0 
+		optional
+			_r1 
+				optional
+					_r2 
+						optional
+							_r3 
+		mandatory
+			_r4 
+				mandatory
+					_r5 
+						alternative
+							_r6 
+							_r7 
+							_r8 
+							_r9 

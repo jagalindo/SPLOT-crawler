@@ -1,0 +1,41 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:17 PM  -->
+<feature_model name="Modelo de Urna Eletronica">
+<meta>
+<data name="description">Exercicio de Reutilização de Software</data>
+<data name="creator">Samuel Assis</data>
+<data name="address"></data>
+<data name="email">samuelassisvieira@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department">DCC-UFMG</data>
+<data name="date">22/03/2023</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Urna Eletronica(_r)
+	:m Abertura Votacao(_r_1)
+		:m Votacao(_r_1_7)
+			:m Autenticacao de eleitor(_r_1_7_8)
+				:g (_r_1_7_8_20) [1,1] 
+					: Autenticar CPF(_r_1_7_8_20_21)
+					: Autenticar Titulo Eleitor(_r_1_7_8_20_24)
+			:g (_r_1_7_12) [1,*] 
+				: Presidencial(_r_1_7_12_13)
+				: Senado(_r_1_7_12_14)
+				: Legislativo Municipal(_r_1_7_12_16)
+				: Departamento(_r_1_7_12_17)
+			:m Registro do voto(_r_1_7_19)
+	:m Fechamento Votacao(_r_2)
+	:m Resultados(_r_31)
+		:m Estatisticas(_r_31_35)
+			:g (_r_31_35_38) [1,1] 
+				: Porcentagem dos votos(_r_31_35_38_39)
+				: Voto por categoria(_r_31_35_38_40)
+	:g (_r_32) [1,1] 
+		: Apurar votos com peso(_r_32_33)
+		: Apurar votos comuns(_r_32_34)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

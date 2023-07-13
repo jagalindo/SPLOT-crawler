@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Oct 19, 2022 - 6:00 PM  -->
+<feature_model name="Customer Feature Model">
+<meta>
+<data name="description">NEMo Mobility Customer Profile</data>
+<data name="creator">Behailu Getachew</data>
+<data name="address">Addis Ababa</data>
+<data name="email">behailu.getachew@mu.edu.et</data>
+<data name="phone">0913032406</data>
+<data name="website"></data>
+<data name="organization">MEKELLE UNIVERSITY</data>
+<data name="department">Software Engineering</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r CustomerFeatureModel(_r)
+	:m GetCustomerAccount(_r_1)
+		:m SystemPrompt(_r_1_2)
+			:m UserName(_r_1_2_4)
+				:m unInputLength(_r_1_2_4_6)
+					:g (_r_1_2_4_6_14) [1,*] 
+						: 0(_r_1_2_4_6_14_15)
+						: 25(_r_1_2_4_6_14_16)
+				:m unLetters(_r_1_2_4_13)
+					:g (_r_1_2_4_13_30) [1,1] 
+						: true(_r_1_2_4_13_30_31)
+						: false(_r_1_2_4_13_30_32)
+				:o unSpecial(_r_1_2_4_20)
+					:g (_r_1_2_4_20_53) [1,1] 
+						: true(_r_1_2_4_20_53_54)
+						: false(_r_1_2_4_20_53_55)
+				:m unNumbers(_r_1_2_4_24)
+					:g (_r_1_2_4_24_33) [1,1] 
+						: true(_r_1_2_4_24_33_34)
+						: false(_r_1_2_4_24_33_35)
+				:m IsUserNameValid(_r_1_2_4_36)
+					:g (_r_1_2_4_36_37) [1,1] 
+						: yes(_r_1_2_4_36_37_38)
+						: no(_r_1_2_4_36_37_39)
+			:m PassWord(_r_1_2_5)
+				:m pwInputLength(_r_1_2_5_28)
+					:g (_r_1_2_5_28_29) [1,*] 
+						: 0(_r_1_2_5_28_29_30)
+						: 25(_r_1_2_5_28_29_31)
+				:m pwLetters(_r_1_2_5_32)
+					:g (_r_1_2_5_32_36) [1,1] 
+						: true(_r_1_2_5_32_36_37)
+						: false(_r_1_2_5_32_36_38)
+				:m pwSpecial(_r_1_2_5_36)
+					:g (_r_1_2_5_36_39) [1,1] 
+						: true(_r_1_2_5_36_39_40)
+						: false(_r_1_2_5_36_39_41)
+				:m pwNumbers(_r_1_2_5_42)
+					:g (_r_1_2_5_42_42) [1,1] 
+						: true(_r_1_2_5_42_42_43)
+						: false(_r_1_2_5_42_42_44)
+				:m IsPassWordValid(_r_1_2_5_35)
+					:g (_r_1_2_5_35_40) [1,1] 
+						: yes(_r_1_2_5_35_40_41)
+						: no(_r_1_2_5_35_40_42)
+			:m CustomerService(_r_1_2_30)
+				:m IsUserAuthorized(_r_1_2_30_43)
+					:g (_r_1_2_30_43_44) [1,1] 
+						: yes(_r_1_2_30_43_44_45)
+						: no(_r_1_2_30_43_44_46)
+			:m IsUserAuthenticated(_r_1_2_47)
+				:g (_r_1_2_47_48) [1,1] 
+					: yes(_r_1_2_47_48_49)
+					: no(_r_1_2_47_48_50)
+</feature_tree>
+<constraints>
+constraint_8:_r_1_2_5_28_29_30 or _r_1_2_5_28 or _r_1_2_5_32_36_38 or _r_1_2_5_32 or _r_1_2_5_36_39_41 or _r_1_2_5_36 or _r_1_2_5_42_42_44 or _r_1_2_5_42 or _r_1_2_5_35 or _r_1_2_5_35_40_42
+constraint_10:_r_1_2_4_6_14_15 or _r_1_2_4_6 or _r_1_2_4_13_30_32 or _r_1_2_4_13 or _r_1_2_4_20_53_55 or _r_1_2_4_20 or _r_1_2_4_24_33_35 or _r_1_2_4_24 or _r_1_2_4 or _r_1_2_4_36 or _r_1_2_4_36_37_39
+constraint_6:_r_1_2_4_6_14_16 or _r_1_2_4_6 or _r_1_2_4_13_30_31 or _r_1_2_4_13 or _r_1_2_4_20_53_54 or _r_1_2_4_20 or _r_1_2_4_24_33_34 or _r_1_2_4_24 or _r_1_2_4 or _r_1_2_4_36 or _r_1_2_4_36_37_38
+constraint_13:_r_1_2_5_28_29_31 or _r_1_2_5_28 or _r_1_2_5_32_36_37 or _r_1_2_5_32 or _r_1_2_5_36_39_40 or _r_1_2_5_36 or _r_1_2_5_42_42_43 or _r_1_2_5_42 or _r_1_2_5 or _r_1_2_5_35 or _r_1_2_5_35_40_41
+constraint_14:_r_1_2_5_35 or _r_1_2_4_36 or _r_1_2_4_36_37_38 or _r_1_2_5_35_40_41 or _r_1_2_30_43 or _r_1_2_30_43_44_45 or _r_1_2_47 or _r_1_2_47_48_49
+</constraints>
+</feature_model>

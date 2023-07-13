@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 25, 2022 - 2:05 PM  -->
+<feature_model name="APOSTAS_ONLINE">
+<meta>
+<data name="description">APLICAÇÃO</data>
+<data name="creator">LEONARDO_E_LUCAS</data>
+<data name="address"></data>
+<data name="email">leogqato27@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Type name for root feature(_r)
+	:m CATEGORIA(_r_1)
+	:g (_r_2) [1,1] 
+		: ESPORTES(_r_2_3)
+		: CASSINO(_r_2_4)
+		: E-SPORTS(_r_2_5)
+	:m GUI(_r_6)
+	:g (_r_7) [1,1] 
+		: MOBILE(_r_7_8)
+		: WEB(_r_7_9)
+	:m DEPOSITO(_r_10)
+	:g (_r_11) [1,1] 
+		: BOLETO(_r_11_12)
+		: TRANSFERENCIA(_r_11_13)
+			:g (_r_11_13_14) [1,1] 
+				: BRADESCO(_r_11_13_14_15)
+				: SANTANDER(_r_11_13_14_17)
+				: CAIXA(_r_11_13_14_18)
+		: PIX(_r_11_20)
+	:m SAQUE(_r_21)
+		:g (_r_21_22) [1,1] 
+			: PIX(_r_21_22_23)
+			: TRANSFERENCIA(_r_21_22_24)
+				:g (_r_21_22_24_25) [1,1] 
+					: BRADESCO(_r_21_22_24_25_26)
+					: SANTANDER(_r_21_22_24_25_27)
+					: CAIXA(_r_21_22_24_25_28)
+	:m ACOMP PARTIDA(_r_29)
+		:g (_r_29_30) [1,1] 
+			: CAMPO VIRTUAL(_r_29_30_31)
+			: TRANSMISSAO_DE_VIDEO(_r_29_30_32)
+	:o BONUS(_r_33)
+</feature_tree>
+<constraints>
+constraint_1:~_r_11_20 or _r_21_22_23
+</constraints>
+</feature_model>

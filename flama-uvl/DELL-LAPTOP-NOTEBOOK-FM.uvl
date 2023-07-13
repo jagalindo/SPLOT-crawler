@@ -1,0 +1,170 @@
+features
+	_id_0 
+		mandatory
+			productcategory 
+				alternative
+					mininotebooks 
+					inspironlaptops 
+					studiolaptops 
+					xpslaptops 
+					adamo 
+					studioxpslaptops 
+		mandatory
+			operatingsystem 
+				alternative
+					windowsvista64bit 
+					windowsxphome 
+					ubuntulinux 
+					_id_2_48 
+					_id_2_49 
+		mandatory
+			harddrive 
+				alternative
+					hd500gb 
+					hd320gb 
+					hd250gb 
+					hd160gb 
+					hd128gbsolidstate 
+					hd120gb 
+					hd80gb 
+		optional
+			opticaldrive 
+				alternative
+					cddvdrw 
+					dvdromdriveanddvdrw 
+					dvdrwandcdrwcombo 
+					bluraydisc 
+		mandatory
+			laptopweight 
+				alternative
+					ultralight 
+					light 
+					desktopreplacement 
+		mandatory
+			memory 
+				alternative
+					morethan4g 
+					mem4gb 
+					mem3gb 
+					mem2gb 
+					mem1gb 
+		mandatory
+			processor 
+				alternative
+					intelcore2duo 
+					intelpentiumdualcore 
+					intelceleron 
+					intelatom 
+		mandatory
+			price 
+				alternative
+					lessthanus400 
+					us400us800 
+					us800us1200 
+					morethanus1200 
+constraints
+	xpslaptops excludes dvdrwandcdrwcombo
+	xpslaptops excludes mem2gb
+	xpslaptops excludes hd80gb
+	xpslaptops excludes dvdromdriveanddvdrw
+	xpslaptops excludes hd128gbsolidstate
+	xpslaptops excludes hd120gb
+	xpslaptops excludes ubuntulinux
+	xpslaptops excludes hd160gb
+	xpslaptops excludes intelceleron
+	xpslaptops excludes intelpentiumdualcore
+	xpslaptops excludes mem1gb
+	adamo excludes ubuntulinux
+	adamo excludes hd500gb
+	adamo excludes hd320gb
+	xpslaptops excludes intelatom
+	xpslaptops excludes lessthanus400
+	adamo excludes windowsxphome
+	adamo excludes hd160gb
+	adamo excludes hd250gb
+	adamo excludes hd80gb
+	adamo excludes hd120gb
+	inspironlaptops excludes morethan4g
+	inspironlaptops excludes mem1gb
+	inspironlaptops excludes ultralight
+	inspironlaptops excludes desktopreplacement
+	studiolaptops excludes windowsxphome
+	inspironlaptops excludes intelatom
+	inspironlaptops excludes morethanus1200
+	studiolaptops excludes ubuntulinux
+	studiolaptops excludes hd160gb
+	studiolaptops excludes hd128gbsolidstate
+	studiolaptops excludes hd120gb
+	studiolaptops excludes hd80gb
+	studiolaptops excludes morethan4g
+	studiolaptops excludes mem2gb
+	studiolaptops excludes mem1gb
+	studiolaptops excludes intelceleron
+	studiolaptops excludes intelatom
+	studiolaptops excludes lessthanus400
+	studiolaptops excludes morethanus1200
+	xpslaptops excludes windowsxphome
+	studioxpslaptops excludes bluraydisc
+	studioxpslaptops excludes dvdrwandcdrwcombo
+	studioxpslaptops excludes dvdromdriveanddvdrw
+	studioxpslaptops excludes hd80gb
+	inspironlaptops excludes bluraydisc
+	inspironlaptops excludes dvdrwandcdrwcombo
+	inspironlaptops excludes dvdromdriveanddvdrw
+	inspironlaptops excludes windowsxphome
+	inspironlaptops excludes windowsvista64bit
+	mininotebooks excludes morethanus1200
+	inspironlaptops excludes hd80gb
+	inspironlaptops excludes hd120gb
+	inspironlaptops excludes hd128gbsolidstate
+	inspironlaptops excludes ubuntulinux
+	studioxpslaptops excludes morethanus1200
+	mininotebooks excludes intelpentiumdualcore
+	mininotebooks excludes intelcore2duo
+	mininotebooks excludes us800us1200
+	mininotebooks excludes intelceleron
+	mininotebooks excludes light
+	mininotebooks excludes bluraydisc
+	mininotebooks excludes morethan4g
+	mininotebooks excludes desktopreplacement
+	mininotebooks excludes mem3gb
+	mininotebooks excludes mem4gb
+	adamo excludes bluraydisc
+	studioxpslaptops excludes desktopreplacement
+	adamo excludes dvdrwandcdrwcombo
+	studioxpslaptops excludes morethan4g
+	adamo excludes dvdromdriveanddvdrw
+	adamo excludes cddvdrw
+	adamo excludes desktopreplacement
+	adamo excludes light
+	studioxpslaptops excludes us400us800
+	studioxpslaptops excludes lessthanus400
+	adamo excludes morethan4g
+	studioxpslaptops excludes intelatom
+	studioxpslaptops excludes intelceleron
+	studioxpslaptops excludes intelpentiumdualcore
+	adamo excludes intelpentiumdualcore
+	studioxpslaptops excludes mem1gb
+	adamo excludes intelceleron
+	studioxpslaptops excludes mem2gb
+	adamo excludes mem3gb
+	adamo excludes mem1gb
+	studioxpslaptops excludes mem3gb
+	mininotebooks excludes hd128gbsolidstate
+	adamo excludes lessthanus400
+	mininotebooks excludes hd250gb
+	adamo excludes intelatom
+	mininotebooks excludes hd320gb
+	adamo excludes us800us1200
+	mininotebooks excludes hd500gb
+	adamo excludes us400us800
+	mininotebooks excludes dvdrwandcdrwcombo
+	mininotebooks excludes dvdromdriveanddvdrw
+	mininotebooks excludes cddvdrw
+	studioxpslaptops excludes windowsxphome
+	studioxpslaptops excludes ubuntulinux
+	studioxpslaptops excludes hd250gb
+	mininotebooks excludes windowsvista64bit
+	studioxpslaptops excludes hd160gb
+	studioxpslaptops excludes hd128gbsolidstate
+	studioxpslaptops excludes hd120gb

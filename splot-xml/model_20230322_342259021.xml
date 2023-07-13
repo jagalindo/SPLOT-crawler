@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 7:37 PM  -->
+<feature_model name="Eleicao RS">
+<meta>
+<data name="description">eleicao</data>
+<data name="creator">Gabriel Rocha</data>
+<data name="address"></data>
+<data name="email">gabreuvcr@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema de eleicao(_r)
+	:m Pessoa credenciada(_r_3)
+		:m Inicia urna com senha(_r_3_4)
+		:m Termina eleicao com senha(_r_3_5)
+	:m Dados(_r_6)
+		:m Documentacao(_r_6_83)
+			:g (_r_6_83_84) [1,*] 
+				: Titulo(_r_6_83_84_85)
+				: CPF(_r_6_83_84_86)
+				: Identidade(_r_6_83_84_87)
+		:m Confirmacao dos dados(_r_6_88)
+	:m Candidatos(_r_19)
+		:g (_r_19_22) [1,1] 
+			: Presidente e Senador(_r_19_22_23)
+			: Prefeito e Vereador(_r_19_22_24)
+			: Chefe departamento(_r_19_22_27)
+	:m Votos opcionais(_r_31)
+		:g (_r_31_76) [1,*] 
+			: Branco(_r_31_76_77)
+			: Nulo(_r_31_76_78)
+			: Abstencao(_r_31_76_79)
+	:m Resultado(_r_50)
+		:m Vencedores(_r_50_51)
+		:m Estatistica(_r_50_53)
+			:g (_r_50_53_54) [1,1] 
+				: Votos candidatos(_r_50_53_54_55)
+				: Votos candidatos por categoria(_r_50_53_54_56)
+			:o Porcentagem votos validos(_r_50_53_57)
+	:m Tipo de Eleitores(_r_59)
+		:g (_r_59_62) [1,1] 
+			: Funcionario(_r_59_62_63)
+				:m Professor(_r_59_62_63_73)
+					:o Peso 2(_r_59_62_63_73_75)
+					:m Votar como professor(_r_59_62_63_73_80)
+				:m Tecnico(_r_59_62_63_74)
+					:m Votar como tecnico(_r_59_62_63_74_81)
+			: Eleitor(_r_59_62_72)
+				:m Votar(_r_59_62_72_82)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

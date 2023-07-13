@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 15, 2023 - 6:58 AM  -->
+<feature_model name="Roomba">
+<meta>
+<data name="description"> Roomba</data>
+<data name="creator">Siti Hawa</data>
+<data name="address"></data>
+<data name="email">hawashareef@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTHM</data>
+<data name="department">FSKTM</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Roomba(_r)
+	:m Navigation(_r_1)
+		:g (_r_1_7) [1,1] 
+			: iAdapt(_r_1_7_8)
+			: iAdapt twopointzero(_r_1_7_9)
+	:m Vacuuming(_r_2)
+		:g (_r_2_10) [1,1] 
+			: AeroVac(_r_2_10_11)
+			: AeroVacTwo(_r_2_10_12)
+			: AeroForce(_r_2_10_13)
+	:m Cleaning(_r_3)
+		:o Modes(_r_3_14)
+			:g (_r_3_14_18) [1,*] 
+				: Entire Level(_r_3_14_18_19)
+				: Carpet Boost(_r_3_14_18_20)
+				: Edge(_r_3_14_18_21)
+		:m Filter(_r_3_15)
+			:g (_r_3_15_22) [1,1] 
+				: HEPA(_r_3_15_22_23)
+				: AeroVac Filter(_r_3_15_22_24)
+		:o Full Bin Indicator(_r_3_16)
+		:o BuiltIn Camera(_r_3_17)
+	:m Battery(_r_4)
+		:g (_r_4_25) [1,1] 
+			: LitiumIon(_r_4_25_26)
+			: NiMh(_r_4_25_27)
+	:o Remote Control(_r_6)
+		:g (_r_6_28) [1,*] 
+			: App(_r_6_28_29)
+			: IRobot RC(_r_6_28_30)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

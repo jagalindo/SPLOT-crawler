@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Oct 25, 2022 - 5:11 PM  -->
+<feature_model name="OnlineShop_CaseStudy">
+<meta>
+<data name="description">Online Shop</data>
+<data name="creator">Sharaf Kabashi</data>
+<data name="address"></data>
+<data name="email">sharafeldin.kabashi@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTHM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r OnlineShop(_r)
+	:m Catalogue(_r_1)
+		:m Info(_r_1_7)
+			:g (_r_1_7_8) [1,*] 
+				: Image(_r_1_7_8_9)
+			:g (_r_1_7_10) [1,*] 
+				: Price(_r_1_7_10_11)
+			:g (_r_1_7_12) [1,*] 
+				: Description(_r_1_7_12_13)
+		:o Offers(_r_1_14)
+		:o Search(_r_1_15)
+			:g (_r_1_15_16) [1,*] 
+				: Basic(_r_1_15_16_17)
+			:g (_r_1_15_18) [1,*] 
+				: Advance(_r_1_15_18_19)
+	:m Payment(_r_2)
+		:g (_r_2_20) [1,*] 
+			: BankDraft(_r_2_20_21)
+		:g (_r_2_22) [1,*] 
+			: CreditCard(_r_2_22_23)
+				:g (_r_2_22_23_24) [1,*] 
+					: Visa(_r_2_22_23_24_25)
+				:g (_r_2_22_23_26) [1,*] 
+					: AmericanExpress(_r_2_22_23_26_27)
+	:m GUI(_r_3)
+		:g (_r_3_28) [1,*] 
+			: PC(_r_3_28_29)
+		:g (_r_3_30) [1,*] 
+			: Mobile(_r_3_30_31)
+	:o Security(_r_5)
+		:g (_r_5_32) [1,1] 
+			: High(_r_5_32_33)
+		:g (_r_5_34) [1,1] 
+			: Medium(_r_5_34_35)
+	:o Banners(_r_6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,70 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Oct 31, 2022 - 3:14 PM  -->
+<feature_model name="IoT_Smart_Campus">
+<meta>
+<data name="description">IoT Device</data>
+<data name="creator">Sharafeldin Kabashi</data>
+<data name="address"></data>
+<data name="email">sharafeldin.kabashi@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UTHM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SmartCampus(_r)
+	:m Temperature_Management(_r_2)
+		:m Temperature_Sensors(_r_2_8)
+		:o Temperature_Actuators(_r_2_9)
+			:g (_r_2_9_70) [1,*] 
+				: Air_Conditioner(_r_2_9_70_71)
+			:g (_r_2_9_72) [1,*] 
+				: Radiators(_r_2_9_72_73)
+	:o Presence_Monitoring(_r_3)
+		:m Presence_Sensors(_r_3_16)
+			:g (_r_3_16_64) [1,*] 
+				: Motion(_r_3_16_64_65)
+			:g (_r_3_16_66) [1,*] 
+				: Camera(_r_3_16_66_67)
+			:g (_r_3_16_68) [1,*] 
+				: Infrared(_r_3_16_68_69)
+		:o Presence_Actuators(_r_3_17)
+	:o Air_Quality_Monitoring(_r_4)
+		:m Air_Quality_Sensors(_r_4_22)
+			:g (_r_4_22_58) [1,*] 
+				: Carbon_Oxide(_r_4_22_58_59)
+			:g (_r_4_22_60) [1,*] 
+				: Ozone(_r_4_22_60_61)
+			:g (_r_4_22_62) [1,*] 
+				: Nitrogen_Oxide(_r_4_22_62_63)
+		:o Air_Quality_Actuators(_r_4_23)
+	:m Illumination_Management(_r_5)
+		:m Illumination_Sensors(_r_5_28)
+		:o Illumination_Actuators(_r_5_29)
+	:o Access_Control(_r_6)
+		:m Access_Control_Sensors(_r_6_30)
+			:g (_r_6_30_50) [1,*] 
+				: Fingerprint(_r_6_30_50_51)
+			:g (_r_6_30_52) [1,*] 
+				: Retina_Scanner(_r_6_30_52_53)
+			:g (_r_6_30_54) [1,*] 
+				: Card_Reader(_r_6_30_54_55)
+			:g (_r_6_30_56) [1,*] 
+				: Numeric_Keypad(_r_6_30_56_57)
+		:o Access_Control_Actuators(_r_6_31)
+	:o Humidity_Management(_r_7)
+		:m Humidity_Sensors(_r_7_37)
+			:g (_r_7_37_42) [1,*] 
+				: Soil_Moisture_Detector(_r_7_37_42_43)
+			:g (_r_7_37_44) [1,*] 
+				: Air_Humidity_Sensor(_r_7_37_44_45)
+		:o Humidity_Actuators(_r_7_38)
+			:g (_r_7_38_46) [1,*] 
+				: Sprinkler(_r_7_38_46_47)
+			:g (_r_7_38_48) [1,*] 
+				: Dehumidifier(_r_7_38_48_49)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

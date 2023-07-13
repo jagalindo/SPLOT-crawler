@@ -1,0 +1,58 @@
+features
+	strategy_mobile_game 
+		optional
+			connectivity 
+				or
+					network 
+						alternative
+							edge 
+							hspa 
+							lte 
+							wifi 
+					bluetooth 
+		mandatory
+			graphics 
+				mandatory
+					detail_level 
+						alternative
+							low 
+							medium 
+							high 
+				mandatory
+					type 
+						alternative
+							2d 
+							3d 
+				mandatory
+					framerate 
+						alternative
+							40fps 
+							50fps 
+							60fps 
+		optional
+			sound 
+				mandatory
+					quality 
+						alternative
+							128kbps 
+							192kbps 
+							256kbps 
+				optional
+					vibration 
+		mandatory
+			game_mode 
+				alternative
+					real_time 
+					turn_based 
+		optional
+			multiplayer 
+				alternative
+					local_multiplayer 
+					online_multiplayer 
+		optional
+			global_scoreboard 
+constraints
+	local_multiplayer requires wifi
+	global_scoreboard requires network
+	online_multiplayer requires wifi
+	multiplayer excludes wifi

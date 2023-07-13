@@ -1,0 +1,35 @@
+features
+	_r 
+		mandatory
+			_r_1 
+				alternative
+					_r_1_6_7 
+					_r_1_6_8 
+					_r_1_6_9 
+					_r_1_6_10 
+		mandatory
+			_r_3 
+				alternative
+					_r_3_11_12 
+					_r_3_11_13 
+					_r_3_11_16 
+					_r_3_11_17 
+					_r_3_11_18 
+					_r_3_11_19 
+		mandatory
+			_r_4 
+				alternative
+					_r_4_20_21 
+					_r_4_20_22 
+					_r_4_20_23 
+					_r_4_20_24 
+					_r_4_20_25 
+		mandatory
+			_r_5 
+constraints
+	_r_1 requires _r_3
+	_r_4 requires _r_5
+	_r_1 requires _r_5
+	_r_3 requires _r_5
+	_r_1 requires _r_4
+	_r_3 requires _r_4

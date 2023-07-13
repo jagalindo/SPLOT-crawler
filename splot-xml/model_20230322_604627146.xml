@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Mar 22, 2023 - 8:07 PM  -->
+<feature_model name="Eleição de um prefeito e um vereador">
+<meta>
+<data name="description">Eleição de um prefeito e um vereador</data>
+<data name="creator">Catarina Enya</data>
+<data name="address"></data>
+<data name="email">catarina.edp@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r urna_eletronica(_r)
+	:m Digitar senha de inicio da eleicao(_r_1)
+		:m Digitar numero do titulo de eleitor(_r_1_2)
+			:m Exibir dados do eleitor(_r_1_2_3)
+				:m Confirmar dados do eleitor(_r_1_2_3_4)
+					:m Votar para prefeito(_r_1_2_3_4_5)
+						:g (_r_1_2_3_4_5_6) [1,1] 
+							: Votar em branco(_r_1_2_3_4_5_6_7)
+								:m Confirmar voto(_r_1_2_3_4_5_6_7_17)
+							: Votar nulo(_r_1_2_3_4_5_6_8)
+								:m Confirmar voto(_r_1_2_3_4_5_6_8_18)
+							: Votar em um candidato(_r_1_2_3_4_5_6_9)
+								:m Confirmar voto(_r_1_2_3_4_5_6_9_19)
+					:m Votar para vereador(_r_1_2_3_4_10)
+						:g (_r_1_2_3_4_10_13) [1,1] 
+							: Votar em branco(_r_1_2_3_4_10_13_14)
+								:m Confirmar voto(_r_1_2_3_4_10_13_14_20)
+							: Votar nulo(_r_1_2_3_4_10_13_15)
+								:m Confirmar voto(_r_1_2_3_4_10_13_15_21)
+							: Votar em um candidato(_r_1_2_3_4_10_13_16)
+								:m Confirmar voto(_r_1_2_3_4_10_13_16_22)
+	:m Digitar senha de termino da eleicao(_r_23)
+		:m Exibir estatisticas da eleicao(_r_23_24)
+			:m Exibir resultado da eleicao(_r_23_24_25)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
