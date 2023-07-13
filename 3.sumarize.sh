@@ -36,4 +36,8 @@ do
   else
     echo "The directory $dir does not exist."
   fi
+
 done
+
+  html_url="http://52.32.1.180:8080/SPLOT/SplotAnalysesServlet?action=select_model&enableSelection=false&&showModelDetails=true"
+  curl "$html_url" >> "$output_file"
