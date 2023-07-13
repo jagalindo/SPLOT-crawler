@@ -5,6 +5,10 @@ dir="./splot-xml"
 output_fama="./fama-xml"
 output_uvl="./flama-uvl"
 
+# Remove previous generated models to avoid possible append problems
+rm $output_fama/*
+rm $output_uvl/*
+
 # Iterate over each XML file in the source directory
 for file in "$dir"/*.xml
 do
