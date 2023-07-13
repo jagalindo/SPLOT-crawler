@@ -1,4 +1,4 @@
-name: Do things every 5 minutes
+name: Do things every 1st of every month
 on:
   schedule:
     - cron: "0 0 1 * *"
