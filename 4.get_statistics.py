@@ -16,7 +16,11 @@ for row in soup.find_all('tr'):
     columns = row.find_all('td')
     output_row = {}
     for header, column in zip(headers, columns):
-        output_row[header] = column.text.strip()
+        if column.find('a'):  # if the column contains a link
+            # extract the text after the last slash
+            output_row[header] = column.find('a')['href'].split('=')[-1]
+        else:
+            output_row[header] = column.text.strip()
     if output_row:
         table_data.append(output_row)
 
