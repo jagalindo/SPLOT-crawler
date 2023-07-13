@@ -585,7 +585,7 @@
         "Features": "10",
         "CTCR": "40%",
         "Clause Density": "0.5",
-        "Creator": "Davi Guimar\u0103es",
+        "Creator": "Davi Guimar\u00e3es",
         "Creation Date": "",
         "Details and Download": "model_20160812_1476754989.xml"
     },
@@ -1741,7 +1741,7 @@
     },
     {
         "#": "175.",
-        "Name": "2 - Elei\u00e7\u0103o de um prefeito e um Vereador",
+        "Name": "2 - Elei\u00e7\u00e3o de um prefeito e um Vereador",
         "Features": "13",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -2611,7 +2611,7 @@
     },
     {
         "#": "262.",
-        "Name": "Elei\u00e7\u0103o de um prefeito e um vereador",
+        "Name": "Elei\u00e7\u00e3o de um prefeito e um vereador",
         "Features": "14",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -2831,7 +2831,7 @@
     },
     {
         "#": "284.",
-        "Name": "Elei\u00e7\u0103o de um chefe de departamento",
+        "Name": "Elei\u00e7\u00e3o de um chefe de departamento",
         "Features": "15",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -3725,7 +3725,7 @@
         "Features": "17",
         "CTCR": "0%",
         "Clause Density": "N/A",
-        "Creator": "Larissa Falc\u0103o",
+        "Creator": "Larissa Falc\u00e3o",
         "Creation Date": "",
         "Details and Download": "model_20140430_1345238885.xml"
     },
@@ -3805,7 +3805,7 @@
         "Features": "17",
         "CTCR": "29%",
         "Clause Density": "0.6",
-        "Creator": "Jo\u0103o Paulo Souza Reis",
+        "Creator": "Jo\u00e3o Paulo Souza Reis",
         "Creation Date": "",
         "Details and Download": "model_20120328_288933955.xml"
     },
@@ -4005,7 +4005,7 @@
         "Features": "17",
         "CTCR": "0%",
         "Clause Density": "N/A",
-        "Creator": "Jo\u0103o Brant",
+        "Creator": "Jo\u00e3o Brant",
         "Creation Date": "",
         "Details and Download": "model_20120328_810464459.xml"
     },
@@ -4451,7 +4451,7 @@
     },
     {
         "#": "446.",
-        "Name": "Elei\u00e7\u0103o para presidente e dois senadores",
+        "Name": "Elei\u00e7\u00e3o para presidente e dois senadores",
         "Features": "19",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -5171,7 +5171,7 @@
     },
     {
         "#": "518.",
-        "Name": "Elei\u00e7\u0103o de um prefeito e um vereador",
+        "Name": "Elei\u00e7\u00e3o de um prefeito e um vereador",
         "Features": "22",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -5895,7 +5895,7 @@
         "Features": "25",
         "CTCR": "16%",
         "Clause Density": "0.5",
-        "Creator": "Carlos Casta\u0144o Guillen",
+        "Creator": "Carlos Casta\u00f1o Guillen",
         "Creation Date": "",
         "Details and Download": "model_20141103_285596543.xml"
     },
@@ -5915,7 +5915,7 @@
         "Features": "25",
         "CTCR": "44%",
         "Clause Density": "0.8",
-        "Creator": "Nelson Mu\u0144oz",
+        "Creator": "Nelson Mu\u00f1oz",
         "Creation Date": "",
         "Details and Download": "model_20140614_436006902.xml"
     },
@@ -6511,7 +6511,7 @@
     },
     {
         "#": "652.",
-        "Name": "Elei\u00e7\u0103o de um presidente e dois senadores",
+        "Name": "Elei\u00e7\u00e3o de um presidente e dois senadores",
         "Features": "29",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -6531,7 +6531,7 @@
     },
     {
         "#": "654.",
-        "Name": "Elei\u00e7\u0103o de um presidente e dois senadores",
+        "Name": "Elei\u00e7\u00e3o de um presidente e dois senadores",
         "Features": "29",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -6565,7 +6565,7 @@
         "Features": "30",
         "CTCR": "30%",
         "Clause Density": "1.6",
-        "Creator": "Jo\u0103o Paulo F. Diniz",
+        "Creator": "Jo\u00e3o Paulo F. Diniz",
         "Creation Date": "",
         "Details and Download": "model_20160330_149443721.xml"
     },
@@ -6971,7 +6971,7 @@
     },
     {
         "#": "698.",
-        "Name": "Urna - Reutiliza\u00e7\u0103o de Software",
+        "Name": "Urna - Reutiliza\u00e7\u00e3o de Software",
         "Features": "33",
         "CTCR": "0%",
         "Clause Density": "N/A",
@@ -7045,7 +7045,7 @@
         "Features": "33",
         "CTCR": "33%",
         "Clause Density": "0.3",
-        "Creator": "P\u013ahl",
+        "Creator": "P\u00e5hl",
         "Creation Date": "",
         "Details and Download": "model_20161125_1777261352.xml"
     },
@@ -9221,7 +9221,7 @@
     },
     {
         "#": "923.",
-        "Name": "Elei\u00e7\u0103o de presidente, deputados e vereador",
+        "Name": "Elei\u00e7\u00e3o de presidente, deputados e vereador",
         "Features": "59",
         "CTCR": "0%",
         "Clause Density": "N/A",
