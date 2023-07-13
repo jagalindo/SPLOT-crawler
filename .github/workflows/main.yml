@@ -13,8 +13,9 @@ jobs:
       with:
         persist-credentials: false 
         fetch-depth: 0 
-    - name: Create local changes
+    - name: Create local changes and install dependencies
       run: |
+        pip install -r requirements.txt
         python 1.download.py
         bash convert.sh
         bash sumarize.sh
