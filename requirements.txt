@@ -2,3 +2,4 @@ requests
 bs4
 flamapy==1.1.3
 flamapy-fm==1.1.3
+tabulate

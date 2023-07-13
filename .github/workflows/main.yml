@@ -17,8 +17,9 @@ jobs:
       run: |
         pip install -r requirements.txt
         python 1.download.py
-        bash convert.sh
-        bash sumarize.sh
+        bash 2.convert.sh
+        bash 3.sumarize.sh
+        python 4.get_statistics.py
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"

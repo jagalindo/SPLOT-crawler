@@ -11,7 +11,7 @@ fi
 # Hardcoded list of directories
 directories=("./splot-xml" "./fama-xml" "./flama-uvl")
 
-echo "This is the list of SPLOT models as of " $(date) >> "$output_file"
+echo "This is the list of SPLOT models as of " $(date). You can parse the statictis using the statistics.json file >> "$output_file"
 # Loop over each directory in the list
 for dir in "${directories[@]}"
 do
@@ -38,6 +38,3 @@ do
   fi
 
 done
-
-  html_url="http://52.32.1.180:8080/SPLOT/SplotAnalysesServlet?action=select_model&enableSelection=false&&showModelDetails=true"
-  curl "$html_url" >> "$output_file"
