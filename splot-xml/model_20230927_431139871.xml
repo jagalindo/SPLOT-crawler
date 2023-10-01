@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Sep 27, 2023 - 12:59 AM  -->
+<feature_model name="Mobile Media">
+<meta>
+<data name="description">mobile media management</data>
+<data name="creator">Willieny</data>
+<data name="address"></data>
+<data name="email">willieny.bm@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFAL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_2)
+		:g (_r_2_5) [1,*] 
+			: Photo(_r_2_5_6)
+			: Music(_r_2_5_7)
+			: Video(_r_2_5_8)
+	:m Media Management(_r_9)
+		:o Favourites(_r_9_10)
+			:m Set Favourites(_r_9_10_11)
+			:m View Favourites(_r_9_10_12)
+		:o Copy Media(_r_9_13)
+		:o SMS Transfer(_r_9_14)
+			:o Receive Photo(_r_9_14_15)
+			:o Send Photo(_r_9_14_16)
+	:m Screen Size(_r_17)
+		:g (_r_17_18) [1,1] 
+			: Screen 1(_r_17_18_19)
+			: Screen 2(_r_17_18_20)
+			: Screen 3(_r_17_18_21)
+</feature_tree>
+<constraints>
+constraint_3:_r_9_13 or ~_r_9_14
+</constraints>
+</feature_model>
