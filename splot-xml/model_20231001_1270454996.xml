@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 1, 2023 - 4:41 AM  -->
+<feature_model name="Mobile">
+<meta>
+<data name="description">test</data>
+<data name="creator">Syamir</data>
+<data name="address">Jalan Hamzah</data>
+<data name="email">Syamir@gamil.com</data>
+<data name="phone">000236547</data>
+<data name="website">test</data>
+<data name="organization">test</data>
+<data name="department">test</data>
+<data name="date">test</data>
+<data name="reference">test</data>
+</meta>
+<feature_tree>
+:r Mobile(_r)
+	:m Alarm(_r_1)
+	:o Speaker(_r_2)
+	:g (_r_3) [1,*] 
+		: Screen(_r_3_4)
+	:g (_r_5) [1,1] 
+		: Charger(_r_5_6)
+	:o 5(_r_7)
+	:m 6(_r_8)
+	:g (_r_9) [1,*] 
+		: 7(_r_9_10)
+	:o 8(_r_11)
+	:o 9(_r_12)
+	:m 10(_r_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

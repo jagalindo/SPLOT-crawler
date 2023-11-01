@@ -1,0 +1,103 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Oct 15, 2023 - 2:06 AM  -->
+<feature_model name="SHOP">
+<meta>
+<data name="description">practica </data>
+<data name="creator">Brayan Meza</data>
+<data name="address"></data>
+<data name="email">bfmeza@unimayor.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UMAYOR</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SHOP(_r)
+	:m Catalogo(_r_1)
+		:m Categoria(_r_1_3)
+			:m Informacion(_r_1_3_4)
+				:m Nombre(_r_1_3_4_5)
+				:m Imagen(_r_1_3_4_6)
+				:m Descripcion(_r_1_3_4_7)
+				:o Precio(_r_1_3_4_9)
+				:o Cantidad(_r_1_3_4_10)
+				:o Guia medidas(_r_1_3_4_11)
+		:o Orden aparicion(_r_1_12)
+		:o Busqueda(_r_1_98)
+			:o Nombre del producto(_r_1_98_105)
+		:o Filtro(_r_1_99)
+			:g (_r_1_99_101) [1,*] 
+				: Rango precio(_r_1_99_101_102)
+				: Categoria(_r_1_99_101_103)
+				: Caracteristicas del producto(_r_1_99_101_104)
+	:m GUI(_r_2)
+		:g (_r_2_33) [1,1] 
+			: PC(_r_2_33_34)
+			: Movil(_r_2_33_36)
+	:m Carrito compras(_r_19)
+		:m Listado productos(_r_19_37)
+			:o Cantidad(_r_19_37_38)
+		:o Lista deseos(_r_19_40)
+		:o Codigo descuento(_r_19_41)
+	:o Registro usuario(_r_24)
+	:o Banner(_r_25)
+		:g (_r_25_83) [1,*] 
+			: Texto(_r_25_83_84)
+			: Imagenes(_r_25_83_86)
+			: Cantidad(_r_25_83_87)
+			: Estatico(_r_25_83_88)
+			: Dinamico(_r_25_83_89)
+			: Link(_r_25_83_90)
+	:o Rastreo(_r_26)
+		:g (_r_26_76) [1,*] 
+			: Condiciones de entrega(_r_26_76_77)
+			: Estado Pedido(_r_26_76_78)
+			: Datos consulta(_r_26_76_79)
+			: Datos entrega(_r_26_76_80)
+	:o Fidelizacion(_r_27)
+		:g (_r_27_72) [1,*] 
+			: Puntos(_r_27_72_73)
+			: Notificaciones(_r_27_72_74)
+			: Eventos(_r_27_72_75)
+	:o Puntos de venta(_r_28)
+		:g (_r_28_65) [1,*] 
+			: Ciudad(_r_28_65_66)
+			: Sedes(_r_28_65_67)
+			: Mapa(_r_28_65_68)
+	:m Contacto(_r_29)
+		:g (_r_29_58) [1,*] 
+			: Formulario(_r_29_58_59)
+			: Redes sociales(_r_29_58_60)
+			: ChatBoot(_r_29_58_61)
+			: WhatsApp(_r_29_58_62)
+			: Correo(_r_29_58_63)
+			: Llamada(_r_29_58_64)
+	:o Preguntas frecuentes(_r_30)
+		:o Categoria(_r_30_56)
+		:o Listado(_r_30_57)
+	:m PQRS(_r_31)
+		:g (_r_31_48) [1,*] 
+			: Consultar estado(_r_31_48_49)
+			: Categorias(_r_31_48_50)
+			: Datos Usuarios(_r_31_48_51)
+				:g (_r_31_48_51_53) [1,1] 
+					: Anonima(_r_31_48_51_53_54)
+					: Identificada(_r_31_48_51_53_55)
+			: Archivo(_r_31_48_52)
+	:o Calificacion de productos o servicios(_r_32)
+		:g (_r_32_43) [1,*] 
+			: Estrellas(_r_32_43_44)
+			: Numeracion(_r_32_43_45)
+			: Comentarios(_r_32_43_46)
+			: Fotos(_r_32_43_47)
+	:o Recomendaciones(_r_91)
+		:g (_r_91_77) [1,*] 
+			: Recetas(_r_91_77_78)
+			: Sugerencias de uso(_r_91_77_79)
+			: Empaquetados(_r_91_77_80)
+			: Rutina(_r_91_77_81)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

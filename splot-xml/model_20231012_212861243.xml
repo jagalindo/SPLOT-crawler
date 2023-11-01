@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 12, 2023 - 7:46 PM  -->
+<feature_model name="Mateus Mts">
+<meta>
+<data name="description">PDS</data>
+<data name="creator">Mateus</data>
+<data name="address">Russas</data>
+<data name="email">mateus19sousa@gmail.com</data>
+<data name="phone">88994819053</data>
+<data name="website"></data>
+<data name="organization">UFC</data>
+<data name="department">UFC</data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Gerenciador de funcionarios(_r)
+	:m Gerente(_r_2)
+		:m Analisar Dados dos funcionarios(_r_2_8)
+			:g (_r_2_8_12) [1,*] 
+				: Ler dados(_r_2_8_12_13)
+				: Alterar dados(_r_2_8_12_15)
+				: Excluir dados(_r_2_8_12_16)
+		:m Login(_r_2_17)
+			:g (_r_2_17_18) [1,*] 
+				: Cadastrar usuarios(_r_2_17_18_19)
+				: Alterar usuarios(_r_2_17_18_20)
+				: Excluir usuarios(_r_2_17_18_21)
+	:m Funcionario(_r_22)
+		:m Login(_r_22_23)
+		:m Alterar dados(_r_22_24)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

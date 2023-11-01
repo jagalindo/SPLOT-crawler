@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 27, 2023 - 11:03 PM  -->
+<feature_model name="Lanchas">
+<meta>
+<data name="description">bbb</data>
+<data name="creator">mmm</data>
+<data name="address">mm</data>
+<data name="email">mmm</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">mmm</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Lanchas(_r)
+	:m Autenticacao(_r_1)
+		:g (_r_1_22) [1,1] 
+			: Passageiro(_r_1_22_23)
+			: Dono da lancha(_r_1_22_24)
+	:o Pagamento(_r_6)
+		:g (_r_6_12) [1,*] 
+			: Boleto Previo(_r_6_12_13)
+			: Pix(_r_6_12_14)
+			: Cartao(_r_6_12_15)
+				:g (_r_6_12_15_16) [1,*] 
+					: Credito(_r_6_12_15_16_17)
+					: Debito(_r_6_12_15_16_18)
+	:m Listagem(_r_7)
+		:o Pagamentos(_r_7_19)
+			:g (_r_7_19_22) [1,*] 
+				: Por Periodo(_r_7_19_22_23)
+				: Por Valor(_r_7_19_22_24)
+		:m Viagens(_r_7_20)
+			:m Por Horario(_r_7_20_21)
+	:m Cadastrar Veiculo(_r_8)
+		:m Lanchas(_r_8_25)
+	:m Avaliar(_r_9)
+		:m Passageiro(_r_9_26)
+		:m Viagem(_r_9_27)
+</feature_tree>
+<constraints>
+constraint_5:_r_6 or ~_r_7_19
+</constraints>
+</feature_model>

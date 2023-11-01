@@ -1,0 +1,34 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Oct 19, 2023 - 4:32 PM  -->
+<feature_model name="Unit Convertor Extension">
+<meta>
+<data name="description">Converts units </data>
+<data name="creator">Nihit Mittal</data>
+<data name="address"></data>
+<data name="email">nmittal2@ncsu.edu</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">NCSU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Unit Convertor(_r)
+	:m Length(_r_1)
+	:m Mass(_r_2)
+	:m Time(_r_3)
+	:m DataTransfer(_r_5)
+	:m Temperature(_r_6)
+	:m Area(_r_7)
+	:m Volume(_r_8)
+	:m Currency(_r_9)
+	:m Speed(_r_10)
+	:m Data(_r_11)
+</feature_tree>
+<constraints>
+constraint_8:_r_1 or _r_7
+constraint_6:_r_1 or _r_7 or _r_8
+constraint_7:_r_3 or _r_5 or _r_11
+constraint_5:_r_1 or _r_3 or _r_10
+</constraints>
+</feature_model>

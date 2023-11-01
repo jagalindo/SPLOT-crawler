@@ -1,0 +1,48 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 27, 2023 - 10:50 PM  -->
+<feature_model name="ProjetoCake">
+<meta>
+<data name="description">CakeBoss</data>
+<data name="creator">Equipe</data>
+<data name="address"></data>
+<data name="email">erick.ferreira410@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">AcarajeTech</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r CakeBoss(_r)
+	:o Autenticar(_r_1)
+		:o Login(_r_1_2)
+		:o Registrar(_r_1_3)
+		:o Logout(_r_1_4)
+	:m Estoque(_r_5)
+		:m Cadastrar(_r_5_6)
+		:o Alterar(_r_5_7)
+		:m Deletar(_r_5_8)
+	:m Gerar Venda(_r_9)
+		:o Pix(_r_9_10)
+		:m Debito(_r_9_11)
+		:m Credito(_r_9_12)
+			:g (_r_9_12_13) [1,*] 
+				: Visa(_r_9_12_13_14)
+				: MasterCard(_r_9_12_13_15)
+				: ELO(_r_9_12_13_16)
+	:o Registo de Vendas(_r_17)
+		:o Download(_r_17_18)
+			:o PDF(_r_17_18_19)
+			:o XML(_r_17_18_20)
+		:o Gerenciar(_r_17_21)
+		:o Imprimir(_r_17_22)
+	:m Produto(_r_23)
+		:o Inserir Ingrediente(_r_23_24)
+	:o Precificar(_r_25)
+		:o Calcular(_r_25_26)
+</feature_tree>
+<constraints>
+constraint_1:_r_5 or _r_23
+constraint_2:_r_23_24 or _r_25_26
+</constraints>
+</feature_model>

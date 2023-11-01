@@ -1,0 +1,103 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 27, 2023 - 7:51 PM  -->
+<feature_model name="FarmNote">
+<meta>
+<data name="description">Software de gerenciamento e gado de corte</data>
+<data name="creator">Osacr Borges Faleta Santana</data>
+<data name="address"></data>
+<data name="email">oscar.borgesfs@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FarmNote</data>
+<data name="department"></data>
+<data name="date">http://52.32.1.180:8080/SPLOT/models/temp_models/model_20231027_1730966403.xml</data>
+<data name="reference">http://52.32.1.180:8080/SPLOT/models/temp_models/model_20231027_1730966403.xml</data>
+</meta>
+<feature_tree>
+:r FarmNote(_r)
+	:m Boi(_r_1)
+		:m Criar(_r_1_6)
+		:m Editar(_r_1_7)
+		:m Deletar(_r_1_9)
+		:m Infomacao(_r_1_10)
+			:g (_r_1_10_11) [1,*] 
+				: Imagem(_r_1_10_11_12)
+				: Historico(_r_1_10_11_13)
+					:g (_r_1_10_11_13_14) [1,*] 
+						: Grafico(_r_1_10_11_13_14_15)
+						: Registro(_r_1_10_11_13_14_16)
+		:o Atualizar Peso(_r_1_17)
+		:o Pesquisa(_r_1_18)
+			:g (_r_1_18_22) [1,*] 
+				: Basica(_r_1_18_22_23)
+				: Com Filtro(_r_1_18_22_24)
+					:g (_r_1_18_22_24_72) [1,*] 
+						: Peso(_r_1_18_22_24_72_73)
+						: Data de Cadastro(_r_1_18_22_24_72_74)
+						: Taxa de Crescimento(_r_1_18_22_24_72_75)
+	:m Procedimento(_r_4)
+		:m Criar(_r_4_25)
+		:m Editar(_r_4_26)
+		:m Deletar(_r_4_27)
+		:m Informacao(_r_4_28)
+		:o Pesquisa(_r_4_29)
+			:g (_r_4_29_30) [1,*] 
+				: Basica(_r_4_29_30_31)
+				: Com Filtro(_r_4_29_30_32)
+					:g (_r_4_29_30_32_76) [1,*] 
+						: Data de Cadastro(_r_4_29_30_32_76_77)
+						: Quantidade de Bois(_r_4_29_30_32_76_78)
+	:m Piquete(_r_5)
+		:m Criar(_r_5_33)
+		:m Editar(_r_5_34)
+		:m Deletar(_r_5_35)
+		:m Informacao(_r_5_36)
+			:g (_r_5_36_37) [1,*] 
+				: Imagem(_r_5_36_37_38)
+					:g (_r_5_36_37_38_42) [1,*] 
+						: Dispositivo(_r_5_36_37_38_42_43)
+						: Maps(_r_5_36_37_38_42_44)
+				: Dados do Assistente(_r_5_36_37_39)
+					:m Dados Climaticos(_r_5_36_37_39_40)
+					:m Sugestao de Movimentacao do Gado(_r_5_36_37_39_41)
+		:o Assistente de Manejo(_r_5_45)
+		:o Com Filtro(_r_5_46)
+			:g (_r_5_46_47) [1,*] 
+				: Basica(_r_5_46_47_48)
+				: Avancada(_r_5_46_47_49)
+					:g (_r_5_46_47_49_79) [1,*] 
+						: Status(_r_5_46_47_49_79_80)
+						: Quantidade de Bois(_r_5_46_47_49_79_81)
+						: Data de Cadastro(_r_5_46_47_49_79_82)
+	:m Fazenda(_r_6)
+		:m Criar(_r_6_50)
+		:m Editar(_r_6_51)
+		:m Deletar(_r_6_52)
+		:m Informacao(_r_6_53)
+			:o Imagem(_r_6_53_54)
+				:g (_r_6_53_54_55) [1,*] 
+					: Dispositivo(_r_6_53_54_55_56)
+					: Maps(_r_6_53_54_55_57)
+		:o Relatorio(_r_6_58)
+			:g (_r_6_58_59) [1,*] 
+				: PDF(_r_6_58_59_60)
+					:g (_r_6_58_59_60_62) [1,*] 
+						: Gado(_r_6_58_59_60_62_63)
+						: Piquete(_r_6_58_59_60_62_64)
+				: CSV(_r_6_58_59_61)
+					:g (_r_6_58_59_61_65) [1,*] 
+						: Gado(_r_6_58_59_61_65_66)
+						: Piquete(_r_6_58_59_61_65_67)
+		:o Pesquisa(_r_6_68)
+			:g (_r_6_68_69) [1,*] 
+				: Basico(_r_6_68_69_70)
+				: Com Filtro(_r_6_68_69_71)
+					:g (_r_6_68_69_71_83) [1,*] 
+						: Data de Cadastro(_r_6_68_69_71_83_84)
+						: Quantidade de Bois(_r_6_68_69_71_83_87)
+						: Quantidade de Pastos(_r_6_68_69_71_83_88)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_10_11_13 or _r_1_17
+constraint_2:~_r_5_36_37_39 or _r_5_45
+</constraints>
+</feature_model>
