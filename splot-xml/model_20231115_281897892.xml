@@ -1,0 +1,58 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 15, 2023 - 12:33 PM  -->
+<feature_model name="ACC-System">
+<meta>
+<data name="description">Model of ACC</data>
+<data name="creator">Asya</data>
+<data name="address"></data>
+<data name="email">oktayas85603@th-nuernberg.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TH Nuernberg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC-System(_r)
+	:m Geschwindigkeitsmessung(_r_17)
+	:m Abstandsmessung(_r_18)
+	:m Sensoren(_r_21)
+		:g (_r_21_22) [1,*] 
+			: Radar(_r_21_22_23)
+				:m Abstandseinstellung(_r_21_22_23_28)
+					:g (_r_21_22_23_28_30) [1,1] 
+						: kurzer Abstand(_r_21_22_23_28_30_31)
+						: langer Abstand(_r_21_22_23_28_30_18)
+				:m Geschwindigkeitseinstellung(_r_21_22_23_22)
+					:g (_r_21_22_23_22_28) [1,*] 
+						: Ueberholmanoever(_r_21_22_23_22_28_29)
+						: Tempolimit(_r_21_22_23_22_28_30)
+				:o Warnung bei zu geringem Abstand(_r_21_22_23_23)
+				:o Kollisionsvermeidung(_r_21_22_23_24)
+				:o Totwinkelueberwachung(_r_21_22_23_25)
+				:o Querverkehrswarnung(_r_21_22_23_26)
+			: Kamera(_r_21_22_19)
+				:o Spurhalteassistent(_r_21_22_19_27)
+				:o Verkehrszeichenerkennung(_r_21_22_19_31)
+				:o Fussgaengererkennung(_r_21_22_19_32)
+				:o Spurwechselassistent(_r_21_22_19_33)
+			: Lidar(_r_21_22_20)
+				:o Parkassistent(_r_21_22_20_36)
+					:g (_r_21_22_20_36_43) [1,*] 
+						: Einparken(_r_21_22_20_36_43_44)
+						: Ausparken(_r_21_22_20_36_43_45)
+				:o Reaktionszeiteinstellung(_r_21_22_20_37)
+					:g (_r_21_22_20_37_34) [1,1] 
+						: manuell(_r_21_22_20_37_34_35)
+						: automatisch(_r_21_22_20_37_34_36)
+	:m Notbremsassistent(_r_38)
+	:m Umfeldbeobachtungssystem(_r_34)
+</feature_tree>
+<constraints>
+constraint_17:~_r_21_22_23_28_30_31 or _r_21_22_23_23
+constraint_18:~_r_21_22_23_28_30_31 or _r_21_22_20_37_34_36
+constraint_10:~_r_21_22_23_22_28_30 or _r_21_22_19_31
+constraint_6:~_r_21_22_23_23 or _r_21_22_23_24
+constraint_7:~_r_21_22_19_27 or ~_r_21_22_23_22_28_29
+</constraints>
+</feature_model>

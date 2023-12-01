@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Nov 12, 2023 - 8:09 PM  -->
+<feature_model name="Hardware Configuration">
+<meta>
+<data name="description">Mounting of hardware modules</data>
+<data name="creator">Thomas</data>
+<data name="address"></data>
+<data name="email">thppogani@edu.aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">private</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Rack(_r)
+	:m Slot A(_r_1)
+		:g (_r_1_5) [1,1] 
+			: SA-M1(_r_1_5_6)
+			: SA-M2(_r_1_5_9)
+			: SA-M3(_r_1_5_10)
+	:m Slot B(_r_2)
+		:g (_r_2_7) [1,1] 
+			: SB-M1(_r_2_7_8)
+			: SB-M2(_r_2_7_11)
+			: SB-M3(_r_2_7_12)
+	:m Slot C(_r_3)
+		:g (_r_3_13) [1,1] 
+			: SC-M1(_r_3_13_14)
+			: SC-M2(_r_3_13_15)
+			: SC-M3(_r_3_13_16)
+	:m Slot D(_r_4)
+		:g (_r_4_17) [1,1] 
+			: SD-M1(_r_4_17_18)
+			: SD-M3(_r_4_17_19)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

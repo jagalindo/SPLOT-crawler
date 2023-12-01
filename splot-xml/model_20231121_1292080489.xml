@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 21, 2023 - 7:05 PM  -->
+<feature_model name="sistema de gerenciamento de biblioteca.">
+<meta>
+<data name="description">sistema de gerenciamento de biblioteca.</data>
+<data name="creator">Joao</data>
+<data name="address"></data>
+<data name="email">joao-gabriel-2000@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PUC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema de Biblioteca(_r)
+	:m Gestao de Usuarios(_r_2)
+		:m Registrar Usuarios(_r_2_3)
+			:g (_r_2_3_27) [1,*] 
+				: Usuarios(_r_2_3_27_28)
+					:m Email(_r_2_3_27_28_29)
+					:m CPF(_r_2_3_27_28_30)
+					:g (_r_2_3_27_28_31) [1,*] 
+						: Celular(_r_2_3_27_28_31_32)
+					:m Senha(_r_2_3_27_28_34)
+		:m Gerenciar Perfis de Usuarios(_r_2_4)
+			:o Deletar(_r_2_4_40)
+			:o Atualizar(_r_2_4_41)
+	:m Gestao de Catalogo(_r_5)
+		:m Adicionar Livros(_r_5_6)
+			:g (_r_5_6_35) [1,*] 
+				: Livro(_r_5_6_35_36)
+					:m Nome(_r_5_6_35_36_37)
+					:m ID(_r_5_6_35_36_38)
+					:o Tipo(_r_5_6_35_36_39)
+		:m Atualizar Informacoes do Livro(_r_5_7)
+	:m Sistema de Emprestimo(_r_9)
+		:m Emprestar Livros(_r_9_10)
+			:g (_r_9_10_25) [1,*] 
+				: Livros(_r_9_10_25_26)
+		:m Renovar Emprestimos de Livros(_r_9_11)
+	:o Sistema de Reservas(_r_12)
+		:o Gerenciar Reservas(_r_12_16)
+		:o Fazer Reservas de Livros(_r_12_17)
+	:o Relatorios e Analises(_r_18)
+		:o Gerar Relatorios(_r_18_19)
+		:o Visualizar Analises(_r_18_22)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

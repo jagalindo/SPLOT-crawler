@@ -1,0 +1,56 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 17, 2023 - 3:05 PM  -->
+<feature_model name="CMyModel">
+<meta>
+<data name="description">CMM</data>
+<data name="creator">Ich</data>
+<data name="address"></data>
+<data name="email">test@test.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Modelling</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC-Model(_r)
+	:g (_r_7) [1,*] 
+		: Radar(_r_7_8)
+			:m Abstandseinstellung(_r_7_8_9)
+				:g (_r_7_8_9_25) [1,1] 
+					: automatisch(_r_7_8_9_25_26)
+					: manuell(_r_7_8_9_25_27)
+			:o Totwinkelueberwachung(_r_7_8_14)
+			:o Querverkehrswarnung(_r_7_8_15)
+			:o Parkassistent(_r_7_8_16)
+				:g (_r_7_8_16_22) [1,*] 
+					: Einparken(_r_7_8_16_22_23)
+					: Ausparken(_r_7_8_16_22_24)
+		: Kamera(_r_7_10)
+			:o Spurhalteassistent(_r_7_10_17)
+			:o Spurwechselassistent(_r_7_10_18)
+			:o Verkehrszeichenerkennung(_r_7_10_19)
+			:o Fussgaengererkennung(_r_7_10_20)
+			:o Ampelerkennung(_r_7_10_21)
+		: Lidar(_r_7_11)
+			:m Geschwindigkeitsregelung(_r_7_11_12)
+				:g (_r_7_11_12_28) [1,*] 
+					: Ueberholmanoever(_r_7_11_12_28_29)
+					: Tempolimit(_r_7_11_12_28_30)
+			:m Notbremsassistent(_r_7_11_13)
+			:o Stop and Go Funktion(_r_7_11_31)
+		: Ultraschall(_r_7_32)
+			:o Fussgaengererkennung(_r_7_32_34)
+</feature_tree>
+<constraints>
+constraint_1:_r_7_11_12 or _r_7_10_19
+constraint_8:_r_7_10_19 or ~_r_7_11_12_28_30
+constraint_10:_r_7_10_20 or ~_r_7_11_31
+constraint_9:_r_7_10_21 or ~_r_7_11_31
+constraint_11:_r_7_8_9 or ~_r_7_11_31
+constraint_6:~_r_7_8_15 or _r_7_10_20
+constraint_7:~_r_7_10_17 or ~_r_7_11_12_28_29
+constraint_4:~_r_7_10_17 or ~_r_7_10_18
+constraint_5:_r_7_11_13 or _r_7_10_20 or _r_7_32_34
+</constraints>
+</feature_model>

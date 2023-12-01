@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 22, 2023 - 8:58 PM  -->
+<feature_model name="HQC-SPL">
+<meta>
+<data name="description">FM para representar la variabilidad de un sistema en el dominio de QC</data>
+<data name="creator">SSC</data>
+<data name="address"></data>
+<data name="email">samuel.sepulveda@ufontera.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de La Frontera</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HQC-SPL(_r)
+	:m functionality(_r_1)
+		:g (_r_1_8) [1,*] 
+			: quantum(_r_1_8_9)
+				:g (_r_1_8_9_11) [1,1] 
+					: gate-based(_r_1_8_9_11_12)
+					: annealing(_r_1_8_9_11_13)
+			: classical(_r_1_8_10)
+	:m qAlgorithm(_r_2)
+		:g (_r_2_14) [1,*] 
+			: fault-tolerant(_r_2_14_15)
+				:g (_r_2_14_15_17) [1,*] 
+					: Shor(_r_2_14_15_17_18)
+					: Grover(_r_2_14_15_17_19)
+			: NISQ(_r_2_14_16)
+				:g (_r_2_14_16_20) [1,*] 
+					: VQE(_r_2_14_16_20_21)
+					: QITE(_r_2_14_16_20_22)
+	:m progrLang(_r_3)
+		:g (_r_3_23) [1,*] 
+			: qLang(_r_3_23_24)
+				:g (_r_3_23_24_26) [1,1] 
+					: QASM(_r_3_23_24_26_27)
+					: Q_sharp(_r_3_23_24_26_28)
+			: classLang(_r_3_23_25)
+				:g (_r_3_23_25_29) [1,1] 
+					: qiskit(_r_3_23_25_29_30)
+					: cirq(_r_3_23_25_29_32)
+	:m integrMech(_r_4)
+		:g (_r_4_33) [1,1] 
+			: microSs(_r_4_33_34)
+			: qSOA(_r_4_33_35)
+	:m HW-nature(_r_5)
+		:g (_r_5_36) [1,*] 
+			: basic-function(_r_5_36_37)
+				:g (_r_5_36_37_39) [1,*] 
+					: topolog-Platf(_r_5_36_37_39_40)
+					: NMR(_r_5_36_37_39_41)
+			: error-corr(_r_5_36_38)
+				:g (_r_5_36_38_43) [1,1] 
+					: ion-traps(_r_5_36_38_43_44)
+					: 2d-transmons(_r_5_36_38_43_45)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

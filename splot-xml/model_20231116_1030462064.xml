@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 16, 2023 - 10:31 PM  -->
+<feature_model name="ACC-System">
+<meta>
+<data name="description">Model of ACC</data>
+<data name="creator">Asya</data>
+<data name="address"></data>
+<data name="email">oktayas85603@th-nuernberg.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TH Nuernberg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC-System(_r)
+	:m Sensoren(_r_31)
+		:g (_r_31_32) [1,*] 
+			: Radar(_r_31_32_33)
+				:m Abstandseinstellung(_r_31_32_33_37)
+					:g (_r_31_32_33_37_50) [1,1] 
+						: automatisch(_r_31_32_33_37_50_51)
+						: manuell(_r_31_32_33_37_50_52)
+				:o Totwinkelueberwachung(_r_31_32_33_39)
+				:o Querverkehrswarnung(_r_31_32_33_40)
+				:o Parkassistent(_r_31_32_33_41)
+					:g (_r_31_32_33_41_56) [1,*] 
+						: Einparken(_r_31_32_33_41_56_57)
+						: Ausparken(_r_31_32_33_41_56_58)
+			: Kamera(_r_31_32_34)
+				:o Spurhalteassistent(_r_31_32_34_42)
+				:o Spurwechselassistent(_r_31_32_34_43)
+				:o Verkehrszeichenerkennung(_r_31_32_34_44)
+				:o Fussgaengererkennung(_r_31_32_34_45)
+				:o Ampelerkennung(_r_31_32_34_46)
+			: Lidar(_r_31_32_35)
+				:m Geschwindigkeitsregelung(_r_31_32_35_47)
+					:g (_r_31_32_35_47_53) [1,*] 
+						: Ueberholmanoever(_r_31_32_35_47_53_54)
+						: Tempolimit(_r_31_32_35_47_53_55)
+				:m Notbremsassistent(_r_31_32_35_48)
+				:o Stop and Go Funktion(_r_31_32_35_59)
+			: Ultraschall(_r_31_32_36)
+				:o Fussgaengererkennung(_r_31_32_36_49)
+</feature_tree>
+<constraints>
+constraint_17:~_r_31_32_33_40 or _r_31_32_34_45
+constraint_10:~_r_31_32_34_42 or ~_r_31_32_35_47_53_54
+constraint_6:_r_31_32_34_44 or ~_r_31_32_35_47_53_55
+constraint_7:~_r_31_32_34_45 or _r_31_32_36_49
+constraint_14:_r_31_32_34_46 or ~_r_31_32_35_59
+constraint_15:_r_31_32_34_45 or ~_r_31_32_35_59
+constraint_16:_r_31_32_33_37 or ~_r_31_32_35_59
+</constraints>
+</feature_model>

@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 17, 2023 - 9:46 AM  -->
+<feature_model name="Rack2023_05-06-Update">
+<meta>
+<data name="description">Rack Mount Config</data>
+<data name="creator">Henrik Zant</data>
+<data name="address"></data>
+<data name="email">zant@student.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU Graz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Rack(_r)
+	:m SlotA(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Module1A(_r_1_2_4)
+			: Module2LA(_r_1_2_5)
+			: Module3A(_r_1_2_7)
+	:m SlotB(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Module1B(_r_8_9_11)
+			: Module2LB(_r_8_9_12)
+			: Module2RB(_r_8_9_13)
+			: Module3B(_r_8_9_14)
+	:m SlotC(_r_25)
+		:g (_r_25_26) [1,1] 
+			: Module1C(_r_25_26_28)
+			: Module2LC(_r_25_26_29)
+			: Module2RC(_r_25_26_30)
+			: Module3C(_r_25_26_31)
+	:m SlotD(_r_32)
+		:g (_r_32_33) [1,1] 
+			: Module1D(_r_32_33_35)
+			: Module2RD(_r_32_33_37)
+			: Module3D(_r_32_33_38)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_2_5 or _r_8_9_13
+constraint_8:_r_1_2_5 or _r_8_9_12 or _r_25_26_29
+constraint_10:_r_1_2_7 or _r_8_9_14 or _r_25_26_31 or _r_32_33_38
+constraint_9:_r_1_2_4 or _r_8_9_11 or _r_25_26_28 or _r_32_33_35
+constraint_6:_r_25_26_29 or ~_r_32_33_37
+constraint_4:_r_8_9_12 or ~_r_25_26_30
+constraint_5:~_r_25_26_29 or _r_32_33_37
+constraint_2:_r_1_2_5 or ~_r_8_9_13
+constraint_3:~_r_8_9_12 or _r_25_26_30
+</constraints>
+</feature_model>

@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 14, 2023 - 3:27 PM  -->
+<feature_model name="ACC-System">
+<meta>
+<data name="description">Model of ACC-System</data>
+<data name="creator">Asya</data>
+<data name="address"></data>
+<data name="email">oktayas85603@th-nuernberg.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TH Nuernberg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC-System(_r)
+	:m ACC aktivieren-deaktivieren(_r_1)
+		:g (_r_1_2) [1,*] 
+			: aktiviert(_r_1_2_3)
+		:g (_r_1_4) [1,*] 
+			: deaktiviert(_r_1_4_5)
+	:m Geschwindigkeitseinstellung(_r_6)
+	:m Abstandseinstellung(_r_7)
+		:g (_r_7_21) [1,*] 
+			: kurzer Abstand(_r_7_21_22)
+		:g (_r_7_23) [1,*] 
+			: langer Abstand(_r_7_23_24)
+	:m Warnung bei zu geringem Abstand(_r_8)
+	:o Spurhalteassistent(_r_9)
+	:o Notbremsassistent(_r_10)
+	:o Geschwindigkeitsbegrenzer(_r_11)
+	:o Sensoren(_r_12)
+		:g (_r_12_13) [1,1] 
+			: Radarbasiert(_r_12_13_14)
+		:g (_r_12_15) [1,1] 
+			: Kamerabasiert(_r_12_15_16)
+		:g (_r_12_17) [1,1] 
+			: Lidarbasiert(_r_12_17_18)
+	:o Kollisionsvermeidung(_r_19)
+	:o Parkassistent(_r_20)
+</feature_tree>
+<constraints>
+constraint_1:~_r_9 or ~_r_10
+constraint_2:~_r_10 or _r_12_13_14
+</constraints>
+</feature_model>

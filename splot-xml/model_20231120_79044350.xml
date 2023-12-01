@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 20, 2023 - 3:42 PM  -->
+<feature_model name="Aviao">
+<meta>
+<data name="description">Aviao Model</data>
+<data name="creator">Enzo</data>
+<data name="address"></data>
+<data name="email">ebarcelosf@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Puc</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Aviao(_r)
+	:m Porte(_r_4)
+		:g (_r_4_5) [1,*] 
+			: Pequeno(_r_4_5_6)
+			: Medio(_r_4_5_7)
+			: Grande(_r_4_5_8)
+	:m Motor(_r_9)
+		:g (_r_9_10) [1,*] 
+			: A jato(_r_9_10_11)
+			: Turboelice(_r_9_10_12)
+	:m Sistema Navegacao(_r_13)
+		:m Gps Integrado(_r_13_14)
+		:o Piloto Automatico(_r_13_16)
+	:m Comunicacao(_r_17)
+		:g (_r_17_18) [1,*] 
+			: Radio(_r_17_18_19)
+			: Satelite(_r_17_18_40)
+	:m Emergencia(_r_41)
+		:m Caixa Preta(_r_41_44)
+		:m ELT(_r_41_45)
+		:m Paraquedas(_r_41_46)
+		:m Sistema aterrissagem emergencia(_r_41_47)
+	:m Combustivel(_r_48)
+		:g (_r_48_49) [1,*] 
+			: Querosene(_r_48_49_50)
+			: Gasolina(_r_48_49_51)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

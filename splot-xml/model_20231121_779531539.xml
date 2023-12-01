@@ -1,0 +1,49 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 21, 2023 - 3:27 PM  -->
+<feature_model name="Sistema de Gerenciamento de Documentos">
+<meta>
+<data name="description">Modelo que descreve as características do sistema de gerenciamento de documentos, incluindo edição de texto, exportação, e suporte a plugins.</data>
+<data name="creator">Marina Schuler</data>
+<data name="address"></data>
+<data name="email">nina_schuler@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PUC Rio</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Gerenciamento de Documentos(_r)
+	:m Recursos Basicos(_r_1)
+		:m Editor de Texto Basico(_r_1_28)
+		:m Salvar Documentos(_r_1_29)
+	:o Recursos Adicionais(_r_4)
+		:o Suporte a Imagens(_r_4_30)
+		:o Temas Personalizados(_r_4_31)
+		:o Buscar Palavras(_r_4_32)
+		:o Contagem de Palavras(_r_4_33)
+		:o Historico de Revisoes(_r_4_34)
+		:o Suporte a Plugins(_r_4_35)
+		:o Notas Rapidas(_r_4_45)
+	:o Exportar Documento(_r_8)
+		:g (_r_8_36) [1,1] 
+			: Exportar em Formato Texto Simples(_r_8_36_37)
+			: Exportar em Formato Word(_r_8_36_38)
+			: Exportar em Formato PDF(_r_8_36_39)
+	:o Recursos Linguisticos Avancados(_r_10)
+		:g (_r_10_41) [1,*] 
+			: Verificador Ortografico(_r_10_41_42)
+			: Corretor Gramatical(_r_10_41_43)
+			: Traducao Automatica(_r_10_41_44)
+	:o Compartilhar Documento(_r_16)
+	:m Modo de Exibicao(_r_47)
+		:g (_r_47_48) [1,1] 
+			: Modo Tela Cheia(_r_47_48_49)
+			: Modo Padrao(_r_47_48_50)
+</feature_tree>
+<constraints>
+constraint_8:_r_4_30 or ~_r_8_36_38
+constraint_6:~_r_4_33 or ~_r_47_48_49
+constraint_7:_r_4_30 or ~_r_8_36_39
+</constraints>
+</feature_model>

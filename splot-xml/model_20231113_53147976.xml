@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 13, 2023 - 3:53 PM  -->
+<feature_model name="Rack">
+<meta>
+<data name="description">It's a Rack</data>
+<data name="creator">Me</data>
+<data name="address"></data>
+<data name="email">Me@me.me</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Rackateers</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Rack(_r)
+	:m A(_r_1)
+		:g (_r_1_17) [1,1] 
+			: A1(_r_1_17_18)
+			: A2(_r_1_17_19)
+			: A3(_r_1_17_20)
+	:m B(_r_2)
+		:g (_r_2_10) [1,1] 
+			: B1(_r_2_10_11)
+			: B2(_r_2_10_12)
+			: B3(_r_2_10_13)
+	:m C(_r_3)
+		:g (_r_3_21) [1,1] 
+			: C1(_r_3_21_22)
+			: C2(_r_3_21_23)
+			: C3(_r_3_21_24)
+	:m D(_r_4)
+		:g (_r_4_25) [1,1] 
+			: D1(_r_4_25_26)
+			: D2(_r_4_25_27)
+			: D3(_r_4_25_28)
+</feature_tree>
+<constraints>
+constraint_30:~_r_1_17_18 or ~_r_2_10_11
+constraint_33:~_r_2_10_12 or ~_r_4_25_27
+constraint_32:~_r_1_17_19 or ~_r_4_25_27
+constraint_31:~_r_1_17_19 or ~_r_3_21_23
+constraint_19:~_r_1_17_18 or ~_r_3_21_22
+constraint_28:~_r_2_10_13 or ~_r_4_25_28
+constraint_29:~_r_3_21_24 or ~_r_4_25_28
+constraint_22:~_r_2_10_11 or ~_r_4_25_26
+constraint_23:~_r_3_21_22 or ~_r_4_25_26
+constraint_20:~_r_1_17_18 or ~_r_4_25_26
+constraint_21:~_r_2_10_11 or ~_r_3_21_22
+constraint_26:~_r_1_17_20 or ~_r_4_25_28
+constraint_27:~_r_2_10_13 or ~_r_3_21_24
+constraint_24:~_r_1_17_20 or ~_r_2_10_13
+constraint_25:~_r_1_17_20 or ~_r_3_21_24
+</constraints>
+</feature_model>

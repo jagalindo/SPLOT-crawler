@@ -1,0 +1,59 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 15, 2023 - 10:17 PM  -->
+<feature_model name="ACC-System">
+<meta>
+<data name="description">Model of ACC</data>
+<data name="creator">Asya</data>
+<data name="address"></data>
+<data name="email">oktayas85603@th-nuernberg.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TH Nuernberg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC-System(_r)
+	:m Geschwindigkeitsmessung(_r_17)
+	:m Abstandsmessung(_r_18)
+	:m Notbremsassistent(_r_38)
+	:m Umfeldbeobachtungssystem(_r_34)
+	:m Sensoren(_r_30)
+		:g (_r_30_31) [1,*] 
+			: Radar(_r_30_31_32)
+				:m Geschwindigkeitseinstellung(_r_30_31_32_37)
+					:g (_r_30_31_32_37_48) [1,*] 
+						: Ueberholmanoever(_r_30_31_32_37_48_49)
+						: Tempolimit(_r_30_31_32_37_48_50)
+				:m Abstandseinstellung(_r_30_31_32_38)
+					:g (_r_30_31_32_38_51) [1,1] 
+						: kurzer Abstand(_r_30_31_32_38_51_52)
+						: langer Abstand(_r_30_31_32_38_51_53)
+				:o Warnung bei zu geringem Abstand(_r_30_31_32_39)
+				:o Kollisionsvermeidung(_r_30_31_32_40)
+				:o Totwinkelueberwachung(_r_30_31_32_41)
+				:o Querverkehrswarnung(_r_30_31_32_42)
+			: Kamera(_r_30_31_33)
+				:o Spurhalteassistent(_r_30_31_33_43)
+				:o Spurwechselassistent(_r_30_31_33_44)
+				:o Verkehrszeichenerkennung(_r_30_31_33_45)
+			: Lidar(_r_30_31_34)
+				:o Parkassistent(_r_30_31_34_46)
+					:g (_r_30_31_34_46_57) [1,*] 
+						: Einparken(_r_30_31_34_46_57_58)
+						: Ausparken(_r_30_31_34_46_57_59)
+				:o Reaktionszeiteinstellung(_r_30_31_34_47)
+					:g (_r_30_31_34_47_62) [1,1] 
+						: manuell(_r_30_31_34_47_62_63)
+						: automatisch(_r_30_31_34_47_62_64)
+			: Ultraschall(_r_30_31_35)
+				:o Fussgaengererkennung(_r_30_31_35_36)
+</feature_tree>
+<constraints>
+constraint_8:~_r_30_31_32_38_51_52 or _r_30_31_34_47_62_64
+constraint_9:_r_30_31_33_45 or ~_r_30_31_32_37_48_50
+constraint_11:_r_30_31_32_39 or ~_r_30_31_32_38_51_52
+constraint_12:~_r_30_31_32_39 or _r_30_31_32_40
+constraint_13:~_r_30_31_33_43 or ~_r_30_31_32_37_48_49
+</constraints>
+</feature_model>

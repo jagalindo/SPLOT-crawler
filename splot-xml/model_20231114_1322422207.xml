@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 14, 2023 - 12:20 AM  -->
+<feature_model name="Hybrid-ACC">
+<meta>
+<data name="description">Modell of Hybrid-ACC</data>
+<data name="creator">Asya</data>
+<data name="address"></data>
+<data name="email">oktayas85603@th-nuernberg.de</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TH Nuernberg</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Hybrid-ACC(_r)
+	:m Radarbasiertes ACC(_r_1)
+		:m Abstandsmessung zum vorausfahrenden Fahrzeug(_r_1_4)
+			:o benutzerdef Abstandseinstellung(_r_1_4_18)
+				:g (_r_1_4_18_21) [1,*] 
+					: langer Abstand(_r_1_4_18_21_22)
+				:g (_r_1_4_18_23) [1,*] 
+					: kurzer Abstand(_r_1_4_18_23_24)
+		:m Geschwindigkeitsregelung(_r_1_34)
+	:m Kamerabasiertes ACC(_r_2)
+		:o Verkehrszeichenerkennung(_r_2_25)
+		:m Abstandsmessung(_r_2_27)
+		:o Umfeldsbeobachtungssystem(_r_2_35)
+		:m Geschwindigkeitsregelung(_r_2_37)
+	:m Lidarbasiertes ACC(_r_3)
+		:o Umfeldbeobachtungssystem(_r_3_31)
+		:m Geschwindigkeitsreglung(_r_3_33)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_4_18 or _r_2_27
+</constraints>
+</feature_model>

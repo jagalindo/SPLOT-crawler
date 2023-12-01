@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 27, 2023 - 1:43 AM  -->
+<feature_model name="Clube de Futebol">
+<meta>
+<data name="description">model de clube de ffutebol</data>
+<data name="creator">Miguel Garcia</data>
+<data name="address"></data>
+<data name="email">dbdoof@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PUC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Clube de Futebol(_r)
+	:m Identidade(_r_1)
+		:m Fundacao(_r_1_4)
+		:m Escudo(_r_1_6)
+		:m Nome(_r_1_7)
+	:m Historia(_r_2)
+		:o Titulos(_r_2_14)
+		:m Jogos disputados(_r_2_15)
+		:g (_r_2_20) [1,*] 
+			: Impacto dentro de campo(_r_2_20_21)
+	:m o clube(_r_3)
+		:m Diretoria(_r_3_11)
+			:o Presidente(_r_3_11_16)
+			:g (_r_3_11_18) [1,1] 
+				: CEO(_r_3_11_18_19)
+			:o Vice Diretor(_r_3_11_22)
+		:m Funcionarios(_r_3_12)
+		:m Jogadores(_r_3_13)
+			:m Goleiro(_r_3_13_23)
+			:m Jogadores de Linha(_r_3_13_24)
+	:m Impacto(_r_8)
+		:m Torcida(_r_8_9)
+		:m Impacto Cultural(_r_8_10)
+</feature_tree>
+<constraints>
+constraint_2:_r_3_13
+</constraints>
+</feature_model>

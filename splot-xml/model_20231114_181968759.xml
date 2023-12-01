@@ -1,0 +1,47 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 14, 2023 - 5:32 PM  -->
+<feature_model name="HardwareRack">
+<meta>
+<data name="description">asf</data>
+<data name="creator">stella</data>
+<data name="address">Karnerberg 3</data>
+<data name="email">stella.lukasser@gmx.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ghj</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Hardware Rack(_r)
+	:m Module 1(_r_1)
+		:g (_r_1_4) [1,1] 
+			: A(_r_1_4_5)
+			: B(_r_1_4_6)
+			: C(_r_1_4_7)
+			: D(_r_1_4_8)
+	:m Module 2(_r_2)
+		:g (_r_2_9) [1,1] 
+			: A(_r_2_9_10)
+			: B(_r_2_9_11)
+			: C(_r_2_9_12)
+			: D(_r_2_9_13)
+	:m Module 3(_r_3)
+		:g (_r_3_16) [1,*] 
+			: A(_r_3_16_17)
+			: B(_r_3_16_18)
+			: C(_r_3_16_19)
+			: D(_r_3_16_21)
+</feature_tree>
+<constraints>
+constraint_8:~_r_1_4_5 or ~_r_2_9_10
+constraint_10:~_r_2_9_10 or ~_r_3_16_17
+constraint_9:~_r_1_4_5 or ~_r_3_16_17
+constraint_11:~_r_1_4_6 or ~_r_2_9_11
+constraint_12:~_r_1_4_6 or ~_r_3_16_18
+constraint_13:~_r_2_9_11 or ~_r_3_16_18
+constraint_14:~_r_1_4_7 or ~_r_2_9_12
+constraint_15:~_r_1_4_7 or ~_r_3_16_19
+constraint_16:~_r_2_9_12 or ~_r_3_16_19
+</constraints>
+</feature_model>

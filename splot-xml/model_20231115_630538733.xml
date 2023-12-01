@@ -1,0 +1,60 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 16, 2023 - 9:43 AM  -->
+<feature_model name="HardwareRack">
+<meta>
+<data name="description">CS</data>
+<data name="creator">FU/AN</data>
+<data name="address"></data>
+<data name="email">my@mail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TUG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HardwareRack(_r)
+	:m SlotA(_r_1)
+		:g (_r_1_5) [1,1] 
+			: ModuleA1(_r_1_5_6)
+			: ModuleA2(_r_1_5_7)
+			: ModuleA3(_r_1_5_8)
+	:m SlotB(_r_2)
+		:g (_r_2_10) [1,1] 
+			: ModuleB1(_r_2_10_11)
+			: ModuleB2(_r_2_10_12)
+			: ModuleB3(_r_2_10_13)
+	:m SlotC(_r_3)
+		:g (_r_3_14) [1,1] 
+			: ModuleC1(_r_3_14_15)
+			: ModuleC2(_r_3_14_16)
+			: ModuleC3(_r_3_14_17)
+	:m SlotD(_r_4)
+		:g (_r_4_20) [1,1] 
+			: ModuleD1(_r_4_20_21)
+			: ModuleD2(_r_4_20_22)
+			: ModuleD3(_r_4_20_23)
+</feature_tree>
+<constraints>
+constraint_39:_r_2_10_12 or _r_4_20_22
+constraint_30:~_r_3_14_17 or ~_r_4_20_23
+constraint_34:~_r_1_5_7 or ~_r_3_14_16
+constraint_32:~_r_1_5_7 or ~_r_4_20_22
+constraint_31:~_r_2_10_12 or ~_r_4_20_22
+constraint_38:_r_1_5_7 or _r_3_14_16
+constraint_37:_r_1_5_8 or _r_2_10_13 or _r_3_14_17 or _r_4_20_23
+constraint_36:_r_1_5_7 or _r_2_10_12 or _r_3_14_16 or _r_4_20_22
+constraint_35:_r_1_5_6 or _r_2_10_11 or _r_3_14_15 or _r_4_20_21
+constraint_17:~_r_1_5_6 or ~_r_3_14_15
+constraint_18:~_r_1_5_6 or ~_r_4_20_21
+constraint_19:~_r_2_10_11 or ~_r_3_14_15
+constraint_28:~_r_2_10_13 or ~_r_3_14_17
+constraint_29:~_r_2_10_13 or ~_r_4_20_23
+constraint_23:~_r_2_10_11 or ~_r_4_20_21
+constraint_26:~_r_1_5_8 or ~_r_3_14_17
+constraint_27:~_r_1_5_8 or ~_r_4_20_23
+constraint_24:~_r_3_14_15 or ~_r_4_20_21
+constraint_16:~_r_1_5_6 or ~_r_2_10_11
+constraint_25:~_r_1_5_8 or ~_r_2_10_13
+</constraints>
+</feature_model>

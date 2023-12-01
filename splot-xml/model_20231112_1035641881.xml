@@ -1,0 +1,57 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 15, 2023 - 10:47 AM  -->
+<feature_model name="Hardware Configuration">
+<meta>
+<data name="description">Mounting of hardware modules</data>
+<data name="creator">ThomasP</data>
+<data name="address"></data>
+<data name="email">thpogani@edu.aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">private</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Rack(_r)
+	:m Slot A(_r_17)
+		:g (_r_17_21) [1,1] 
+			: M-A1(_r_17_21_22)
+			: M-A2(_r_17_21_23)
+			: M-A3(_r_17_21_24)
+	:m Slot B(_r_33)
+		:g (_r_33_35) [1,1] 
+			: M-B1(_r_33_35_36)
+			: M-B2(_r_33_35_37)
+			: M-B3(_r_33_35_38)
+	:m Slot C(_r_39)
+		:g (_r_39_40) [1,1] 
+			: M-C1(_r_39_40_41)
+			: M-C2(_r_39_40_42)
+			: M-C3(_r_39_40_43)
+	:m Slot D(_r_44)
+		:g (_r_44_45) [1,1] 
+			: M-D1(_r_44_45_46)
+			: M-D2(_r_44_45_47)
+			: M-D3(_r_44_45_48)
+</feature_tree>
+<constraints>
+constraint_45:~_r_17_21_22 or ~_r_33_35_36
+constraint_57:~_r_39_40_43 or ~_r_44_45_48
+constraint_44:_r_17_21_22 or _r_33_35_36 or _r_39_40_41 or _r_44_45_46
+constraint_56:~_r_33_35_38 or ~_r_44_45_48
+constraint_47:~_r_17_21_22 or ~_r_44_45_46
+constraint_46:~_r_17_21_22 or ~_r_39_40_41
+constraint_55:~_r_33_35_38 or ~_r_39_40_43
+constraint_49:~_r_33_35_36 or ~_r_44_45_46
+constraint_54:~_r_17_21_24 or ~_r_44_45_48
+constraint_48:~_r_33_35_36 or ~_r_39_40_41
+constraint_53:~_r_17_21_24 or ~_r_39_40_43
+constraint_50:~_r_39_40_41 or ~_r_44_45_46
+constraint_51:_r_17_21_24 or _r_33_35_38 or _r_39_40_43 or _r_44_45_48
+constraint_52:~_r_17_21_24 or ~_r_33_35_38
+constraint_92:~_r_33_35_37 or ~_r_44_45_47
+constraint_91:~_r_17_21_23 or ~_r_44_45_47
+constraint_85:~_r_17_21_23 or ~_r_39_40_42
+</constraints>
+</feature_model>
