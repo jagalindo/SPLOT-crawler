@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Dec 22, 2023 - 7:25 AM  -->
+<feature_model name="VM spl">
+<meta>
+<data name="description">Vending Machine</data>
+<data name="creator">brc</data>
+<data name="address"></data>
+<data name="email">burcu1988-1988@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">asd</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r svm(_r)
+	:m ServeBeeverage(_r_1)
+		:g (_r_1_6) [1,1] 
+			: tea(_r_1_6_7)
+			: soda(_r_1_6_8)
+	:o CancelPurchase(_r_2)
+	:g (_r_3) [1,*] 
+		: purchase(_r_3_4)
+			:g (_r_3_4_9) [1,*] 
+				: EUR(_r_3_4_9_10)
+				: USD(_r_3_4_9_11)
+		: servefree(_r_3_5)
+			:g (_r_3_5_12) [1,*] 
+				: a(_r_3_5_12_13)
+				: b(_r_3_5_12_14)
+</feature_tree>
+<constraints>
+constraint_1:_r_2 or _r_3_4
+</constraints>
+</feature_model>
