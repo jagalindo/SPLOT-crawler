@@ -1,0 +1,73 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Apr 7, 2024 - 7:33 PM  -->
+<feature_model name="Línea de procesos de apps de mensajeria instantanea">
+<meta>
+<data name="description">La línea de procesos de aplicaciones de mensajería instantánea tiene como objetivo satisfacer las necesidades de comunicación en tiempo real de diversos tipos de usuarios, tanto en el ámbito personal como profesional.</data>
+<data name="creator">Gomez-Caicedo</data>
+<data name="address"></data>
+<data name="email">yaquelineagp@unicauca.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">unicauca</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Desarrollo apps mensajeria inst(_r)
+	:m Analisis de requisitos(_r_1)
+		:m Tipo de usuarios(_r_1_3)
+			:g (_r_1_3_4) [1,1] 
+				: Usuarios personales(_r_1_3_4_5)
+				: Usuarios profesionales(_r_1_3_4_8)
+		:m Funcionalidades basicas(_r_1_9)
+			:g (_r_1_9_10) [1,1] 
+				: Mensajes de texto_voz e imagenes(_r_1_9_10_11)
+				: Funcionalidades avanzadas(_r_1_9_10_12)
+	:m Diseno(_r_13)
+		:m Plataforma(_r_13_14)
+			:g (_r_13_14_15) [1,1] 
+				: Android(_r_13_14_15_16)
+				: ios(_r_13_14_15_17)
+				: web(_r_13_14_15_18)
+		:m Estilo de interfaz(_r_13_19)
+			:g (_r_13_19_20) [1,1] 
+				: Minimalista(_r_13_19_20_21)
+				: Personalizable(_r_13_19_20_22)
+	:m Implementacion(_r_23)
+		:m Lenguaje de programacion(_r_23_26)
+			:g (_r_23_26_30) [1,1] 
+				: JAVA(_r_23_26_30_31)
+				: Swift(_r_23_26_30_32)
+				: JavaScript(_r_23_26_30_33)
+		:m Framework de desarrollo(_r_23_27)
+			:g (_r_23_27_34) [1,1] 
+				: Nativo(_r_23_27_34_35)
+				: Multiplataforma(_r_23_27_34_36)
+	:m Pruebas(_r_24)
+		:m Tipo de pruebas(_r_24_28)
+			:g (_r_24_28_37) [1,1] 
+				: Pruebas unitarias(_r_24_28_37_38)
+				: Pruebas de aceptacion(_r_24_28_37_39)
+				: Pruebas de integracion(_r_24_28_37_40)
+		:m Nivel de automatizacion(_r_24_29)
+			:g (_r_24_29_41) [1,1] 
+				: Pruebas manuales(_r_24_29_41_42)
+				: Pruebas automatizadas(_r_24_29_41_43)
+	:m Lanzamiento(_r_25)
+		:m Tienda de aplicaciones(_r_25_44)
+			:g (_r_25_44_46) [1,1] 
+				: Google Play Store(_r_25_44_46_47)
+				: App Store(_r_25_44_46_48)
+		:m Estrategia de marketing(_r_25_45)
+			:g (_r_25_45_49) [1,1] 
+				: Marketing online(_r_25_45_49_50)
+				: Marketing offline(_r_25_45_49_51)
+</feature_tree>
+<constraints>
+constraint_8:~_r_13_14_15_16 or _r_23_26_30_31
+constraint_10:~_r_13_14_15_18 or _r_23_26_30_33
+constraint_9:~_r_13_14_15_17 or _r_23_26_30_32
+constraint_11:~_r_13_14_15_16 or _r_25_44_46_47
+constraint_12:~_r_13_14_15_17 or _r_25_44_46_48
+</constraints>
+</feature_model>
