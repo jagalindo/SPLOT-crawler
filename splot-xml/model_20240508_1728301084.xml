@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 8, 2024 - 2:40 PM  -->
+<feature_model name="test">
+<meta>
+<data name="description">test</data>
+<data name="creator">test</data>
+<data name="address"></data>
+<data name="email">test</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">test</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ACC(_r)
+	:m Regulierung_Geschw(_r_1)
+		:m GeschwindigkeitErhoehen(_r_1_16)
+		:m GeschwindigkeitVerringern(_r_1_17)
+	:m Abstandshaltung(_r_2)
+		:g (_r_2_12) [1,1] 
+			: KurzerAbstand(_r_2_12_13)
+			: Mittlerer Abstand(_r_2_12_14)
+			: GrosserAbstand(_r_2_12_15)
+	:m Abstandsmessgeraet(_r_3)
+		:g (_r_3_4) [1,*] 
+			: Radar(_r_3_4_5)
+			: Kamera(_r_3_4_6)
+	:m Kollisionswarnung(_r_7)
+		:m Visuelle Warnung(_r_7_8)
+		:o Auditive Warnung(_r_7_9)
+	:o Ein- und Ausschalten(_r_10)
+	:o StopAndGO(_r_11)
+</feature_tree>
+<constraints>
+constraint_1:_r_3_4_5 or ~_r_11
+</constraints>
+</feature_model>

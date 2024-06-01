@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 28, 2024 - 2:06 PM  -->
+<feature_model name="Estrategia digital de SLEPs">
+<meta>
+<data name="description">Estrategia TI</data>
+<data name="creator">DCC</data>
+<data name="address"></data>
+<data name="email">cecilia@dcc.uchile.cl</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">DCC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SLEP(_r)
+	:g (_r_1) [1,*] 
+		: Infraestructura fisica(_r_1_2)
+			:g (_r_1_2_5) [1,*] 
+				: Conectividad(_r_1_2_5_6)
+					:m Compania(_r_1_2_5_6_17)
+					:m Medio(_r_1_2_5_6_18)
+				: Hardware(_r_1_2_5_7)
+					:g (_r_1_2_5_7_8) [1,*] 
+						: Computadores(_r_1_2_5_7_8_9)
+						: Impresoras(_r_1_2_5_7_8_10)
+						: Redes internas(_r_1_2_5_7_8_20)
+		: Gestion(_r_1_3)
+			:m Coodinacion entre SLEPs(_r_1_3_22)
+				:g (_r_1_3_22_23) [1,*] 
+					: Jornadas(_r_1_3_22_23_24)
+					: Redes(_r_1_3_22_23_27)
+			:m Contabilidad(_r_1_3_28)
+				:m Remuneraciones(_r_1_3_28_29)
+					:o Personas(_r_1_3_28_29_22)
+				:m Compras(_r_1_3_28_21)
+		: Educacion Colegios(_r_1_4)
+			:m Libro de clase(_r_1_4_32)
+			:m Actores(_r_1_4_33)
+				:g (_r_1_4_33_34) [1,*] 
+					: Alumnos(_r_1_4_33_34_35)
+					: Apoderados(_r_1_4_33_34_23)
+					: Comunidad(_r_1_4_33_34_24)
+					: Apoyo pedagogico(_r_1_4_33_34_25)
+						:o Psicopedagogos(_r_1_4_33_34_25_26)
+						:o Psicologos(_r_1_4_33_34_25_27)
+					: Directivos(_r_1_4_33_34_28)
+						:o Directores(_r_1_4_33_34_28_29)
+						:m Jefe de UTP(_r_1_4_33_34_28_30)
+			:m Material pedagogico(_r_1_4_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

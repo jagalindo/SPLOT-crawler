@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 8, 2024 - 2:38 PM  -->
+<feature_model name="Auto">
+<meta>
+<data name="description">Es ist ein Auto</data>
+<data name="creator">me</data>
+<data name="address"></data>
+<data name="email">yes.no@sure.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">yes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Auto(_r)
+	:o Komfort(_r_2)
+		:g (_r_2_3) [1,*] 
+			: Sitzheizung(_r_2_3_4)
+			: Elektrische Heckklappe(_r_2_3_7)
+			: Glasdach(_r_2_3_8)
+	:m Motor(_r_9)
+		:g (_r_9_10) [1,1] 
+			: Verbrenner(_r_9_10_11)
+			: Elektro(_r_9_10_12)
+				:m Akku(_r_9_10_12_18)
+	:m Hilfsysteme(_r_14)
+		:m ABS(_r_14_15)
+		:o ACC(_r_14_16)
+	:o Sportsitze(_r_17)
+</feature_tree>
+<constraints>
+constraint_3:~_r_2_3_4 or ~_r_17
+</constraints>
+</feature_model>

@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 28, 2024 - 1:41 PM  -->
+<feature_model name="Carro">
+<meta>
+<data name="description">Model for a car, made in Portuguese.</data>
+<data name="creator">Pedro Machado Pecanha</data>
+<data name="address"></data>
+<data name="email">pedrompecanha27@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">PUC-Rio</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Carro(_r)
+	:g (_r_1) [1,1] 
+		: 1 porta(_r_1_2)
+		: 2 portas(_r_1_3)
+		: 3 portas(_r_1_4)
+		: 4 portas(_r_1_5)
+	:g (_r_6) [1,1] 
+		: Manual(_r_6_7)
+		: Automatico(_r_6_8)
+	:o Camera de Re(_r_9)
+	:o Central Multimedia(_r_10)
+	:g (_r_11) [1,1] 
+		: Travas Manuais(_r_11_12)
+		: Travas Eletricas(_r_11_13)
+	:g (_r_14) [1,1] 
+		: A diesel(_r_14_15)
+		: A gasolina(_r_14_16)
+		: Flex(_r_14_17)
+		: Hibrido(_r_14_18)
+		: Eletrico(_r_14_19)
+	:o Alarme(_r_20)
+	:m Estepe(_r_21)
+	:o Entradas USB(_r_22)
+	:o Teto Solar(_r_23)
+	:g (_r_24) [1,*] 
+		: Para-brisa manual(_r_24_25)
+		: Para-brisa automatico(_r_24_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 7, 2024 - 10:35 AM  -->
+<feature_model name="programavimas">
+<meta>
+<data name="description">programavimas</data>
+<data name="creator">RB</data>
+<data name="address">Danutės 39-3</data>
+<data name="email">renata.burbaite@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">KTU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Programavimo_mokymuisi_skirtos_aplinkos(_r)
+	:m Mokymosi_resursai(_r_1)
+		:o Skaitmenines_knygos(_r_1_2)
+		:m Mokomoji_medziaga(_r_1_3)
+		:o Nuotolines_pamokos(_r_1_4)
+	:m Aplinkos_paieska(_r_5)
+		:o Mokiniu_mokymosi_ypatumai(_r_5_6)
+			:o Motyvacija(_r_5_6_17)
+			:o Individualumas(_r_5_6_18)
+			:o Socialiniai_veiksniai(_r_5_6_19)
+		:m Priemoniu_panaudojimas(_r_5_8)
+		:o Virtualios_mokymosi_aplinkos(_r_5_9)
+	:m Programavimo_kalbos(_r_10)
+		:g (_r_10_11) [1,*] 
+			: Ci_plus_plus(_r_10_11_12)
+			: Python(_r_10_11_13)
+			: Java(_r_10_11_14)
+			: Java_Script(_r_10_11_15)
+	:m Programavimo_mokymo_aplinku_tipai(_r_16)
+		:o Internetines_platformos(_r_16_29)
+			:g (_r_16_29_31) [1,*] 
+				: Idle(_r_16_29_31_32)
+				: Joodle(_r_16_29_31_33)
+				: OnlineGDB(_r_16_29_31_34)
+				: repl_it(_r_16_29_31_35)
+				: Kitos(_r_16_29_31_43)
+		:o Idiegiamos_programavimo_aplinkos(_r_16_36)
+			:g (_r_16_36_37) [1,*] 
+				: CodeBlocks(_r_16_36_37_38)
+				: Visual Studio Code(_r_16_36_37_39)
+				: Dev_C_plus_plus(_r_16_36_37_41)
+				: Eclipse(_r_16_36_37_42)
+				: Kitos(_r_16_36_37_44)
+		:g (_r_16_45) [1,*] 
+			: Programu_kodo_redaktoriai(_r_16_45_46)
+				:g (_r_16_45_46_47) [1,*] 
+					: Notepad_plus_plus(_r_16_45_46_47_48)
+					: Atom(_r_16_45_46_47_49)
+					: Sublime_text(_r_16_45_46_47_50)
+					: Kiti(_r_16_45_46_47_51)
+	:m Programavimo_mokymo_budai(_r_52)
+		:g (_r_52_53) [1,*] 
+			: Grupiniai_projektai(_r_52_53_54)
+			: Pamokos(_r_52_53_55)
+			: Savarankiskas_mokymasis(_r_52_53_56)
+			: Mentoryste(_r_52_53_57)
+			: Kiti(_r_52_53_58)
+	:m Mokymosi_turinys(_r_64)
+		:m Pradedantiesiems(_r_64_65)
+		:m Pazengusiems(_r_64_66)
+	:m Vertinimas(_r_67)
+	:g (_r_68) [1,*] 
+		: Ilgalaikiai_projektai(_r_68_69)
+		: Kaupiamasis_vertinimas(_r_68_70)
+		: Kontroliniai_darbai(_r_68_71)
+		: Testai(_r_68_72)
+			:g (_r_68_72_73) [1,*] 
+				: Atviro_tipo(_r_68_72_73_74)
+				: Su_pasirenkamaisiais_atsakymais(_r_68_72_73_75)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
