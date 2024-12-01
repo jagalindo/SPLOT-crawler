@@ -1,0 +1,63 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 28, 2024 - 3:33 PM  -->
+<feature_model name="FoldingBike">
+<meta>
+<data name="description">Feature model of holding bike</data>
+<data name="creator">Palina Dubatouka</data>
+<data name="address"></data>
+<data name="email">padubatouka@edu.aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Klagenfurt University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:g (_r_1) [1,1] 
+		: RegularFoldingBike(_r_1_2)
+		: ElectricFoldingBike(_r_1_3)
+			:m Motor(_r_1_3_4)
+			:m Battery(_r_1_3_5)
+	:m Frame(_r_8)
+		:m material(_r_8_9)
+			:g (_r_8_9_10) [1,1] 
+				: steel(_r_8_9_10_11)
+				: titanium(_r_8_9_10_12)
+		:o Mudgaurds(_r_8_13)
+	:m Seat(_r_14)
+		:m saddle material(_r_14_17)
+			:g (_r_14_17_18) [1,1] 
+				: synthetic(_r_14_17_18_19)
+				: leather(_r_14_17_18_20)
+		:m seatpost(_r_14_21)
+			:g (_r_14_21_24) [1,1] 
+				: standard(_r_14_21_24_25)
+				: extended(_r_14_21_24_26)
+				: telescope(_r_14_21_24_27)
+	:m Tyre1(_r_29)
+		:m reflectors(_r_29_32)
+			:g (_r_29_32_33) [1,1] 
+				: true(_r_29_32_33_34)
+				: false(_r_29_32_33_35)
+		:m type(_r_29_36)
+			:g (_r_29_36_37) [1,1] 
+				: urban(_r_29_36_37_38)
+				: marathon(_r_29_36_37_39)
+	:m Tyre2(_r_40)
+		:m reflectors(_r_40_41)
+			:g (_r_40_41_42) [1,1] 
+				: true(_r_40_41_42_43)
+				: false(_r_40_41_42_44)
+		:m type(_r_40_45)
+			:g (_r_40_45_46) [1,1] 
+				: urban(_r_40_45_46_47)
+				: marathon(_r_40_45_46_48)
+</feature_tree>
+<constraints>
+constraint_8:_r_8_13 or ~_r_29_36_37_39
+constraint_6:~_r_29 or _r_40
+constraint_7:_r_29 or ~_r_40
+constraint_5:~_r_8_13 or _r_29_36_37_39
+</constraints>
+</feature_model>

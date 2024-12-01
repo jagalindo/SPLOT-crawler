@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 26, 2024 - 12:29 PM  -->
+<feature_model name="FoldingBike">
+<meta>
+<data name="description">hw uni</data>
+<data name="creator">K. Taranov</data>
+<data name="address"></data>
+<data name="email">kataranov@edu.aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">AAU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:m Bike Type(_r_2)
+		:g (_r_2_3) [1,1] 
+			: Electrical(_r_2_3_4)
+				:m Battery(_r_2_3_4_55)
+				:m Motor(_r_2_3_4_56)
+			: Regular(_r_2_3_5)
+	:m Frame Material(_r_11)
+		:g (_r_11_12) [1,1] 
+			: Steel(_r_11_12_13)
+			: Titanium(_r_11_12_14)
+		:o Mudgards(_r_11_64)
+	:m Saddle Material(_r_15)
+		:g (_r_15_16) [1,1] 
+			: Synthetic(_r_15_16_17)
+			: Leather(_r_15_16_18)
+	:m Seat Post(_r_19)
+		:g (_r_19_20) [1,1] 
+			: Standard(_r_19_20_21)
+			: Extended(_r_19_20_22)
+			: Telescope(_r_19_20_23)
+	:m Tyres Type(_r_57)
+		:g (_r_57_58) [1,1] 
+			: Urban(_r_57_58_59)
+			: Marathon(_r_57_58_60)
+		:o Reflectors(_r_57_63)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

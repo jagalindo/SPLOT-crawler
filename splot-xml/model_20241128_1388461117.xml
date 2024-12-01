@@ -1,0 +1,58 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 28, 2024 - 4:39 AM  -->
+<feature_model name="regular_folding_bike_2">
+<meta>
+<data name="description">Task2</data>
+<data name="creator">ABOBA</data>
+<data name="address"></data>
+<data name="email">kobzarienko@inbox.ru</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">aau</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:g (_r_5) [1,1] 
+		: RegularFoldingBike(_r_5_6)
+		: ElectricFoldingBike(_r_5_7)
+			:m Motor(_r_5_7_10)
+			:m Battery(_r_5_7_11)
+	:m Frame(_r_12)
+		:m material(_r_12_13)
+			:g (_r_12_13_14) [1,1] 
+				: steel(_r_12_13_14_15)
+				: titanium(_r_12_13_14_16)
+		:o Mudguards(_r_12_17)
+	:m Seat(_r_18)
+		:m saddle_material(_r_18_19)
+			:g (_r_18_19_20) [1,1] 
+				: synthetic(_r_18_19_20_21)
+				: leather(_r_18_19_20_22)
+		:m seatpost(_r_18_23)
+			:g (_r_18_23_31) [1,1] 
+				: standard(_r_18_23_31_32)
+				: extended(_r_18_23_31_33)
+				: telescope(_r_18_23_31_34)
+	:m Tyres(_r_28)
+		:m FrontTyre(_r_28_24)
+			:o reflectors(_r_28_24_25)
+			:m front_type(_r_28_24_26)
+				:g (_r_28_24_26_27) [1,1] 
+					: front_urban(_r_28_24_26_27_28)
+					: front_marathon(_r_28_24_26_27_29)
+		:m RearTyre(_r_28_30)
+			:o reflectors(_r_28_30_32)
+			:m rear_type(_r_28_30_33)
+				:g (_r_28_30_33_34) [1,1] 
+					: rear_urban(_r_28_30_33_34_35)
+					: rear_marathon(_r_28_30_33_34_36)
+</feature_tree>
+<constraints>
+constraint_1:~_r_28_24_26 or _r_28_30_33
+constraint_4:~_r_12_17 or ~_r_28_30_33_34_36
+constraint_2:_r_28_24_26 or ~_r_28_30_33
+constraint_3:~_r_12_17 or ~_r_28_24_26_27_29
+</constraints>
+</feature_model>

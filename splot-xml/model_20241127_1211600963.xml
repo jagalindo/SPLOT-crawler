@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 27, 2024 - 9:15 AM  -->
+<feature_model name="FoldingBike1">
+<meta>
+<data name="description">FoldingBike without constraints</data>
+<data name="creator">JT</data>
+<data name="address"></data>
+<data name="email">j.tropper@student.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU Graz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Folding Bike(_r)
+	:g (_r_1) [1,1] 
+		: RegularFoldingBike(_r_1_2)
+		: ElectricFoldingBike(_r_1_3)
+			:m Motor(_r_1_3_4)
+			:m Battery(_r_1_3_5)
+	:m Tyres(_r_6)
+		:m reflectors(_r_6_7)
+			:g (_r_6_7_8) [1,1] 
+				: true(_r_6_7_8_9)
+				: false(_r_6_7_8_10)
+		:m type(_r_6_12)
+			:g (_r_6_12_13) [1,1] 
+				: urban(_r_6_12_13_14)
+				: marathon(_r_6_12_13_15)
+	:m Seat(_r_11)
+		:m saddle_material(_r_11_16)
+			:g (_r_11_16_17) [1,1] 
+				: synthetic(_r_11_16_17_18)
+				: leather(_r_11_16_17_19)
+		:m seatpost(_r_11_20)
+			:g (_r_11_20_21) [1,1] 
+				: standard(_r_11_20_21_22)
+				: extended(_r_11_20_21_23)
+				: telescope(_r_11_20_21_24)
+	:m Frame(_r_25)
+		:m material(_r_25_26)
+			:g (_r_25_26_27) [1,1] 
+				: steel(_r_25_26_27_28)
+				: titanium(_r_25_26_27_29)
+		:o mudguards(_r_25_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

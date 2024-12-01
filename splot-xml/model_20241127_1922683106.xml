@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 27, 2024 - 8:03 PM  -->
+<feature_model name="folding bike example">
+<meta>
+<data name="description">folding bike example</data>
+<data name="creator">claudia</data>
+<data name="address"></data>
+<data name="email">clau2blei@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">tugraz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:m Seat(_r_4)
+		:m Saddle_material(_r_4_18)
+			:g (_r_4_18_20) [1,1] 
+				: Synthetic(_r_4_18_20_21)
+				: Leather(_r_4_18_20_22)
+		:m Seatpost(_r_4_19)
+			:g (_r_4_19_25) [1,1] 
+				: standard(_r_4_19_25_26)
+				: extended(_r_4_19_25_27)
+				: telescope(_r_4_19_25_28)
+	:m Frame(_r_5)
+		:o Mudguards(_r_5_9)
+		:m Material(_r_5_29)
+			:g (_r_5_29_30) [1,1] 
+				: steel(_r_5_29_30_31)
+				: titanium(_r_5_29_30_32)
+	:m Tyre(_r_8)
+		:o reflectors(_r_8_39)
+		:m type(_r_8_40)
+			:g (_r_8_40_41) [1,1] 
+				: urban(_r_8_40_41_42)
+				: marathon(_r_8_40_41_43)
+	:g (_r_11) [1,1] 
+		: RegularFoldingBike(_r_11_12)
+		: ElectricFoldingBike(_r_11_13)
+			:m Motor(_r_11_13_14)
+			:m Battery(_r_11_13_15)
+	:m Tyre2(_r_44)
+		:o reflectors(_r_44_46)
+		:m type(_r_44_47)
+			:g (_r_44_47_48) [1,1] 
+				: urban(_r_44_47_48_49)
+				: marathon(_r_44_47_48_50)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

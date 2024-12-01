@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 27, 2024 - 11:43 PM  -->
+<feature_model name="Folding Bike">
+<meta>
+<data name="description">Regular Folding Bike</data>
+<data name="creator">Derrick Tunde</data>
+<data name="address"></data>
+<data name="email">Detunde@edu.aau.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">University of Klagenfurt</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:m RegularFoldingBike(_r_1)
+		:m frame(_r_1_2)
+			:m Material(_r_1_2_6)
+				:g (_r_1_2_6_23) [1,1] 
+					: Steel(_r_1_2_6_23_24)
+					: Titanium(_r_1_2_6_23_25)
+			:o Mudguard(_r_1_2_8)
+				:g (_r_1_2_8_30) [1,*] 
+					: Mudguards(_r_1_2_8_30_31)
+					: Mudgaurds(_r_1_2_8_30_33)
+		:m Seat(_r_1_3)
+			:m SaddleMaterial(_r_1_3_9)
+				:g (_r_1_3_9_10) [1,1] 
+					: Leather(_r_1_3_9_10_11)
+					: Synthetic(_r_1_3_9_10_12)
+		:m SeatPost(_r_1_4)
+			:g (_r_1_4_13) [1,1] 
+				: Standard(_r_1_4_13_14)
+				: Extended(_r_1_4_13_15)
+				: Telescope(_r_1_4_13_16)
+		:m Tyres(_r_1_5)
+			:g (_r_1_5_19) [1,1] 
+				: Tyre1(_r_1_5_19_21)
+				: Tyre2(_r_1_5_19_22)
+</feature_tree>
+<constraints>
+constraint_1:_r_1_5_19_21 or _r_1_5_19_22
+</constraints>
+</feature_model>

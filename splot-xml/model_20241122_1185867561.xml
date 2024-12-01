@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2024 - 3:12 PM  -->
+<feature_model name="FoldingBike">
+<meta>
+<data name="description">Feature model of a folding bike</data>
+<data name="creator">Dominik Hammler</data>
+<data name="address"></data>
+<data name="email">dominik.hammler@student.tugraz.at</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TU Graz</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:m Frame(_r_1)
+		:m material(_r_1_2)
+			:g (_r_1_2_7) [1,1] 
+				: steel(_r_1_2_7_8)
+				: titanium(_r_1_2_7_9)
+		:o mudguard(_r_1_10)
+	:m Seat(_r_11)
+		:m saddle_material(_r_11_12)
+			:g (_r_11_12_15) [1,1] 
+				: synthetic(_r_11_12_15_16)
+				: leather(_r_11_12_15_17)
+		:m seatpost(_r_11_13)
+			:g (_r_11_13_18) [1,1] 
+				: standard(_r_11_13_18_19)
+				: extended(_r_11_13_18_20)
+				: telescope(_r_11_13_18_21)
+	:m Type(_r_26)
+		:g (_r_26_27) [1,1] 
+			: RegularFoldingBike(_r_26_27_28)
+			: ElectricFoldingBike(_r_26_27_29)
+				:m Motor(_r_26_27_29_30)
+				:m Battery(_r_26_27_29_31)
+	:m Tyre(_r_32)
+		:m reflectors(_r_32_51)
+			:g (_r_32_51_53) [1,1] 
+				: true(_r_32_51_53_54)
+				: false(_r_32_51_53_55)
+		:m type(_r_32_52)
+			:g (_r_32_52_56) [1,1] 
+				: urban(_r_32_52_56_57)
+				: marathon(_r_32_52_56_58)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
