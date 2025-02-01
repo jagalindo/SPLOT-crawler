@@ -1,13 +1,13 @@
-This is the list of SPLOT models as of  Wed Jan 1 01:08:55 UTC 2025. You can parse the statictis using the statistics.json file
+This is the list of SPLOT models as of  Sat Feb 1 01:04:05 UTC 2025. You can parse the statictis using the statistics.json file
 ## Directory: ./splot-xml
 Number of files: 1352
-Total size: 2595352 bytes
+Total size: 2517528 bytes
 ## Directory: ./fama-xml
 Number of files: 1352
-Total size: 4331348 bytes
+Total size: 4253524 bytes
 ## Directory: ./flama-uvl
 Number of files: 1352
-Total size: 1367211 bytes
+Total size: 1293483 bytes
 Below, you can find the current statistics of the models from SPLOT
 | #      | Name                                                                          |   Features | CTCR   | Clause Density   | Creator                                                              | Creation Date                                                                  | Details and Download          |
 |:-------|:------------------------------------------------------------------------------|-----------:|:-------|:-----------------|:---------------------------------------------------------------------|:-------------------------------------------------------------------------------|:------------------------------|
