@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, May 12, 2025 - 1:06 AM  -->
+<feature_model name="Venda Ai">
+<meta>
+<data name="description">Modelo de features para um sistema de vendas com suporte a vendas pagas e fiadas, cadastro de produtos e clientes, controle de estoque e notificações.</data>
+<data name="creator">Arthur Saldanha</data>
+<data name="address"></data>
+<data name="email">arthursaldanha17@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Venda Ai</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VendaAI(_r)
+	:o cadastrar_produto(_r_2)
+		:o gerencia_de_estoque(_r_2_10)
+			:o notifica_estoque(_r_2_10_11)
+	:o historico(_r_3)
+	:o bloquear_venda_por_divida(_r_4)
+	:g (_r_12) [1,*] 
+		: venda_paga(_r_12_13)
+		: venda_fiada(_r_12_14)
+			:m cadastro_de_cliente(_r_12_14_15)
+			:o notificar_cliente(_r_12_14_16)
+			:o pagamento(_r_12_14_17)
+</feature_tree>
+<constraints>
+constraint_10:_r_12_14 or ~_r_12_14_16
+constraint_9:~_r_12_14 or _r_12_14_15
+constraint_11:_r_12_14 or ~_r_12_14_17
+constraint_12:_r_2 or ~_r_2_10
+constraint_13:_r_2_10 or ~_r_2_10_11
+constraint_14:_r_4 or _r_12_14
+constraint_15:_r_12_13 or _r_12_14
+</constraints>
+</feature_model>

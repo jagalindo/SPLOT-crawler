@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, May 13, 2025 - 7:50 PM  -->
+<feature_model name="HoraCerta">
+<meta>
+<data name="description">HoraCerta</data>
+<data name="creator">HoraCerta</data>
+<data name="address"></data>
+<data name="email">HoraCerta</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">HoraCerta</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r HoraCerta(_r)
+	:m cadastrar_prestador(_r_1)
+		:m editar_prestador(_r_1_2)
+		:m excluir_prestador(_r_1_3)
+		:m cadastrar_funcionario(_r_1_4)
+			:g (_r_1_4_5) [1,*] 
+				: editar_funcionario(_r_1_4_5_6)
+	:m cadastrar_usuario(_r_10)
+		:m editar_usuario(_r_10_11)
+		:m excluir_usuario(_r_10_12)
+	:m cadastrar_servico(_r_13)
+		:g (_r_13_14) [1,*] 
+			: excluir_servico(_r_13_14_16)
+	:m cadastrar_horario(_r_18)
+		:m excluir_horario(_r_18_19)
+		:m editar_horario(_r_18_20)
+		:m bloquear_horario(_r_18_21)
+		:m marcar_horario(_r_18_22)
+	:m historico_servicos(_r_23)
+	:m sistema_feedback(_r_24)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
