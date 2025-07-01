@@ -1,0 +1,142 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 18, 2025 - 11:47 PM  -->
+<feature_model name="VITA">
+<meta>
+<data name="description">Sistema de controle e gerenciamento de drone</data>
+<data name="creator">Alana Araújo</data>
+<data name="address"></data>
+<data name="email">alana.aadn@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VITA(_r)
+	:m central_controle(_r_1)
+		:m cadastro_piloto(_r_1_2)
+			:m nome_completo(_r_1_2_3)
+			:o data_nascimento(_r_1_2_4)
+			:m telefone(_r_1_2_5)
+			:m email(_r_1_2_7)
+			:m codigo_decea(_r_1_2_8)
+			:m senha(_r_1_2_9)
+		:m cadastro_operador(_r_1_10)
+			:m nome_completo(_r_1_10_11)
+			:m codigo_cnbc_renape(_r_1_10_14)
+			:m telefone(_r_1_10_15)
+			:o data_nascimento(_r_1_10_16)
+			:m email(_r_1_10_17)
+			:m senha(_r_1_10_18)
+			:m perfil_acesso(_r_1_10_19)
+				:g (_r_1_10_19_20) [1,1] 
+					: acesso_central_controle(_r_1_10_19_20_21)
+					: acesso_modulo_resgate(_r_1_10_19_20_22)
+		:m cadastro_drone(_r_1_23)
+			:m numero_de_serie(_r_1_23_24)
+			:m apelido(_r_1_23_26)
+		:m login_operador(_r_1_27)
+			:m email(_r_1_27_28)
+			:m senha(_r_1_27_29)
+		:m armazenamento(_r_1_30)
+			:m banco_de_dados(_r_1_30_31)
+				:g (_r_1_30_31_32) [1,*] 
+					: usuarios(_r_1_30_31_32_33)
+					: drones(_r_1_30_31_32_34)
+					: logs_sistema(_r_1_30_31_32_35)
+					: missoes(_r_1_30_31_32_36)
+			:m armazenamento_arquivos(_r_1_30_37)
+				:g (_r_1_30_37_38) [1,*] 
+					: imagens_capturadas(_r_1_30_37_38_39)
+					: backup_seguranca(_r_1_30_37_38_40)
+					: relatorios_exportados(_r_1_30_37_38_41)
+			:o politica_retencao_dados(_r_1_30_42)
+				:g (_r_1_30_42_43) [1,*] 
+					: armazenamento_tempo_limitado(_r_1_30_42_43_44)
+					: exclusao_automatica_dados_antigos(_r_1_30_42_43_45)
+		:m criar_missao(_r_1_46)
+			:m planejamento_rotas(_r_1_46_47)
+				:m criar_rota(_r_1_46_47_48)
+				:o editar_rota(_r_1_46_47_49)
+			:m atribuir_pilotos(_r_1_46_50)
+				:g (_r_1_46_50_51) [1,*] 
+					: piloto_1(_r_1_46_50_51_52)
+					: piloto_2(_r_1_46_50_51_53)
+					: piloto_3(_r_1_46_50_51_54)
+					: piloto_4(_r_1_46_50_51_55)
+					: piloto_5(_r_1_46_50_51_56)
+			:m atribuir_drones(_r_1_46_57)
+				:g (_r_1_46_57_58) [1,*] 
+					: drone_1(_r_1_46_57_58_59)
+					: drone_2(_r_1_46_57_58_60)
+					: drone_3(_r_1_46_57_58_62)
+					: drone_4(_r_1_46_57_58_63)
+					: drone_5(_r_1_46_57_58_64)
+			:m enviar_missao(_r_1_46_65)
+		:o visiualizar_historico(_r_1_66)
+			:g (_r_1_66_67) [1,*] 
+				: filtros(_r_1_66_67_68)
+					:g (_r_1_66_67_68_69) [1,*] 
+						: por_data(_r_1_66_67_68_69_70)
+						: por_piloto(_r_1_66_67_68_69_71)
+						: por_drone(_r_1_66_67_68_69_72)
+				: detalhamento_da_missao(_r_1_66_67_73)
+					:g (_r_1_66_67_73_75) [1,*] 
+						: rota_executada(_r_1_66_67_73_75_76)
+						: tempo_de_voo(_r_1_66_67_73_75_77)
+						: imagens_capturadas(_r_1_66_67_73_75_78)
+						: alertas_emitidos(_r_1_66_67_73_75_79)
+				: exportar_relatorio(_r_1_66_67_80)
+					:m dados(_r_1_66_67_80_82)
+						:g (_r_1_66_67_80_82_83) [1,1] 
+							: exportar_todos_os_dados(_r_1_66_67_80_82_83_84)
+							: exportar_dados_selecionados(_r_1_66_67_80_82_83_85)
+					:m formato(_r_1_66_67_80_86)
+						:g (_r_1_66_67_80_86_87) [1,1] 
+							: csv_excel(_r_1_66_67_80_86_87_88)
+							: pdf(_r_1_66_67_80_86_87_89)
+	:m controle_drone(_r_90)
+		:m receber_missao(_r_90_91)
+		:m login(_r_90_92)
+			:m email(_r_90_92_94)
+			:m senha(_r_90_92_96)
+		:m executar_rota(_r_90_97)
+			:g (_r_90_97_98) [1,1] 
+				: modo_manual(_r_90_97_98_99)
+				: modo_autonomo(_r_90_97_98_100)
+		:m enviar_alerta_deteccao(_r_90_101)
+		:m armazenamento(_r_90_102)
+			:m gravar_imagens_capturadas(_r_90_102_103)
+			:m gravar_rota_executada(_r_90_102_104)
+			:m gravar_logs(_r_90_102_105)
+		:m controle(_r_90_106)
+			:m conexao_via_satelite(_r_90_106_107)
+			:g (_r_90_106_108) [1,1] 
+				: conectar(_r_90_106_108_109)
+				: desconectar(_r_90_106_108_110)
+			:m movimento(_r_90_106_112)
+			:g (_r_90_106_115) [1,*] 
+				: decolar(_r_90_106_115_116)
+				: ir_para_esquerda(_r_90_106_115_118)
+				: ir_para_direita(_r_90_106_115_119)
+				: descer(_r_90_106_115_120)
+				: subir(_r_90_106_115_121)
+				: pousar(_r_90_106_115_122)
+	:m modulo_de_resgate(_r_123)
+		:m login(_r_123_124)
+			:m email(_r_123_124_125)
+			:m senha(_r_123_124_126)
+		:m receber_alerta_deteccao(_r_123_127)
+			:o botao_alerta_recebido(_r_123_127_129)
+		:m comunicacao_com_central(_r_123_128)
+		:m visualizar_no_mapa(_r_123_130)
+			:m coordenadas_gps(_r_123_130_131)
+			:o mapa_interativo(_r_123_130_132)
+			:o tracar_rota_ate_local(_r_123_130_133)
+</feature_tree>
+<constraints>
+constraint_1:_r_90_106_107 or ~_r_90_106_112
+constraint_2:_r_1_30_37 or ~_r_1_66_67_80
+</constraints>
+</feature_model>

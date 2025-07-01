@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 18, 2025 - 3:00 PM  -->
+<feature_model name="Projeto Old - Robô de Conversação">
+<meta>
+<data name="description">Um robô de conversação que visa ajudar pessoas com algum transtorno e dificuldade em fazer amigos</data>
+<data name="creator">Andressa de Pinho Barreto</data>
+<data name="address"></data>
+<data name="email">andressabarreto12410268@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Trabalho de Engenharia - grupo 6</data>
+<data name="department"></data>
+<data name="date">17/06/2025</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Projeto Old(_r)
+	:m F1 -Dialogo(_r_1)
+		:o F2 - Mensagens de texto(_r_1_29)
+		:o F3 - Mensagens de voz(_r_1_30)
+		:o F4 - Linguagem de sinais(_r_1_31)
+		:o F5 - Mensagens por ligacao(_r_1_32)
+	:o F6 - Personalizacao(_r_6)
+		:o F7 - Personalizacao da voz(_r_6_33)
+			:g (_r_6_33_38) [1,1] 
+				: F10 - Voz masculina(_r_6_33_38_39)
+				: F11 - Voz feminina(_r_6_33_38_40)
+				: F12 - Voz neutra(_r_6_33_38_41)
+		:o F8 - Personalizacao do rosto(_r_6_42)
+			:g (_r_6_42_43) [1,1] 
+				: F13 - Rosto masculino(_r_6_42_43_44)
+				: F14 - Rosto feminino(_r_6_42_43_45)
+				: F15 - Rosto neutro(_r_6_42_43_46)
+		:o F9 - Personalizacao do nome(_r_6_47)
+	:m F16 - Servico de Emergencia(_r_16)
+		:m F17 - Ligacao para emergencia(_r_16_48)
+		:m F18 - Identificacao de emergencia(_r_16_49)
+		:o F19 - Ligacao para contatos salvos(_r_16_50)
+	:o F20 - Temas(_r_21)
+		:g (_r_21_22) [1,1] 
+			: F21 - Tema escuro(_r_21_22_23)
+			: F22 - Tema claro(_r_21_22_24)
+	:m F23 - Servico de ligacoes(_r_26)
+		:m F24 - Realizar ligacao(_r_26_51)
+		:o F25 - Adicionar contato(_r_26_57)
+			:o F27 - Lista de contatos(_r_26_57_29)
+		:o F26 - Excluir contato(_r_26_58)
+</feature_tree>
+<constraints>
+constraint_9:~_r_16_48 or _r_26_51
+constraint_6:~_r_1_32 or _r_26_51
+constraint_7:_r_16_48 or ~_r_16_49
+constraint_4:~_r_16_50 or _r_26_57_29
+constraint_5:_r_26_57 or ~_r_26_58
+</constraints>
+</feature_model>

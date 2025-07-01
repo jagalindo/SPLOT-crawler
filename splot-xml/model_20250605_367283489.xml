@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 5, 2025 - 1:12 PM  -->
+<feature_model name="Folding Bike">
+<meta>
+<data name="description">Folding Bike for TU course</data>
+<data name="creator">Jonas Pettersson</data>
+<data name="address">Gärtnergasse 7</data>
+<data name="email">jonas.pettersson@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens AG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r FoldingBike(_r)
+	:g (_r_1) [1,1] 
+		: Regular(_r_1_2)
+		: Electric(_r_1_3)
+			:m Motor(_r_1_3_4)
+			:m Battery(_r_1_3_5)
+	:m Frame(_r_6)
+		:g (_r_6_7) [1,1] 
+			: steel(_r_6_7_8)
+			: titanium(_r_6_7_9)
+		:o Mudguards(_r_6_18)
+	:m Seat(_r_10)
+		:g (_r_10_11) [1,1] 
+			: synthetic(_r_10_11_12)
+			: leather(_r_10_11_13)
+		:g (_r_10_14) [1,1] 
+			: standard(_r_10_14_15)
+			: extended(_r_10_14_16)
+			: telescope(_r_10_14_17)
+	:m Tyres(_r_19)
+		:o reflectors(_r_19_20)
+		:g (_r_19_21) [1,1] 
+			: urban(_r_19_21_22)
+			: marathon(_r_19_21_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

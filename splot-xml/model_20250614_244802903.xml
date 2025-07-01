@@ -1,0 +1,99 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Jun 14, 2025 - 2:57 PM  -->
+<feature_model name="Miku">
+<meta>
+<data name="description">Modelo ES</data>
+<data name="creator">Equipe 10</data>
+<data name="address"></data>
+<data name="email">gabrielaraujo12210095@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Miku(_r)
+	:m Integracao com a casa inteligente(_r_5)
+		:m Integracao com sistema de automacao geral(_r_5_6)
+			:m Integracao com hubs de automacao(_r_5_6_75)
+			:o Integracao com tomadas inteligentes(_r_5_6_76)
+			:o Integracao com sensores de movimento(_r_5_6_77)
+			:o Integracao com sensores de temperatura e umidade(_r_5_6_78)
+		:o Integracao com sistema de iluminacao(_r_5_12)
+			:g (_r_5_12_13) [1,*] 
+				: Integracao com lampadas inteligentes(_r_5_12_13_14)
+				: Integracao com interruptores inteligentes(_r_5_12_13_15)
+				: Integracao com dimmers(_r_5_12_13_16)
+		:o Integracao com sistemas de climatizacao(_r_5_17)
+		:g (_r_5_18) [1,*] 
+			: Integracao com termostatos inteligentes(_r_5_18_19)
+			: Integracao com ar-condicionado inteligente(_r_5_18_20)
+			: Integracao com ventiladores inteligentes(_r_5_18_21)
+			: Integracao com cortinas e persianas inteligentes(_r_5_18_22)
+		:o Integracao com sistemas de seguranca(_r_5_23)
+			:g (_r_5_23_24) [1,*] 
+				: Integracao com cameras de vigilancia(_r_5_23_24_25)
+				: Integracao com sensores de porta e janela(_r_5_23_24_26)
+				: Integracao com alarmes inteligentes(_r_5_23_24_27)
+				: Integracao com fechaduras eletronicas(_r_5_23_24_28)
+				: Integracao com porteiro eletronico(_r_5_23_24_29)
+			:o Integracao com sistemas de lazer(_r_5_23_30)
+				:g (_r_5_23_30_31) [1,*] 
+					: Integracao com smart TVs(_r_5_23_30_31_32)
+					: Integracao com video game(_r_5_23_30_31_33)
+					: Integracao com caixas de som inteligentes(_r_5_23_30_31_34)
+					: Integracao com home theater(_r_5_23_30_31_35)
+					: Integracao com projetor smart(_r_5_23_30_31_36)
+			:o Integracao com linha branca inteligente(_r_5_23_38)
+				:g (_r_5_23_38_39) [1,*] 
+					: Integracao com geladeiras inteligentes(_r_5_23_38_39_40)
+					: Integracao com fornos inteligentes(_r_5_23_38_39_41)
+					: Integracao com micro-ondas inteligentes(_r_5_23_38_39_42)
+					: Integracao com maquinas de cafe inteligentes(_r_5_23_38_39_43)
+					: Integracao com maqunas de lavar inteligentes(_r_5_23_38_39_44)
+	:m Instrucoes(_r_45)
+		:m Instrucoes gestuais(_r_45_47)
+		:m Instrucoes por voz(_r_45_48)
+	:m Interpretacao de comandos(_r_49)
+		:m Comandos personalizados(_r_49_50)
+		:o Tarefas programadas(_r_49_51)
+	:m Reconhecimento de ambiente(_r_52)
+		:m Detector de presenca(_r_52_53)
+		:m Desvio de obstaculo(_r_52_54)
+		:m Reconhecimento de comodos(_r_52_55)
+		:o Interacao com pets(_r_52_56)
+	:m Monitoramento e seguranca(_r_57)
+		:m Reconhecimento de usuario(_r_57_58)
+		:m Solicitar apresentacao(_r_57_59)
+		:m Controle de permissoes(_r_57_60)
+		:m Captura e upload(_r_57_61)
+		:m Reproducao de capturas(_r_57_62)
+		:o Resposta a emergencias(_r_57_63)
+		:o Reconhecimento de hostilidade(_r_57_65)
+		:o Rotina de incendio(_r_57_66)
+		:o Reconhecimento de estado critico(_r_57_68)
+		:o Chamadas de emergencia(_r_57_70)
+	:m Limpeza automatica(_r_71)
+		:m Aspirar(_r_71_72)
+		:m Passar pano(_r_71_73)
+		:m Secar(_r_71_74)
+		:o Ajuste por superficie(_r_71_75)
+	:m Controle de recarga(_r_76)
+		:m Energia Alta(_r_76_77)
+		:m Energia Media(_r_76_78)
+		:m Energia Baixa(_r_76_79)
+	:m Notificacoes(_r_80)
+		:o Notificacoes de atividade(_r_80_82)
+		:m Alertas de manutencao(_r_80_83)
+		:o Leitura de lembretes e agenda(_r_80_84)
+	:m Rotinas(_r_85)
+		:m Aprendizado de rotina(_r_85_86)
+		:o Auxilio na rotina(_r_85_79)
+	:m Controle manual(_r_87)
+	:m Ligar e Desligar(_r_88)
+</feature_tree>
+<constraints>
+constraint_4:_r_49_51 or ~_r_85_79
+</constraints>
+</feature_model>

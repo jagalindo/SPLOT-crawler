@@ -1,0 +1,51 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 25, 2025 - 9:53 PM  -->
+<feature_model name="Drone_Autonomo">
+<meta>
+<data name="description">Trabalho da materia de Engenharia de Software</data>
+<data name="creator">Joabe Tenorio</data>
+<data name="address"></data>
+<data name="email">joabtenor.25@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r drone_autonomo(_r)
+	:m navegacao_autonoma(_r_2)
+		:m planejamento_rota(_r_2_3)
+		:m desvio_obstaculos(_r_2_4)
+		:m retorno_automatico(_r_2_5)
+		:o estabilizacao_voo(_r_2_6)
+	:m controle_Monitoramento(_r_7)
+		:m telemetria_tempo_real(_r_7_8)
+		:m comando_intervencao(_r_7_9)
+		:m interface_usuario(_r_7_10)
+	:o si-visao_computacional(_r_11)
+		:g (_r_11_12) [1,*] 
+			: reconhecimento_padroes(_r_11_12_13)
+			: rastreamento_alvo(_r_11_12_16)
+	:m seguranca_operacional(_r_17)
+		:m si-deteccao_falhas(_r_17_18)
+			:o voo_seguro_em_perda_sinal(_r_17_18_29)
+		:m pouso_emergencia(_r_17_19)
+		:m restricao_zona(_r_17_20)
+	:m gerenciamento_energia(_r_21)
+		:m monitoramento_bateria(_r_21_22)
+		:o otimizacao_consumo(_r_21_23)
+		:m estimativa_autonomia(_r_21_24)
+	:o coleta_armazenamento_de_dados(_r_25)
+		:g (_r_25_26) [1,*] 
+			: armazenamento_videos_fotos(_r_25_26_27)
+			: log_voo(_r_25_26_28)
+	:o gerenciamento_usuarios(_r_29)
+		:m cadastro_operador(_r_29_30)
+		:m login_autenticacao(_r_29_31)
+		:o niveis_acesso(_r_29_32)
+</feature_tree>
+<constraints>
+constraint_16:~_r_2 or _r_7_9
+</constraints>
+</feature_model>

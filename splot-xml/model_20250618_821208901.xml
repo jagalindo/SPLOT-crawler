@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 25, 2025 - 9:47 PM  -->
+<feature_model name="F0 - Controlador de Insetos e Pragas">
+<meta>
+<data name="description">Robô dedetizador com controle remoto e recursos inteligentes para combate a insetos e pragas.</data>
+<data name="creator">Líncon Neres</data>
+<data name="address"></data>
+<data name="email">linconmaciel12310370@soumaissantissimo.com.br </data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Equipe 9</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r F0 - Controlador de Insetos e Pragas(_r)
+	:m F1 - Interface do Usuario(_r_1)
+		:m F2 - Cadastro do Usuario(_r_1_2)
+			:g (_r_1_2_3) [1,*] 
+				: F3 - Login(_r_1_2_3_4)
+				: F4 - Senha(_r_1_2_3_5)
+				: F5 - AT2F(_r_1_2_3_6)
+		:m F6 - Perfis de Usuario(_r_1_7)
+			:g (_r_1_7_8) [1,*] 
+				: F7 - Tecnico(_r_1_7_8_9)
+				: F8 - Cliente(_r_1_7_8_10)
+	:o F9 - Mapeamento da area(_r_11)
+		:m F10 - Geracao de Mapa 3D(_r_11_12)
+			:m F11 - Relatorios(_r_11_12_13)
+				:m F12 - Graficos(_r_11_12_13_14)
+	:m F13 - Sistema de Seguranca(_r_34)
+		:m F14 - Deteccao de Presenca Humana(_r_34_35)
+			:m F15 - Emissao de alerta(_r_34_35_36)
+				:m F16 - Interrupcao de Gas(_r_34_35_36_37)
+	:o F17 - Sensor de Movimento(_r_38)
+		:m F18 - Deteccao de Presenca de Pragas(_r_38_39)
+			:m F19 - Acao de Combate(_r_38_39_40)
+				:m F20 - Pulverizacao(_r_38_39_40_41)
+	:m F21 - Robo(_r_42)
+		:m F22 - Alerta de Bateria Fraca(_r_42_43)
+			:g (_r_42_43_44) [1,*] 
+				: F23 - Visual(_r_42_43_44_45)
+				: F24 - Sonoro(_r_42_43_44_48)
+				: F25 - Notificacao Remota(_r_42_43_44_49)
+	:m F26 - Controle Remoto(_r_50)
+		:m F27 - Conexoes(_r_50_51)
+			:g (_r_50_51_52) [1,1] 
+				: F28 - WIFI(_r_50_51_52_53)
+				: F29 - 5G(_r_50_51_52_54)
+				: F30 - Bluetooth(_r_50_51_52_55)
+		:m F31 - Emissao de Gas Dedetizador(_r_50_34)
+			:o F32 - Monitoramento de Estoque de Gas(_r_50_34_35)
+				:g (_r_50_34_35_37) [1,1] 
+					: F33 - Cheio(_r_50_34_35_37_38)
+					: F34 - Vazio(_r_50_34_35_37_39)
+			:o F35 - Controle de Intensidade do Gas(_r_50_34_40)
+				:g (_r_50_34_40_41) [1,1] 
+					: F36 - Alto(_r_50_34_40_41_42)
+					: F37 - Medio(_r_50_34_40_41_43)
+					: F38 - Baixo(_r_50_34_40_41_44)
+		:m F39 - Bateria(_r_50_45)
+			:m F40 - Recarregavel(_r_50_45_46)
+				:g (_r_50_45_46_47) [1,1] 
+					: F41 - Inducao(_r_50_45_46_47_48)
+					: F42 - Por fonte(_r_50_45_46_47_49)
+		:m F43 - Interface(_r_50_50)
+			:m F44 - Painel LCD(_r_50_50_51)
+		:m F45 - APP(_r_50_52)
+			:o F46 - IA(_r_50_52_54)
+			:o F47 - Integracao com Banco de Dados(_r_50_52_55)
+			:o F48 - Portabilidade(_r_50_52_56)
+				:g (_r_50_52_56_57) [1,1] 
+					: F49 - Android(_r_50_52_56_57_58)
+					: F50 - IOS(_r_50_52_56_57_59)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

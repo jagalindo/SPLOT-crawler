@@ -1,0 +1,100 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 4, 2025 - 6:18 PM  -->
+<feature_model name="Smart Home">
+<meta>
+<data name="description">Casa inteligente</data>
+<data name="creator">Alana Araujo</data>
+<data name="address"></data>
+<data name="email">alana.aadn@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Smart Home(_r)
+	:m Sistema de iluminacao(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Manual(_r_1_2_3)
+				:g (_r_1_2_3_4) [1,1] 
+					: Ligar manual(_r_1_2_3_4_5)
+						:g (_r_1_2_3_4_5_8) [1,*] 
+							: Ligar Interno Manual(_r_1_2_3_4_5_8_9)
+							: Ligar Externo Manual(_r_1_2_3_4_5_8_10)
+					: Desligar Manual(_r_1_2_3_4_6)
+						:g (_r_1_2_3_4_6_11) [1,*] 
+							: Desligar Interno Manual(_r_1_2_3_4_6_11_12)
+							: Desligar Externo Manual(_r_1_2_3_4_6_11_13)
+			: Automatico(_r_1_2_14)
+				:g (_r_1_2_14_15) [1,1] 
+					: Ligar Auto(_r_1_2_14_15_16)
+						:g (_r_1_2_14_15_16_19) [1,*] 
+							: Ligar Interno Auto(_r_1_2_14_15_16_19_20)
+							: Ligar Externo Auto(_r_1_2_14_15_16_19_21)
+					: Desligar Auto(_r_1_2_14_15_17)
+						:g (_r_1_2_14_15_17_22) [1,*] 
+							: Desligar Interno Auto(_r_1_2_14_15_17_22_23)
+							: Desligar Externo Auto(_r_1_2_14_15_17_22_24)
+				:o Cortinas(_r_1_2_14_18)
+					:g (_r_1_2_14_18_25) [1,1] 
+						: Abrir(_r_1_2_14_18_25_26)
+						: Fechar(_r_1_2_14_18_25_27)
+	:m Sistema de temperatura(_r_28)
+		:g (_r_28_29) [1,1] 
+			: Manual(_r_28_29_30)
+				:g (_r_28_29_30_32) [1,*] 
+					: Controle de Janela(_r_28_29_30_32_33)
+						:g (_r_28_29_30_32_33_35) [1,1] 
+							: Abrir(_r_28_29_30_32_33_35_36)
+							: Fechar(_r_28_29_30_32_33_35_37)
+					: Controle de ar-condicionado(_r_28_29_30_32_34)
+						:g (_r_28_29_30_32_34_38) [1,1] 
+							: Ligar(_r_28_29_30_32_34_38_39)
+							: Desligar(_r_28_29_30_32_34_38_40)
+			: Automatico(_r_28_29_41)
+				:g (_r_28_29_41_42) [1,*] 
+					: Controle de Janela Auto(_r_28_29_41_42_43)
+						:g (_r_28_29_41_42_43_45) [1,1] 
+							: Abrir Auto(_r_28_29_41_42_43_45_46)
+							: Fechar Auto(_r_28_29_41_42_43_45_47)
+					: Controle de ar-condicionado Auto(_r_28_29_41_42_44)
+						:g (_r_28_29_41_42_44_48) [1,1] 
+							: Ligar Auto(_r_28_29_41_42_44_48_49)
+							: Desligar Auto(_r_28_29_41_42_44_48_50)
+	:m Sistema de Seguranca(_r_51)
+		:o Alerta de invasao(_r_51_52)
+		:o Deteccao de presenca(_r_51_53)
+		:m Notificacao(_r_51_54)
+			:g (_r_51_54_55) [1,*] 
+				: Ligar 190(_r_51_54_55_56)
+				: Enviar mensagem(_r_51_54_55_57)
+				: Chamada de video(_r_51_54_55_58)
+		:o Deteccao de Fumaca - Gas(_r_51_59)
+		:m Trancar Portas e Janelas(_r_51_60)
+	:m Conexao(_r_61)
+		:g (_r_61_62) [1,1] 
+			: Dados Moveis(_r_61_62_63)
+			: Wi-fi(_r_61_62_64)
+		:m Cabeada(_r_61_65)
+	:o Controle de eletrodomestico(_r_66)
+		:o Maquina de lavar(_r_66_67)
+		:o Lava-louca(_r_66_69)
+		:o TV(_r_66_70)
+		:o Geladeira(_r_66_71)
+		:o Cafeteria(_r_66_72)
+	:o Gerenciamento de camera(_r_73)
+		:m Transmissao em tempo real(_r_73_55)
+		:o Gravacao de video(_r_73_57)
+	:o Sistema de energia(_r_58)
+		:m Monitoramento de consumo(_r_58_59)
+		:m Modo economico(_r_58_60)
+		:o Desligamento automatico de aparelhos(_r_58_61)
+</feature_tree>
+<constraints>
+constraint_1:_r_61 or _r_73
+constraint_4:_r_1_2_3 or _r_1_2_14
+constraint_2:_r_61_62_63 or _r_61_62_64
+constraint_3:_r_51_53 or _r_73_57
+</constraints>
+</feature_model>

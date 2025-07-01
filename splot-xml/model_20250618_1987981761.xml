@@ -1,0 +1,63 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 18, 2025 - 6:11 PM  -->
+<feature_model name="Robo Sanetização Uv">
+<meta>
+<data name="description">trabalho</data>
+<data name="creator">Victor gabriel</data>
+<data name="address"></data>
+<data name="email">victor12410149@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r robo_sanetizacao_uv(_r)
+	:m funcionamento(_r_2)
+		:g (_r_2_5) [1,1] 
+			: ligar(_r_2_5_6)
+			: desligar(_r_2_5_7)
+	:m Locomocao(_r_8)
+		:g (_r_8_12) [1,1] 
+			: Autonoma(_r_8_12_13)
+			: Semi_Manual(_r_8_12_14)
+			: Estatica(_r_8_12_15)
+	:m Recarga(_r_9)
+		:g (_r_9_20) [1,1] 
+			: Recarga_automatica(_r_9_20_21)
+			: Recarga_manual(_r_9_20_22)
+	:m ControleUV(_r_10)
+		:g (_r_10_26) [1,1] 
+			: UV_Ligado(_r_10_26_27)
+			: UV_Desligado(_r_10_26_28)
+		:m UV_Seguranca(_r_10_29)
+	:m Potencia(_r_30)
+		:g (_r_30_35) [1,1] 
+			: Alta_Potencia(_r_30_35_36)
+			: Media_Potencia(_r_30_35_37)
+			: Baixa_Potencia(_r_30_35_38)
+	:m Alertas(_r_31)
+		:g (_r_31_39) [1,*] 
+			: Alerta_Sonoro(_r_31_39_40)
+			: Alerta_Visual(_r_31_39_41)
+		:m Notificacao_Conclusao(_r_31_42)
+	:m Relatorio(_r_32)
+		:g (_r_32_43) [1,*] 
+			: Relatorio_em_Andamento(_r_32_43_44)
+			: Relatorio_Conclusao(_r_32_43_45)
+			: Relatorio_de_Falha(_r_32_43_46)
+	:m Limpeza_Autonoma(_r_34)
+		:g (_r_34_48) [1,*] 
+			: Sanitizacao_Programada(_r_34_48_49)
+			: Sanitizacao_Manual(_r_34_48_50)
+	:m Sensores(_r_37)
+		:o Mapeamento(_r_37_38)
+		:o Desvio_obstaculos(_r_37_39)
+</feature_tree>
+<constraints>
+constraint_8:~_r_8_12_15 or ~_r_37_39
+constraint_7:~_r_8_12_15 or ~_r_37_38
+constraint_4:_r_8_12_13 or ~_r_9_20_21
+</constraints>
+</feature_model>

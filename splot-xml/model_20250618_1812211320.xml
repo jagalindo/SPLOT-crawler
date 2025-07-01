@@ -1,0 +1,103 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 18, 2025 - 7:50 PM  -->
+<feature_model name="core_drone">
+<meta>
+<data name="description">trabalho_ES</data>
+<data name="creator">joao</data>
+<data name="address"></data>
+<data name="email">joao12410285@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r app_drone_residencial(_r)
+	:m Cadastro(_r_1)
+		:m Email(_r_1_2)
+		:m Senha(_r_1_3)
+		:m Nome(_r_1_4)
+		:m CPF(_r_1_5)
+		:m N_telefone(_r_1_6)
+	:m Login(_r_7)
+		:m Nome_e_senha(_r_7_8)
+		:m Gmail(_r_7_9)
+		:m Esqueceu_senha(_r_7_10)
+			:g (_r_7_10_20) [1,*] 
+				: email_login(_r_7_10_20_21)
+				: N_telefone_login(_r_7_10_20_22)
+	:m Painel_principal(_r_23)
+		:g (_r_23_24) [1,*] 
+			: Patrulha_automatica(_r_23_24_25)
+			: Controle_drone(_r_23_24_26)
+				:g (_r_23_24_26_27) [1,1] 
+					: automatico(_r_23_24_26_27_28)
+					: Manual(_r_23_24_26_27_29)
+			: Status_drone(_r_23_24_30)
+				:g (_r_23_24_30_31) [1,*] 
+					: Bateria(_r_23_24_30_31_32)
+					: Conexao(_r_23_24_30_31_33)
+					: Localizacao(_r_23_24_30_31_34)
+			: Chat(_r_23_24_35)
+	:m Monitoramento(_r_36)
+		:g (_r_36_37) [1,*] 
+			: Trasmissao_ao _vivo(_r_36_37_38)
+				:g (_r_36_37_38_39) [1,*] 
+					: Zoom(_r_36_37_38_39_40)
+					: Capturar_tela(_r_36_37_38_39_41)
+			: Alternar_cameras(_r_36_37_42)
+				:g (_r_36_37_42_43) [1,1] 
+					: Frontal(_r_36_37_42_43_44)
+					: Traseira(_r_36_37_42_43_45)
+			: Visao_noturna(_r_36_37_46)
+	:m Alertas(_r_47)
+	:g (_r_48) [1,*] 
+		: Deteccao_movimento(_r_48_49)
+		: Deteccao_som(_r_48_50)
+		: Historico_alertas(_r_48_51)
+		: Notificacoes(_r_48_52)
+			:g (_r_48_52_53) [1,*] 
+				: App_notificacao(_r_48_52_53_54)
+				: Email_notificacao(_r_48_52_53_55)
+				: Whatsapp(_r_48_52_53_56)
+	:m Gravacoes(_r_57)
+		:g (_r_57_58) [1,*] 
+			: Salvar(_r_57_58_59)
+				:g (_r_57_58_59_61) [1,1] 
+					: Local(_r_57_58_59_61_62)
+					: Drive(_r_57_58_59_61_63)
+			: Compartilhar(_r_57_58_60)
+				:g (_r_57_58_60_64) [1,*] 
+					: Email_garavacoes(_r_57_58_60_64_65)
+					: Whatsapp_gravacoes(_r_57_58_60_64_66)
+			: Reproduzir(_r_57_58_67)
+	:m Configuracoes(_r_68)
+		:g (_r_68_69) [1,*] 
+			: Horarios_patrulha(_r_68_69_70)
+			: Sensibilidade_sensores(_r_68_69_71)
+			: Areas_patrulha(_r_68_69_72)
+			: Acessibilidade(_r_68_69_73)
+				:g (_r_68_69_73_74) [1,*] 
+					: Modo(_r_68_69_73_74_75)
+						:g (_r_68_69_73_74_75_76) [1,1] 
+							: Claro(_r_68_69_73_74_75_76_77)
+							: Escuro(_r_68_69_73_74_75_76_78)
+					: Tamanho_fonte(_r_68_69_73_74_79)
+						:g (_r_68_69_73_74_79_80) [1,1] 
+							: Pequeno(_r_68_69_73_74_79_80_81)
+							: Medio(_r_68_69_73_74_79_80_82)
+							: Grande(_r_68_69_73_74_79_80_83)
+					: Leitor_de_tela(_r_68_69_73_74_85)
+	:m Perfil(_r_87)
+		:g (_r_87_88) [1,*] 
+			: Editar_dados_pessoais(_r_87_88_89)
+				:g (_r_87_88_89_90) [1,*] 
+					: Nome_dados(_r_87_88_89_90_91)
+					: Email_dados(_r_87_88_89_90_92)
+			: Trocar_Senha(_r_87_88_93)
+			: Sair(_r_87_88_94)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

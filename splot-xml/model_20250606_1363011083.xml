@@ -1,0 +1,72 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jun 6, 2025 - 5:24 PM  -->
+<feature_model name="MRI Image Classification">
+<meta>
+<data name="description">FM for the specification of AI research problem</data>
+<data name="creator">Hyacinth Ali</data>
+<data name="address"></data>
+<data name="email">hyacinth.ali@mcgill.ca</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">McGill University</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MRI Classification(_r)
+	:m Ananlysis Type(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Classification(_r_1_2_3)
+			: Prediction(_r_1_2_4)
+			: Anomaly Detection(_r_1_2_5)
+			: Clustering(_r_1_2_6)
+	:m Review(_r_7)
+		:g (_r_7_8) [1,1] 
+			: Human(_r_7_8_9)
+			: Automated(_r_7_8_10)
+	:m Input Data(_r_11)
+		:m Type(_r_11_12)
+			:g (_r_11_12_13) [1,*] 
+				: Text(_r_11_12_13_14)
+				: Image(_r_11_12_13_15)
+					:g (_r_11_12_13_15_18) [1,1] 
+						: Natural Images(_r_11_12_13_15_18_19)
+						: Medical Images(_r_11_12_13_15_18_20)
+				: Audio(_r_11_12_13_16)
+				: AV Type(_r_11_12_13_17)
+					:g (_r_11_12_13_17_22) [1,1] 
+						: Speech(_r_11_12_13_17_22_23)
+						: Music(_r_11_12_13_17_22_24)
+				: Video(_r_11_12_13_21)
+		:o Distribution(_r_11_26)
+			:g (_r_11_26_27) [1,1] 
+				: Balanced(_r_11_26_27_28)
+				: Unbalanced(_r_11_26_27_29)
+		:m Format(_r_11_30)
+			:g (_r_11_30_31) [1,1] 
+				: Structured(_r_11_30_31_32)
+				: Unstructured(_r_11_30_31_33)
+		:o Size(_r_11_34)
+			:g (_r_11_34_35) [1,1] 
+				: Dozens(_r_11_34_35_36)
+				: Hundreds(_r_11_34_35_37)
+				: Thousands(_r_11_34_35_38)
+		:o Data Privacy(_r_11_39)
+			:g (_r_11_39_40) [1,*] 
+				: Anonymized(_r_11_39_40_41)
+				: Pseudonymized(_r_11_39_40_42)
+				: PII_Removed(_r_11_39_40_43)
+	:m Desired Output(_r_44)
+		:g (_r_44_45) [1,1] 
+			: Binary Classification(_r_44_45_46)
+			: Multi-Class Classification(_r_44_45_47)
+</feature_tree>
+<constraints>
+constraint_1:~_r_11_12_13_16 or _r_11_12_13_17
+constraint_7:_r_11_12_13_17 or ~_r_11_12_13_21
+constraint_4:~_r_1_2_6 or ~_r_11_12_13_17_22_23
+constraint_5:~_r_1_2_5 or _r_11_30_31_32
+constraint_2:~_r_1_2_3 or _r_11_12_13_15
+constraint_3:~_r_1_2_3 or _r_11_12_13_14
+</constraints>
+</feature_model>

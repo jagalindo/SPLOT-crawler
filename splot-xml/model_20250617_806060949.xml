@@ -1,0 +1,68 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Jun 17, 2025 - 1:34 PM  -->
+<feature_model name="Sistema_Irrigacao_Inteligente">
+<meta>
+<data name="description">Modelo de features para um sistema inteligente de irrigação automatizada e monitoramento do solo.</data>
+<data name="creator">Bruno de Lima Almeida Andrade</data>
+<data name="address"></data>
+<data name="email">brunoandrade12310408@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Santissimo Sacramento</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema_Irrigacao_Inteligente(_r)
+	:m Controle de Irrigacao(_r_1)
+		:m Automatico(_r_1_6)
+			:m Por Umidade(_r_1_6_7)
+			:o Por Clima(_r_1_6_8)
+		:g (_r_1_30) [1,1] 
+			: Manual(_r_1_30_31)
+				:o Botao fisico(_r_1_30_31_32)
+				:o Aplicativo(_r_1_30_31_33)
+	:m Monitoramento(_r_9)
+		:m Umidade do solo(_r_9_10)
+			:m Medicao a cada 10 min(_r_9_10_11)
+	:m Alertas(_r_12)
+		:m Umidade Critica maior 1h(_r_12_14)
+		:m Envio Automatico de Alertas(_r_12_16)
+	:m Cadastro(_r_17)
+		:m usuarios(_r_17_19)
+		:m Plantacoes(_r_17_20)
+			:m Regras Personalizadas(_r_17_20_22)
+			:o Historico de Configuracoes(_r_17_20_23)
+			:o Restauracao de Configuracoes(_r_17_20_24)
+	:m Configuracao por plantacao(_r_25)
+		:m Umidade ideal(_r_25_26)
+		:m Tempo de Irrigacao(_r_25_27)
+		:m Sensibilidade a agua(_r_25_28)
+	:o Dashboard(_r_29)
+		:m Historico de Irrigacao(_r_29_34)
+		:m Consumo por Plantacao(_r_29_36)
+	:g (_r_37) [1,*] 
+		: Integracoes(_r_37_38)
+			:o Api de clima(_r_37_38_39)
+			:o Sensores Externos(_r_37_38_40)
+	:g (_r_41) [1,*] 
+		: Sensores(_r_41_42)
+			:m Umidade Solos(_r_41_42_43)
+			:o Temperatura(_r_41_42_44)
+			:o Umidade Ambiente(_r_41_42_45)
+	:m Usabilidade(_r_46)
+		:m Multi_dispositivos(_r_46_48)
+		:m Layout Responsivo(_r_46_49)
+	:m Seguranca(_r_50)
+		:m Autenticacao 2 fatores(_r_50_51)
+	:m Confiabilidade(_r_52)
+		:m Backup Regular(_r_52_53)
+		:m Recuperacao Rapida(_r_52_54)
+	:m Desempenho(_r_55)
+		:m Cache de consultas(_r_55_56)
+</feature_tree>
+<constraints>
+constraint_5:~_r_37_38_40 or _r_41_42_44 or _r_41_42_45
+constraint_3:~_r_1_6_8 or _r_37_38_39
+</constraints>
+</feature_model>

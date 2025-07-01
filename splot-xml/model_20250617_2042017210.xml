@@ -1,0 +1,81 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 25, 2025 - 9:40 PM  -->
+<feature_model name="Sistema_Robotico_Seguranca">
+<meta>
+<data name="description">modelo de features para o sistema de software do robô de segurança</data>
+<data name="creator">Felipe Brito</data>
+<data name="address"></data>
+<data name="email">felipebritosantos7@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Sistema_Robotico_Seguranca(_r)
+	:m Inicializacao_sistema(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Manual(_r_1_2_3)
+			: Via_App(_r_1_2_4)
+	:m Controle_movimento(_r_5)
+		:g (_r_5_6) [1,*] 
+			: Cima(_r_5_6_7)
+			: Baixo(_r_5_6_8)
+			: Esquerda(_r_5_6_9)
+			: Direita(_r_5_6_10)
+	:m Deteccao_Obstaculos(_r_11)
+		:g (_r_11_12) [1,*] 
+			: Desvio_Obstaculos(_r_11_12_13)
+			: Registro_Posicao_Obstaculo(_r_11_12_14)
+	:o Comandos_Remotos(_r_15)
+		:g (_r_15_16) [1,*] 
+			: Controle_Manual(_r_15_16_17)
+			: Controle_Voz(_r_15_16_19)
+	:m Monitoramento_Tempo_Real(_r_20)
+		:g (_r_20_21) [1,*] 
+			: Video(_r_20_21_22)
+			: Audio(_r_20_21_23)
+	:m Armazenamento_Dados(_r_24)
+		:g (_r_24_51) [1,*] 
+			: Nuvem(_r_24_51_52)
+				:g (_r_24_51_52_54) [1,*] 
+					: Drive(_r_24_51_52_54_55)
+					: Dropbox(_r_24_51_52_54_56)
+			: Local(_r_24_51_53)
+	:o Mapeamento_ambiente(_r_32)
+		:o Visualizacao_mapeamento(_r_32_33)
+	:o Configuracao_rotas(_r_34)
+		:g (_r_34_35) [1,*] 
+			: Rotas_Percorridas(_r_34_35_36)
+			: Definir_Rotas(_r_34_35_37)
+	:m Notificacoes(_r_38)
+		:g (_r_38_57) [1,*] 
+			: Envio_Notificacao(_r_38_57_58)
+				:g (_r_38_57_58_60) [1,*] 
+					: SMS(_r_38_57_58_60_61)
+					: E-mail(_r_38_57_58_60_62)
+					: Push_App(_r_38_57_58_60_63)
+			: Receber_Notificacao(_r_38_57_59)
+	:o Relatorios_Diarios(_r_46)
+	:o Carregamento_Automatizado(_r_47)
+	:o Agendamento_Tarefas(_r_48)
+	:o Modos_Operacao(_r_49)
+		:g (_r_49_50) [1,1] 
+			: Patrulha(_r_49_50_51)
+			: Monitoramento Silencioso(_r_49_50_52)
+	:o Atualizacao_Firmware_Remota(_r_53)
+	:m Diagnostico_LogsErros(_r_54)
+	:o Integracao_Alarme(_r_60)
+		:g (_r_60_61) [1,*] 
+			: Ativar_Alarme(_r_60_61_62)
+			: Desativar Alarme(_r_60_61_63)
+	:o Navegacao_Autonoma(_r_64)
+</feature_tree>
+<constraints>
+constraint_6:~_r_15_16_17 or ~_r_64
+constraint_20:~_r_15 or ~_r_47
+constraint_7:_r_32_33 or ~_r_34
+constraint_5:_r_5 or ~_r_15_16_17
+</constraints>
+</feature_model>

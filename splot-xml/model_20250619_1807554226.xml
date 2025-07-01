@@ -1,0 +1,103 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 19, 2025 - 1:37 AM  -->
+<feature_model name="Miku">
+<meta>
+<data name="description">Modelo ES</data>
+<data name="creator">Equipe 10</data>
+<data name="address"></data>
+<data name="email">gabrielaraujo12210095@soumaissantissimo.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Miku(_r)
+	:m Integracao-casa-inteligente(_r_5)
+		:m Integracao-sistema-automacao-geral(_r_5_6)
+			:m Integracao-hubs-automacao(_r_5_6_75)
+			:o Integracao-tomadas(_r_5_6_76)
+			:o Integracao-sensores-movimento(_r_5_6_77)
+			:o Integracao-sensores-temperatura-e-umidade(_r_5_6_78)
+		:o Integracao-sistema-iluminacao(_r_5_12)
+			:g (_r_5_12_13) [1,*] 
+				: Integracao-lampadas(_r_5_12_13_14)
+				: Integracao-interruptores(_r_5_12_13_15)
+				: Integracao-dimmers(_r_5_12_13_16)
+		:o Integracao-sistema-climatizacao(_r_5_17)
+			:g (_r_5_17_103) [1,*] 
+				: Integracao-termostato(_r_5_17_103_104)
+				: Integracao-ar-condicionado(_r_5_17_103_105)
+				: Integracao-ventiladores(_r_5_17_103_106)
+				: Integracao-cortinas-e-persianas(_r_5_17_103_107)
+		:o Integracao-sistema-seguranca(_r_5_23)
+			:g (_r_5_23_24) [1,*] 
+				: Integracao-cameras-vigilancia(_r_5_23_24_25)
+				: Integracao-sensores-porta-e-janela(_r_5_23_24_26)
+				: Integracao-alarmes(_r_5_23_24_27)
+				: Integracao-fechaduras-eletronicas(_r_5_23_24_28)
+				: Integracao-porteiro-eletronico(_r_5_23_24_29)
+		:o Integracao-sistemas-lazer(_r_5_75)
+			:g (_r_5_75_76) [1,*] 
+				: Integracao-smart-TVs(_r_5_75_76_77)
+				: Integracao-video-game(_r_5_75_76_78)
+				: Integracao-caixas-som(_r_5_75_76_79)
+				: Integracao-home-theater(_r_5_75_76_80)
+				: Integracao-projetor-smart(_r_5_75_76_81)
+		:o Integracao-linha-branca(_r_5_82)
+			:g (_r_5_82_83) [1,*] 
+				: Integracao-geladeiras(_r_5_82_83_84)
+				: Integracao-fornos(_r_5_82_83_85)
+				: Integracao-micro-ondas(_r_5_82_83_86)
+				: Integracao-cafeteiras(_r_5_82_83_87)
+				: Integracao-maquinas-lavar(_r_5_82_83_88)
+	:m Instrucoes(_r_45)
+		:g (_r_45_75) [1,*] 
+			: Gestos(_r_45_75_76)
+			: Voz(_r_45_75_77)
+	:m Interpretacao-comandos(_r_49)
+		:g (_r_49_78) [1,*] 
+			: Comandos-personalizados(_r_49_78_79)
+			: Tarefas-programadas(_r_49_78_80)
+	:m Reconhecimento-ambiente(_r_52)
+		:m Detector-presenca(_r_52_53)
+		:m Desvio-obstaculo(_r_52_54)
+		:m Reconhecimento-comodos(_r_52_55)
+		:o Interacao-pets(_r_52_56)
+	:m Seguranca(_r_57)
+		:m Controle-permissoes(_r_57_60)
+		:o Resposta-emergencias(_r_57_63)
+		:o Reconhecimento-hostilidade(_r_57_65)
+		:o Rotina-incendio(_r_57_66)
+		:o Reconhecimento-estado-critico(_r_57_68)
+		:o Chamar-emergencia(_r_57_70)
+	:m Limpeza-automatica(_r_71)
+		:m Aspirar(_r_71_72)
+		:m Passar-pano(_r_71_73)
+		:m Secar(_r_71_74)
+		:o Ajuste-superficie(_r_71_75)
+	:m Controle-recarga(_r_76)
+		:g (_r_76_85) [1,1] 
+			: Energia-alta(_r_76_85_86)
+			: Energia-media(_r_76_85_87)
+			: Energia-baixa(_r_76_85_88)
+	:m Notificacoes(_r_80)
+		:o Notificacoes-atividade(_r_80_82)
+		:m Alertas-manutencao(_r_80_83)
+		:o Leitura-lembretes-e-agenda(_r_80_84)
+	:m Rotinas(_r_85)
+		:m Aprendizado-rotina(_r_85_86)
+		:o Auxilio-rotina(_r_85_79)
+	:m Controle-manual(_r_87)
+	:m Ligar-e-desligar(_r_88)
+	:m Monitoramento(_r_89)
+		:g (_r_89_97) [1,*] 
+			: Captura-upload(_r_89_97_98)
+			: Reconhecimento-usuario(_r_89_97_99)
+			: Solicitar apresentacao(_r_89_97_100)
+</feature_tree>
+<constraints>
+constraint_2:~_r_85_79 or _r_49_78_80
+</constraints>
+</feature_model>

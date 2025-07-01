@@ -1,0 +1,70 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jun 19, 2025 - 7:14 PM  -->
+<feature_model name="robo_coletor">
+<meta>
+<data name="description">projeto_robo_coletor_engenharia_softwere</data>
+<data name="creator">Janina Pereira Pontes</data>
+<data name="address"></data>
+<data name="email">Janinappontes1997@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Estudante_santissimo</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r robo_coletor(_r)
+	:o sistema_filtro_personalizacao(_r_1)
+	:m registro_eventos(_r_2)
+	:m sistema_controle_acesso(_r_3)
+		:m autenticacao_usuario(_r_3_36)
+	:m sistema_controle_movimento(_r_4)
+		:m joystick(_r_4_39)
+		:g (_r_4_43) [1,1] 
+			: mobile(_r_4_43_44)
+			: computador(_r_4_43_45)
+	:m sistema_coleta_soltura_itens(_r_5)
+		:m ajuste_forca(_r_5_14)
+			:g (_r_5_14_53) [1,1] 
+				: forca_maxima(_r_5_14_53_54)
+				: forca_minima(_r_5_14_53_55)
+		:m pegar_itens(_r_5_59)
+		:m soltar_itens(_r_5_60)
+	:m sensor_temperatura(_r_6)
+		:g (_r_6_49) [1,*] 
+			: celcius(_r_6_49_50)
+			: kelvin(_r_6_49_51)
+			: fahrenheit(_r_6_49_52)
+	:m sistema_alerta(_r_7)
+		:g (_r_7_43) [1,*] 
+			: alerta_luz(_r_7_43_44)
+			: alerta_cores(_r_7_43_47)
+			: alerta_sonoro(_r_7_43_48)
+	:m retorno_automatico(_r_9)
+		:m bateria_baixa(_r_9_23)
+		:m robo_danificado(_r_9_24)
+	:m sistema_camera(_r_10)
+		:m camera_termografica(_r_10_25)
+			:g (_r_10_25_60) [1,*] 
+				: variacao_calor(_r_10_25_60_61)
+				: medicao_temperatura(_r_10_25_60_63)
+			:m Imagem_termica(_r_10_25_42)
+		:o modo_noturno(_r_10_26)
+			:o deteccao_baixa_luminosidade(_r_10_26_35)
+		:o controle_zoom(_r_10_27)
+			:o Definicao_escala(_r_10_27_30)
+			:o zoom_gradual(_r_10_27_31)
+	:o conexao(_r_41)
+		:o intranet(_r_41_73)
+	:g (_r_70) [1,1] 
+		: wi_fi(_r_70_71)
+		: dados_moveis(_r_70_72)
+	:o economia_energia(_r_74)
+</feature_tree>
+<constraints>
+constraint_19:_r_7_43_44 or ~_r_74
+constraint_7:~_r_7 or _r_41_73
+constraint_12:~_r_10_26 or ~_r_74
+constraint_14:~_r_7_43_44 or _r_74
+</constraints>
+</feature_model>

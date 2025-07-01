@@ -1,0 +1,81 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jun 11, 2025 - 10:40 PM  -->
+<feature_model name="Quadro interativo">
+<meta>
+<data name="description">Trabalho da disciplina de ES</data>
+<data name="creator">Michelle</data>
+<data name="address"></data>
+<data name="email">docente.michellelarissa@fsssacramento.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">FSSS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r core_quadro_interativo(_r)
+	:m quadro_interativo(_r_1)
+		:m configuracao_tela(_r_1_2)
+			:g (_r_1_2_15) [1,1] 
+				: preto_tela(_r_1_2_15_16)
+				: branco_tela(_r_1_2_15_19)
+		:o caneta(_r_1_3)
+			:g (_r_1_3_20) [1,*] 
+				: pincel(_r_1_3_20_21)
+				: lapis(_r_1_3_20_28)
+				: marca_texto(_r_1_3_20_29)
+				: mao_livre(_r_1_3_20_30)
+		:m escrever(_r_1_4)
+		:m apagar(_r_1_5)
+			:m borracha(_r_1_5_31)
+				:o tipo_borracha(_r_1_5_31_32)
+					:g (_r_1_5_31_32_34) [1,*] 
+						: suave(_r_1_5_31_32_34_35)
+						: total(_r_1_5_31_32_34_36)
+				:o tamanho_borracha(_r_1_5_31_33)
+					:g (_r_1_5_31_33_37) [1,*] 
+						: pequeno_borracha(_r_1_5_31_33_37_38)
+						: medio_borracha(_r_1_5_31_33_37_39)
+						: grande_borracha(_r_1_5_31_33_37_40)
+		:o selecionar(_r_1_6)
+			:o formato(_r_1_6_41)
+				:g (_r_1_6_41_42) [1,*] 
+					: quadrado(_r_1_6_41_42_43)
+					: circulo(_r_1_6_41_42_44)
+					: livre(_r_1_6_41_42_45)
+		:o salvar(_r_1_7)
+		:o imagem(_r_1_8)
+			:g (_r_1_8_46) [1,*] 
+				: copiar(_r_1_8_46_47)
+				: colar(_r_1_8_46_48)
+				: recortar(_r_1_8_46_49)
+				: inserir(_r_1_8_46_50)
+				: remover(_r_1_8_46_51)
+		:o fonte(_r_1_9)
+			:g (_r_1_9_52) [1,*] 
+				: tamanho_fonte(_r_1_9_52_53)
+					:g (_r_1_9_52_53_58) [1,*] 
+						: pequeno_fonte(_r_1_9_52_53_58_59)
+						: medio_fonte(_r_1_9_52_53_58_60)
+						: grande_fonte(_r_1_9_52_53_58_61)
+				: tipo_fonte(_r_1_9_52_54)
+					:g (_r_1_9_52_54_62) [1,*] 
+						: arial(_r_1_9_52_54_62_63)
+						: times(_r_1_9_52_54_62_64)
+				: cor(_r_1_9_52_55)
+					:g (_r_1_9_52_55_65) [1,*] 
+						: preto_fonte(_r_1_9_52_55_65_66)
+						: vermelho_fonte(_r_1_9_52_55_65_67)
+				: alinhamento(_r_1_9_52_56)
+					:g (_r_1_9_52_56_68) [1,*] 
+						: esquerda(_r_1_9_52_56_68_69)
+						: centro(_r_1_9_52_56_68_70)
+						: direita(_r_1_9_52_56_68_71)
+						: justificado(_r_1_9_52_56_68_72)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_3 or _r_1_9
+constraint_2:_r_1_6 or ~_r_1_8
+constraint_3:~_r_1_2_15_16 or ~_r_1_9_52_55_65_66
+</constraints>
+</feature_model>
