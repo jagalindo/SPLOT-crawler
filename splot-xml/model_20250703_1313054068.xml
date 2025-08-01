@@ -1,0 +1,30 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jul 3, 2025 - 3:29 AM  -->
+<feature_model name="GestorPro">
+<meta>
+<data name="description">Model for UFF</data>
+<data name="creator">Bruno</data>
+<data name="address"></data>
+<data name="email">bpmonteiro@id.uff.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidade Federal Fluminense</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r GestorPro(_r)
+	:m modulo_de_autenticacao(_r_1)
+	:m controle_de_permissoes(_r_2)
+	:m registro_de_logs(_r_3)
+	:m responsividade_da_interface(_r_4)
+	:m estrutura_de_microsservicos(_r_5)
+	:m padronizacao_entre_modulos(_r_6)
+	:m interface_intuitiva(_r_7)
+	:m comunicacao_entre_os_microsservicos(_r_8)
+	:m criptografia_de_dados(_r_9)
+	:o modulo_de_gestao_de_pessoas(_r_10)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
