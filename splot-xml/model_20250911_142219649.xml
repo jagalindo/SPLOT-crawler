@@ -1,0 +1,71 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Sep 11, 2025 - 9:33 AM  -->
+<feature_model name="Educational-Robotics">
+<meta>
+<data name="description">Remote car system embedded with sensor</data>
+<data name="creator">Muhammad Sahak</data>
+<data name="address"></data>
+<data name="email">shahliza@utm.my</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universiti Teknologi Malysia</data>
+<data name="department">Faculty Computing</data>
+<data name="date">2017</data>
+<data name="reference">Embedded Real-Time and Software Engineering Lab</data>
+</meta>
+<feature_tree>
+:r ER_System(_r)
+	:m mobile_robot(_r_1)
+		:m Hardware_features(_r_1_3)
+			:o Battery_extension(_r_1_3_6)
+			:m Sensor(_r_1_3_7)
+				:g (_r_1_3_7_25) [1,1] 
+					: Motion(_r_1_3_7_25_26)
+						:g (_r_1_3_7_25_26_41) [1,1] 
+							: Accelerometer(_r_1_3_7_25_26_41_42)
+							: push_button(_r_1_3_7_25_26_41_43)
+					: Looks(_r_1_3_7_25_27)
+						:g (_r_1_3_7_25_27_44) [1,1] 
+							: color_sensor(_r_1_3_7_25_27_44_45)
+							: light_sensor(_r_1_3_7_25_27_44_46)
+							: sonar_sensor(_r_1_3_7_25_27_44_47)
+							: obstacle_sensor(_r_1_3_7_25_27_44_48)
+					: Sensing(_r_1_3_7_25_28)
+						:g (_r_1_3_7_25_28_49) [1,1] 
+							: temperature(_r_1_3_7_25_28_49_50)
+							: collision_sensor(_r_1_3_7_25_28_49_51)
+					: Voice_sound(_r_1_3_7_25_29)
+			:m Microcomputer(_r_1_3_8)
+				:g (_r_1_3_8_30) [1,1] 
+					: Atmel(_r_1_3_8_30_31)
+					: Arduino_Uno(_r_1_3_8_30_32)
+			:m Actuator(_r_1_3_9)
+				:g (_r_1_3_9_33) [1,1] 
+					: DC_motor(_r_1_3_9_33_34)
+					: LED(_r_1_3_9_33_35)
+					: Ball_Shooter(_r_1_3_9_33_36)
+					: Large_motor(_r_1_3_9_33_37)
+					: Buzzer(_r_1_3_9_33_38)
+					: Sound(_r_1_3_9_33_39)
+					: Medium_motor(_r_1_3_9_33_40)
+	:m Controller(_r_2)
+		:m Communication(_r_2_4)
+			:g (_r_2_4_10) [1,1] 
+				: USB_cable(_r_2_4_10_11)
+				: WiFi(_r_2_4_10_12)
+				: Bluetooth(_r_2_4_10_13)
+				: SPI(_r_2_4_10_14)
+		:o Tools(_r_2_5)
+			:g (_r_2_5_15) [1,1] 
+				: Cap(_r_2_5_15_16)
+				: Remote_control(_r_2_5_15_17)
+				: Joystick(_r_2_5_15_18)
+		:m Library(_r_2_19)
+			:g (_r_2_19_20) [1,1] 
+				: Sound_commands(_r_2_19_20_21)
+				: Sensing_commands(_r_2_19_20_22)
+				: Looks_command(_r_2_19_20_23)
+				: Motion_command(_r_2_19_20_24)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
