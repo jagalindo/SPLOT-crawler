@@ -1,0 +1,50 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Oct 6, 2025 - 11:16 AM  -->
+<feature_model name="my_splot_test">
+<meta>
+<data name="description">Test if splot still works</data>
+<data name="creator">gs</data>
+<data name="address"></data>
+<data name="email">gs</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">sie</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r root(_r)
+	:m frontWheel(_r_1)
+		:g (_r_1_10) [1,1] 
+			: frontsize14(_r_1_10_11)
+			: frontsize16(_r_1_10_12)
+			: frontsize18(_r_1_10_13)
+			: frontsize20(_r_1_10_14)
+	:m rearWheel(_r_2)
+		:g (_r_2_15) [1,1] 
+			: rearsize14(_r_2_15_16)
+			: rearsize16(_r_2_15_17)
+			: rearsize18(_r_2_15_18)
+			: rearsize20(_r_2_15_19)
+	:o trainingWheels(_r_3)
+	:m color(_r_4)
+		:g (_r_4_5) [1,1] 
+			: red(_r_4_5_6)
+			: green(_r_4_5_7)
+			: blue(_r_4_5_8)
+			: yellow(_r_4_5_9)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_10_11 or _r_2_15_16
+constraint_8:_r_1_10_14 or ~_r_2_15_19
+constraint_9:~_r_3 or ~_r_1_10_11
+constraint_10:~_r_3 or ~_r_2_15_16
+constraint_6:_r_1_10_13 or ~_r_2_15_18
+constraint_12:_r_1_10_13 or _r_1_10_14 or ~_r_4_5_9
+constraint_7:~_r_1_10_14 or _r_2_15_19
+constraint_4:_r_1_10_12 or ~_r_2_15_17
+constraint_5:~_r_1_10_13 or _r_2_15_18
+constraint_2:_r_1_10_11 or ~_r_2_15_16
+constraint_3:~_r_1_10_12 or _r_2_15_17
+</constraints>
+</feature_model>
