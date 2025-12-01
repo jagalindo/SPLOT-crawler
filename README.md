@@ -1,4 +1,4 @@
-This is the list of SPLOT models as of  Sat Nov 1 01:12:51 UTC 2025. You can parse the statictis using the statistics.json file
+This is the list of SPLOT models as of  Mon Dec 1 01:22:41 UTC 2025. You can parse the statictis using the statistics.json file
 ## Directory: ./splot-xml
 Number of files: 1392
 Total size: 2614078 bytes
