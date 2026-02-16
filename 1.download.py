@@ -1,31 +1,98 @@
-# Import libraries
-import requests
-import urllib.request
+"""Download feature models from the SPLOT repository."""
+
+import logging
 import time
-import os.path
+import urllib.request
+from urllib.parse import parse_qs, urlparse
+
+import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
 
-# Set the URL you want to webscrape from
-url = 'http://52.32.1.180:8080/SPLOT/SplotAnalysesServlet?action=select_model&enableSelection=false&&showModelDetails=true'
+from config import (
+    DOWNLOAD_DELAY_SECONDS,
+    MAX_RETRIES,
+    REQUEST_TIMEOUT_SECONDS,
+    SPLOT_CATALOGUE_URL,
+    SPLOT_MODELS_URL,
+    SPLOT_XML_DIR,
+)
 
-# Connect to the URL
-response = requests.get(url)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+logger = logging.getLogger(__name__)
 
-# Parse HTML and save to BeautifulSoup object¶
-soup = BeautifulSoup(response.text, "html.parser")
 
-# To download the whole data set, let's do a for loop through all a tags
-for i in range(0,len(soup.findAll('a'))): #'a' tags are for links
-    one_a_tag = soup.findAll('a')[i]
-    if 'modelFile' in str(one_a_tag):
-        link = one_a_tag['href']
-        url = urlparse(link).query
-        modelName=parse_qs(url)['modelFile']
-        if modelName[0].endswith('.xml') and not os.path.exists('./splot-xml/'+modelName[0]): #to make it sure that we do not follow bizzare models and avoid redownloading already present models
-            download_url = 'http://52.32.1.180:8080/SPLOT/models/'+ modelName[0]
-            print(download_url)
-            urllib.request.urlretrieve(download_url,'./splot-xml/'+modelName[0]) 
-            time.sleep(10) #pause the code for a sec, this time seems appropiated. But more testing is needed
+def fetch_model_links():
+    """Fetch the list of model download links from the SPLOT catalogue."""
+    logger.info("Fetching model catalogue from %s", SPLOT_CATALOGUE_URL)
+    response = requests.get(SPLOT_CATALOGUE_URL, timeout=REQUEST_TIMEOUT_SECONDS)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    model_names = []
+
+    for tag in soup.find_all("a"):
+        href = tag.get("href", "")
+        if "modelFile" not in href:
+            continue
+        query = urlparse(href).query
+        params = parse_qs(query)
+        names = params.get("modelFile", [])
+        if names and names[0].endswith(".xml"):
+            model_names.append(names[0])
+
+    logger.info("Found %d XML models in catalogue", len(model_names))
+    return model_names
+
+
+def download_model(model_name):
+    """Download a single model file with retry logic."""
+    dest = SPLOT_XML_DIR / model_name
+    if dest.exists():
+        return False
+
+    download_url = f"{SPLOT_MODELS_URL}/{model_name}"
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            logger.info("Downloading %s (attempt %d/%d)", model_name, attempt, MAX_RETRIES)
+            urllib.request.urlretrieve(download_url, str(dest))
+            return True
+        except Exception as exc:
+            logger.warning("Failed to download %s: %s", model_name, exc)
+            if attempt < MAX_RETRIES:
+                wait = 2 ** attempt
+                logger.info("Retrying in %ds...", wait)
+                time.sleep(wait)
+            else:
+                logger.error("Giving up on %s after %d attempts", model_name, MAX_RETRIES)
+                if dest.exists():
+                    dest.unlink()
+                return False
+
+
+def main():
+    SPLOT_XML_DIR.mkdir(parents=True, exist_ok=True)
+
+    model_names = fetch_model_links()
+    downloaded = 0
+    skipped = 0
+
+    for model_name in model_names:
+        if download_model(model_name):
+            downloaded += 1
+            time.sleep(DOWNLOAD_DELAY_SECONDS)
+        else:
+            skipped += 1
+
+    logger.info(
+        "Done. Downloaded: %d, Skipped (already present or failed): %d",
+        downloaded,
+        skipped,
+    )
+
+
+if __name__ == "__main__":
+    main()
