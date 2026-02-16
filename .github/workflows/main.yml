@@ -1,48 +1,55 @@
-name: Do things every 1st of every month
+name: Monthly SPLOT crawler pipeline
 
 on:
   schedule:
     - cron: "0 0 1 * *"
-  workflow_dispatch: # Add this line
+  workflow_dispatch:
 
 jobs:
-  build:
+  crawl:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
-        persist-credentials: false 
-        fetch-depth: 0 
-    - name: Create local changes and install dependencies
-      run: |
-        pip install -r requirements.txt
-        python 1.download.py
-        bash 2.convert.sh
-        bash 3.sumarize.sh
-        python 4.get_statistics.py
-    - name: Commit files
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: "temurin"
+        java-version: "17"
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run tests
+      run: python -m pytest tests/ -v
+
+    - name: Run pipeline
+      run: python run_pipeline.py
+
+    - name: Get the date
+      id: date
+      run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
+    - name: Commit and push changes
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add -A
-        git diff --quiet && git diff --staged --quiet || git commit -m "Add changes"
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-    - name: Get the date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update models ${{ steps.date.outputs.date }}"
+        git push
 
     - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: ${{ steps.date.outputs.date }}
-        release_name: Release ${{ steps.date.outputs.date }}
-        body: Release for ${{ steps.date.outputs.date }}
-        draft: false
-        prerelease: false
+        name: Release ${{ steps.date.outputs.date }}
+        body: Automated monthly update for ${{ steps.date.outputs.date }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
