@@ -42,13 +42,17 @@ jobs:
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add -A
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update models ${{ steps.date.outputs.date }}"
-        git push
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update models ${{ steps.date.outputs.date }}" && git push)
+
+    - name: Create and push tag
+      run: |
+        git tag -f "v${{ steps.date.outputs.date }}"
+        git push -f origin "v${{ steps.date.outputs.date }}"
 
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ steps.date.outputs.date }}
+        tag_name: v${{ steps.date.outputs.date }}
         name: Release ${{ steps.date.outputs.date }}
         body: Automated monthly update for ${{ steps.date.outputs.date }}
       env:

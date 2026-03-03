@@ -10,7 +10,8 @@ output_uvl="./flama-uvl"
 mkdir -p "$output_fama" "$output_uvl"
 
 # Remove previous generated models to avoid possible append problems
-rm -f "$output_fama"/* "$output_uvl"/*
+find "$output_fama" -type f -delete 2>/dev/null || true
+find "$output_uvl" -type f -delete 2>/dev/null || true
 
 success=0
 failed=0
