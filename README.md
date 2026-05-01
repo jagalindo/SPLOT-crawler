@@ -1,6 +1,6 @@
 # SPLOT Feature Models Repository
 
-This is the list of SPLOT models as of Wed Apr  1 02:01:20 UTC 2026. You can parse the statistics using the `statistics.json` file.
+This is the list of SPLOT models as of Fri May  1 02:31:07 UTC 2026. You can parse the statistics using the `statistics.json` file.
 
 ## Directory: ./splot-xml
 - **Number of files:** 1392
