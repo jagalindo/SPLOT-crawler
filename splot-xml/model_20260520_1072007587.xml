@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, May 20, 2026 - 1:05 AM  -->
+<feature_model name="testFatureModel">
+<meta>
+<data name="description">test</data>
+<data name="creator">SKono</data>
+<data name="address"></data>
+<data name="email">Kono_Susumu@ogis-ri.co.jp</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">OGIS-RI</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r testFeature1(_r)
+	:m Feature-1(_r_1)
+		:g (_r_1_5) [1,1] 
+			: Feature-6(_r_1_5_6)
+			: Feature-7(_r_1_5_7)
+			: Feature-11(_r_1_5_11)
+	:o Feature-2(_r_2)
+		:m Feature-8(_r_2_8)
+		:m Feature-9(_r_2_9)
+		:m Feature-10(_r_2_10)
+	:o Feature-3(_r_3)
+	:m Feature-4(_r_4)
+</feature_tree>
+<constraints>
+constraint_1:_r_1 or _r_1_5_6
+</constraints>
+</feature_model>
