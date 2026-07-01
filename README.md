@@ -1,6 +1,6 @@
 # SPLOT Feature Models Repository
 
-This is the list of SPLOT models as of Mon Jun  1 03:00:22 UTC 2026. You can parse the statistics using the `statistics.json` file.
+This is the list of SPLOT models as of Wed Jul  1 02:52:06 UTC 2026. You can parse the statistics using the `statistics.json` file.
 
 ## Directory: ./splot-xml
 - **Number of files:** 1393
@@ -12,7 +12,7 @@ This is the list of SPLOT models as of Mon Jun  1 03:00:22 UTC 2026. You can par
 
 ## Directory: ./flama-uvl
 - **Number of files:** 1393
-- **Total size:** 5.7M
+- **Total size:** 5.8M
 
 
 ## Model Statistics
